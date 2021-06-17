@@ -250,6 +250,7 @@
 |Baca, Colorado|Baca, CO|08009
 |Bent, Colorado|Bent, CO|08011
 |Boulder, Colorado|Boulder, CO|08013
+|Broomfield, Colorado|Broomfield, CO|08014
 |Chaffee, Colorado|Chaffee, CO|08015
 |Cheyenne, Colorado|Cheyenne, CO|08017
 |Clear Creek, Colorado|Clear Creek, CO|08019
@@ -317,6 +318,7 @@
 |Kent, Delaware|Kent, DE|10001
 |New Castle, Delaware|New Castle, DE|10003
 |Sussex, Delaware|Sussex, DE|10005
+|District of Columbia, District of Columbia|District of Columbia, DC|11001
 |Alachua, Florida|Alachua, FL|12001
 |Baker, Florida|Baker, FL|12003
 |Bay, Florida|Bay, FL|12005
@@ -545,6 +547,7 @@
 |Worth, Georgia|Worth, GA|13321
 |Hawaii, Hawaii|Hawaii, HI|15001
 |Honolulu, Hawaii|Honolulu, HI|15003
+|Kalawao, Hawaii|Kalawao, HI|15005
 |Kauai, Hawaii|Kauai, HI|15007
 |Maui, Hawaii|Maui, HI|15009
 |Ada, Idaho|Ada, ID|16001
@@ -1650,7 +1653,7 @@
 |Wheatland, Montana|Wheatland, MT|30107
 |Wibaux, Montana|Wibaux, MT|30109
 |Yellowstone, Montana|Yellowstone, MT|30111
-|Yellowstone Nat Park, Montana|Yellowstone Nat Park, MT|30113
+// |Yellowstone Nat Park, Montana|Yellowstone Nat Park, MT|30113
 |Adams, Nebraska|Adams, NE|31001
 |Antelope, Nebraska|Antelope, NE|31003
 |Arthur, Nebraska|Arthur, NE|31005
@@ -2918,7 +2921,7 @@
 |Buena Vista City, Virginia|Buena Vista City, VA|51530
 |Charlottesville City, Virginia|Charlottesville City, VA|51540
 |Chesapeake City, Virginia|Chesapeake City, VA|51550
-|Clifton Forge City, Virginia|Clifton Forge City, VA|51560
+// |Clifton Forge City, Virginia|Clifton Forge City, VA|51560
 |Colonial Heights Cit, Virginia|Colonial Heights Cit, VA|51570
 |Covington City, Virginia|Covington City, VA|51580
 |Danville City, Virginia|Danville City, VA|51590
