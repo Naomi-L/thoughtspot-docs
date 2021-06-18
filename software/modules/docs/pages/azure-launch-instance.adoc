@@ -54,7 +54,6 @@ image::azure-createvm.png[Create a virtual machine]
 
 . Specify information under *Basics*.
 +
-+
 image::azure-basicsettings.png[Specify information under Basics]
 +
 [horizontal]
@@ -108,7 +107,7 @@ image::azure-networking.png[Specify networking information]
 3.::  Select *Advanced* for _NIC network security group_.
 
 4.:: After you select *Advanced*, the *Configure network security group* option appears. Find your company's security group, or *create new*. When creating your security group, ensure that the required ports are open.
-Refer to the xref:port-requirementss[minimum port requirements].
+Refer to the xref:port-requirements[minimum port requirements].
 
 . Under *Management*, configure your monitoring and management preferences.
 If you have no preferences, you can leave them at their default settings.
@@ -229,4 +228,5 @@ As you develop your expertise in Azure VM creation, we recommend the following T
 
 * https://training.thoughtspot.com/node-network-configuration/510569[Node Configuration: Azure]
 
-See other training resources at + https://training.thoughtspot.com/[<img src="{{ "/images/ts-u.png" | prepend: site.baseurl }}" alt="ThoughtSpot U">]
+See other training resources at +
+https://training.thoughtspot.com/[<img src="{{ "/images/ts-u.png" | prepend: site.baseurl }}" alt="ThoughtSpot U">]

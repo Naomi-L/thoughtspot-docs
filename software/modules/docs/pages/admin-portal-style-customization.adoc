@@ -1,5 +1,5 @@
 = Style customization
-:last_updated: 9/24/202
+:last_updated: 9/24/2020
 
 Style customization allows you to change the overall style of your ThoughtSpot interface.
 
