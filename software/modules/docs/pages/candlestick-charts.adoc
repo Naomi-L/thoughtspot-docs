@@ -65,7 +65,7 @@ Notice the following features of this chart:
 * The _Open_ for one day almost never coincides with the _Close_ of the previous day. This is due to after-hours trading.
 
 
-## Color customization in candlestick charts
+== Color customization in candlestick charts
 
 image::candlestick_color.png[Color customization in candlestick chart,role="right"]
 There are two color choices for this chart type:
