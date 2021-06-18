@@ -184,7 +184,7 @@ Refer to https://docs.aws.amazon.com/systems-manager/latest/userguide/setup-inst
 
 . Click *Next: Add Storage*.
 Add the required storage based on your instance type (either EBS volumes or S3), and the amount of data you are deploying.
-For specific storage requirements, refer to xref:configuration-options.adoc#ts-aws-instance-types[ThoughtSpot AWS instance types].
+For specific storage requirements, refer to xref:aws-configuration-options.adoc#ts-aws-instance-types[ThoughtSpot AWS instance types].
 +
 image::aws-add-storage.png[Add storage volumes]
 +
