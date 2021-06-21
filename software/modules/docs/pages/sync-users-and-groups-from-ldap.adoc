@@ -122,9 +122,9 @@ It also deletes any other entities created in the ThoughtSpot system from this L
 
 . When the ThoughtSpot search engine finishes indexing, your new users should appear in the ThoughtSpot application. To check if the ThoughtSpot search engine is indexing, run the following command:
 +
-```
+----
 tscli cluster status
-```
+----
 
 === Command-line switches for `syncUsersAndGroups.py`
 

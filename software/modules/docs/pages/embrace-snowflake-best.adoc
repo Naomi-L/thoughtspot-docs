@@ -38,7 +38,7 @@ See https://docs.snowflake.net/manuals/sql-reference/sql/create-view.html#syntax
 +
 The following example uses the sample `WEATHER` data from the **Snowflake Free Trial** sample data:
 +
-```
+----
 CREATE <strong>json_weather_data_view</strong> as
 SELECT
   v:time::timestamp as observation_time,
@@ -58,17 +58,17 @@ SELECT
   v:wind.speed::float as wind_speed
 FROM json_weather_data
 WHERE city_id = 5128638;
-```
+----
 
 . Query the new view in Snowflake.
 +
 The following example demonstrates how you can query the view `json_weather_data_view` created in the previous step:
 +
-```
+----
    SELECT * FROM json_weather_data_view
 WHERE date_trunc('month',observation_time) = '2018-01-01'
 LIMIT 20;
-```
+----
 
 . In ThoughtSpot Embrace, add a connection to Snowflake, specifically to the view you created.
 +
@@ -88,7 +88,7 @@ In Snowflake, you can query the schema to get a list of its existing foreign key
 
 To determine which foreign keys already exist in your Snowflake schema, issue the following `SELECT ... AS` statement:
 
-```
+----
 select
   fk_tco.table_schema as foreign_schema,
   fk_tco.table_name as foreign_table,
@@ -111,7 +111,7 @@ order by
   fk_tco.table_schema,
   fk_tco.table_name;
 
-```
+----
 
 The system returns the results of this query as a table that represents all foreign keys in the database, ordered by schema name and by name of the foreign table. The table has the following columns:
 
@@ -144,14 +144,14 @@ See xref:create-new-relationship.adoc[Join a table or view to another data sourc
 
 To add a foreign key constraint in Snowflake, you must issue the following `ALTER TABLE` statement:
 
-```
+----
 ALTER TABLE &lt;table_name&gt; ADD { outoflineUniquePK | outoflineFK }
-```
+----
 
 
 outoflineUniquePK::
 The primary key in the relationship, with the following definition: +
-```
+----
   outoflineUniquePK ::=
   [ CONSTRAINT &lt;constraint_name&gt;> ]
   { UNIQUE | PRIMARY KEY } ( &lt;col_name&gt;> [ , &lt;col_name&gt; , ... ] )
@@ -161,11 +161,11 @@ The primary key in the relationship, with the following definition: +
   [ ENABLE | DISABLE ]
   [ VALIDATE | NOVALIDATE ]
   [ RELY | NORELY ]
-```
+----
 
 outoflineFK::
 The foreign key in the relationship, with the following definition: +
-```
+----
      outoflineFK :=
     [ CONSTRAINT &lt;constraint_name&gt; ]
     FOREIGN KEY ( &lt;col_namev [ , &lt;col_name&gt; , ... ] )
@@ -179,31 +179,31 @@ The foreign key in the relationship, with the following definition: +
     [ ENABLE | DISABLE ]
     [ VALIDATE | NOVALIDATE ]
     [ RELY | NORELY ]
-```
+----
 
 [#add-fk-snowflake]
 **Example 1: adding a foreign key in Snowflake**
 
 For example, you can add a foreign key to Retail Sales schema in Snowflake by running the following `ALTER TABLE` statement. Also, contrast it with xref:add-fk-thoughtspot[Example 2]:
 
-```
+----
 ALTER TABLE "HO_RETAIL"."PUBLIC"."HO_Retail_Sales_Fact"
   ADD FOREIGN KEY ("Date_Key" )
   REFERENCES "HO_RETAIL"."PUBLIC"."HO_Date_Dimension"
   MATCH FULL
   ON UPDATE NO ACTION
   ON DELETE NO ACTION;
-```
+----
 
 [#add-fk-thoughtspot]
 **Example 2: adding a foreign key in ThoughtSpot**
 
 To add the foreign key in ThoughtSpot (an alternative to the process outlined in xref:add-fk-snowflake[Example 1], you can issue the following TQL `ALTER TABLE` statement:
-```
+----
 TQL&gt; ALTER TABLE "HO_Retail_Sales_Fact"
    ADD CONSTRAINT FOREIGN KEY ("Date_Key")
    REFERENCES "HO_Date_Dimension" ("Date_Key");
-```
+----
 
 [#connect-snowflake]
 == Connect to Snowflake through Embrace
