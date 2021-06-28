@@ -97,7 +97,7 @@
 *** xref:docs:formula-add.adoc[Add a formula to search]
 *** xref:docs:edit-formula-in-answer.adoc[View or edit a formula in a search]
 
-*** xref:docs:aggregation-formulas.adoc[Aggregate formulas]
+*** xref:docs:formulas-aggregation.adoc[Aggregate formulas]
 **** xref:docs:formulas-cumulative.adoc[Cumulative functions]
 **** xref:docs:formulas-moving.adoc[Moving functions]
 **** xref:docs:formulas-aggregation-flexible.adoc[Flexible aggregation functions (group aggregate and filters)]
