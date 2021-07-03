@@ -23,7 +23,7 @@ The following index includes mutable data modeling settings that you can apply t
 | xref:data-modeling-column-basics.adoc#change-column-description[Description]
 | Adds a text description of what the column contains.
 
-| xref:datatypes.adoc[Data Type]
+| xref:data-types.adoc[Data Type]
 | *Read only.* Shows the column's data type.
 
 | xref:data-modeling-column-basics.adoc#change-column-type[Column Type]
