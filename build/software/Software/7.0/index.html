@@ -1,0 +1,3335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <title>ThoughtSpot Software Documentation | ThoughtSpot Software</title>
+    <meta name="generator" content="Antora 3.0.0-alpha.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<!-- old algolia - start <link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css
+      <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css
+<!--      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/@docsearch/css" />
+
+<link rel="stylesheet" href="./src/index.css" /> -->
+<!-- new alogolia - start -->
+<!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+/> -->
+<!-- <link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css"> -->
+<link rel="stylesheet" href="../../_/css/vendor/docsearch.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--    <link rel="stylesheet" href="../../_/css/site-extra.css"> -->
+<link rel="stylesheet" href="../../_/css/vendor/docsearch.css">
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
+<meta name="docsearch:version" content="6.3,6.2,6.1,6.0,latest" />
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+    <script>var uiRootPath = '../../_'</script>
+    <script src="/node_modules/vanilla-modal/dist/index.js"></script>
+        <script>
+        (function (global, factory) {
+      if (typeof define === "function" && define.amd) {
+        define(['exports'], factory);
+      } else if (typeof exports !== "undefined") {
+        factory(exports);
+      } else {
+        var mod = {
+          exports: {}
+        };
+        factory(mod.exports);
+        global.VanillaModal = mod.exports;
+      }
+    })(this, function (exports) {
+      'use strict';
+
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+
+      function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError("Cannot call a class as a function");
+        }
+      }
+
+      var _createClass = function () {
+        function defineProperties(target, props) {
+          for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+          }
+        }
+
+        return function (Constructor, protoProps, staticProps) {
+          if (protoProps) defineProperties(Constructor.prototype, protoProps);
+          if (staticProps) defineProperties(Constructor, staticProps);
+          return Constructor;
+        };
+      }();
+
+      var _extends = Object.assign || function (target) {
+        for (var i = 1; i < arguments.length; i++) {
+          var source = arguments[i];
+
+          for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+
+        return target;
+      };
+
+      var defaults = {
+        modal: '.modal',
+        modalInner: '.modal-inner',
+        modalContent: '.modal-content',
+        open: '[data-modal-open]',
+        close: '[data-modal-close]',
+        page: 'body',
+        class: 'modal-visible',
+        loadClass: 'vanilla-modal',
+        clickOutside: true,
+        closeKeys: [27],
+        transitions: true,
+        transitionEnd: null,
+        onBeforeOpen: null,
+        onBeforeClose: null,
+        onOpen: null,
+        onClose: null
+      };
+
+      function throwError(message) {
+        // eslint-disable-next-line no-console
+        console.error('VanillaModal: ' + message);
+      }
+
+      function find(arr, callback) {
+        return function (key) {
+          var filteredArray = arr.filter(callback);
+          return filteredArray[0] ? filteredArray[0][key] : undefined;
+        };
+      }
+
+      function transitionEndVendorSniff() {
+        var el = document.createElement('div');
+        var transitions = [{ key: 'transition', value: 'transitionend' }, { key: 'OTransition', value: 'otransitionend' }, { key: 'MozTransition', value: 'transitionend' }, { key: 'WebkitTransition', value: 'webkitTransitionEnd' }];
+        return find(transitions, function (_ref) {
+          var key = _ref.key;
+          return typeof el.style[key] !== 'undefined';
+        })('value');
+      }
+
+      function isPopulatedArray(arr) {
+        return Object.prototype.toString.call(arr) === '[object Array]' && arr.length;
+      }
+
+      function getNode(selector, parent) {
+        var targetNode = parent || document;
+        var node = targetNode.querySelector(selector);
+        if (!node) {
+          throwError(selector + ' not found in document.');
+        }
+        return node;
+      }
+
+      function addClass(el, className) {
+        if (!(el instanceof HTMLElement)) {
+          throwError('Not a valid HTML element.');
+        }
+        el.setAttribute('class', el.className.split(' ').filter(function (cn) {
+          return cn !== className;
+        }).concat(className).join(' '));
+      }
+
+      function removeClass(el, className) {
+        if (!(el instanceof HTMLElement)) {
+          throwError('Not a valid HTML element.');
+        }
+        el.setAttribute('class', el.className.split(' ').filter(function (cn) {
+          return cn !== className;
+        }).join(' '));
+      }
+
+      function getElementContext(e) {
+        if (e && typeof e.hash === 'string') {
+          return document.querySelector(e.hash);
+        } else if (typeof e === 'string') {
+          return document.querySelector(e);
+        }
+        throwError('No selector supplied to open()');
+        return null;
+      }
+
+      function applyUserSettings(settings) {
+        return _extends({}, defaults, settings, {
+          transitionEnd: transitionEndVendorSniff()
+        });
+      }
+
+      function matches(e, selector) {
+        var allMatches = (e.target.document || e.target.ownerDocument).querySelectorAll(selector);
+        for (var i = 0; i < allMatches.length; i += 1) {
+          var node = e.target;
+          while (node && node !== document.body) {
+            if (node === allMatches[i]) {
+              return node;
+            }
+            node = node.parentNode;
+          }
+        }
+        return null;
+      }
+
+      var VanillaModal = function () {
+        function VanillaModal(settings) {
+          _classCallCheck(this, VanillaModal);
+
+          this.isOpen = false;
+          this.current = null;
+          this.isListening = false;
+
+          this.settings = applyUserSettings(settings);
+          this.dom = this.getDomNodes();
+
+          this.open = this.open.bind(this);
+          this.close = this.close.bind(this);
+          this.closeKeyHandler = this.closeKeyHandler.bind(this);
+          this.outsideClickHandler = this.outsideClickHandler.bind(this);
+          this.delegateOpen = this.delegateOpen.bind(this);
+          this.delegateClose = this.delegateClose.bind(this);
+          this.listen = this.listen.bind(this);
+          this.destroy = this.destroy.bind(this);
+
+          this.addLoadedCssClass();
+          this.listen();
+        }
+
+        _createClass(VanillaModal, [{
+          key: 'getDomNodes',
+          value: function getDomNodes() {
+            var _settings = this.settings,
+                modal = _settings.modal,
+                page = _settings.page,
+                modalInner = _settings.modalInner,
+                modalContent = _settings.modalContent;
+
+            return {
+              modal: getNode(modal),
+              page: getNode(page),
+              modalInner: getNode(modalInner, getNode(modal)),
+              modalContent: getNode(modalContent, getNode(modal))
+            };
+          }
+        }, {
+          key: 'addLoadedCssClass',
+          value: function addLoadedCssClass() {
+            addClass(this.dom.page, this.settings.loadClass);
+          }
+        }, {
+          key: 'setOpenId',
+          value: function setOpenId(id) {
+            var page = this.dom.page;
+
+            page.setAttribute('data-current-modal', id || 'anonymous');
+          }
+        }, {
+          key: 'removeOpenId',
+          value: function removeOpenId() {
+            var page = this.dom.page;
+
+            page.removeAttribute('data-current-modal');
+          }
+        }, {
+          key: 'open',
+          value: function open(allMatches, e) {
+            var page = this.dom.page;
+            var _settings2 = this.settings,
+                onBeforeOpen = _settings2.onBeforeOpen,
+                onOpen = _settings2.onOpen;
+
+            if (!(this.current instanceof HTMLElement === false)) {
+              throwError('VanillaModal target must exist on page.');
+              return;
+            }
+            this.releaseNode(this.current);
+            this.current = getElementContext(allMatches);
+            if (typeof onBeforeOpen === 'function') {
+              onBeforeOpen.call(this, e);
+            }
+            this.captureNode(this.current);
+            addClass(page, this.settings.class);
+            this.setOpenId(this.current.id);
+            this.isOpen = true;
+            if (typeof onOpen === 'function') {
+              onOpen.call(this, e);
+            }
+          }
+        }, {
+          key: 'detectTransition',
+          value: function detectTransition() {
+            var modal = this.dom.modal;
+
+            var css = window.getComputedStyle(modal, null);
+            return Boolean(['transitionDuration', 'oTransitionDuration', 'MozTransitionDuration', 'webkitTransitionDuration'].filter(function (i) {
+              return typeof css[i] === 'string' && parseFloat(css[i]) > 0;
+            }).length);
+          }
+        }, {
+          key: 'close',
+          value: function close(e) {
+            var _settings3 = this.settings,
+                transitions = _settings3.transitions,
+                transitionEnd = _settings3.transitionEnd,
+                onBeforeClose = _settings3.onBeforeClose;
+
+            var hasTransition = this.detectTransition();
+            if (this.isOpen) {
+              this.isOpen = false;
+              if (typeof onBeforeClose === 'function') {
+                onBeforeClose.call(this, e);
+              }
+              removeClass(this.dom.page, this.settings.class);
+              if (transitions && transitionEnd && hasTransition) {
+                this.closeModalWithTransition(e);
+              } else {
+                this.closeModal(e);
+              }
+            }
+          }
+        }, {
+          key: 'closeModal',
+          value: function closeModal(e) {
+            var onClose = this.settings.onClose;
+
+            this.removeOpenId(this.dom.page);
+            this.releaseNode(this.current);
+            this.isOpen = false;
+            this.current = null;
+            if (typeof onClose === 'function') {
+              onClose.call(this, e);
+            }
+          }
+        }, {
+          key: 'closeModalWithTransition',
+          value: function closeModalWithTransition(e) {
+            var _this = this;
+
+            var modal = this.dom.modal;
+            var transitionEnd = this.settings.transitionEnd;
+
+            var closeTransitionHandler = function closeTransitionHandler() {
+              modal.removeEventListener(transitionEnd, closeTransitionHandler);
+              _this.closeModal(e);
+            };
+            modal.addEventListener(transitionEnd, closeTransitionHandler);
+          }
+        }, {
+          key: 'captureNode',
+          value: function captureNode(node) {
+            var modalContent = this.dom.modalContent;
+
+            while (node.childNodes.length) {
+              modalContent.appendChild(node.childNodes[0]);
+            }
+          }
+        }, {
+          key: 'releaseNode',
+          value: function releaseNode(node) {
+            var modalContent = this.dom.modalContent;
+
+            while (modalContent.childNodes.length) {
+              node.appendChild(modalContent.childNodes[0]);
+            }
+          }
+        }, {
+          key: 'closeKeyHandler',
+          value: function closeKeyHandler(e) {
+            var closeKeys = this.settings.closeKeys;
+
+            if (isPopulatedArray(closeKeys) && closeKeys.indexOf(e.which) > -1 && this.isOpen === true) {
+              e.preventDefault();
+              this.close(e);
+            }
+          }
+        }, {
+          key: 'outsideClickHandler',
+          value: function outsideClickHandler(e) {
+            var clickOutside = this.settings.clickOutside;
+            var modalInner = this.dom.modalInner;
+
+            if (clickOutside) {
+              var node = e.target;
+              while (node && node !== document.body) {
+                if (node === modalInner) {
+                  return;
+                }
+                node = node.parentNode;
+              }
+              this.close(e);
+            }
+          }
+        }, {
+          key: 'delegateOpen',
+          value: function delegateOpen(e) {
+            var open = this.settings.open;
+
+            var matchedNode = matches(e, open);
+            if (matchedNode) {
+              e.preventDefault();
+              this.open(matchedNode, e);
+            }
+          }
+        }, {
+          key: 'delegateClose',
+          value: function delegateClose(e) {
+            var close = this.settings.close;
+
+            if (matches(e, close)) {
+              e.preventDefault();
+              this.close(e);
+            }
+          }
+        }, {
+          key: 'listen',
+          value: function listen() {
+            var modal = this.dom.modal;
+
+            if (!this.isListening) {
+              modal.addEventListener('click', this.outsideClickHandler, false);
+              document.addEventListener('keydown', this.closeKeyHandler, false);
+              document.addEventListener('click', this.delegateOpen, false);
+              document.addEventListener('click', this.delegateClose, false);
+              this.isListening = true;
+            } else {
+              throwError('Event listeners already applied.');
+            }
+          }
+        }, {
+          key: 'destroy',
+          value: function destroy() {
+            var modal = this.dom.modal;
+
+            if (this.isListening) {
+              this.close();
+              modal.removeEventListener('click', this.outsideClickHandler);
+              document.removeEventListener('keydown', this.closeKeyHandler);
+              document.removeEventListener('click', this.delegateOpen);
+              document.removeEventListener('click', this.delegateClose);
+              this.isListening = false;
+            } else {
+              throwError('Event listeners already removed.');
+            }
+          }
+        }]);
+
+        return VanillaModal;
+      }();
+
+      exports.default = VanillaModal;
+    });
+    </script>
+        <script>var vanillaModal = new VanillaModal.default()</script>
+        <script>const modal = new VanillaModal(options);</script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="home">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/@docsearch/css" /> -->
+<style type="text/css">
+  body.vanilla-modal .modal-hider {
+    position: absolute;
+    left: -99999em;
+  }
+</style>
+<header class="header">
+  <nav class="navbar">
+    <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs-thoughtspot-com.netlify.app/software/latest/"><img src="../../_/img/ts-docs-blue.svg" alt="ThoughtSpot logo" height="50"/></a>
+    <!-- <a class="navbar-item" href="../..">ThoughtSpot Software</a> -->
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <!-- search box begin -->
+            <div class="navbar-item search hide-for-print">
+              <div id="search" class="field has-filter">
+                <input class="query" type="text" placeholder="Search the docs">
+            <!--    <label class="filter checkbox">
+                  <input type="checkbox" data-facet-filter="component:Software"> In this project
+                </label> -->
+              </div>
+            </div>
+        <!-- search box end -->
+      <!--  <a class="navbar-item" href="#">Home</a> -->
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Software</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://cloud-docs.thoughtspot.com/">Cloud</a>
+            <a class="navbar-item" href="https://developers.thoughtspot.com/">Developer</a>
+            <a class="navbar-item" href="https://seekwell-docs.netlify.app/seekwell/0.0/">Seekwell</a>
+<!--            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a> -->
+          </div>
+        </div>
+        <!-- <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  </nav>
+</header>
+<div class="body container">
+<div class="nav-container" data-component="Software" data-version="7.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Software</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">About our product releases</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/fixed.html">Fixed issues</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/accessibility.html">Accessibility</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/deprecation.html">Deprecation announcements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/help-center.html">More help and support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/support.html">ThoughtSpot support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/support-contact.html">Contact ThoughtSpot support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/support-configure.html">Configure support services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/support-handbook.html">ThoughtSpot Support Handbook</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="_attachments/support-handbook.pdf">Support Handbook&nbsp;<span class="badge badge-pdf">PDF</span></a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/users.html">Users</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/business-user.html">Business User</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/analyst.html">Analyst</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-engineer.html">Data Engineer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/it-ops.html">IT and Ops</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/developer.html">Developer</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/getting-started.html">Getting Started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/information-center.html">Information Center</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/user-onboarding-experience.html">User onboarding experience</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-assist.html">Search Assist</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/navigating-thoughtspot.html">Finding your way around</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/accessing.html">ThoughtSpot browser access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/user-profile.html">Your user preferences</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tags.html">Use tags to organize</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/privileges-end-user.html">Privileges</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/pinboard-granular-permission.html">Granular access to pinboards</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-start.html">Start a new search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-choose-data-source.html">Choose a data source</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-bar.html">Search bar features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-suggestion.html">Search suggestions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-columns.html">Search results and column types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-data-refresh-time.html">Last data refresh time</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/answers.html">Work with Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tml-answers.html">Model, migrate, or restore Answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/expert-ask.html">Ask an expert</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/expert-manage-requests.html">Manage Ask an Expert requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/expert-answer-get.html">Retrieve Ask an Expert answers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/expert-answer.html">Answer an expert question</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/chart-table.html">Results that are tables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/search-keyword.html">Keyword searches</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-time.html">Time series analysis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-growth.html">Search using growth over time</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-subquery.html">Subquery search (in keyword)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-proximity.html">Proximity search: near and farther than</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/filters.html">Work with filters</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/filter-chart-table.html">Add a filter to a table</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/filter-chart.html">Add a filter to a chart</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/filter-bulk.html">Create a bulk filter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/filter-delete.html">Delete a filter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/filter-null.html">Filter on null, blank, or empty values</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/search-actions.html">Other search actions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-table-change.html">Change result display options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/show-underlying-data.html">Show underlying data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-drill-down.html">See the search behind a result</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-conditional-formatting.html">Apply conditional formatting to a table</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-download.html">Download your search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-replay.html">Replay search</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/charts.html">Understand charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/chart-types.html">Chart types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-column.html">Column charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-column-stacked.html">Stacked column charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-bar.html">Bar charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-bar-stacked.html">Stacked bar charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-line.html">Line charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-pie.html">Pie charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-area.html">Area Charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-area-stacked.html">Stacked area charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-scatter.html">Scatter charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-bubble.html">Bubble charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-pareto.html">Pareto charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-waterfall.html">Waterfall charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-treemap.html">Treemap charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-heatmap.html">Heatmap charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-line-column.html">Line column charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-line-column-stacked.html">Line stacked column charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-funnel.html">Funnel charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/chart-geo.html">Geo charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/chart-geo-area.html">Geo area charts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/chart-geo-bubble.html">Geo bubble charts</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/chart-geo-heatmap.html">Geo heatmap charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-pivot-table.html">Pivot table</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-sankey.html">Sankey charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-radar.html">Radar charts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-candlestick.html">Candlestick charts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/chart-change.html">Changing charts</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-axes-options.html">Change axes options</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-column-configure.html">Configure the columns</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-column-axis-rename.html">Rename columns and axes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-x-axis.html">Reorder the labels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-y-axis.html">Set the y-axis range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-column-visibility.html">Hide and show values</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-high-cardinality.html">Charts and tables with a very large number of data values</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-color-change.html">Change chart colors</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-data-labels.html">Show data labels</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-data-markers.html">Show data markers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-regression-line.html">Add regression lines</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-gridlines.html">Display gridlines</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-lock-type.html">Disable automatic selection of chart type</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chart-zoom.html">Zoom into a chart</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/formulas.html">Formulas</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formula-add.html">Add a formula to search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formula-answer-edit.html">View or edit a formula in a search</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/formulas-aggregation.html">Aggregate formulas</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/formulas-cumulative.html">Cumulative functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/formulas-moving.html">Moving functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/formulas-aggregation-flexible.html">Flexible aggregation functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/formulas-aggregation-group.html">Grouping functions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/formulas-aggregation-filtered.html">Filtered aggregation functions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-conversion.html">Conversion functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-date.html">Date functions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-simple-operations.html">Simple number calculations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-percent.html">Percent calculations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-logical-operations.html">Formula operators</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-nested.html">Nested formulas</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formulas-chasm-trap.html">Formulas for chasm traps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/pinboards.html">Pinboards</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-follow.html">Follow a pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-layout-edit.html">Edit a pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-filters.html">Pinboard filters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-filters-linked.html">Linked Pinboard filters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-filters-selective.html">Selective Pinboard filters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/answer-explorer.html">Answer Explorer</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-schedule.html">Schedule a pinboard job</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-search.html">Search actions within a pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-visualization-delete.html">Delete a visualization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-copy.html">Copy a pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-link-copy.html">Copy a pinboard or visualization link</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-chart-reset.html">Reset a pinboard or visualization</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-slideshow.html">Present a pinboard as a slideshow</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-download-pdf.html">Download as PDF</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/pinboard-request-access.html">Request access</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tml-pinboards.html">Model, migrate, or restore Pinboards</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/r-thoughtspot.html">Custom R in ThoughtSpot</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/r-scripts.html">Create and share R scripts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/r-scripts-run.html">Run prebuilt R scripts on answers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/r-answers-save-share.html">Save and share R visualizations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/spotiq.html">SpotIQ</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-best.html">Best practices</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-monitor-headlines.html">Monitor Headlines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-comparative.html">Comparative Analysis</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-custom.html">Custom SpotIQ analysis</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-r.html">Advanced R customizations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-feedback.html">Insight feedback</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/spotiq-preferences.html">SpotIQ preferences</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-sources.html">Work with data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-import-ui.html">Append data through the UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-profile.html">View a data profile</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/locale.html">Set your ThoughtSpot locale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/sharing.html">Share your work</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-pinboards.html">Share a pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-answers.html">Share answers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-user-imported-data.html">Share uploaded data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-request-access.html">Request access</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-revoke-access.html">Revoke access (unshare)</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/administration.html">Administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/admin-sign-in.html">Log in credentials</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/admin-portal.html">Admin Console</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-users.html">Managing users</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-groups.html">Managing groups</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-authentication-local.html">Local authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-authentication-saml.html">Authentication through SAML</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-authentication-active-directory.html">Authentication through Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-ssl-configure.html">Configure SSL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-reverse-ssh-tunnel.html">Configure a reverse SSH tunnel</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-smtp-configure.html">Set the relay host for SMTP (email)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-customize-help.html">Customize ThoughtSpot Help</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-customize-actions-menu.html">Customize actions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-style-customization.html">Style customization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-nas-mount-configure.html">Configure NAS for backup storage</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-snapshot-manage.html">Manage and create snapshots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-system-cluster-pinboard.html">System Cluster Pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-system-alerts-pinboard.html">System Alerts Pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-user-adoption-pinboard.html">User Adoption Pinboard</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/admin-portal-available-update.html">Available cluster updates</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/customization.html">Style Customization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/customize-logo.html">Upload application logos</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/customize-fonts.html">Set chart and table visualization fonts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/customize-background.html">Choose a background color</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/customize-color-palettes.html">Select chart color palettes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/customize-footer-text.html">Change the footer text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/sysadmin-overview.html">System administration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/send-logs-to-administrator.html">Send logs when reporting problems</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/sysadmin-search-replay.html">Set up recording for Replay Search</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/sysadmin-cluster-upgrade.html">Upgrade a cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/backup-strategy.html">Choose the backup strategy</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/backup-schedule.html">Understand backup/snapshot schedules</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/snapshots.html">Work with snapshots</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/backup-modes.html">Backup modes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/backup-manual.html">Create a manual backup</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/backup-configure-schedule.html">Configure periodic backups</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/restore.html">About restore operations</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/schedule-pinboards.html">Scheduled Jobs: pinboard schedule management</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/system-monitor.html">System monitoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/system-info-usage.html">Overview board</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/system-data.html">Data board</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/cluster-manager.html">Cluster Manager board</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/system-alerts-events.html">Alerts and Events board</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/system-worksheet.html">System Worksheets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/system-pinboards.html">System Pinboards</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/falcon-monitor.html">Falcon monitoring Pinboards</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/performance-tracking.html">Performance Tracking Pinboard</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/troubleshooting.html">Troubleshooting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-logs.html">Get logs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-logs-share.html">Upload logs to ThoughtSpot Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-connectivity.html">Network connectivity issues</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-timezone.html">Check the timezone</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-certificate.html">Browser untrusted connection error</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-char-encoding.html">Characters not displaying correctly</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-browser-cache.html">Clear the browser cache</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-formulas.html">Cannot open a saved answer that contains a formula</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-load.html">Data loading too slowly</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/troubleshooting-blanks.html">Search results contain too many blanks</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/components.html">Architectural components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-caching.html">Data caching</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/authentication.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/security-data-object.html">Data and object security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/performance.html">Performance considerations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-compression.html">In-memory data compression</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/installation.html">Installation and setup</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/locale-set.html">Set your locale</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/network-test.html">Test connectivity between nodes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/use-agreement.html">ThoughtSpot use agreement</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/relay-host.html">Set the relay host for SMTP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/custom-calendar.html">Set up custom calendars</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/internal-auth.html">Configure internal authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/ssl.html">Configure SSL</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/saml.html">Configure SAML</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/active-directory.html">Enable SSH through Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/ldap.html">Integrate LDAP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#docs:ldap-config-ad.adoc">Configure authentication through Active Directory</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/ldap-ssl.html">Add the SSL certificate for LDAP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/ldap-test.html">Test the LDAP configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/ldap-sync-users-groups.html">Sync users and groups from LDAP</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#docs:nas-mount.adoc">Configure NAS file system</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/monitoring-setup.html">Set up monitoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/support-configure.html">Configure support services</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/ports.html">Network ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/load-balancer-configuration.html">Configure load balancing and proxies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/customize-style.html">Customize look and feel</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-load.html">Load and manage data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/case-configuration.html">Configure casing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/load-csv.html">Load CSV files with the UI</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/schema-viewer.html">How to view a data schema</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/schema-plan.html">Plan the schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-types.html">Data types</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/constraints.html">Constraints</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/sharding.html">Sharding</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/chasm-trap.html">Chasm traps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/schema-create.html">Build the schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/schema-prepare.html">Connect with TQL and create a schema</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/schema-script.html">Create a schema in SQL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/schema-examples.html">Examples of schema creation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/schema-upload.html">Upload a SQL script</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/schema-change.html">Change the schema</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-type-conversion.html">Convert column data type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tsload-import-csv.html">Import CSV files with tsload</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tsload-script.html">Load data with a script</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tsload-connector.html">Load data with a tsload connector</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-source-delete.html">Delete a data source (table)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tql-table.html">Delete or change a table in TQL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/users-groups.html">Manage users and groups</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/onboarding.html">Onboarding users</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/groups-privileges.html">Understand groups and privileges</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/group-management.html">Create, edit, or delete a group</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/user-management.html">Create, edit, or delete a user</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/user-sign-up.html">Allow users to sign up</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/security.html">Security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/security-thoughtspot-lifecycle.html">ThoughtSpot lifecycle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/security-system.html">System security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/audit-logs.html">Tools and processes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/secure-monitor-sw.html">Third-party security software</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/secure-monitor-sw-install.html">Installing third-party software</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-security.html">Data security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-source-tables.html">Share tables and columns</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-worksheets.html">Share worksheets</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-views.html">Share Views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-pinboards.html">Share Pinboards</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-answers.html">Share Answers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/share-revoke-access.html">Revoke access (unshare)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/security-spotiq.html">Security for SpotIQ functions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/security-rls.html">Row level security (RLS)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/security-rls-concept.html">How rule-based RLS works</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/security-rls-implement.html">Set rule-based RLS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/security-data-encryption.html">Encryption of data in transit</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-modeling.html">Improve search with modeling</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/model-data-ui.html">Change a table&#8217;s data model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-modeling-edit.html">Edit the system-wide data model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-modeling-settings.html">Data model settings</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-column-basics.html">Set column name, description, and type</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-aggreg-additive.html">Set additive and aggregate values</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-visibility.html">Hide a column</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-synonym.html">Define a synonym</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/spotiq-data-model-preferences.html">Exclude columns from SpotIQ analyses</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-index.html">Manage suggestion indexing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-geo-data.html">Add a geographical data setting</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-patterns.html">Set number, date, currency formats</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-modeling-attributable-dimension.html">Change the Attribution Dimension setting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/relationships.html">Link tables using relationships</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/relationship-create.html">Create a relationship</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/relationship-delete.html">Delete a relationship</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/worksheets.html">Worksheets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-create.html">Creating worksheets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-edit.html">Editing or renaming worksheets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-formula.html">Create a formula in a worksheet</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-filter.html">Create worksheet filters</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-progressive-joins.html">How the worksheet join rule works</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-inclusion.html">Change join rule or RLS for a worksheet</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/join-add.html">Create a join relationship</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/join-worksheet-edit.html">Modify joins between Worksheet Tables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/search-assist-coach.html">Create worksheet onboarding lessons with Search Assist Coach</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/worksheet-delete.html">Delete Worksheets or Tables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tml-worksheets.html">Model, migrate, or restore Worksheets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tml.html">Worksheet TML specification</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/views.html">Work with Views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/searches-views.html">Save a search as a view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/views-searches.html">Create a search from a view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/views-examples.html">View example scenarios</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/views-materialized.html">About materialized views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/view-materialize.html">Materialize a view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/view-dematerialize.html">Dematerialize a view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/view-refresh.html">Refresh a view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tml-views.html">Model, migrate, or restore Views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/schedule-materialization.html">Schedule view refreshes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/migration.html">Migrating TS objects</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/scriptability.html">Scriptability</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tml.html">TML: ThoughtSpot Modeling Language</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/app-templates.html">SpotApps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/mobile.html">Mobile</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/mobile-deploy.html">Deploy</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/mobile-install.html">Install and set up</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/mobile-faq.html">FAQ</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/notes-mobile.html">Release notes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embedding-overview.html">Embedding</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/login-console.html">Log into the Linux shell using SSH</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/admin-sign-in.html">Log in credentials</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/js-api.html">Use the JavaScript API</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/saml-integration.html">SAML</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/saml.html">Configure SAML</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/saml-configure-siteminder.html">Configure CA SiteMinder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/active-directory-federated-services.html">Configure Active Directory Federated Services</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-api.html">Data REST API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-api-calling.html">Calling the REST API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-api-pagination.html">REST API pagination</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-api-get.html">Use the Data REST API to get data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-api-search.html">Use the Embedded Search API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/data-api-push.html">Use the Data Push API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embedding.html">Embed ThoughtSpot</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embed-viz.html">Embed Pinboard or visualization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/js-api-enable.html">Authentication flow with embed</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embed-full.html">Full application embedding</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/trusted-authentication.html">Configure trusted authentication</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/runtime-filters.html">Runtime Filters</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/runtime-filter-apply.html">Apply a Runtime Filter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/runtime-filter-operators.html">Runtime Filter Operators</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/deployment-sw.html">Software Deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/al2.html">Amazon Linux 2 deployments</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-prerequisites.html">Amazon Linux 2 prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-ts-artifacts.html">ThoughtSpot deployment artifacts for Amazon Linux 2</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-install-online.html">Online Amazon Linux 2 install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-install-offline.html">Offline Amazon Linux 2 install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-upgrade.html">Amazon Linux 2 upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-add-node.html">Adding new nodes to clusters in Amazon Linux 2</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/al2-packages.html">Packages installed with Amazon Linux 2</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/rhel.html">RHEL and OEL Support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-prerequisites.html">RHEL and OEL prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-ts-artifacts.html">ThoughtSpot deployment artifacts for RHEL and OEL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-install-online.html">Online RHEL and OEL install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-install-offline.html">Offline RHEL and OEL install</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-upgrade.html">RHEL and OEL upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-add-node.html">Add new nodes to clusters on RHEL or OEL</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/rhel-packages.html">Packages installed with RHEL and OEL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/hardware-appliance.html">Hardware appliance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/smc.html">Deploying on the SMC appliance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/smc-prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/smc-hardware-requirements.html">Hardware requirements</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/smc-connect-appliance.html">Connect the appliance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/smc-configure-nodes.html">Configure nodes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/smc-cluster-install.html">Install cluster</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dell.html">Deploying on the Dell appliance</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dell-prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dell-hardware-requirements.html">Hardware requirements</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dell-connect-appliance.html">Connect the appliance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dell-configure-management.html">Configure management settings</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dell-configure-nodes.html">Configure nodes</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dell-cluster-install.html">Install cluster</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/deploying-cloud.html">Cloud deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/aws-configuration-options.html">Cloud deployment on AWS</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/aws-launch-instance.html">Set up AWS resources for ThoughtSpot</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/aws-prepare-vms.html">Prepare AWS VMs for ThoughtSpot</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/aws-installing.html">Configure ThoughtSpot nodes in AWS</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/aws-cluster-install.html">Install ThoughtSpot clusters in AWS</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/ha-aws-efs.html">Set up high availability</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/aws-backup-restore.html">Back up and Restore using S3</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/azure-configuration-options.html">Cloud deployment on Microsoft Azure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/azure-launch-instance.html">Set up ThoughtSpot in Azure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/azure-installing.html">Configure ThoughtSpot nodes in Azure</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/azure-cluster-install.html">Install ThoughtSpot clusters in Azure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/gcp-configuration-options.html">Cloud deployment on GCP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/gcp-launch-instance.html">Set up ThoughtSpot in GCP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/gcp-installing.html">Configure ThoughtSpot nodes in GCP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/gcp-cluster-install.html">Install ThoughtSpot clusters in GCP</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/gcp-backup-restore.html">Back up and Restore a GCP cluster using GCS</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/vmware.html">VMware deployment</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/vmware-setup.html">Set up ThoughtSpot in VMware</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/vmware-installing.html">Configure ThoughtSpot nodes in VMware</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/vmware-cluster-install.html">Install ThoughtSpot clusters in VMware</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/ports.html">Network ports</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/consumption-pricing.html">Consumption-based pricing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace.html">Embrace</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-snowflake.html">Snowflake</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-snowflake-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-snowflake-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-snowflake-best.html">Best practices</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-snowflake-reference.html">Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-snowflake-partner.html">Snowflake Partner Connect</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/embrace-snowflake-tutorial.html">Tutorials</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-redshift.html">Amazon Redshift</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-redshift-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-redshift-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-redshift-best.html">Best practices</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-redshift-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-gbq.html">Google BigQuery</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-gbq-prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-gbq-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-gbq-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-gbq-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-synapse.html">Azure Synapse</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-synapse-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-synapse-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-synapse-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-teradata.html">Teradata</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-teradata-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-teradata-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-teradata-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-hana.html">SAP HANA</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-hana-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-hana-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-hana-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/embrace-adw.html">Oracle ADW</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-adw-add.html">Add a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-adw-modify.html">Modify a connection</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/embrace-adw-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow.html">Dataflow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/dataflow-key-features.html">Key features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/dataflow-workflow.html">How DataFlow works</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/dataflow-home.html">DataFlow home page</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/dataflow-requirements-guidelines.html">Requirements and guidelines</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-databases.html">Database Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-amazon-aurora.html">Amazon Aurora in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-aurora-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-aurora-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-aurora-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-amazon-redshift.html">Amazon Redshift in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-redshift-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-redshift-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-redshift-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-azure-synapse.html">Azure Synapse in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-azure-synapse-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-azure-synapse-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-azure-synapse-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-cassandra.html">Cassandra in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-cassandra-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-cassandra-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-cassandra-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-databricks-delta-lake.html">Databricks Delta Lake in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-databricks-delta-lake-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-databricks-delta-lake-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-databricks-delta-lake-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-denodo.html">Denodo in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-denodo-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-denodo-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-denodo-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-google-bigquery.html">Google BigQuery in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-google-bigquery-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-google-bigquery-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-google-bigquery-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-hive.html">Hive in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-hive-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-hive-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-hive-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-ibm-db2.html">IBM Db2 in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-ibm-db2-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-ibm-db2-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-ibm-db2-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-jdbc.html">JDBC in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-jdbc-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-jdbc-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-jdbc-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-mariadb.html">MariaDB in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mariadb-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mariadb-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mariadb-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-mongodb.html">MongoDB in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mongodb-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mongodb-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mongodb-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-mysql.html">MySQL in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mysql-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mysql-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-mysql-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-netezza.html">Netezza in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-netezza-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-netezza-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-netezza-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-oracle.html">Oracle in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-oracle-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-oracle-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-oracle-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-postgresql.html">PostgreSQL in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-postgresql-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-postgresql-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-postgresql-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-presto.html">Presto in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-presto-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-presto-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-presto-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-sas.html">SAS in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sas-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sas-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sas-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-sap-adaptive-server-enterprise.html">SAP Adaptive Server Enterprise in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-adaptive-server-enterprise-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-adaptive-server-enterprise-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-adaptive-server-enterprise-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-sap-hana.html">SAP HANA in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-hana-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-hana-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-hana-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-sap-sql-anywhere.html">SAP SQL Anywhere in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-sql-anywhere-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-sql-anywhere-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sap-sql-anywhere-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-sql-server.html">SQL Server in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sql-server-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sql-server-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-sql-server-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-snowflake.html">Snowflake in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-snowflake-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-snowflake-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-snowflake-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-splice-machine.html">Splice Machine in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-splice-machine-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-splice-machine-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-splice-machine-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-teradata.html">Teradata in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-teradata-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-teradata-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-teradata-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-filesystems.html">File System Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-amazon-s3.html">Amazon S3 in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-s3-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-s3-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-amazon-s3-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-apache-parquet.html">Apache Parquet in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-apache-parquet-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-apache-parquet-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-apache-parquet-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-azure-blob-storage.html">Azure Blob Storage in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-azure-blob-storage-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-azure-blob-storage-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-azure-blob-storage-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-files.html">Flat Files in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-files-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-files-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-files-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-google-cloud-storage.html">Google Cloud Storage in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-google-cloud-storage-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-google-cloud-storage-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-google-cloud-storage-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-hdfs.html">HDFS in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-hdfs-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-hdfs-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-hdfs-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-applications.html">Application Connections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-salesforce.html">Salesforce in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-salesforce-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-salesforce-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-salesforce-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-rest-api.html">REST APIs in DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-rest-api-add.html">Connect</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-rest-api-sync.html">Sync</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/dataflow-rest-api-reference.html">Reference</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/dataflow-administration.html">Administration of DataFlow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/dataflow-user-management.html">Manage DataFlow users</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/dataflow-mail-setup.html">DataFlow mail setup</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-integration.html">Data Integration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/jdbc-odbc-prereqs.html">JDBC and ODBC setup prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/odbc.html">ODBC driver client</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/odbc-windows-install.html">ODBC on Windows</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/multiple-sources-windows.html">Configure multiple connections on Windows</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/windows-deploy-ssl.html">Deploy SSL with ODBC on Windows</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="docs/odbc-driver-ssis.html">Set up the ODBC Driver for SSIS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/odbc-linux-install.html">Install the ODBC Driver on Linux</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/odbc-best-practices.html">Best Practices for Using ODBC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/jdbc-driver.html">JDBC driver client</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/jdbc-driver-use.html">Use the JDBC driver</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/jdbc-pentaho.html">Set up the JDBC driver for Pentaho</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/data-integration-troubleshooting.html">Troubleshooting data integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/odbc-enable-log.html">Enable ODBC logs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#docs:jdbc-logging.adoc">Enable JDBC logs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/schema-not-found.html">Schema not found error with ODBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/throughput.html">How to improve throughput</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/windows-odbc-tracing.html">ODBC tracing on Windows</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/odbc-jdbc-sql.html">SQL commands in ODBC and JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/odbc-jdbc-configuration.html">Connection configuration for ODBC and JDBC</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/disaster-recovery.html">Disaster Recovery</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/disk-failure.html">Disk failure</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/node-failure.html">Node failure</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/ha-resilience.html">HA and resilience</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/cluster-replacement.html">Cluster replacement</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#docs:nas-mount.adoc">Mount a NAS file system</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/dr-config.html">Configure disaster recovery</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/reference.html">Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/keywords.html">Keyword reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-zh-CN.html">中文 (简体): Chinese Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-da-DK.html">Dansk: Danish Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-nl-NL.html">Nederland: Dutch Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-fi-FI.html">Suomi: Finnish Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-en-US.html">English (American) Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-fr-FR.html">Français (France): French Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-fr-CA.html">Français (Canada): French Canadian Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-de-DE.html">Deutsche: German Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-it-IT.html">Italiano: Italian Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-ja-JP.html">日本語: Japanese Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-nb-NO.html">Norsk: Norwegian Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-pt-PT.html">Português (Portugal): Portuguese Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-pt-BR.html">Português (Brasil): Portuguese Brazilian Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-es-ES.html">Español (España): Spanish Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-es-US.html">Español (Latinoamérica): Spanish Latin American Keyword reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/keywords-sv-SE.html">Svenska: Swedish Keyword reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-types.html">Data types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/public-api-reference.html">API Reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/pinboard-data-api.html">Pinboard Data API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/metadata-api.html">Metadata API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/session-api.html">Session API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/user-api.html">User API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/group-api.html">Group API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/materialization-api.html">Materialization API</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/search-data-api.html">Search Data API</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/tql-cli-commands.html">TQL reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/tql-service-api-ref.html">TQL service reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/tsload.html">tsload reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/tsload-api.html">tsload connector API reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/tsload-api-flags.html">tsload flag reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/tscli-command-ref.html">tscli command reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/data-load-date-formats.html">Date and time formats reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/rls-rule-builder-reference.html">Row level security rules reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/formula-reference.html">Formula function reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/alerts-reference.html">Alerts code reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/action-codes.html">User action code reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/stop-words.html">Stop word reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/geomap-reference.html">Geo Map reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="docs/faq.html">Frequently asked questions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/deployment-reference.html">Deployment reference</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/cable-networking.html">Cable reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/ports.html">Network ports</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/nodesconfig-example.html">The nodes.config file</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/parameters-nodesconfig.html">Parameters of the nodes.config file</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/cluster-create.html">Using the tscli cluster create command</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/parameters-cluster-create.html">Parameters of the tscli cluster create command</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="_attachments/site-survey.pdf">Site survey&nbsp;<span class="badge badge-pdf">PDF</span></a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/practice.html">ThoughtSpot in Practice</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="docs/reaggregation-scenarios.html">Reaggregation in practice</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/reaggregation-supplier-tender.html">S1: Supplier tendering by job</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/reaggregation-average-rates.html">S2: Average rates of exchange</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/reaggregation-semi-additive-1.html">S3: Average period for semi-additives I</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="docs/reaggregation-semi-additive-2.html">S3: Average period for semi-additives II</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Software</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="index.html">7.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="main-home"  data-ceiling="topbar">
+  <!--   <div class="article-header"> -->
+<!-- <button class="nav-control"></button>
+ -->
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Software</a></li>
+    <li><a href="index.html">ThoughtSpot Software Documentation</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<article class="doc-home">
+<h1 class="page">ThoughtSpot Software Documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Find topics for the common types of ThoughtSpot users below.</p>
+</div>
+</div>
+</div>
+<div class="sect1 conceal-title">
+<h2 id=""><a class="anchor" href="#"></a></h2>
+<div class="sectionbody">
+<div class="columns">
+  <div class="box">
+    <img src="_images/persona-business-user.png">
+    <h2>
+      <a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/business-user.html">Business User</a>
+    </h2>
+    <ul>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/onboarding.html">Onboarding</a></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/navigating-thoughtspot.html">Finding your way around</a></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/pinboards.html">Pinboards</a></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/search.html">Searches and answers</a></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/business-user.html">More <img src="_images/more.png" class="image-small"></a></li>
+    </ul>
+    </div>
+  <div class="box">
+    <img src="_images/persona-analyst.png">
+    <h2>
+      <a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/analyst.html">Analyst</a>
+    </h2>
+    <ul>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/pinboard-filters.html">Pinboard filters</a></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/relationship-create.html">Define table joins</a></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/worksheets.html">Create worksheets</a></li>
+    </ul>
+    </div>
+  <div class="box">
+    <img src="_images/persona-data-engineer.png">
+    <h2>
+      <a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/data-engineer.html">Data Engineer</a>
+    </h2>
+    <ul>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace.html">Embrace: connect to data</a>
+      <ul>
+        <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-snowflake.html">Snowflake</a></li>
+        <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-redshift.html">Amazon Redshift</a></li>
+        <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-gbq.html">Google BigQuery</a></li>
+        <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-synapse.html">Azure Synapse</a></li>
+        <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-teradata.html">Teradata</a></li>
+        <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-hana.html">SAP HANA</a></li>
+      </ul></li>
+      <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/dataflow.html">DataFlow: upload data</a></li>
+    </ul>
+    </div>
+ </div>
+ <!-- 2nd row of 3-column layout -->
+ <div class="columns">
+   <div class="box2">
+     <img src="_images/persona-it-ops.png">
+     <h2>
+       <a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/it-ops.html">IT and Operations
+     </h2>
+     <ul>
+       <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/admin-portal-users.html">Managing users</a></li>
+       <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/admin-portal-groups.html">Managing groups</a></li>
+       <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/customize-style.html">Customizing style</a></li>
+     </ul>
+     </div>
+     <div class="box2">
+       <img src="_images/persona-developer.png">
+       <h2>
+         <a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/developer.html">Developer</a>
+       </h2>
+       <ul>
+         <li><a href="">...</a></li>
+         <li><a href="">...</a></li>
+         <li><a href="">...</a></li>
+       </ul>
+       </div>
+   <div class="box2">
+     <img src="_images/persona-data-engineer.png">
+     <h2>
+       <a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/data-engineer.html">More...</a>
+     </h2>
+     <ul>
+         <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-synapse.html">Azure Synapse</a></li>
+         <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-teradata.html">Teradata</a></li>
+         <li><a href="https://docs-thoughtspot-com.netlify.app/software/latest/docs/embrace-hana.html">SAP HANA</a></li>
+       </ul>
+     </ul>
+     </div>
+  </div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<div id="main_footer">
+<div class="grid_container">
+<div class="blurb">
+<a href="/" class="logo" title="ThoughtSpot home page">Home Page</a>
+<p class="smallest light_grey">ThoughtSpot is the Search & AI-driven Analytics platform for the enterprise. Anyone can use search to analyze company data in seconds and get automated insights when you need them.</p>
+</div>
+<div class="footer_nav">
+<div class="nav_column">
+<h6 class="nav_title">Product</h6>
+<ul class="menu">
+<li><a href="https://www.thoughtspot.com/product"target="_blank">Product</a></li>
+<li><a href="https://www.thoughtspot.com/spotiq" target="_blank">SpotIQ</a></li>
+<li><a href="https://www.thoughtspot.com/mobile" target="_blank">Mobile</a></li>
+ <li><a href="https://www.thoughtspot.com/embedded-analytics" target="_blank">Embedded Analytics</a></li>
+<li><a href="https://www.thoughtspot.com/architecture" target="_blank">Architecture</a></li>
+<li><a href="https://www.thoughtspot.com/pricing" target="_blank">Pricing</a></li>
+</ul>
+</div>
+<div class="nav_column">
+<h6 class="nav_title">Solutions</h6>
+<ul class="menu">
+<li><a href="https://www.thoughtspot.com/solutions" target="_blank">Overview</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/retail" target="_blank">Retail</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/financial-services" target="_blank">Financial Services</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/manufacturing" target="_blank">Manufacturing</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/communications" target="_blank">Communications</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/healthcare-life-sciences" target="_blank">Healthcare</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/embedded-analytics" target="_blank">Embedded Analytics</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/procurement-analytics" target="_blank">Procurement</a></li>
+<li><a href="https://www.thoughtspot.com/solutions/government-analytics" target="_blank">Government Analytics</a></li>
+</ul>
+</div>
+<div class="nav_column">
+<h6 class="nav_title">Resources</h6>
+<ul class="menu">
+<li><a href="https://www.thoughtspot.com/resources" target="_blank">Overview</a></li>
+<li><a href="https://www.thoughtspot.com/resources/demo-video" target="_blank">Demo Videos</a></li>
+<li><a href="https://www.thoughtspot.com/resources/analyst-report" target="_blank">Analyst Reports</a></li>
+<li><a href="https://www.thoughtspot.com/resources/webinar" target="_blank">Webinars</a></li>
+<li><a href="https://www.thoughtspot.com/resources/case-study" target="_blank">Case Studies</a></li>
+<li><a href="https://www.thoughtspot.com/resources/white-paper" target="_blank">White Papers</a></li>
+<li><a href="https://www.thoughtspot.com/resources/datasheet" target="_blank">Datasheets</a></li>
+<li><a href="https://www.thoughtspot.com/resources/solution-brief" target="_blank">Solution Briefs</a></li>
+</ul>
+</div>
+<div class="nav_column">
+<h6 class="nav_title">About Us</h6>
+<ul class="menu">
+<li><a href="https://www.thoughtspot.com/team" target="_blank">Team</a></li>
+<li><a href="https://www.thoughtspot.com/customers" target="_blank">Customers</a></li>
+<li><a href="https://www.thoughtspot.com/atlas-marketplace" target="_blank">Atlas Marketplace</a></li>
+<li><a href="https://www.thoughtspot.com/partners" target="_blank">Partner Directory</a></li>
+<li><a href="https://www.thoughtspot.com/events" target="_blank">Events</a></li>
+<li><a href="https://www.thoughtspot.com/news" target="_blank">News</a></li>
+<li><a href="https://www.thoughtspot.com/careers" target="_blank">Careers</a></li>
+<li><a href="https://www.thoughtspot.com/blog" target="_blank">Blog</a></li>
+<li><a href="https://www.thoughtspot.com/legal" target="_blank">Legal</a></li>
+</ul>
+</div>
+<div class="nav_column">
+<h6 class="nav_title">Connect</h6>
+<ul class="connect">
+<li><a href="/demo">Request Demo</a></li>
+<li><a href="https://community.thoughtspot.com/" target="_blank">Community</a></li>
+<li><a href="https://www.thoughtspot.com/support" target="_blank">Support</a></li>
+<li><a href="https://www.thoughtspot.com/contact" target="_blank">Contact Us</a></li>
+</ul>
+</div>
+<div class="nav_column mobile_only">
+<div class="contact_and_share">
+<p class="collapse"><a href="tel:8005087008" title="Call ThoughtSpot">(800) 508-7008</a></p>
+<span itemscope itemtype="http://schema.org/Organization">
+<a itemprop="sameAs" href="https://twitter.com/thoughtspot" target="_blank" title="Thoughtspot on Twitter" class="share twitter"><span class="screenreader_only">Thoughtspot on Twitter</span></a>
+<a itemprop="sameAs" href="https://www.facebook.com/ThoughtSpot" target="_blank" title="Thoughtspot on Facebook" class="share facebook"><span class="screenreader_only">Thoughtspot on Facebook</span></a>
+<a itemprop="sameAs" href="https://www.linkedin.com/company/thoughtspot" target="_blank" title="Thoughtspot on LinkedIn" class="share linkedin"><span class="screenreader_only">Thoughtspot on LinkedIn</span></a>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid_container">
+<div class="stay_in_touch">
+<!-- <p class="white collapse smallest">Stay in Touch</p>
+<p class="light_grey collapse smallest">Get the latest from ThoughtSpot</p>
+
+<iframe title="Form iframe" class="pardot_iframe" src="https://go.thoughtspot.com/l/710713/2019-04-23/6skk?lang=en&success_redirect=https%3A%2F%2Fgo.thoughtspot.com%2Fsubscribe-thank-you.html" width="450" height="110"></iframe> -->
+</div>
+<div class="contact_and_share desktop_only">
+<p class="collapse"><a href="tel:8005087008" title="Call ThoughtSpot">(800) 508-7008</a></p>
+<span itemscope itemtype="http://schema.org/Organization">
+<a itemprop="sameAs" href="https://twitter.com/thoughtspot" target="_blank" title="Thoughtspot on Twitter" class="share twitter"><span class="screenreader_only">Thoughtspot on Twitter</span></a>
+<a itemprop="sameAs" href="https://www.facebook.com/ThoughtSpot" target="_blank" title="Thoughtspot on Facebook" class="share facebook"><span class="screenreader_only">Thoughtspot on Facebook</span></a>
+<a itemprop="sameAs" href="https://www.linkedin.com/company/thoughtspot" target="_blank" title="Thoughtspot on LinkedIn" class="share linkedin"><span class="screenreader_only">Thoughtspot on LinkedIn</span></a>
+</span>
+</div>
+</div>
+<div class="ultima_footer grid_container">
+&copy;2021 ThoughtSpot Inc.<br class="mobile_only"> All Rights Reserved <br class="mobile_only">
+<a href="https://www.thoughtspot.com/terms-of-use" target="_blank">Terms of Use</a> <a href="https://www.thoughtspot.com/privacy" target="_blank">Privacy Statement</a>
+<a href="https://www.thoughtspot.com/cookies-policy" target="_blank">Cookie Policy</a>
+</div>
+</div>
+</div>
+<script>var vanillaModal = new VanillaModal.default()</script>
+<!-- old footer
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <span>&copy;2021 ThoughtSpot, Inc. All rights reserved.</span>
+  </div>
+ </div>
+</footer> -->
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/jquery.js"></script>
+<script src="../../_/js/vendor/bootstrap.js"></script>
+<script src="../../_/js/vendor/tab.js"></script>
+<!--<script async src="../../_/js/vendor/docsearch.min.js"></script>-->
+<!--  <script src="../../_/js/vendor/tippy.js"></script>-->
+<!-- <script async src="../../_/js/vendor/popper.js"></script>-->
+
+<!--<script src="https://unpkg.com/@popperjs/core@2"></script>-->
+<!--<script src="https://unpkg.com/tippy.js@6"></script>-->
+<!-- <script>
+tippy('button', {content: 'tooltip'});
+</script>
+<script>
+// IIFE to ensure safe use of $
+(function( $ ) {
+
+  // Create plugin
+  $.fn.tooltips = function(el) {
+
+    var $tooltip,
+      $body = $('body'),
+      $el;
+
+    // Ensure chaining works
+    return this.each(function(i, el) {
+
+      $el = $(el).attr("data-tooltip", i);
+
+      // Make DIV and append to page
+      var $tooltip = $('<div class="tooltip" data-tooltip="' + i + '">' + $el.attr('title') + '<div class="arrow"></div></div>').appendTo("body");
+
+      // Position right away, so first appearance is smooth
+      var linkPosition = $el.position();
+
+      $tooltip.css({
+        top: linkPosition.top - $tooltip.outerHeight() - 13,
+        left: linkPosition.left - ($tooltip.width()/2)
+      });
+
+      $el
+      // Get rid of yellow box popup
+      .removeAttr("title")
+
+      // Mouseenter
+      .hover(function() {
+
+        $el = $(this);
+
+        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']');
+
+        // Reposition tooltip, in case of page movement e.g. screen resize
+        var linkPosition = $el.position();
+
+        $tooltip.css({
+          top: linkPosition.top - $tooltip.outerHeight() - 13,
+          left: linkPosition.left - ($tooltip.width()/2)
+        });
+
+        // Adding class handles animation through CSS
+        $tooltip.addClass("active");
+
+        // Mouseleave
+      }, function() {
+
+        $el = $(this);
+
+        // Temporary class for same-direction fadeout
+        $tooltip = $('div[data-tooltip=' + $el.data('tooltip') + ']').addClass("out");
+
+        // Remove all classes
+        setTimeout(function() {
+          $tooltip.removeClass("active").removeClass("out");
+          }, 300);
+
+        });
+
+      });
+
+    }
+
+})(jQuery);
+
+$("a[title]").tooltips();
+</script> -->
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
+<!-- old search snippet - begin <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+function focusSearchInput () { document.querySelector('#input').focus() }
+var search = docsearch({
+  appId: '7DXYLT633X',
+  apiKey: 'f2070e11a04d7c9e7487102e4a68ea1a',
+  indexName: 'search-manager',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: {
+    facetFilters: [['version:latest', 'version:6.2', 'version:6.1', 'version:6.0']],
+  }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+focusSearchInput()
+window.addEventListener('load', focusSearchInput)
+</script>-->
+
+<!-- old search snippet - end -->
+<!-- docsearch snippet - begin -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> -->
+ <!-- <script>
+  docsearch({
+    // Your apiKey and indexName will be given to you once
+    // we create your config
+    apiKey: 'f2070e11a04d7c9e7487102e4a68ea1a',
+    indexName: 'search-manager',
+    appId: '7DXYLT633X', // Should be only included if you are running DocSearch on your own.
+    // Replace inputSelector with a CSS selector
+    // matching your search input
+    // Set debug to true to inspect the dropdown
+    debug: true,
+    inputSelector: '#search-input',
+    autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+    algoliaOptions: {
+      facetFilters: [['version:latest', 'version:6.2', 'version:6.1', 'version:6.0']],
+  },
+  });
+</script> -->
+<!-- docsearch snippet - end -->
+
+<!--- new fixed docsearch snippet - begin
+
+<script>
+function focusSearchInput () { document.querySelector('#search-input').focus() }
+var search = docsearch({
+  appId: '7DXYLT633X',
+  apiKey: 'f2070e11a04d7c9e7487102e4a68ea1a',
+  indexName: 'search-manager',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: {
+    facetFilters: [['version:latest', 'version:6.2', 'version:6.1', 'version:6.0']],
+  }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+focusSearchInput()
+window.addEventListener('load', focusSearchInput)
+</script>
+
+<script async id="search-script" src="../../_/js/vendor/docsearch.js" data-app-id="7DXYLT633X" data-api-key="f2070e11a04d7c9e7487102e4a68ea1a" data-index-name="search-manager" data-stylesheet="../../_/css/vendor/docsearch.css"></script>
+
+new fixed docsearch snippet - end -->
+
+<!-- yet another attempt - begin
+
+<script>
+function focusSearchInput () { document.querySelector('#search-input').focus() }
+var search = docsearch({
+  appId: '7DXYLT633X',
+  apiKey: 'eb713b359b0ea12251c4c8627758d26d',
+  indexName: 'search-manager',
+  inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
+  algoliaOptions: {
+    facetFilters: [['version:latest', 'version:6.2', 'version:6.1', 'version:6.0']],
+  }
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
+focusSearchInput()
+window.addEventListener('load', focusSearchInput)
+</script>
+-->
+<script async id="search-script" src="../../_/js/vendor/docsearch.js" data-app-id="7DXYLT633X" data-api-key="eb713b359b0ea12251c4c8627758d26d" data-index-name="search-manager" data-stylesheet="../../_/css/vendor/docsearch.css"></script>
+
+<!-- yet another attempt - end -->
+  </body>
+</html>
