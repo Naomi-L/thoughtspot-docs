@@ -3,4 +3,8 @@
 
 ThoughtSpot integrates with SAML for authentication.
 
+You can use ThoughtSpot's integration with SAML for user authentication. By default, xref:authentication-local.adoc[local authentication] is enabled. You can also configure a SAML integration with an external Identity Provider (IdP), allowing your ThoughtSpot users to log in using one of the supported Identity Providers.
+
+Popular Identity Providers that ThoughtSpot supports include https://developer.okta.com/docs/guides/build-sso-integration/saml2/overview/[Okta], https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-saml2-settings-azure-ad[Azure Active Directory], https://docs.pingidentity.com/bundle/solution-guides/page/ozz1597769517562.html[PingFederate], https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-saml2-settings[Microsoft AD FS], and https://developers.onelogin.com/quickstart/saml[Onelogin]. This is not an exhaustive list. To determine if ThoughtSpot supports your preferred IdP, talk to your ThoughtSpot contact. Refer to your Identity Provider’s SAML documentation for specific information on setting up SAML with that IdP.
+
 include::partial$authentication-saml.adoc[]
