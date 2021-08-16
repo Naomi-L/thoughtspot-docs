@@ -2,7 +2,7 @@
 :last_updated: 06/22/2021
 :experimental:
 :linkattrs:
-:page_aliases: /end-user/search/about-column-charts.adoc#stacked-columns
+:page_aliases: /end-user/search/about-column-charts.adoc
 
 The stacked column chart is similar to the xref:docs:chart-column.adoc[column chart], but with one major difference.
 It includes a legend, which divides each column into additional sections, by color.
