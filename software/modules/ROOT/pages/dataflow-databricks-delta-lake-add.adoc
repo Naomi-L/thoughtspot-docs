@@ -1,4 +1,4 @@
-= Add a Databricks Delta Lake connection
+= Add a Databricks Delta Lake DataFlow connection
 :last_updated: 9/14/2020
 :page-aliases: /data-integrate/dataflow/dataflow-databricks-delta-lake-add.adoc
 :linkattrs:
@@ -16,10 +16,10 @@ include::partial$add-database-connection.adoc[]
 Name your connection.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-connection-type[Connection type]
 +
-Choose the Azure Dtabricks connection type.
+Choose the Azure Databricks connection type.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-server-hostname-[Server Hostname]
 +
-Specify the hostname of the Databricks server
+Specify the hostname of the Databricks server.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-port[Port]
 +
 Specify the port associated with the system.
@@ -28,16 +28,16 @@ Specify the port associated with the system.
 Specify the HTTP Path.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-protocol[Protocol]
 +
-Specify the remote server connection
+Specify the remote server connection.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-cluster-id[Cluster id]
 +
-Specify the canonical identifier for the cluster
+Specify the canonical identifier for the cluster.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-access-token[Access token]
 +
 Specify the access token to authenticate Databricks API.
 ** xref:dataflow-databricks-delta-lake-reference.adoc#dataflow-databricks-delta-lake-conn-dbfs-stage-location[DBFS stage location]
 +
-Specify the mount storage object location
+Specify the mount storage object location.
 +
 See xref:dataflow-databricks-delta-lake-reference.adoc#connection-properties[Connection properties] for details, defaults, and examples.
 . Click *Create connection*.
