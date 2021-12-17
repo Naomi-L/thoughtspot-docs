@@ -1,4 +1,4 @@
-= Google BigQuery connection reference
+= Google BigQuery DataFlow connection reference
 :last_updated: 07/03/2020
 :experimental:
 :linkattrs:
@@ -29,7 +29,7 @@ Valid Values:;; INTERACTIVE, BATCH
 Default:;; BATCH
 Other notes:;; In *Advanced configuration*
 [#dataflow-google-bigquery-conn-use-proxy]
-Use proxy:: If required, to use a proxy, select the check box. Use Proxy and provide the details Optional field.
+Use proxy:: If required, to use a proxy, select the check box Use Proxy and provide the details. Optional field.
 Other notes:;; In *Advanced configuration*
 [#dataflow-google-bigquery-conn-host]
 Host:: Specify the hostname or the IP address of the BigQuery system.
