@@ -1,4 +1,4 @@
-= Add an Amazon Redshift database connection
+= Add an Amazon Redshift DataFlow connection
 :last_updated: 02/19/2021
 :linkattrs:
 :experimental:
@@ -16,8 +16,8 @@ See xref:dataflow-amazon-redshift-reference.adoc#connection-properties[Connectio
 
 xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-connection-name[Connection name]::  Name your connection.
 xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-connection-type[Connection type]::  Choose the Amazon Redshsift connection type.
-xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-host[Host]::  Specify the hostname or the IP address of the Redshift system
-xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-port[Port]::  Specify the port associated to the Redshift system
+xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-host[Host]::  Specify the hostname or the IP address of the Redshift system.
+xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-port[Port]::  Specify the port associated to the Redshift system.
 xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-user[User]::  Specify the user to connect to Amazon Redshift.
 This user must have data access privileges.
 xref:dataflow-amazon-redshift-reference.adoc#dataflow-amazon-redshift-conn-password[Password]::  Specify the password for the User.

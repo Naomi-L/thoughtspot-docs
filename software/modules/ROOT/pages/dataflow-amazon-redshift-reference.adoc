@@ -1,4 +1,4 @@
-= Amazon Redshift connection reference
+= Amazon Redshift DataFlow connection reference
 :last_updated: 06/19/2020
 :experimental:
 :linkattrs:
@@ -22,7 +22,7 @@ Example:;; Amazon Redshift
 Host:: Specify the hostname or the IP address of the Redshift system. Mandatory field.
 Example:;; example.com
 [#dataflow-amazon-redshift-conn-port]
-Port:: Specify the port associated to the Redshift system Mandatory field.
+Port:: Specify the port associated to the Redshift system. Mandatory field.
 Example:;; 1234
 Default:;; 5439
 [#dataflow-amazon-redshift-conn-user]
