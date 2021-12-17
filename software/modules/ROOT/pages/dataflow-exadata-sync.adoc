@@ -1,4 +1,4 @@
-= Sync data through an Exadata connection
+= Sync data through an Exadata DataFlow connection
 :last_updated: 3/22/2021
 :page-aliases: /data-integrate/dataflow/dataflow-exadata-sync.adoc
 :experimental:
