@@ -1,4 +1,4 @@
-= Hive connection reference
+= Hive DataFlow connection reference
 :last_updated: 06/19/2020
 :experimental:
 :linkattrs:
@@ -193,7 +193,7 @@ Example:;; example.example.com
 Default realm:: A Kerberos realm is the domain over which a Kerberos authentication server has the authority to authenticate a user, host or service (Configured from Kerberos configuration-/etc/krb5.conf). Mandatory field.
 Example:;; labhdp.example.com
 [#dataflow-hive-conn-queue-name]
-Queue name:: Specify the queue name followed by a coma separated form in yarn.scheduler.capacity.root.queues.
+Queue name:: Specify the queue name followed by a comma separated form in yarn.scheduler.capacity.root.queues.
 Mandatory field. +
  For Hadoop Extract only.
  Example:;; default

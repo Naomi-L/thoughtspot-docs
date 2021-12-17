@@ -1,4 +1,4 @@
-= Add a Hive database connection
+= Add a Hive DataFlow connection
 :last_updated: 7/6/2020
 :experimental:
 :linkattrs:
@@ -27,7 +27,7 @@ See xref:dataflow-hive-reference.adoc#connection-properties[Connection propertie
 This is the default value.
 Only when using Hiveserver2 HA.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-host[Host] +
-  Specify the hostname or the IP address of the Hadoop system Only when _not_ using Hiveserver2 HA.
+  Specify the hostname or the IP address of the Hadoop system. Only when _not_ using Hiveserver2 HA.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-port[Port] +
   Specify the port.
 Only when _not_ using Hiveserver2 HA.
@@ -42,13 +42,13 @@ This user must have data access privileges.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-trust-store[Trust store] +
   Specify the trust store name for authentication. For SSL and Kerberos authentication only.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-trust-store-password[Trust store password] +
-  Specify the password for the trust store For SSL and Kerberos authentication only.
+  Specify the password for the trust store. For SSL and Kerberos authentication only.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-hive-transport-mode[Hive transport mode] +
   Applicable only for hive process engine.
 This specifies the network protocol used for communicating between hive nodes.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-http-path[HTTP path] +
   This is specified as an option when http transport mode is selected. For HTTP transport mode only.
- ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-hadoop-distribution-[Hadoop distribution] +
+ ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-hadoop-distribution[Hadoop distribution] +
   Provide the Hadoop distribution of the connection.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-distribution-version[Distribution version] +
   Provide the version of the Hadoop distribution.
@@ -94,7 +94,7 @@ Define as `dfs.namenode.rpc-address.dfs.nameservices.name node ID 2`.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-default-realm[Default realm] +
   A Kerberos realm is the domain over which a Kerberos authentication server has the authority to authenticate a user, host or service (Configured from Kerberos configuration-/etc/krb5.conf).
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-queue-name[Queue name] +
-  Specify the queue name followed by a coma separated form in yarn.scheduler.capacity.root.queues.
+  Specify the queue name followed by a comma separated form in yarn.scheduler.capacity.root.queues.
 For Hadoop Extract only.
  ** xref:dataflow-hive-reference.adoc#dataflow-hive-conn-yarn-web-ui-port[YARN web UI port] +
   Yarn Providing web UI for yarn RM and by default 8088 in use. For Hadoop Extract only.
