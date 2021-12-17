@@ -53,7 +53,7 @@ For this example, our data is in the format "%d/%m/%Y %H:%M", or "13/05/2021 10:
 . Specify the datetime format as follows: +
 Date style::: "DMY"
 Date delimiter::: "/"
-Time style::::: "24HOUR"
+Time style::: "24HOUR"
 Time delimiter::: ":"
 . To override the default datetime format, "%H:%M:%S", enter `--date_time_format '%d/%m/%Y %H:%M'` under *tsload options*.
 . Click *Save*.
