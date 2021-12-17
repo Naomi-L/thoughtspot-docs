@@ -18,22 +18,22 @@ Example:;; GreenplumConnection
 Connection type:: Choose the Greenplum connection type. Mandatory field.
 Example:;; Greenplum
 [#dataflow-greenplum-conn-host]
-Host:: Specify the hostname or the IP address of the Greenplum system Mandatory field.
+Host:: Specify the hostname or the IP address of the Greenplum system. Mandatory field.
 Example:;; www.example.com
 [#dataflow-greenplum-conn-port]
-Port:: Specify the port associated to the Greenplum system Mandatory field.
+Port:: Specify the port associated to the Greenplum system. Mandatory field.
 Example:;; 1234
 [#dataflow-greenplum-conn-user]
-User:: Specify the user id that will be used to connect to the Greenplum system.This user should have necessary privileges to access the data in the databases. Mandatory field.
+User:: Specify the user id that will be used to connect to the Greenplum system. This user should have necessary privileges to access the data in the databases. Mandatory field.
 Example:;;  userdi
 [#dataflow-greenplum-conn-password]
-Password:::: Specify the password for the User Mandatory field.
+Password:::: Specify the password for the User. Mandatory field.
 Example:;;  pswrd234%!
 [#dataflow-greenplum-conn-database]
 Database:: Collection of information that is organized so that it can be easily accessed, managed and updated. Mandatory field.
 Example:;;  ditform
 [#dataflow-greenplum-conn-version]
-Version:: Specify the Greenplum version being connected to Optional field.
+Version:: Specify the Greenplum version being connected to. Optional field.
 Example:;; 4.x
 Other notes:;; Advanced configuration
 [#dataflow-greenplum-conn-jdbc-options]
@@ -54,7 +54,7 @@ Example:;; 1
 Valid Values:;; Any printable ASCII character or decimal value for ASCII character
 Default:;; 1
 [#dataflow-greenplum-sync-null-value]
-Null Value:: Specifies the string literal that should indicate the null value in the extracted data.During the data load the column value matching this string will be loaded as null in the target. Optional field.
+Null Value:: Specifies the string literal that should indicate the null value in the extracted data. During the data load the column value matching this string will be loaded as null in the target. Optional field.
 Example:;; NULL
 Valid Values:;; Any string literal
 Default:;; NULL
@@ -71,7 +71,7 @@ Valid Values:;; SINGLE, DOUBLE
 Default:;; DOUBLE
 Other notes:;; This is required if the text data has newline character or delimiter character
 [#dataflow-greenplum-sync-max-ignored-rows]
-Max ignored rows:: Abort the transaction after encountering 'n' ignored rows Optional field.
+Max ignored rows:: Abort the transaction after encountering 'n' ignored rows. Optional field.
 Default:;; 0
 [#dataflow-greenplum-sync-ts-load-options]
 TS load options:: Specifies the parameters passed with the `tsload` command, in addition to the commands already included by the application. The format for these parameters is:
@@ -87,6 +87,7 @@ Default:;; --max_ignored_rows 0
 
 Reference:;; xref:tsload-api-flags.adoc[]
 
-== Related Information
-
-xref:dataflow-tips.adoc[Dataflow tips]
+'''
+> **Related Information**
+> 
+> * xref:dataflow-tips.adoc[Dataflow tips]

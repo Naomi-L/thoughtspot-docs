@@ -1,4 +1,4 @@
-= Add a Greenplum database connection
+= Add a Greenplum DataFlow connection
 :last_updated: 3/22/2021
 :page-aliases: /data-integrate/dataflow/dataflow-greenplum-add.adoc
 :linkattrs:
@@ -19,25 +19,25 @@ Name your connection.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-connection-type[Connection type]::
 Choose the Greenplum connection type.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-host[Host]::
-Specify the hostname or the IP address of the Greenplum system
+Specify the hostname or the IP address of the Greenplum system.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-port[Port]::
-Specify the port associated to the Greenplum system
+Specify the port associated to the Greenplum system.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-user[User]::
 Specify the user id that will be used to connect to the Greenplum system.
 This user should have necessary privileges to access the data in the databases.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-password[Password]::
-Specify the password for the User
+Specify the password for the User.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-database[Database]::
 Collection of information that is organized so that it can be easily accessed, managed and updated.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-version[Version]::
-Specify the Greenplum version being connected to
+Specify the Greenplum version being connected to.
 xref:dataflow-greenplum-reference.adoc#dataflow-greenplum-conn-jdbc-options[JDBC options]::
 Specify the options associated with the JDBC URL.
 +
 
 . Click *Create connection*.
 
-'''
+c
 > **Related information**
 >
 > * xref:dataflow-greenplum-reference.adoc#connection-properties[DataFlow greenplum connection properties]
