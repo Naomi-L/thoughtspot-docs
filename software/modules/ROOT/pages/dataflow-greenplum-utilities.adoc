@@ -1,4 +1,4 @@
-= Using Greenplum utilities
+= Using Greenplum utilities in DataFlow
 :last_updated: 03/23/2021
 :page-aliases: /data-integrate/dataflow/dataflow-greenplum-utilities.adoc
 :experimental:
