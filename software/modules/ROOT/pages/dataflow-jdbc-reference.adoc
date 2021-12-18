@@ -1,4 +1,4 @@
-= JDBC connection reference
+= JDBC DataFlow connection reference
 :last_updated: 11/25/2020
 :experimental:
 :linkattrs:
@@ -36,7 +36,7 @@ Optional field. +
  Select the check-box to encrypt the details.
 [#dataflow-jdbc-conn-schema-object-name-enclosing-character]
 Schema object name enclosing character:: Specify the schema object name enclosing character. Optional field.
-Default:;;
+Default:;;  "
 Other notes:;; Advanced configuration
 
 [#sync-properties]
