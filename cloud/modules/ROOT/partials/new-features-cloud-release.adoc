@@ -41,7 +41,7 @@ ThoughtSpot now supports scheduled alerts for changes in Key Performance Indicat
 
 [#chart-kpi]
 KPI chart type::
-You can now create visualizations of your data’s Key Performance Indicators (KPIs). For more information, see xref:chart-kpi.adoc[]
+You can now create visualizations of your data’s Key Performance Indicators (KPIs). ThoughtSpot automatically selects the KPI chart type when you search a single measure in your data. Use conditional formatting to show and hide data labels, or adjust the colors to indicate positive and negative changes. For more information, see xref:chart-kpi.adoc[].
 
 [#workspace-one]
 Support for VMware Workspace One::
