@@ -1,5 +1,5 @@
 = Basic Liveboard usage
-:last_updated: 5/10/2022
+:last_updated: 5/16/2022
 :linkattrs:
 :page-partial:
 :page-aliases: pinboards.adoc
@@ -41,7 +41,7 @@ To add an Answer to a Liveboard:
 +
 image::add_to_pinboard.png[]
 
-. In the *Add to Liveboard* dialog box, click the *+* icons next to the Liveboards where you plan to add your Answer.
+. In the *Pin to Liveboard* dialog box, click the *+* icons next to the Liveboards where you plan to add your Answer.
 +
 image::copy_to_pinboard.png[]
 +
