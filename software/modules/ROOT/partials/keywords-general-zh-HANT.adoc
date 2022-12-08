@@ -21,3 +21,6 @@ include::partial$keywords/sort_by.adoc[]
 include::partial$keywords/by.adoc[]
 中文 (繁體);; 通過 +
 被
+
+include::partial$keywords/for-each.adoc[]
+中文 (繁體);; 為每個

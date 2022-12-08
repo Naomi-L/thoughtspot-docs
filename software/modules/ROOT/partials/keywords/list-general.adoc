@@ -4,3 +4,4 @@
 * xref:bottom-n[bottom n]
 * xref:sort-by[sort by]
 * xref:by[by <measure>]
+* xref:for-each[for each]
