@@ -1,7 +1,0 @@
-[#for-each]
-for each:: Used to specify an attribute by which to break down the search.
-Examples;;
-+
-----
-sales for each year
-----

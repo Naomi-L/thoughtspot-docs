@@ -14,4 +14,3 @@ include::partial$keywords/sort_by.adoc[]
 
 include::partial$keywords/by.adoc[]
 
-include::partial$keywords/for-each.adoc[]
