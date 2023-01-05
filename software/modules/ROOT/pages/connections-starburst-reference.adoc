@@ -24,7 +24,7 @@ Port:: Enter the port number associated with the database.
 [#user-id]
 User::  Enter the user associated with the database.
 [#password]
-Password::  Enter the password of the user.
+Password::  Enter the password of the user. Note that SSL must be enabled for password authentication. To enable SSL, enter "SSL=true" under Advanced Configuration.
 [#database]
 Database::
 Enter the name of the database associated with the account. _(Optional)_
