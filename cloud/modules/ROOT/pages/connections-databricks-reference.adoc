@@ -25,7 +25,7 @@ User::: Email address associated with your {connection} account. Username and pa
 When using a link:https://docs.databricks.com/en/integrations/jdbc/authentication.html#databricks-personal-access-token[Personal Access Token] as a password, enter the User as 'Token'.
 Password::: Specify the password of the {connection} account. You can also use your '`personal access token`' generated in {connection}. For more information, see link:https://docs.microsoft.com/en-us/azure/databricks/dev-tools/api/latest/authentication#--generate-a-personal-access-token[Generate a personal access token^].
 link:https://docs.databricks.com/en/integrations/enable-disable-oauth.html#enable-custom-app-ui[OAuth]::
-OAuth Client ID::: Specify the OAuth client ID.
+xref:connections-databricks-oauth.adoc[OAuth Client ID]::: Specify the OAuth client ID.
 OAuth Client Secret::: Specify the OAuth client secret.
 Scope::: Specify the scope.
 Auth Url::: Specify the auth url.
@@ -49,7 +49,7 @@ When using a link:https://docs.databricks.com/en/integrations/jdbc/authenticatio
 Password::: Enter your '`personal access token`' generated in {connection}.
 This is not the password for your Azure account. For more information, see link:https://docs.microsoft.com/en-us/azure/databricks/dev-tools/api/latest/authentication#--generate-a-personal-access-token[Generate a personal access token^].
 OAuth::
-OAuth Client ID::: Specify the OAuth client ID.
+xref:connections-databricks-oauth.adoc[OAuth Client ID]::: Specify the OAuth client ID.
 OAuth Client Secret::: Specify the OAuth client secret.
 Scope::: Specify the scope.
 Auth Url::: Specify the auth url.
