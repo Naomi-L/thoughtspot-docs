@@ -249,10 +249,20 @@ ThoughtSpot introduces custom sorting of attributes to sort all chart types in a
 
 image::custom-sort-order.png[Custom Sorting]
 For more information about how to configure a custom sort order, see
+ifndef::pendo-links[]
 xref:worksheet-custom-sort.adoc[Define a custom sort order for a Worksheet].
+endif::[]
+ifdef::pendo-links[]
+xref:worksheet-custom-sort.adoc[Define a custom sort order for a Worksheet,window=_blank].
+endif::[]
 
 For more information about how to use custom sorting, see
+ifndef::pendo-links[]
 xref:chart-table-change.adoc#custom-sort[Custom Sort].
+endif::[]
+ifdef::pendo-links[]
+xref:chart-table-change.adoc#custom-sort[Custom Sort,window=_blank].
+endif::[]
 // Mary - SCAL-156895
 
 endif::free-trial-feature[]
@@ -385,7 +395,13 @@ If you do not have a valid OAuth access token, you can now directly navigate to 
 
 // Naomi-- scal-187049
 
-In accordance with link:https://community.snowflake.com/s/article/Behaviour-Change-Release-information-associated-with-Snowflake-JDBC-driver-version-3-13-25#:~:text=This%20change%20was%20made%20to,my_account.snowflakecomputing.com[Snowflake's recent JDBC update], ThoughtSpot does not support Snowflake account names that contain underscores for connections that use Private Link. For more information on how to adjust your account name behavior to avoid this restriction, see xref:connections-snowflake-private-link.adoc#account-name[Snowflake Private Link].
+In accordance with link:https://community.snowflake.com/s/article/Behaviour-Change-Release-information-associated-with-Snowflake-JDBC-driver-version-3-13-25#:~:text=This%20change%20was%20made%20to,my_account.snowflakecomputing.com[Snowflake's recent JDBC update], ThoughtSpot does not support Snowflake account names that contain underscores for connections that use Private Link. For more information on how to adjust your account name behavior to avoid this restriction, see
+ifndef::pendo-links[]
+xref:connections-snowflake-private-link.adoc#account-name[Snowflake Private Link].
+endif::[]
+ifdef::pendo-links[]
+xref:connections-snowflake-private-link.adoc#account-name[Snowflake Private Link,window=_blank].
+endif::[]
 
 ////
 [#9-8-0-cl-IAM]
