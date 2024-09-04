@@ -7,7 +7,7 @@
 :path: /articles/parameters
 :popular: true
 :versions: ["business"]
-:brand: Analyst Studio
+:product: Analyst Studio
 
 [#overview]
 == Overview
@@ -15,7 +15,7 @@
 Use Parameters to make Reports more scalable, re-usable, and interactive by allowing viewers to modify the data returned by a Report without modifying its code.
 
 Parameters are defined and configured using the link:http://liquidmarkup.org/[Liquid template language,window=_blank], and a single Report can accept input from multiple parameters at once.
-{brand} reports offer four different kinds of Parameters:
+{product} reports offer four different kinds of Parameters:
 
 * {blank}<<select,**Select**>>
 * {blank}<<multiselect,**Multiselect**>>
@@ -24,9 +24,9 @@ Parameters are defined and configured using the link:http://liquidmarkup.org/[Li
 
 When you <<defining-parameters,define a Parameter>> in a Report's code and subsequently run the Report, a form is automatically added to the top of the Report that report viewers can use to modify the Parameter's value.
 
-You can include Parameter values in a Report's xref:report-layout-and-presentation.adoc#url-query-string[URL query string] and {brand} will return the Report's output using those values.
+You can include Parameter values in a Report's xref:report-layout-and-presentation.adoc#url-query-string[URL query string] and {product} will return the Report's output using those values.
 
-NOTE: Parameters are a powerful feature that, by design, allow {brand} users to run arbitrary SQL against a database. It is the responsibility of Workspace administrators to ensure that only authorized users are allowed to query the underlying database via the parameters feature.
+NOTE: Parameters are a powerful feature that, by design, allow {product} users to run arbitrary SQL against a database. It is the responsibility of Workspace administrators to ensure that only authorized users are allowed to query the underlying database via the parameters feature.
 
 == Getting started
 
@@ -36,7 +36,7 @@ There are two primary steps to implementing a parameter:
 For readability, we suggest you place this code below your SQL code.
 
 *Reference parameters in your SQL code* - Insert one or more references to each parameter into your SQL code using Liquid object tags (for example, `{{ parameter_name }}`).
-At run time, {brand} replaces each object reference in your SQL code with the corresponding Parameter's input value before sending the code to your database for execution.
+At run time, {product} replaces each object reference in your SQL code with the corresponding Parameter's input value before sending the code to your database for execution.
 
 Let's walk through a simple example.
 link:https://app.mode.com/tutorial/reports/f14811830f89?param_acquired_year=2013[This Report,window=_blank] takes input from one Parameter and displays companies in the link:https://www.crunchbase.com/[Crunchbase,window=_blank] database that were acquired that year:
@@ -64,7 +64,7 @@ acquired_year:
 
 This code produces a single text box parameter titled "Acquired Year" with a default value of "2013".
 Whenever the Report is run, the exact set of characters entered into this text box will be substituted directly into all report SQL code wherever `{{ acquired_year }}` is written.
-Un-check the box next to *Show parameter template code* and you'll see the code that was actually executed against the database, after {brand} evaluated all the Liquid code and the parameter's value was substituted into the WHERE clause for `{{ acquired_year }}`.
+Un-check the box next to *Show parameter template code* and you'll see the code that was actually executed against the database, after {product} evaluated all the Liquid code and the parameter's value was substituted into the WHERE clause for `{{ acquired_year }}`.
 
 *Query as written:*
 
@@ -170,11 +170,11 @@ Because Multiselect Parameters can return zero, one, or many values, you'll want
 [discrete]
 ===== The optional `input_type` property
 
-When you define a Multiselect Parameter, you can use the optional `input_type` property to tell {brand} how to format the expression list that the Parameter returns.
+When you define a Multiselect Parameter, you can use the optional `input_type` property to tell {product} how to format the expression list that the Parameter returns.
 Acceptable values are `input_type: string` and `input_type: number`.
 If the `input_type` property is not explicitly defined, the default value is `string`.
 
-This property is most commonly used when the Multiselect Parameter's acceptable inputs are numbers, rather than strings, and you want {brand} to render the Parameter's input as a list of numbers that are not wrapped in single quotes.
+This property is most commonly used when the Multiselect Parameter's acceptable inputs are numbers, rather than strings, and you want {product} to render the Parameter's input as a list of numbers that are not wrapped in single quotes.
 
 For example, suppose the parameter `election_district` is defined as follows:
 
@@ -190,7 +190,7 @@ election_district:
 {% endform %}
 ----
 
-Adding the `input_type` property to the definition influences how {brand} evaluates `{{ election_district }}` references in code in the following ways:
+Adding the `input_type` property to the definition influences how {product} evaluates `{{ election_district }}` references in code in the following ways:
 
 [discrete]
 ===== Property `input_type: string` OR `input_type` not specified
@@ -313,9 +313,9 @@ Each optional property is used in the link:https://app.mode.com/modeanalytics/re
 [discrete]
 ===== `default`
 
-The default value is what {brand} will substitute into your SQL code for the Parameter if no value is explicitly provided.
+The default value is what {product} will substitute into your SQL code for the Parameter if no value is explicitly provided.
 When a user opens your Report for the first time, it will run with the Parameter set to this value.
-This is also what {brand} will use for the Parameter's value while you are editing the Report and running queries in the Query Editor.
+This is also what {product} will use for the Parameter's value while you are editing the Report and running queries in the Query Editor.
 
 For Multiselect Parameters, set `default: all`, and all available options will be selected by default.
 
@@ -325,7 +325,7 @@ NOTE: A Parameter value provided via the Report's xref:report-layout-and-present
 ===== `label`
 
 `label` allows you to customize the label placed above the Parameter in the Report view that users will see.
-If you do not define the `label` property for a Parameter, {brand} will automatically link:https://apidock.com/rails/String/humanize[humanize,window=_blank] the Parameter's name and display that in the Report view.
+If you do not define the `label` property for a Parameter, {product} will automatically link:https://apidock.com/rails/String/humanize[humanize,window=_blank] the Parameter's name and display that in the Report view.
 
 [discrete]
 ===== `description`
@@ -407,7 +407,7 @@ sales_rep:
 
 This SQL query returns a list of sales reps and their corresponding unique IDs from the database.
 In the sales_rep parameter definition, `labels` and `values` reference column names in the query's results.
-Because `labels` and `values` point to different columns in this example, when one or more of the rep names from the "name" column is selected, {brand} will substitute the corresponding value(s) from the "id" column into the query anywhere `{{ sales_rep }}` is written.
+Because `labels` and `values` point to different columns in this example, when one or more of the rep names from the "name" column is selected, {product} will substitute the corresponding value(s) from the "id" column into the query anywhere `{{ sales_rep }}` is written.
 
 If you would like the Parameter options displayed to the user to be the same as the values substituted into your SQL code, simply set `labels` and `values` equal to the same column name.
 
@@ -543,7 +543,7 @@ The order in the report view would respect the order in the query form.
 [discrete]
 === *Q: How to set up a schedule with relative Parameter dates (like "yesterday")*
 
-When creating schedules in {brand}, you may want to set up a date Parameter that's relative to the time the schedule runs.
+When creating schedules in {product}, you may want to set up a date Parameter that's relative to the time the schedule runs.
 For example, rather than setting a date Parameter to show data from January 1, 2022 to today, you may want to set up the Parameter to show data over the last week.
 
 You can do this using an `if` statement in your query.
@@ -598,8 +598,8 @@ For instance, instead of using the `previous_week` Parameter in the `if` stateme
 In this case, if you picked that specific date (Jan 1, 2022), the Parameter would use the first `AND` statement.
 This way, you can use this relative date option for a Report schedule without having to add an additional Parameter that might lead to confusion for people running the Report manually.
 
-You can do things like this with `if` statements in {brand} because it uses the Liquid template language to create Parameters.
-You can read more about what you can do in {brand} with this language and xref:querying-data.adoc#extending-sql-with-liquid[common techniques here].
+You can do things like this with `if` statements in {product} because it uses the Liquid template language to create Parameters.
+You can read more about what you can do in {product} with this language and xref:querying-data.adoc#extending-sql-with-liquid[common techniques here].
 
 [#troubleshooting]
 == Troubleshooting

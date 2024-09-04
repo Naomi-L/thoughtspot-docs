@@ -7,7 +7,7 @@
 :path: /articles/viz-filters
 :popular: true
 :versions: ["business"]
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
@@ -16,7 +16,7 @@ Now with Helix, you can easily load millions of rows of raw data and filter on t
 
 == Report vs visualization filters
 
-There are two types of filters in {brand}:
+There are two types of filters in {product}:
 
 . *Report-level filters*: These are filters that you create from the Report Builder and apply to all charts in your Report.
 Generally, you create these for your Report viewers to be able to filter data themselves.
@@ -77,7 +77,7 @@ For timestamp fields, you can select either from a list of full datetime values 
 
 image::filter-timestamp-2023.png[Filter Timestamp]
 
-{brand} has two ways to interpret a filter list of values:
+{product} has two ways to interpret a filter list of values:
 
 * *Include* values: You can check values that you want to include in your visualization and uncheck values that you do not want to include.
 This is the default pattern.
@@ -90,7 +90,7 @@ As new values appear in your field in the future, an exclude filter will allow t
 Filters that include values limit the visualization's data to a set of selected values.
 This means new field values must be added manually to include filter list selection.
 
-{brand} recommends setting up filter lists as either exclude or include to keep the list as short as possible for easier maintenance overtime.
+{product} recommends setting up filter lists as either exclude or include to keep the list as short as possible for easier maintenance overtime.
 Long filter lists are also detrimental to chart rendering performance, so exclude filters are an important tool.
 
 The "_Display relevant values_" functionality in visualization filters enhances the data exploration experience by dynamically displaying only the most pertinent values based on previously applied filters.
@@ -108,7 +108,7 @@ image::filter-display-relevant-values.gif[Filter Relevant Values]
 
 Range filters allow you to limit a numeric field in the visualization by setting optional start and/or end values to create an inclusive range.
 
-By default, {brand}'s range filters will show the minimum and maximum values in your data as shadow text.
+By default, {product}'s range filters will show the minimum and maximum values in your data as shadow text.
 However, range filters do not require both start and end values.
 
 If there is no end value provided, the filter will act as an "`at least x value`" filter for the start value x.
@@ -159,7 +159,7 @@ image::Mixed-time-unit-relative-date-range-filter.gif[Mixed time unit relative d
 
 === Top/bottom N
 
-{brand} also supports limiting a visualization to display a set of field values according to some aggregation.
+{product} also supports limiting a visualization to display a set of field values according to some aggregation.
 For instance, you might want to see the five most popular US states according to recent order volume.
 
 image::filter-topbottomN.png[Filter Top/Bottom N]
@@ -174,7 +174,7 @@ Applying the filter first will ensure the global top/bottom of your data are con
 [discrete]
 === *Q: Can you apply the Report View's filters to Notebook-generated visuals?*
 
-{brand}'s report filters only work with our native charts and tables.
+{product}'s report filters only work with our native charts and tables.
 
 However, you can leverage xref:parameters.adoc#overview[Parameters] for this case.
 When you select a Parameter and run the report, the queries return values associated with the selected Parameters.

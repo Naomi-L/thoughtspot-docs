@@ -5,11 +5,11 @@
 :description: How to create, duplicate, delete, archive, and move reports in Analyst Studio.
 :ogdescription: How to create, duplicate, delete, archive, and move reports in Analyst Studio.
 :path: /articles/organizing-reports
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Create a new Report
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and (if necessary) sign in to {brand}.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and (if necessary) sign in to {product}.
 . Click on the *New* image:modal-add.svg[new] button in the upper right corner of the window.
 . A new, empty Report will be created in your personal Collection.
 
@@ -23,12 +23,12 @@ To star a Report:
 an empty star will appear next to the Report name.
 . Click on the *Star* image:inline-star-default.svg[star].
 
-To see a list of all the starred Reports, regardless of where they live, click on *Starred* on the left side of your link:https://app.mode.com/home/[{brand} home page,window=_blank].
+To see a list of all the starred Reports, regardless of where they live, click on *Starred* on the left side of your link:https://app.mode.com/home/[{product} home page,window=_blank].
 To remove a star from a Report, repeat the above steps.
 
 == Duplicate a Report
 
-{brand} lets you copy an existing Report so that you can modify or build on it without making changes to the original.
+{product} lets you copy an existing Report so that you can modify or build on it without making changes to the original.
 You can duplicate any Report that you created.
 In a paid plan Workspace, you can duplicate any Report visible to you, as long as you have access to all of the database connections used in that Report.
 
@@ -60,14 +60,14 @@ You can unarchive any of the Reports in this view by hovering over the Report th
 == Delete a Report
 
 Deleting a Report removes it from your Workspace, including all of its code, results, run history, and visualizations.
-When you delete a Report, it will no longer be visible in {brand}, and links to that Report will no longer work.
+When you delete a Report, it will no longer be visible in {product}, and links to that Report will no longer work.
 To delete a Report:
 
 . Navigate to the Collection containing the Report you want to delete.
 . Hover over the Report thumbnail and click on the overflow menu icon image:menu-dots-gray-press.svg[menu]that appears in the upper right.
 . Click *Delete*.
 
-When you delete a Report, it will no longer be accessible by anyone in your {brand} Workspace.
+When you delete a Report, it will no longer be accessible by anyone in your {product} Workspace.
 To recover a deleted Report, contact {support-url}.
 
 [#move-a-report-to-another-collection]
@@ -84,4 +84,4 @@ If you have view-only access to a Collection, you will not be able to move Repor
 
 NOTE: Once you move a Report from your xref:spaces.adoc#personal-space[Personal Collection] to another Collection, you cannot move it back. A workaround would be to duplicate the Report back to your Personal Collection.
 
-You cannot move a Report to the xref:spaces.adoc#community-space[community collection] if any query within it has ever been run against any database other than the {brand} Public Warehouse.
+You cannot move a Report to the xref:spaces.adoc#community-space[community collection] if any query within it has ever been run against any database other than the {product} Public Warehouse.

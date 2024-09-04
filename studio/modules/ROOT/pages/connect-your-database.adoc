@@ -4,11 +4,11 @@
 :experimental:
 :linkattrs:
 :description: Connect your database.
-:brand: Analyst Studio
+:product: Analyst Studio
 
 ** xref:connecting-mode-to-your-database.adoc[Connecting Analyst Studio to your database] +
-Learn how {brand} connects.
+Learn how {product} connects.
 ** xref:supported-databases.adoc[Supported databases] +
-Connect {brand} to your data.
+Connect {product} to your data.
 ** xref:managing-database-connections.adoc[Managing database connections] +
-Administer {brand} connectivity.
+Administer {product} connectivity.

@@ -5,7 +5,7 @@
 :description: How to add Calculated Fields to Charts.
 :ogdescription: How to add Calculated Fields to Charts.
 :path: /articles/cal-fields
-:brand: Analyst Studio
+:product: Analyst Studio
 
 [#overview]
 == Overview
@@ -37,7 +37,7 @@ Some common scenarios for when you'd want to use calculated fields include:
 
 == Creating a calculated field
 
-. Navigate to the {brand} home page and sign in to your Workspace.
+. Navigate to the {product} home page and sign in to your Workspace.
 . Click the green `+` to create a new report in the upper right-hand corner.
 . Run a SQL query.
 (It can be as simple as `SELECT * FROM table`.)
@@ -56,7 +56,7 @@ This example uses the formula:   `SUM(CASE [Status] WHEN 'CANCELLED' THEN 1 ELSE
 This formula checks for whether the order status was cancelled.
 It will sum up the tally of cancelled orders and divide by the total number of rows to calculate the cancellation rate.
 +
-TIP: To see the full list of functions {brand} currently supports, open the panel on the right-hand side.
+TIP: To see the full list of functions {product} currently supports, open the panel on the right-hand side.
 +
 image:cal_fields_functions_list.png[]
 
@@ -100,7 +100,7 @@ Comments in calculated fields are always marked by a prepended `//`.
 ==== Field properties
 
 |===
-| Property | Description | In {brand}
+| Property | Description | In {product}
 
 | *Dimension*
 | Fields that are used to slice and describe data records (for example, names, dates).
@@ -112,12 +112,12 @@ Comments in calculated fields are always marked by a prepended `//`.
 
 | *Discrete*
 | Values in the Dataset are distinct and separate.
-These fields are indicated in {brand} with blue icons.
+These fields are indicated in {product} with blue icons.
 | image:cal-fields-discrete.png[dimensions]
 
 | *Continuous*
 | Values in the Dataset can take on any value within a finite or infinite range.
-These fields are indicated in {brand} with green icons.
+These fields are indicated in {product} with green icons.
 | image:cal-fields-continuous.png[measures]
 |===
 
@@ -818,7 +818,7 @@ However, there are limitations to what calculated fields you can use in *functio
 ==== *Q: How do you get the running percentage total of a field?*
 
 We do have some ways of utilizing analytic functions within our calculated fields to calculate percent over total.
-Check out this link:https://mode.com/blog/analytic-functions-in-calculated-fields/[blog on Analytic Functions,window=_blank] and how to use them in {brand}.
+Check out this link:https://mode.com/blog/analytic-functions-in-calculated-fields/[blog on Analytic Functions,window=_blank] and how to use them in {product}.
 
 [discrete]
 ==== *Q: How to do a CASE statement where the condition is a comparison (e.g. \<=)?*

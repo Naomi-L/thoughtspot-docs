@@ -5,12 +5,12 @@
 :description: How to embed an Analyst Studio report in Salesforce as a Visualforce page.
 :ogdescription: How to embed an Analyst Studio report in Salesforce as a Visualforce page.
 :path: /articles/embed-in-salesforce
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-A {brand} Report can be embedded into a Salesforce page layout as a VisualForce page.
-The embed can be configured so that the underlying {brand} Report refreshes whenever the page layout is loaded in Salesforce. The Report can be run with Parameters that are derived from Salesforce objects (for example, a customer ID).
+An {product} Report can be embedded into a Salesforce page layout as a VisualForce page.
+The embed can be configured so that the underlying {product} Report refreshes whenever the page layout is loaded in Salesforce. The Report can be run with Parameters that are derived from Salesforce objects (for example, a customer ID).
 
 For example:
 
@@ -21,16 +21,16 @@ image::salesforce-embed.png[Embed Analyst Studio Reports in Salesforce]
 In order to follow the steps in this guide, the following requirements must be met:
 
 * You must have permissions in Salesforce to create VisualForce objects, change page layouts, and access the setup page.
-* The {brand} Workspace containing the target report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank].
-* Embed viewers must be logged in to {brand}, must be members of the {brand} Workspace containing the embedded Report, and must have access to the embedded Report.
+* The {product} Workspace containing the target report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank].
+* Embed viewers must be logged in to {product}, must be members of the {product} Workspace containing the embedded Report, and must have access to the embedded Report.
 +
-NOTE: The exact steps outlined in this guide assume you are using the Salesforce Classic interface. You may embed a {brand} Report using the Salesforce Lightning interface, but the steps below may vary.
+NOTE: The exact steps outlined in this guide assume you are using the Salesforce Classic interface. You may embed an {product} Report using the Salesforce Lightning interface, but the steps below may vary.
 
 == Implementation steps
 
 === Prepare the Report
 
-Begin by creating a Report in {brand} that displays the data you want to embed inside of Salesforce.
+Begin by creating a Report in {product} that displays the data you want to embed inside of Salesforce.
 
 If you want the Report to display different output depending on the context in which the embed is viewed in Salesforce, xref:parameters.adoc[add Parameters].
 In the example below, we use a Parameter called `organization_id`, which represents the unique id of a customer as stored in our internal database.

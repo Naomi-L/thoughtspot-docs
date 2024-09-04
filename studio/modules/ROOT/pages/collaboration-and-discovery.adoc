@@ -5,16 +5,16 @@
 :description: How to collaborate and discover reports in Analyst Studio
 :ogdescription: How to collaborate and discover reports in Analyst Studio
 :path: /articles/collaboration-and-discovery
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == My Work
 
-Click *My Work* image:nav-my-work.svg[my work] on the left side of your link:https://app.mode.com/home/[{brand} home page,window=_blank] to show all of the Reports you have created in this Workspace, regardless of where (that is, in which Collection) those Reports currently live.
+Click *My Work* image:nav-my-work.svg[my work] on the left side of your link:https://app.mode.com/home/[{product} home page,window=_blank] to show all of the Reports you have created in this Workspace, regardless of where (that is, in which Collection) those Reports currently live.
 
 == Recently viewed
 //+++<flag-icon>++++++</flag-icon>+++
 
-Click *Recently Viewed*  on the left side of your link:https://app.mode.com/home/[{brand} home page,window=_blank] to view an ordered list of all the Reports you recently viewed, starting from the most recent, no matter where those Reports currently live or who created them.
+Click *Recently Viewed*  on the left side of your link:https://app.mode.com/home/[{product} home page,window=_blank] to view an ordered list of all the Reports you recently viewed, starting from the most recent, no matter where those Reports currently live or who created them.
 
 == Pin a Report
 //+++<flag-icon>++++++</flag-icon>+++
@@ -56,7 +56,7 @@ To delete a Report shortcut:
 
 == Search
 
-To easily navigate to Reports, Datasets, and Collections in {brand}, click the magnifying glass icon in the top right to use the search bar, or use the keyboard shortcut (`Cmd/Ctrl+K`).
+To easily navigate to Reports, Datasets, and Collections in {product}, click the magnifying glass icon in the top right to use the search bar, or use the keyboard shortcut (`Cmd/Ctrl+K`).
 Search by title, description, or query keywords like column names to find the content you need.
 
 === Keyboard shortcuts

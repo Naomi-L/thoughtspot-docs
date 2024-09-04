@@ -6,26 +6,26 @@
 :hide_from_nav: true
 :ogdescription: testing
 :path: /articles/google-sheets-testing
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-{brand}'s Google Sheet integration allows users to connect to their individual Google Accounts to upload Google Sheet data directly into {brand} Datasets for reporting and visual exploration.
+{product}'s Google Sheet integration allows users to connect to their individual Google Accounts to upload Google Sheet data directly into {product} Datasets for reporting and visual exploration.
 
 === Requirements
 
 * Before you get started, you'll need to make sure the Google Sheets Integration is enabled for your Workspace.
 Admins can enable the feature from the *Google Sheets feature page* in Workspace Settings.
-* Once the feature is enabled, Workspace Members can connect {brand} to their individual Google Accounts from the *Google Account page* in Workspace Settings.
+* Once the feature is enabled, Workspace Members can connect {product} to their individual Google Accounts from the *Google Account page* in Workspace Settings.
 
 image::1-admin-enable.png[admin enable]
 
-=== Tips when preparing your Google Sheet data for use in {brand}
+=== Tips when preparing your Google Sheet data for use in {product}
 
 * Avoid using merged cells, and ensure each cell only contains data (graphs and images won't be uploaded).
 * Add headers to the first row, as column names will be auto-generated from the first row.
 * Consider using a dedicated worksheet tab to prep and narrow down the scope of your data.
-When you upload a Google Sheet into {brand}, the entire range is used (including any hidden and filtered cells).
+When you upload a Google Sheet into {product}, the entire range is used (including any hidden and filtered cells).
 +
 TIP: Use Google Sheet functions to copy data from one tab to another more quickly.
 For example: +
@@ -33,7 +33,7 @@ For example: +
 
 == Creating a Google Sheet Dataset
 
-To create a new Google Sheet Dataset, select the *Create* button in the top right corner of your {brand} home screen and choose the *Upload a Google Sheet* option in the Datasets section.
+To create a new Google Sheet Dataset, select the *Create* button in the top right corner of your {product} home screen and choose the *Upload a Google Sheet* option in the Datasets section.
 
 image::2-upload-sheet.png[upload sheet]
 
@@ -47,9 +47,9 @@ If you haven't connected to your account before, you'll first be prompted to do 
 image::4-connect-account-modal.png[Connect account]
 
 Click on the *Set up account* button to access the Google Account page in Workspace Settings.
-From here, you can give {brand} access to your Google Drive account.
+From here, you can give {product} access to your Google Drive account.
 
-NOTE: After you upload a Google Sheet into a {brand} Dataset, access to the Dataset will be determined by the Collection the Dataset lives in. Datasets you create can also sync new data in from Google so long as you're connected to your Google Account.
+NOTE: After you upload a Google Sheet into an {product} Dataset, access to the Dataset will be determined by the Collection the Dataset lives in. Datasets you create can also sync new data in from Google so long as you're connected to your Google Account.
 
 image::5-connect-account-settings-page.png[account settings]
 
@@ -221,8 +221,8 @@ image::11-make-chart.png[New chart]
 
 === Refreshing data in a Dataset-based Report
 
-New Google Sheet Dataset data can be synced into {brand} via a Dataset schedule, or manually from within the Datasets editor.
-When you run your Report or refresh an individual Dataset from within a Report, {brand} will check to see if there's a newer Google Sheet Dataset sync available, load it in, and snapshot its results within your Report's Run History.
+New Google Sheet Dataset data can be synced into {product} via a Dataset schedule, or manually from within the Datasets editor.
+When you run your Report or refresh an individual Dataset from within a Report, {product} will check to see if there's a newer Google Sheet Dataset sync available, load it in, and snapshot its results within your Report's Run History.
 
 Datasets will be badged in the Report edit view when there is a fresher sync available, so you know when to refresh your Report.
 
@@ -232,7 +232,7 @@ image::16-gsheets-data-refresh-available.png[use in report]
 
 After you've authorized access to your Google Account, you'll be able to browse and upload any Google Sheets you have access to in Google Drive.
 
-Once you upload a Google Sheet into a {brand} Dataset, access to the Dataset will be determined *solely by the Collection it lives in*.
+Once you upload a Google Sheet into an {product} Dataset, access to the Dataset will be determined *solely by the Collection it lives in*.
 Datasets you create can continue to sync new data in from Google so long as you're connected to your Google Account.
 
 == FAQs
@@ -268,7 +268,7 @@ Currently, only query-backed Datasets can be synced to GitHub.
 There is also a known bug when syncing Reports that contain Google Sheet Datasets to GitHub, causing any Google Sheet Datasets to appear as empty .sql files.
 
 [discrete]
-=== *Q: If I make changes to my underlying Google Sheet, how are they reflected in {brand}?*
+=== *Q: If I make changes to my underlying Google Sheet, how are they reflected in {product}?*
 
 To update your Google Sheet Dataset to reflect any changes made to the underlying Google Sheet, click the *Sync* button in the Datasets editor, or set up a schedule to sync new data in on a schedule.
 
@@ -292,7 +292,7 @@ The Dataset will be permanently removed from your Workspace, and any dependent R
 image::4-delete-dataset.png[Delete Dataset confirmation]
 
 [discrete]
-=== *Q: What happens to my Google Sheet Datasets if I disconnect my Google account from {brand}?*
+=== *Q: What happens to my Google Sheet Datasets if I disconnect my Google account from {product}?*
 
 Disconnecting your Google Account will prevent you from creating new Datasets using Google Sheet data until you reconnect.
 

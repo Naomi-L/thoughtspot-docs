@@ -6,19 +6,19 @@
 :ogdescription: Adding internal facing embedded Analyst Studio reports to external sites.
 :path: /articles/internal-embeds
 :versions: ["business"]
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-An Internal Embed built using your private data is only visible to logged-in members of your {brand} Workspace who would otherwise have access to the underlying report.
+An Internal Embed built using your private data is only visible to logged-in members of your {product} Workspace who would otherwise have access to the underlying report.
 It can be embedded within private wiki, blog, or any other website or application with access to the internet.
 Here's an example of what an Internal Embed looks like:+++<iframe src="https://app.mode.com/modeanalytics/reports/e2e53f08ba18/embed" width="100%" height="430" frameborder="0">++++++</iframe>+++
 
-Click the green *Powered by {brand}* link at the bottom of the embed to open the underlying Report in {brand}.
+Click the green *Powered by {product}* link at the bottom of the embed to open the underlying Report in {product}.
 
-NOTE: Generally, you must be logged in to {brand} and have access to the underlying Report in order to view an Internal Embed. However, the above embedded report is built on xref:managing-database-connections.adoc#mode-public-warehouse[{brand}'s Public Warehouse] and is therefore viewable by anyone on the internet.
+NOTE: Generally, you must be logged in to {product} and have access to the underlying Report in order to view an Internal Embed. However, the above embedded report is built on xref:managing-database-connections.adoc#mode-public-warehouse[{product}'s Public Warehouse] and is therefore viewable by anyone on the internet.
 
-//Learn more about xref:white-label-embeds.adoc#embedding-reports-built-using-the-mode-public-warehouse[embedding reports built on {brand}'s Public Warehouse].
+//Learn more about xref:white-label-embeds.adoc#embedding-reports-built-using-the-mode-public-warehouse[embedding reports built on {product}'s Public Warehouse].
 
 == Create an internal embed URL
 
@@ -40,7 +40,7 @@ https://app.mode.com/[ORG_NAME]/reports/[REPORT_TOKEN]/runs/[RUN_TOKEN]/embed
                                                                             ^^^^^^
 ----
 
-Another option would be to grab code snippets including template code that you can customize and include in your host application that are generated in {brand}.
+Another option would be to grab code snippets including template code that you can customize and include in your host application that are generated in {product}.
 Open the Report editor for the Report you want to embed and click *Embed* in the header to generate code snippets for one of two types of embed methods:
 
 image::internal_embed2023.png[Internal Embed modal]
@@ -90,7 +90,7 @@ For example:
 ----
 
 Remember to adjust the `height` attribute so that the embed results are visible.
-You can also use {brand}'s <<javascript,JavaScript embed helper library>> to dynamically set the height.
+You can also use {product}'s <<javascript,JavaScript embed helper library>> to dynamically set the height.
 
 NOTE: Unlike White-Label Embeds, internal embeds do not allow for Parameter values to be set within the URL.
 
@@ -98,7 +98,7 @@ NOTE: Unlike White-Label Embeds, internal embeds do not allow for Parameter valu
 
 === Filter panel toggle
 
-Internal Embeds feature a branded {brand} border, which includes a *Filters* button in the lower right corner that you can use to toggle the xref:interactivity.adoc#filters-and-parameters[filter] panel open or closed.
+Internal Embeds feature a branded {product} border, which includes a *Filters* button in the lower right corner that you can use to toggle the xref:interactivity.adoc#filters-and-parameters[filter] panel open or closed.
 
 === Styling and branding
 
@@ -139,13 +139,13 @@ IMPORTANT: Attaching the `embed-hidden` class to an element hides it when an emb
 === Troubleshooting
 
 Similar to White-Label Embeds, issues can arise if the URL is incorrect or missing `/embed`.
-If the following error returns, it's likely that your URL is incorrect or pointing at a Report that you may not have access to within {brand}.
+If the following error returns, it's likely that your URL is incorrect or pointing at a Report that you may not have access to within {product}.
 
 image::report_not_found.png[]
 
-* Click on the green *Powered by {brand}* link at the bottom of the embed to open the underlying Report in {brand} to see if you have access.
-If the report is visible in {brand} and not within the embed, likely the URL is incorrect.
-* If a user is unable to see the embed in the application, have them make sure to sign into {brand} in another tab.
-Only users that are signed in to {brand} are able to view internal embeds.
+* Click on the green *Powered by {product}* link at the bottom of the embed to open the underlying Report in {product} to see if you have access.
+If the report is visible in {product} and not within the embed, likely the URL is incorrect.
+* If a user is unable to see the embed in the application, have them make sure to sign into {product} in another tab.
+Only users that are signed in to {product} are able to view internal embeds.
 * {blank}
 Contact {support-url} if issues persist after verifying the above details for assistance.

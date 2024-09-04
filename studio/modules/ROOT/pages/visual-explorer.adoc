@@ -5,7 +5,7 @@
 :description: Visualize your data in Visual Explorer.
 :ogdescription: Visualize your data in Visual Explorer.
 :path: /articles/visual-explorer
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Getting started
 
@@ -329,7 +329,7 @@ As the name implies, fields with a shared axis are plotted together along a sing
 With shared axis, each measure can be configured independently--including differing mark types--opening up endless possibilities for combination charts.
 It allows you to plot two or more measures along a single axis, and helps ensure you're comparing data across values that are aligned.
 
-If you're simply looking to compare trends and patterns across measures in your data, that might have separate scales or even different units, {brand}'s dual axis feature may be a better fit for your charting needs.
+If you're simply looking to compare trends and patterns across measures in your data, that might have separate scales or even different units, {product}'s dual axis feature may be a better fit for your charting needs.
 To learn about plotting data along more than one axis, see <<dual-axes,dual axes>>.
 
 
@@ -444,7 +444,7 @@ image::manual-mode-update-changes-.gif[Manual Update Mode]
 == Pivot table and chart facet pagination
 
 Pivot tables or charts with many rows or columns impact visualization load time.
-In order to ensure a faster loading experience and reduce errors, {brand} automatically paginates pivot tables and charts with high cardinality.
+In order to ensure a faster loading experience and reduce errors, {product} automatically paginates pivot tables and charts with high cardinality.
 
 Pagination controls will appear below your Quick Chart or Visual Explorer chart once you drag in a field with large amounts of data.
 Pivot tables and charts are paginated based on facets.

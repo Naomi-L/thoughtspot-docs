@@ -6,7 +6,7 @@
 :experimental:
 :ogdescription: An overview of workspace API Tokens.
 :path: /articles/workspace-api-tokens
-:brand: Analyst Studio
+:product: Analyst Studio
 :jira: SCAL-219402
 
 //+++<flag-icon>++++++</flag-icon>+++

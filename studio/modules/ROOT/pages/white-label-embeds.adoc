@@ -6,23 +6,23 @@
 :ogdescription: Adding external facing embedded Analyst Studio reports to external sites.
 :path: /articles/white-label-embeds
 :versions: ["business"]
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-A {brand} report can be embedded into another website, such as a private wiki, blog, or any other website or application with access to the internet.
+an {product} report can be embedded into another website, such as a private wiki, blog, or any other website or application with access to the internet.
 An embed will display the full contents of the underlying report including charts, tables, and other xref:getting-started-with-mode.adoc#advanced-visualizations[custom visualizations].
 Any report can be embedded as a <<white-label-embed,White-Label Embed>> (WLE).
 
-A link:https://mode.com/embedded-analytics/[White-Label Embed,window=_blank] (WLE) may be seen by viewers who are not logged in to {brand} or members of your Workspace who do not have access to the underlying report.
+A link:https://mode.com/embedded-analytics/[White-Label Embed,window=_blank] (WLE) may be seen by viewers who are not logged in to {product} or members of your Workspace who do not have access to the underlying report.
 For a given embed, your host application securely controls who can see what using a signature process (and optionally, using xref:parameters.adoc[parameters]).
 
 [#white-label-embed]
 A White-Label Embed offers the following:
 
-* *No {brand} viewer authentication:* With WLEs, the embed host application, instead of {brand}, handles any required viewer authentication and programmatically controls access to the embedded reports by generating a unique, rapidly-expiring signed embed URL and (optionally) xref:parameters.adoc[parameters].
-* *No {brand} branding:* There is no {brand} Analytics label in the embed border or loading animation.
-* *Reduced viewer interactivity:* Some interactive features of {brand}'s xref:visualizations.adoc#built-in-charts-and-tables[built-in charts and tables] are not available, including some drill-down features and chart-specific URLs.
+* *No {product} viewer authentication:* With WLEs, the embed host application, instead of {product}, handles any required viewer authentication and programmatically controls access to the embedded reports by generating a unique, rapidly-expiring signed embed URL and (optionally) xref:parameters.adoc[parameters].
+* *No {product} branding:* There is no {product} Analytics label in the embed border or loading animation.
+* *Reduced viewer interactivity:* Some interactive features of {product}'s xref:visualizations.adoc#built-in-charts-and-tables[built-in charts and tables] are not available, including some drill-down features and chart-specific URLs.
 * *Reduced underlying data access:* To prevent unintentional leakage of sensitive data, viewers cannot see any of the underlying report's metadata, code, historical runs, or query results.
 You may, however, elect to expose the ability for viewers to <<csv-export,download a CSV>> of the embedded report's results in your host application.
 
@@ -31,7 +31,7 @@ You may, however, elect to expose the ability for viewers to <<csv-export,downlo
 === Example implementation
 
 To show a <<white-label-embed,White-Label Embed>> in action, we built a lightweight analytics portal for a fictional paper company named Parch & Posey.
-The analytics in the portal are provided by two parameterized and White-Label Embedded {brand} reports.
+The analytics in the portal are provided by two parameterized and White-Label Embedded {product} reports.
 
 Access the link:https://parch-posey-v3.herokuapp.com/[Parch & Posey example portal,window=_blank] using any of the following credentials:
 
@@ -59,13 +59,13 @@ The report on the *All Orders* tab is built with a custom link:http://d3js.org/[
 
 To embed a report, the following requirements must be met:
 
-* The {brand} Workspace containing the target report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank].
+* The {product} Workspace containing the target report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank].
 * If you plan to implement a link:https://mode.com/embedded-analytics/[White-Label Embed,window=_blank], White-Label Embeds must be included in your Workspace's paid plan.
-* The creator of the embedded report must be an active member of the same {brand} Workspace that contains the report.
+* The creator of the embedded report must be an active member of the same {product} Workspace that contains the report.
 
 == Implementation steps
 
-Embed a {brand} report into a host application by following the steps below.
+Embed an {product} report into a host application by following the steps below.
 
 [#create-an-embed-url]
 === Create an embed URL
@@ -93,9 +93,9 @@ Control how often your embed refreshes by specifying a `max_age` in the embed UR
 The `max_age` specifies the maximum allowable age, in seconds, that a cached report run's results may be:
 
 * If the report has never run or the most recent run of the report is older than the specified number of seconds, the report will be fully run when accessed.
-Otherwise, the most recent report run results from {brand}'s servers will be returned.
-* If the URL query string includes values for xref:parameters.adoc[parameters], {brand} will return the most recent cached results using the same set of parameter values as long as those results are not older than the value of `max_age`.
-If the report has never been run with the specified parameter values, {brand} will run the report using them.
+Otherwise, the most recent report run results from {product}'s servers will be returned.
+* If the URL query string includes values for xref:parameters.adoc[parameters], {product} will return the most recent cached results using the same set of parameter values as long as those results are not older than the value of `max_age`.
+If the report has never been run with the specified parameter values, {product} will run the report using them.
 
 This ensures the embedded report's data is refreshed as regularly as necessary while allowing you to balance the load the embed places on your database.
 For example, including `max_age=3600` in the URL query string ensures that the underlying report will refresh once the most recent results are more than 3600 seconds (that is, one hour) old.
@@ -157,7 +157,7 @@ You'll need these values to build the request URL (outlined in step 2 below).
 * *Current timestamp*: +
 The current time, in seconds, in link:https://en.wikipedia.org/wiki/Unix_time[UNIX epoch time,window=_blank].
 +
-IMPORTANT: Your host application **must** create the `signature` using a process that is not transparent to embed viewers. Exposing your signature token's access secret in front-end, client-side code will compromise the security of your {brand} account.
+IMPORTANT: Your host application **must** create the `signature` using a process that is not transparent to embed viewers. Exposing your signature token's access secret in front-end, client-side code will compromise the security of your {product} account.
 
 [#1-enable-wle-for-the-report]
 ==== 1. Enable WLE for the report
@@ -169,7 +169,7 @@ To enable it:
 . Select *Embed* in the header.
 . In the pop-up, click the *White-Label Embed* tab.
 . Toggle the switch so it says _White-Label embedding of this report is ON_. +
-TIP: If you don't see the White-Label Embed tab, your Workspace does not have White-Label Embeds enabled. Contact your Workspace's {brand} admins or {brand} support to learn more about enabling White-Label Embeds.
+TIP: If you don't see the White-Label Embed tab, your Workspace does not have White-Label Embeds enabled. Contact your Workspace's {product} admins or {product} support to learn more about enabling White-Label Embeds.
 
 ==== 2. Build request URL
 
@@ -262,7 +262,7 @@ For example:
 ----
 
 Remember to adjust the `height` attribute so that the embed results are visible.
-You can also use {brand}'s xref:internal-embeds.adoc#javascript [JavaScript embed helper library] to dynamically set the height.
+You can also use {product}'s xref:internal-embeds.adoc#javascript [JavaScript embed helper library] to dynamically set the height.
 
 If you are implementing a White-Label Embed, your back-end code will need to update the `src` attribute of the iframe with the dynamically-generated signed embed URL whenever the page loads or whenever the embed needs to be reloaded.
 
@@ -283,7 +283,7 @@ That response contains URLs that can be used to obtain a CSV of the underlying q
 
 In your application, you can add an event listener to retrieve these URLs and expose them using any element on the page.
 
-For example, the following JavaScript listens for the embed response from {brand}, retrieves the CSV download URLs, and assigns them as the targets of a couple of corresponding `<a>` elements:
+For example, the following JavaScript listens for the embed response from {product}, retrieves the CSV download URLs, and assigns them as the targets of a couple of corresponding `<a>` elements:
 
 [source,html]
 ----
@@ -311,7 +311,7 @@ If the White-Label Embed fails to load for any reason, the embed will not post a
 
 === PDF Export
 
-Unlike CSV Export, where a click on the endpoint url itself would invoke a direct download, PDF Export requires a four-part process as described here in the link:https://mode.com/developer/api-cookbook/distribution/export-pdf/[{brand} API cookbook,window=_blank].
+Unlike CSV Export, where a click on the endpoint url itself would invoke a direct download, PDF Export requires a four-part process as described here in the link:https://mode.com/developer/api-cookbook/distribution/export-pdf/[{product} API cookbook,window=_blank].
 
 * Get Report Latest Run
 * Get status of PDF Generation
@@ -496,17 +496,17 @@ Accordingly, these are not rendered by default in an embed.
 IMPORTANT: Attaching the `embed-hidden` class to an element hides it when an embed renders but *does not* prevent that element's contents from being transmitted to the host application page. These contents will still be accessible if the host application viewer inspects the page.
 
 [#embedding-reports-built-using-the-mode-public-warehouse]
-=== Embedding reports built using the {brand} Public Warehouse
+=== Embedding reports built using the {product} Public Warehouse
 
-Any {brand} user can create an embed from a report built with data from the xref:managing-database-connections.adoc#mode-public-warehouse[{brand} Public Warehouse], even if the report is in a Workspace that is not on a paid {brand} plan.
+Any {product} user can create an embed from a report built with data from the xref:managing-database-connections.adoc#mode-public-warehouse[{product} Public Warehouse], even if the report is in a Workspace that is not on a paid {product} plan.
 However, the following limitations apply:
 
-* The underlying report must be in a xref:spaces.adoc#community-space[community Collection] and therefore may *only* use data contained in the xref:managing-database-connections.adoc#mode-public-warehouse[{brand} Public Warehouse].
+* The underlying report must be in a xref:spaces.adoc#community-space[community Collection] and therefore may *only* use data contained in the xref:managing-database-connections.adoc#mode-public-warehouse[{product} Public Warehouse].
 * Parameter values cannot be set using the embed xref:report-layout-and-presentation.adoc#url-query-string[URL's query string].
 * The `run=now` and `max_age` fields cannot be used in the embed xref:report-layout-and-presentation.adoc#url-query-string[URL's query string].
 In other words, you cannot set these embeds to run upon view nor to refresh when they reach a certain age.
 
-Anyone can view an embedded report built using {brand} Public Warehouse data when it is in a community Collection, even if they are not logged in to {brand} or do not have a {brand} account.
+Anyone can view an embedded report built using {product} Public Warehouse data when it is in a community Collection, even if they are not logged in to {product} or do not have an {product} account.
 
 [#test-your-white-label-embeds]
 == Test your White-Label Embeds
@@ -524,20 +524,20 @@ Learn more about <<white-label-embed,setting up White-Label Embeds>>, and <<trou
 == FAQs
 
 [discrete]
-=== *Q: Why does my embed show a {brand}-branded border?*
+=== *Q: Why does my embed show an {product}-branded border?*
 
-Only Internal Embeds include a {brand}-branded border.
-A White-Label Embed should not include a {brand}-branded border.
-If you are attempting to implement a White-Label Embed and the iframe includes a {brand}-branded border when it is accessed, it is not implemented correctly and the embed is falling back to an Internal Embed when accessed.
+Only Internal Embeds include an {product}-branded border.
+A White-Label Embed should not include an {product}-branded border.
+If you are attempting to implement a White-Label Embed and the iframe includes an {product}-branded border when it is accessed, it is not implemented correctly and the embed is falling back to an Internal Embed when accessed.
 
-To test this, attempt to access the embed while either logged out of {brand} or using a private browser mode (for example, incognito mode in Google Chrome).
-When you access the embed without an active {brand} session, it should return an <<troubleshooting,error message>> that you can use to troubleshoot.
+To test this, attempt to access the embed while either logged out of {product} or using a private browser mode (for example, incognito mode in Google Chrome).
+When you access the embed without an active {product} session, it should return an <<troubleshooting,error message>> that you can use to troubleshoot.
 
 [#troubleshooting]
 == Troubleshooting
 
 Most issues with embeds stem from problems with generating the embed URL signature or other parts of the embed URL.
-{brand} offers a number of resources to help you test and troubleshoot White-Label Embeds:
+{product} offers a number of resources to help you test and troubleshoot White-Label Embeds:
 
 * Test your White-Label Embeds using <<test-your-white-label-embeds,this form>>.
 * Refer to the list of errors and their respective troubleshooting steps provided below.
@@ -594,7 +594,7 @@ This error may occur when:
 * You are not using a valid xref:sharing-and-embedding.adoc#white-label-embed-signature-tokens[Embed Signature token] or the user account tied to that token does not have access to the report.
 * The URL path does not point to a valid report or report run.
 
-White-Label Embed viewers may also receive this error when they try to view the embed but the underlying report's creator is no longer an active member of the {brand} Workspace containing the report.
+White-Label Embed viewers may also receive this error when they try to view the embed but the underlying report's creator is no longer an active member of the {product} Workspace containing the report.
 To resolve this, please do any of the following:
 
 * Re-invite the report's creator/owner to the Workspace.

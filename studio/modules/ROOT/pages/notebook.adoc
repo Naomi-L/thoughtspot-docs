@@ -5,11 +5,11 @@
 :description: Getting started with the Python and R Notebook.
 :ogdescription: Getting started with the Python and R Notebook.
 :path: /articles/notebook
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-Every {brand} Report contains an integrated notebook-style environment where analysts can extend their analysis using either Python or R.
+Every {product} Report contains an integrated notebook-style environment where analysts can extend their analysis using either Python or R.
 
 The Notebook's movable code blocks and markdown cells enable exploratory data analysis, visualization, and collaboration.
 Notebook environments have a variety of supported <<python,Python libraries>> and <<r,R packages>> installed.
@@ -28,7 +28,7 @@ Your query results will automatically be loaded into a `datasets` object.
 
 image::notebook-language-2023.png[notebook language]
 
-Key elements of the {brand} Notebook:
+Key elements of the {product} Notebook:
 
 * {blank}<<toolbar,**Toolbar**>>
 ** Where you can manipulate and run your Notebook, restart the session, export, and more.
@@ -160,9 +160,9 @@ image::querytoken.png[Query token]
 
 === Memory management in Python
 
-For {brand} Business and Enterprise paid plans, {brand}'s Python notebook has 16GB of RAM and up to 16 CPU available to it.
-The free {brand} Studio notebook is limited to 4GB of RAM and 1 CPU.
-To effectively manage memory usage in the {brand} Notebooks, consider (1) data load of query result sets, (2) incremental library installation, (3) memory utilization in session.
+For {product} Business and Enterprise paid plans, {product}'s Python notebook has 16GB of RAM and up to 16 CPU available to it.
+The free {product} Studio notebook is limited to 4GB of RAM and 1 CPU.
+To effectively manage memory usage in the {product} Notebooks, consider (1) data load of query result sets, (2) incremental library installation, (3) memory utilization in session.
 
 [discrete]
 ===== *Data load of query result sets*
@@ -173,7 +173,7 @@ Users can consistently load up to 2GB per raw query result as a pandas dataframe
 [discrete]
 ===== *Incremental library installation*
 
-For {brand} Business and Enterprise paid plans, the Notebook environment has up to 1 GB of memory available to load additional packages.
+For {product} Business and Enterprise paid plans, the Notebook environment has up to 1 GB of memory available to load additional packages.
 
 [discrete]
 ===== *Memory utilization in session*
@@ -208,7 +208,7 @@ The following examples add an export button to an output cell that will generate
 [#supported-libraries]
 == Supported libraries
 
-{brand} enables easier access to advanced analytical functions by supporting well-established, public libraries within {brand}'s Notebooks.
+{product} enables easier access to advanced analytical functions by supporting well-established, public libraries within {product}'s Notebooks.
 Common use cases include:
 
 * *Data Manipulation* - Cleaning, aggregating, and summarizing data.
@@ -218,9 +218,9 @@ Common use cases include:
 [#python]
 === Python
 
-IMPORTANT: Notebooks in the {brand} Studio plan are unable to properly utilize the `pip`, `requests`, or the `urllib3` packages in the Python or Python 3 Edge environments. To fully utilize these packages, please upgrade to a paid {brand} Business or Enterprise plan.
+IMPORTANT: Notebooks in the {product} Studio plan are unable to properly utilize the `pip`, `requests`, or the `urllib3` packages in the Python or Python 3 Edge environments. To fully utilize these packages, please upgrade to a paid {product} Business or Enterprise plan.
 
-{brand} supports Python version 3.9 in the Notebooks.
+{product} supports Python version 3.9 in the Notebooks.
 
 Each environment comes preloaded with the following libraries:+++<supported-libraries-table type="Python">++++++</supported-libraries-table>+++
 
@@ -229,10 +229,10 @@ IMPORTANT: We strongly discourage using either the `requests` or `pygsheets` lib
 === Edge
 //+++<flag-icon>++++++</flag-icon>+++
 
-{brand} provides access to an additional Python 3 environment called Python 3 Edge where pending library upgrades are staged.
+{product} provides access to an additional Python 3 environment called Python 3 Edge where pending library upgrades are staged.
 Analysts should use Edge as an alternative environment where they can test out the updated versions of supported Python libraries without fear of jeopardizing scheduled Reports.
 
-{brand} will announce periodic scheduled promotion events via emails to {brand} account administrators.
+{product} will announce periodic scheduled promotion events via emails to {product} account administrators.
 Users will have at least 30 days from that time for testing and validation before the library updates will be made in the broader Python 3 environment.
 Any Notebooks using the Edge environment will be migrated to use the Python 3 environment at the same time.
 
@@ -251,7 +251,7 @@ image::pythonEdge.png[python edge environment]
 [#r]
 === R
 
-IMPORTANT: Notebooks in the {brand} Studio plan are unable to properly utilize the httr package in the R environment. To fully utilize this package, please upgrade to a paid {brand} Business or Enterprise plan.
+IMPORTANT: Notebooks in the {product} Studio plan are unable to properly utilize the httr package in the R environment. To fully utilize this package, please upgrade to a paid {product} Business or Enterprise plan.
 
 The Notebook supports R version 4.2.0 and comes preloaded with the following R packages:+++<supported-libraries-table json="https://mode.github.io/runtimes/r.json" type="R">++++++</supported-libraries-table>+++
 
@@ -260,14 +260,14 @@ IMPORTANT: We strongly discourage using the `httr` library to access APIs that r
 [#install-additional-libraries]
 == Install additional libraries
 
-IMPORTANT: Notebooks in the {brand} Studio plan are unable to install additional libraries. To access this feature, please upgrade to a paid {brand} Business or Enterprise plan.
+IMPORTANT: Notebooks in the {product} Studio plan are unable to install additional libraries. To access this feature, please upgrade to a paid {product} Business or Enterprise plan.
 
 To use a publicly available library in the Notebook that is not listed above, users leverage each environment's package manager to install that library at run-time.
 The Notebook environment has up to 1 GB of memory available to load additional packages.
 
-IMPORTANT: This offers a workaround to try to install additional libraries, beyond what {brand} currently supports, into the Notebook. It is not guaranteed to work in all cases. Only supported libraries have been tested to function as expected in {brand}'s Notebooks.
+IMPORTANT: This offers a workaround to try to install additional libraries, beyond what {product} currently supports, into the Notebook. It is not guaranteed to work in all cases. Only supported libraries have been tested to function as expected in {product}'s Notebooks.
 
-{brand}'s Notebook architecture does not enable manually installed libraries to have access to the Notebook's kernel.
+{product}'s Notebook architecture does not enable manually installed libraries to have access to the Notebook's kernel.
 This means that manually installed versions of popular and interactive libraries like Plotly, Bokeh, and ipywidgets will not function as expected even if the package installation appears to succeed.
 
 Unlike officially supported libraries, you must install packages for any additional libraries in each individual report's Notebook environment.
@@ -405,7 +405,7 @@ You may now use any of the methods or functionality included in the library in s
 [discrete]
 === *Q: How much memory is available to the Notebook?*
 
-Each Notebook session has the following resources available, depending on the version of your {brand} Workspace:
+Each Notebook session has the following resources available, depending on the version of your {product} Workspace:
 
 |===
 | | Available memory | Available CPU | Run-time limit | Suspend after idle for | Can install additional libraries?
@@ -428,7 +428,7 @@ Each Notebook session has the following resources available, depending on the ve
 When suspended, the Notebook environment can be resumed at any time by running a cell, running the entire Notebook, or running the Report.
 
 [discrete]
-=== *Q: Can you visualize a notebook-generated visualization with {brand}'s native chart editor?*
+=== *Q: Can you visualize a notebook-generated visualization with {product}'s native chart editor?*
 
 At this time, it is not possible to use our visualization tools, such as Quick Charts and Visual Explorer, to manipulate Python/R dataframes.
 To visualize data from a Notebook, you will need to use a visualization library to create a visualization.
@@ -468,7 +468,7 @@ Since metrics charts are SQL Queries under the hood, their results are made avai
 [discrete]
 === *Q: Can you apply report filters to notebook generated visuals?*
 
-{brand}'s report filters only work with our native charts and tables.
+{product}'s report filters only work with our native charts and tables.
 
 However, you can leverage xref:parameters.adoc#overview[Parameters] for this case.
 When you select a parameter and run the report, the queries return values associated with the selected parameters.
@@ -484,7 +484,7 @@ This is because the logic is set up such that the notebook does not know which q
 Therefore, it is possible that the notebook would render faster, but it must wait for all queries to finish running.
 
 [discrete]
-=== *Q: I am on a paid {brand} Business or Enterprise plan. Why can't I pip install or upgrade certain libraries in the Notebook?*
+=== *Q: I am on a paid {product} Business or Enterprise plan. Why can't I pip install or upgrade certain libraries in the Notebook?*
 
 If you want to install or upgrade additional libraries or versions, we recommend following the <<install-additional-libraries,steps outlined here>>.
 Please be sure to run the exact command listed on the site.

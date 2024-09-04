@@ -6,32 +6,32 @@
 :ogdescription: An overview of webhooks and how to set them up in Analyst Studio.
 :path: /articles/webhooks
 :versions: ["business"]
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-link:https://en.wikipedia.org/wiki/Webhook[Webhooks,window=_blank] let other applications subscribe to be notified when certain events happen in your {brand} Workspace.
+link:https://en.wikipedia.org/wiki/Webhook[Webhooks,window=_blank] let other applications subscribe to be notified when certain events happen in your {product} Workspace.
 You can use webhooks to do automate workflows and trigger other applications.
 For example:
 
 * Trigger a Zap in link:https://zapier.com/[Zapier,window=_blank].
-* Send a customized Slack alert when a {brand} Report finishes running.
-* Log usage of your {brand} Workspace.
+* Send a customized Slack alert when an {product} Report finishes running.
+* Log usage of your {product} Workspace.
 
-When you set up a webhook, {brand} will send a `POST` message to a URL of your choice in real-time.
+When you set up a webhook, {product} will send a `POST` message to a URL of your choice in real-time.
 The message payload contains the name of the event and a link to the API endpoint associated with that event.
-{brand}'s webhooks are designed to be light-weight and secure, since the payload itself does not contain sensitive information.
+{product}'s webhooks are designed to be light-weight and secure, since the payload itself does not contain sensitive information.
 
 We'll periodically add support for new webhook events.
-If you have ideas for new events you'd like to see in {brand}, please xref:contact-us.adoc[let our success team know].
-You can learn more about what's possible by viewing sample code in our link:https://github.com/mode/webhooks-examples[webhooks example repo,window=_blank] and refer to {brand}'s link:https://mode.com/developer/api-reference/introduction/[API documentation,window=_blank].
+If you have ideas for new events you'd like to see in {product}, please xref:contact-us.adoc[let our success team know].
+You can learn more about what's possible by viewing sample code in our link:https://github.com/mode/webhooks-examples[webhooks example repo,window=_blank] and refer to {product}'s link:https://mode.com/developer/api-reference/introduction/[API documentation,window=_blank].
 
 == Create and subscribe to a webhook
 
-. On the top left of {brand} home page, click on your account and select *Workspace Settings*.
+. On the top left of {product} home page, click on your account and select *Workspace Settings*.
 . Select *Webhooks* from the left navigation panel and then click *Add New Webhook*.
 . Add a Target URL, Description, and an event to subscribe to.
-. When you click *Create Webhook*, {brand} will send a test event to the target URL to make sure the response is successful.
+. When you click *Create Webhook*, {product} will send a test event to the target URL to make sure the response is successful.
 
 NOTE: Currently, only admins can enable webhooks. Non-admins will need to contact a workspace admin to initialize Webhooks. Once the webhooks are enabled, any user is able to construct logic that utilizes the data sent by these webhooks to trigger other functions.
 
@@ -138,7 +138,7 @@ You can access the included URL to learn more about the included resource.
 [discrete]
 === *Q: How to set up alerts with Webhooks?*
 
-A convenient way to trigger alerts is by utilizing {brand}'s Webhooks feature.
+A convenient way to trigger alerts is by utilizing {product}'s Webhooks feature.
 This allows you to set up a webhook that sends notifications when a Report or query finishes running, as outlined in this guide.
 
 Additionally, you can review the data returned from the run, and if a specific value exceeds a set threshold, an alert can be sent to Slack.

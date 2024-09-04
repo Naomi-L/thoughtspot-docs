@@ -5,7 +5,7 @@
 :description: Explorations are your own personal visualizations.
 :ogdescription: Explorations are your own personal visualizations.
 :path: /articles/explorations
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
@@ -17,7 +17,7 @@ video::oqrt-wWBdBc[youtube]
 +++<vidcon>++++++<vid src="https://www.youtube.com/embed/oqrt-wWBdBc" title="YouTube video player" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">++++++</vid>++++++</vidcon>+++
 ////
 
-TIP: You can follow along with the examples in this video in the {brand} University course: link:https://university.mode.com/getting-insights-from-mode-reports[Getting Insights from {brand} Reports,window=_blank].
+TIP: You can follow along with the examples in this video in the {product} University course: link:https://university.mode.com/getting-insights-from-mode-reports[Getting Insights from {product} Reports,window=_blank].
 
 === Create an Exploration
 
@@ -26,7 +26,7 @@ From within the Chart editor context, click the *Explore* button in the toolbar 
 
 image::charteditorXM.png[explore from the chart editor]
 
-When viewing a {brand} Report or Dashboard, hover over a visualization and click the Explore button, or click on a series to explore a more specific subset of the data.
+When viewing an {product} Report or Dashboard, hover over a visualization and click the Explore button, or click on a series to explore a more specific subset of the data.
 
 image::explorechartorsubset.gif[explore from report view]
 
@@ -38,7 +38,7 @@ image::save-exploration1.png[save exploration]
 
 === Navigating Explorations
 
-Below, we've outlined some of the key elements that will help you find your way around {brand}'s Explorations.
+Below, we've outlined some of the key elements that will help you find your way around {product}'s Explorations.
 
 *When you begin exploring:*
 
@@ -97,7 +97,7 @@ Change how a pill is aggregated by clicking the pill's context menu.
 
 === Filters
 
-When you explore in a Report with xref:interactivity.adoc#filters-and-parameters[filters], {brand} will translate the relevant filters into your Exploration automatically.
+When you explore in a Report with xref:interactivity.adoc#filters-and-parameters[filters], {product} will translate the relevant filters into your Exploration automatically.
 This is so the visualization will reflect what you were seeing on the Report, and so that the filters will persist when you save your Exploration.
 Once you begin exploring, you can add or update filters.
 
@@ -118,8 +118,8 @@ image::parameters-applied.png[parameters applied]
 
 Users can copy an Exploration into another Report.
 
-. _Copy chart to {brand} clipboard_: The copy to {brand} clipboard icon is accessible via the toolbar, located on top of the Exploration.
-. _Paste chart from {brand} clipboard_: The paste from {brand} clipboard action is available in the kebab menu for each data source in the chart designer.
+. _Copy chart to {product} clipboard_: The copy to {product} clipboard icon is accessible via the toolbar, located on top of the Exploration.
+. _Paste chart from {product} clipboard_: The paste from {product} clipboard action is available in the kebab menu for each data source in the chart designer.
 The paste and replace action is also available in the kebab menu for each visualization in the chart designer.
 The replace action can be undone using the back button on the chart toolbar.
 The fields that are required for the copied charts but are missing from the target data source will be displayed as red pills.
@@ -137,7 +137,7 @@ image:copy-paste-replace-from-explorations.gif[Copy Paste Replace from Explorati
 [#view-saved-explorations]
 == View saved Explorations
 
-To return to any Explorations you've made and or view all of your saved Explorations, go to the *My Explorations* tab on the left side of your link:https://app.mode.com/home/[{brand} home page,window=_blank].
+To return to any Explorations you've made and or view all of your saved Explorations, go to the *My Explorations* tab on the left side of your link:https://app.mode.com/home/[{product} home page,window=_blank].
 From here you can search and filter your Explorations, or view, edit, or delete an existing Exploration.
 Your list of Explorations is private and browsable only to you.
 
@@ -192,7 +192,7 @@ Currently, Explorations can only be saved against the most recent successful run
 === *Q: How do Explorations work with schedules?*
 
 Explorations will update along with Reports if you've set up a recurring run schedule.
-As for delivering an Exploration itself on a schedule (that is, to Slack or email), you can't currently share Explorations outside of {brand}.
+As for delivering an Exploration itself on a schedule (that is, to Slack or email), you can't currently share Explorations outside of {product}.
 
 [discrete]
 === *Q: What happens if the permissions change on a Report being used by Explorations?*

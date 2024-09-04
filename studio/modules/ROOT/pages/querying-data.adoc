@@ -5,12 +5,12 @@
 :description: How to query data in Analyst Studio.
 :ogdescription: How to query data in Analyst Studio.
 :path: /articles/querying-data
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-The Report is where analysis happens in {brand}.
-Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and click the *New* image:modal-add.svg[new] button in the upper right corner of the window to create a new Report and get started.
+The Report is where analysis happens in {product}.
+Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click the *New* image:modal-add.svg[new] button in the upper right corner of the window to create a new Report and get started.
 All new Reports are automatically added to your xref:spaces.adoc#personal-space[Personal Collection].
 
 After creating a Report, you will be taken to the editor to write your first query.
@@ -63,7 +63,7 @@ image::dataview-source.png[Source tab]
 +
 TIP: Quickly expand or collapse the Data View by double-clicking its header.
 
-. *Database dropdown*: Tells {brand} which connection to query and which database's schemas and tables to display in the <<schema-browser,schema browser>>.
+. *Database dropdown*: Tells {product} which connection to query and which database's schemas and tables to display in the <<schema-browser,schema browser>>.
 . {blank}<<schema-browser,**Schema Browser**>>: A visual representation of the schemas, tables and columns that are available in the selected database, which you can drag to resize.
 
 // The query editor accepts any valid SQL code for the selected database and valid <<extending-sql-with-liquid,Liquid template code>>. Use Liquid to extend the functionality of your SQL code or add xref:parameters.adoc[parameter input forms] to your report to make it more interactive and extensible.
@@ -93,7 +93,7 @@ NOTE: The **play** button is not available for certain database types, including
 
 == Querying multiple data sources
 
-{brand} Reports can contain multiple queries, and each individual query can retrieve data from any one connected database.
+{product} Reports can contain multiple queries, and each individual query can retrieve data from any one connected database.
 Different visualizations, each with data from different databases, can exist side-by-side within the same Report.
 
 You cannot `JOIN` data sets between different connections in a single query.
@@ -101,8 +101,8 @@ However, you can combine result sets from multiple databases and visualize the c
 
 == Complex and multi-statement queries
 
-{brand} performs very little translation or manipulation of your code before sending it to your database for execution.
-This means that {brand} will be able to execute any code that's valid for your database.
+{product} performs very little translation or manipulation of your code before sending it to your database for execution.
+This means that {product} will be able to execute any code that's valid for your database.
 Given the right database permissions, you aren't limited to `SELECT` statements;
 you can do anything your database lets you do, including:
 
@@ -110,8 +110,8 @@ you can do anything your database lets you do, including:
 * `INSERT`, `DELETE`, and `UPDATE` operations.
 * Creating, modifying, or employing user-defined functions.
 
-{brand} will execute code containing multiple SQL statements, separated by semicolons.
-For example, the following code is valid in {brand}:
+{product} will execute code containing multiple SQL statements, separated by semicolons.
+For example, the following code is valid in {product}:
 
 [source,sql]
 ----
@@ -133,10 +133,10 @@ SELECT * FROM temp1;
 === Overview
 
 You can extend the power of your SQL queries in many interesting ways by using the open source link:http://liquidmarkup.org/[Liquid template language,window=_blank].
-Using Liquid, the SQL behind your {brand} Reports can be manipulated at Report run time using loops, if/then statements, and other advanced structures that might be difficult or impossible to do in SQL alone.
+Using Liquid, the SQL behind your {product} Reports can be manipulated at Report run time using loops, if/then statements, and other advanced structures that might be difficult or impossible to do in SQL alone.
 Several examples of these methods are shown below.
 
-Whenever a query is executed in a {brand} Report, Liquid code (if present) is evaluated first before the code is sent to your database for execution as SQL.
+Whenever a query is executed in an {product} Report, Liquid code (if present) is evaluated first before the code is sent to your database for execution as SQL.
 Liquid code is composed of:
 
 *link:https://help.shopify.com/themes/liquid/objects[Objects,window=_blank]* which contain attributes that are used to render dynamic content into your SQL query at run time.
@@ -147,7 +147,7 @@ They are placed inside Object tags `{{ }}` and denoted with a `|` character.
 
 *link:https://help.shopify.com/themes/liquid/tags[Tags,window=_blank]* which make up the programming logic (for example, if/else, for, etc.) that tells your code what to do.
 They are wrapped in a single curly bracket and a percent sign `+{%...%}+`.
-Tags don't themselves produce output that gets rendered into your query, but they may instruct {brand} to render, ignore, repeat, or otherwise modify specific lines of SQL code.
+Tags don't themselves produce output that gets rendered into your query, but they may instruct {product} to render, ignore, repeat, or otherwise modify specific lines of SQL code.
 
 Full documentation on what's possible with Liquid is available on the link:https://help.shopify.com/themes/liquid[Shopify help site,window=_blank] and link:https://shopify.github.io/liquid/[documentation for the Liquid GitHub repo,window=_blank].
 
@@ -282,7 +282,7 @@ The `for` loop then iterates over each value in the array variable `food`.
 
 ==== Comments
 
-Use `{% comment %}` and `{% endcomment %}` tags to instruct {brand} to ignore whatever text or code is written between them.
+Use `{% comment %}` and `{% endcomment %}` tags to instruct {product} to ignore whatever text or code is written between them.
 
 ==== Parameters
 //+++<flag-icon>++++++</flag-icon>+++
@@ -293,14 +293,14 @@ Parameters are a great way to make Reports more extensible, maintainable, and sc
 ==== Query headers
 //+++<flag-icon>++++++</flag-icon>+++
 
-Liquid templates can be used when defining xref:managing-database-connections.adoc#query-headers-and-footers[custom query headers] in data sources connected to your {brand} Workspace.
+Liquid templates can be used when defining xref:managing-database-connections.adoc#query-headers-and-footers[custom query headers] in data sources connected to your {product} Workspace.
 A custom query header is prepended to every query run against that data source and is a great way to increase logging fidelity in your database.
 
 [#sql-keyboard-shortcuts]
 == SQL keyboard shortcuts
 
-{brand}'s SQL Editor runs using the Ace Editor library, and we have enabled most of the link:https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts[default keyboard shortcuts,window=_blank] for things like commenting or indenting blocks of text.
-We've also added some {brand}-specific keyboard shortcuts:
+{product}'s SQL Editor runs using the Ace Editor library, and we have enabled most of the link:https://github.com/ajaxorg/ace/wiki/Default-Keyboard-Shortcuts[default keyboard shortcuts,window=_blank] for things like commenting or indenting blocks of text.
+We've also added some {product}-specific keyboard shortcuts:
 
 === General
 
@@ -516,32 +516,32 @@ We've also added some {brand}-specific keyboard shortcuts:
 [discrete]
 === *Q: The schema browser is empty or missing tables I know to be in the database.*
 
-The tables listed in {brand}'s schema browser may differ from what you expect for a number of reasons:
+The tables listed in {product}'s schema browser may differ from what you expect for a number of reasons:
 
 * *The database was recently connected or updated.*
 +
-{brand}'s schema browser updates once daily at 10:05am UTC / 2:05am PST / 5:05am EST.
+{product}'s schema browser updates once daily at 10:05am UTC / 2:05am PST / 5:05am EST.
 If you recently connected a new database, an automatic update is triggered and the schema browser may appear blank for 30 minutes or more until the refresh completes.
 If new tables were added to an existing database, you will need to manually trigger the schema refresh to see the updates.
-To instruct {brand} to perform a schema browser refresh, click on the image:menu-dots-gray-press.svg[menu] button in the upper right corner of the schema browser and click *Refresh*.
+To instruct {product} to perform a schema browser refresh, click on the image:menu-dots-gray-press.svg[menu] button in the upper right corner of the schema browser and click *Refresh*.
 +
 New tables and databases, however, may be queried immediately regardless of whether they appear in the schema browser.
 
 * *You don't have permission to see the missing tables.*
 +
-{brand} connects to your database as a database user.
+{product} connects to your database as a database user.
 This user, which is defined by your database, may not have access to all of the tables in your database.
 If you think this might be the case, try querying one of the tables that's missing from the schema browser.
 If the query returns an error saying you don't have permission to access that table, this is likely the issue.
 +
 Resolve this issue by granting the database user access to the missing tables.
 These configurations are defined by the database and typically managed by database admins.
-These permissions cannot be changed directly in {brand}.
+These permissions cannot be changed directly in {product}.
 
 [discrete]
-=== *Q: Does {brand} time-out long-running queries or Reports?*
+=== *Q: Does {product} time-out long-running queries or Reports?*
 
-{brand} will cancel any incomplete queries or Report runs after a certain period of time to prevent long-running queries from degrading the performance of {brand} or your database.
+{product} will cancel any incomplete queries or Report runs after a certain period of time to prevent long-running queries from degrading the performance of {product} or your database.
 Note that your database may be configured to time-out queries sooner than the times listed below:
 
 |===
@@ -571,9 +571,9 @@ This allows for efficient and concurrent query processing, ensuring that your qu
 By starting queries simultaneously, we can maximize the use of your database resources and minimize the overall time it takes to retrieve the results of your queries.
 
 [discrete]
-=== *Q: Does {brand} support real-time data?*
+=== *Q: Does {product} support real-time data?*
 
-At this time, {brand} does not maintain active connections to client databases for security and data cost purposes, and does not support real-time data.
+At this time, {product} does not maintain active connections to client databases for security and data cost purposes, and does not support real-time data.
 All Reports, whether scheduled or ad hoc, create new connections on demand.
 
 Please see our documentation on how to xref:report-scheduling-and-sharing.adoc#scheduled-runs[schedule a Report].
@@ -581,10 +581,10 @@ We also suggest taking a look at our xref:datasets.adoc#overview[Datasets] docum
 This allows multiple Reports to be created off of an initial query, which can be set to refresh on a schedule as well.
 
 [discrete]
-=== *Q: What type and version of SQL does {brand} use for the Public Warehouse?*
+=== *Q: What type and version of SQL does {product} use for the Public Warehouse?*
 
-Our {brand} Public Warehouse is a PostgreSQL data source using version 13.1.
-When connecting to a private database, {brand} does not enforce any specific SQL syntax.
+Our {product} Public Warehouse is a PostgreSQL data source using version 13.1.
+When connecting to a private database, {product} does not enforce any specific SQL syntax.
 Instead, we support any version of SQL that your connected database supports, allowing you to use the full capabilities of your database without any limitations.
 This allows you to use the most up-to-date SQL features and ensures that your queries are optimized for your specific database environment.
 
@@ -600,12 +600,12 @@ Yes, currently the limit is 160 queries per Report.
 [discrete]
 === *1. Sorry, this data is larger than your limit.*
 
-{brand} limits the size of query results that you can access depending on whether you're using {brand} Studio, or which paid plan you've chosen.
+{product} limits the size of query results that you can access depending on whether you're using {product} Studio, or which paid plan you've chosen.
 
-For {brand} Business and Enterprise customers, we offer different plans that support increased capacity up to 10 GB.
+For {product} Business and Enterprise customers, we offer different plans that support increased capacity up to 10 GB.
 
 [discrete]
 === *2. Query result is too large. Please try adding a `LIMIT` clause.*
 
-Query results over 10 GB cannot be returned to {brand} from a database.
+Query results over 10 GB cannot be returned to {product} from a database.
 If your results exceed this limit, add a LIMIT statement to your query to return a smaller set of results.

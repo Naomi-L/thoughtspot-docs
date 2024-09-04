@@ -5,22 +5,22 @@
 :description: A Collection is a group of reports organized around a team or project.
 :ogdescription: A Collection is a group of reports organized around a team or project.
 :path: /articles/spaces
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-A Collection is a place for {brand} users to organize Reports and Datasets around a team, project, or common theme.
-All {brand} Reports and Datasets live in exactly one Collection, but a Report or Dataset can be easily xref:organizing-reports.adoc#move-a-report-to-another-collection[moved] to a different Collection within the same {brand} Workspace.
+A Collection is a place for {product} users to organize Reports and Datasets around a team, project, or common theme.
+All {product} Reports and Datasets live in exactly one Collection, but a Report or Dataset can be easily xref:organizing-reports.adoc#move-a-report-to-another-collection[moved] to a different Collection within the same {product} Workspace.
 
-Collections that you belong to are listed on the left side of your link:https://app.mode.com/home/[{brand} home page,window=_blank] under the *Collections* section.
+Collections that you belong to are listed on the left side of your link:https://app.mode.com/home/[{product} home page,window=_blank] under the *Collections* section.
 Click on a Collection to see a list of all of the Reports and Datasets in that Collection.
 At the top of your screen, you can toggle to get different views of the available content in the Collection.
 You can also sort Reports and Datasets by name or by when they were last edited.
-The availability of different types of Collections depends on your {brand} Workspace's version:
+The availability of different types of Collections depends on your {product} Workspace's version:
 
-{brand} Studio Workspaces have one Collection that is created when the Workspace is created and cannot be deleted.
+{product} Studio Workspaces have one Collection that is created when the Workspace is created and cannot be deleted.
 
-Workspaces with a paid {brand} plan can have an unlimited number of Collections, and anyone in the Workspace can create any number of Collections.
+Workspaces with a paid {product} plan can have an unlimited number of Collections, and anyone in the Workspace can create any number of Collections.
 Users can see all Collections they have access to in the Collections list when they click on *Collections* in their navigation panel.
 
 [#types-of-spaces]
@@ -29,7 +29,7 @@ Users can see all Collections they have access to in the Collections list when t
 [#personal-space]
 === Personal content
 
-You have a personal Collection in each {brand} Workspace in which you are a member.
+You have a personal Collection in each {product} Workspace in which you are a member.
 Your personal Collection is created for you when you join a Workspace, and it cannot be renamed or deleted.
 
 When you create a new Report, it will live in your personal Collection until you xref:organizing-reports.adoc#move-a-report-to-another-collection[move it] to another Collection.
@@ -49,14 +49,14 @@ image::personal_manage_access.png[Reports in Personal collection]
 === Community Collection
 
 Reports in the community Collection are public and can be viewed, shared, run, or duplicated by anyone on the internet.
-Building reports based on data in the xref:managing-database-connections.adoc#mode-public-warehouse[{brand} Public Warehouse] and saving them in the community Collection is a great way to demonstrate and share your analytics and visualization skills with the entire {brand} community and beyond.
+Building reports based on data in the xref:managing-database-connections.adoc#mode-public-warehouse[{product} Public Warehouse] and saving them in the community Collection is a great way to demonstrate and share your analytics and visualization skills with the entire {product} community and beyond.
 
 Each Workspace's community Collection is hidden by default, but it can be easily xref:sharing-and-embedding.adoc#sharing[enabled] by a Workspace Admin.
 When enabled, every member of the Workspace can contribute to the community Collection, and they will see it listed on the left side of their home page in the Collections section.
 
-The community Collection can only include Reports with queries that run against the {brand} Public Warehouse.
-If a Report has ever queried a database other than the {brand} Public Warehouse, such as any of your Workspace's private connected databases, the Report can no longer be moved into the community Collection.
-This is true even if the most recent run of the Report only queries the {brand} Public Warehouse.
+The community Collection can only include Reports with queries that run against the {product} Public Warehouse.
+If a Report has ever queried a database other than the {product} Public Warehouse, such as any of your Workspace's private connected databases, the Report can no longer be moved into the community Collection.
+This is true even if the most recent run of the Report only queries the {product} Public Warehouse.
 
 == Managing Collections
 //+++<flag-icon>++++++</flag-icon>+++
@@ -65,7 +65,7 @@ This is true even if the most recent run of the Report only queries the {brand} 
 
 Any member of a Workspace can create a new Collection:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and sign in.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and sign in.
 . Click on *Collections* in the navigation panel to access all of your Collections.
 . All Collections in the Workspace will now be listed on the right.
 Click on *Create Collection* in the upper right.
@@ -85,7 +85,7 @@ Before you delete a Collection, you must first remove all Reports from that Coll
 You can either move the Reports to another Collection or delete the Reports.
 To delete a Collection once it contains no Reports:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and sign in.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and sign in.
 . Open the Collection you'd like to delete, either by clicking on its name in the Collections section (if you are a member) or by clicking on *Collections* in the navigation panel, finding it in the list, and clicking on the Collection.
 . At the top of the window, click on the *gear* image:settings-mini-hover.svg[gear] next to the Collection's name.
 . Click *Delete Collection*.
@@ -98,7 +98,7 @@ NOTE: You cannot delete your personal Collection. While you cannot delete the co
 
 Only users with Editor access to a Collection can change the name or description.
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and sign in.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and sign in.
 . Open the Collection you'd like to rename, either by clicking on its name in the Collections section (if you are a member) or by clicking on *Collections* in the navigation panel.
 . At the top of the window, click on the *gear* image:settings-mini-hover.svg[gear] next to the Collection's name.
 . Click *Rename Collection*.
@@ -109,7 +109,7 @@ Only users with Editor access to a Collection can change the name or description
 == Membership and visibility
 //+++<flag-icon>++++++</flag-icon>+++
 
-All Collections you have access to and have been added to your navigation will be listed in the Collections section on the left side of your {brand} home page.
+All Collections you have access to and have been added to your navigation will be listed in the Collections section on the left side of your {product} home page.
 Any new Collections you've been added to will also show up in your navigation automatically.
 If you do not want the Collection to show up in the Collections section, you may go to the Collection and remove it from your navigation.
 
@@ -126,7 +126,7 @@ For more information on how to manage access, see xref:permissions.adoc#set-up-c
 Only users with *Editor* access can add new members to a Collection.
 Here's how:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and sign in.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and sign in.
 . Open the Collection that you want to add members to, either by clicking on its name in the Collections section (if you are a member), or by clicking on *Collections* in the navigation panel, finding it in the list, and clicking on the Collection.
 . At the top of the window, click on the *gear* image:settings-mini-hover.svg[gear] next to the Collection's name.
 . Click *Add Members*.

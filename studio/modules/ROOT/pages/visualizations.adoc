@@ -5,12 +5,12 @@
 :description: Visualize your data to gain insight.
 :ogdescription: Visualize your data to gain insight.
 :path: /articles/visualizations
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
 After using SQL to gather, structure, and analyze all of the necessary data for your analysis, you can build visualizations on top of that data.
-{brand} offers a number of options for building visualizations, including the ability to take your analysis even further using Python / R, or using any type of custom visualization using JavaScript (for example, link:https://d3js.org/[D3,window=_blank]).
+{product} offers a number of options for building visualizations, including the ability to take your analysis even further using Python / R, or using any type of custom visualization using JavaScript (for example, link:https://d3js.org/[D3,window=_blank]).
 
 [#built-in-charts-and-tables]
 == Quick Charts
@@ -25,7 +25,7 @@ An alternative is to locate the Dataset in the data panel to create a chart from
 
 image::create-a-chart-2.png[Create a chart]
 
-{brand} supports the following Quick Chart types:
+{product} supports the following Quick Chart types:
 
 === Bar and column charts
 
@@ -197,7 +197,7 @@ Note that the default sort order is ascending by the field you have in the *Tren
 * _Indicator_: Chooses how the inputted value compares to another value.
 Click on the little arrow to the right of the field name to choose the aggregate type, calculation format, and the value for comparing to the _Big Value_.
 +
-NOTE: If you want to mirror the functionality of the {brand}'s old Big Numbers, add the same field that you have in the _Value_ dropzone to the _Indicator_ dropzone.
+NOTE: If you want to mirror the functionality of the {product}'s old Big Numbers, add the same field that you have in the _Value_ dropzone to the _Indicator_ dropzone.
 
 * _Format_: use format shortcuts at located in the top toolbar to the right panel's to customize the formats of _Value_ and _Indicator_.
 These options include plain text, currency, number, and percentage.
@@ -509,7 +509,7 @@ To manage Quick Charts in the Report, click on the three vertical dots to access
 * *Duplicate*: Creates a copy of the visualization.
 * *Add to builder*: Adds the visualization to the Report layout.
 * *Remove from builder*: Removes the visualization from the Report layout but does not delete it from the Report.
-* *Copy to {brand} clipboard*: Copies the visualization that can be pasted in the same or different Report.
+* *Copy to {product} clipboard*: Copies the visualization that can be pasted in the same or different Report.
 Read more about <<copy-visualizations-across-reports,copying and pasting visualizations>>.
 * *Delete*: Removes the visualization from your report layout and deletes it from the editor.
 
@@ -542,25 +542,25 @@ These visualizations will update whenever the Notebook is run and the output cha
 
 == Custom visualizations
 
-{brand} supports the ability to customize {brand}'s native visualizations or add custom D3 visualizations to a {brand} report.
+{product} supports the ability to customize {product}'s native visualizations or add custom D3 visualizations to an {product} report.
 When editing a Report, in the Report Builder's top toolbar, click the icon *</>* to customize the Report's HTML.
 The HTML editor lets you use valid HTML, JavaScript, or CSS in the layout of your Report, allowing you to add interactivity, custom visualizations, and more.
-To help you get started, {brand}'s community maintains the link:https://github.com/mode/alamode[Alamode,window=_blank] JavaScript library that makes creating link:https://d3js.org/[D3-powered,window=_blank] visualizations easy.
+To help you get started, {product}'s community maintains the link:https://github.com/mode/alamode[Alamode,window=_blank] JavaScript library that makes creating link:https://d3js.org/[D3-powered,window=_blank] visualizations easy.
 
-Check out link:https://mode.com/example-gallery/[{brand}'s Gallery,window=_blank] for inspiration, sample reports, and more information about how to create advanced visualizations in {brand}.
+Check out link:https://mode.com/example-gallery/[{product}'s Gallery,window=_blank] for inspiration, sample reports, and more information about how to create advanced visualizations in {product}.
 
 [#copy-visualizations-across-reports]
 == Copy visualizations across Reports
 
-Users have the option to copy charts to the {brand} clipboard and paste them under the target data source in the same or different Reports.
+Users have the option to copy charts to the {product} clipboard and paste them under the target data source in the same or different Reports.
 This can be accomplished by following the steps outlined below:
 
-*1. Copy chart to {brand} clipboard*
+*1. Copy chart to {product} clipboard*
 
-The copy to {brand} clipboard option is accessible via the kebab menu, located on the left-hand side navigation panel within the chart designer.
+The copy to {product} clipboard option is accessible via the kebab menu, located on the left-hand side navigation panel within the chart designer.
 Similarly, in Report View, the kebab menu provides the option to copy a visualization.
 In Explorations, a copy icon is available in the top toolbar.
-The following properties of the chart are copied to the {brand} clipboard.
+The following properties of the chart are copied to the {product} clipboard.
 
 * Rows and columns
 * Reference to calculated fields
@@ -568,9 +568,9 @@ The following properties of the chart are copied to the {brand} clipboard.
 * Chart filters
 * All Layers (Color, Size, Text, Detail) +
 
-*2. Paste chart from {brand} clipboard*
+*2. Paste chart from {product} clipboard*
 
-The paste from {brand} clipboard action is available in the kebab menu for each data source in the chart designer.
+The paste from {product} clipboard action is available in the kebab menu for each data source in the chart designer.
 The paste and replace action is also available in the kebab menu for each visualization in the chart designer.
 The replace action can be undone using the back button on the chart toolbar.
 The fields that are required for the copied charts but are missing from the target data source will be displayed as red pills.
@@ -648,7 +648,7 @@ As the number of visualizations increases, more aggregation needs to be performe
 By limiting the number of visualizations, you can ensure that your Report loads quickly and efficiently.
 
 [discrete]
-=== *Q: Can you visualize a Notebook-generated visualization with {brand}'s native chart editor?*
+=== *Q: Can you visualize a Notebook-generated visualization with {product}'s native chart editor?*
 
 At this time, it is not possible to use our visualization tools, such as Quick Charts and Visual Explorer, to manipulate Python/R dataframes.
 To visualize data from a Notebook, you will need to use a visualization library to create a visualization.

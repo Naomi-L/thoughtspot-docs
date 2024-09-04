@@ -6,7 +6,7 @@
 :ogdescription: Curate tables of data that can be reused across multiple reports
 :path: /articles/datasets
 //can't find in modern stack
-:brand: Analyst Studio
+:product: Analyst Studio
 
 [#overview]
 == Overview
@@ -24,12 +24,12 @@ That data then cascades to all associated Reports.
 === What are the benefits of using Datasets?
 
 Datasets can help make maintaining and scaling access to data efficient and cost-effective.
-They create a new layer between your data warehouse and Reports in {brand}, which in practice allows for more control over governance, centralized logic, and data usage.
+They create a new layer between your data warehouse and Reports in {product}, which in practice allows for more control over governance, centralized logic, and data usage.
 
 Key benefits of Datasets:
 
 * *Centralize logic and data quality*: Datasets can power multiple reports, allowing analysts to write or update one query that cascades down across multiple reports.
-* *Manage data stack complexities*: Datasets introduces a new way data moves through {brand}, creating a middle governance later that can centralize logic and make scaling easier.
+* *Manage data stack complexities*: Datasets introduces a new way data moves through {product}, creating a middle governance later that can centralize logic and make scaling easier.
 * *Improve efficiency and performance*: With data cached in Helix, this provides incremental performance gains for each Report refresh that doesn't have to hit the data warehouse.
 * *Cost savings*: Datasets are positioned between Reports and warehouses for more efficient data usage and controlled warehouse hits.
 * *Confident self-service access*: Datasets can be an approved source for teams within an organization to confidently build Reports without writing any code, knowing the Dataset has been published by the data team.
@@ -48,11 +48,11 @@ This Report may contain multiple queries, which can all be combined into a Datas
 * A Dataset with a more broad data view, such as a Dataset created to answer questions about product engagement.
 The Dataset would be the source of truth for asking ad-hoc questions on this topic.
 
-Check out our {brand} University learning path, link:https://university.mode.com/path/self-serve-infrastructure-datasets[Building Self-Serve Infrastructure with Datasets,window=_blank], to learn more about developing a Datasets strategy.
+Check out our {product} University learning path, link:https://university.mode.com/path/self-serve-infrastructure-datasets[Building Self-Serve Infrastructure with Datasets,window=_blank], to learn more about developing a Datasets strategy.
 
 == Creating a Dataset
 
-To create a new Dataset, select the *Create* button in the top right corner of your {brand} home screen and choose *Make a reusable Dataset*.
+To create a new Dataset, select the *Create* button in the top right corner of your {product} home screen and choose *Make a reusable Dataset*.
 
 image::make-dataset-plus.png[create dataset]
 
@@ -220,7 +220,7 @@ Dataset access for creation image:dataset-access-creation.png[Dataset access for
 
 Dataset access for usage image:dataset-access-usage.png[Dataset access for usage]
 
-You can learn more about creating a Dataset access and permissions strategy in this {brand} University course, link:https://university.mode.com/building-datasets-for-self-serve-analytics/1564645/scorm/18mar8c4v6a60[Dataset organization and permissions best practices,window=_blank].
+You can learn more about creating a Dataset access and permissions strategy in this {product} University course, link:https://university.mode.com/building-datasets-for-self-serve-analytics/1564645/scorm/18mar8c4v6a60[Dataset organization and permissions best practices,window=_blank].
 
 == Using Datasets in Reports
 
@@ -258,7 +258,7 @@ Use this workflow when you've found a Dataset that you'd like to explore and ana
 [#create-button]
 === Creating a Report from the Create button or shortcut tile
 
-To create a new report, select the *Create* button in the {brand} header, and choose *Use existing data*.
+To create a new report, select the *Create* button in the {product} header, and choose *Use existing data*.
 
 image::use-existing-data-plus.png[Creating a report from the create button]
 
@@ -342,8 +342,8 @@ image::11-make-chart.png[New chart]
 User can copy charts previously created off ad-hoc queries to a reusable Dataset using a simple copy-paste action.
 Only one chart can be copied at a time.
 
-. Copy chart to {brand} clipboard: The copy to {brand} clipboard option is accessible via the kebab menu, located on the left-hand side navigation panel within the chart designer.
-. Paste chart from {brand} clipboard: The paste from {brand} clipboard action is available in the kebab menu for each data source in the chart designer.
+. Copy chart to {product} clipboard: The copy to {product} clipboard option is accessible via the kebab menu, located on the left-hand side navigation panel within the chart designer.
+. Paste chart from {product} clipboard: The paste from {product} clipboard action is available in the kebab menu for each data source in the chart designer.
 The fields that are required for the copied charts but are missing from the Dataset will be displayed as red pills.
 The user can switch out the red pills with relevant fields from the Dataset.
 . Replace fields in the pasted chart: Users can drag fields directly on top of the field to be replaced in Visual Explorer and in Quick Chart dropzones that accept a single field.
@@ -391,7 +391,7 @@ Learn more about sharing Reports in this xref:report-scheduling-and-sharing.adoc
 === Refreshing data in a Dataset-based Report
 
 Datasets run independently of Reports.
-When you run your Report or refresh an individual Dataset, {brand} will check to see if there's a newer Dataset run available, load it in, and snapshot its results within your Report's Run History.
+When you run your Report or refresh an individual Dataset, {product} will check to see if there's a newer Dataset run available, load it in, and snapshot its results within your Report's Run History.
 
 There is a badge in the Report edit view notifying you that a fresher run is available, so you know when to refresh the Report.
 
@@ -463,14 +463,14 @@ There's also no way to use a Definition without writing SQL.
 You need to have both permissions to query against the Connection a Definition is built on top of, and feel comfortable writing a query, to take advantage of its data.
 
 [discrete]
-==== *Q: When should I think about using Datasets vs {brand}'s new dbt Semantic Layer Integration?*
+==== *Q: When should I think about using Datasets vs {product}'s new dbt Semantic Layer Integration?*
 
 Datasets are reusable containers of curated data intended to cover much broader topics and subject areas.
 You might consider using a Dataset to return an entire table that you've modeled in dbt, whereas metrics are typically much more tightly scoped.
 Metrics are also aimed at allowing users to quickly find answers to very well-defined questions (for example, 'How much revenue did we make last week?'), whereas Datasets can be used for more open-ended, exploratory self-serve analysis (for example, 'Why is my revenue lower this quarter than last quarter?').
 
 While both features allow you to analyze data in a code-free environment, they can have different impacts on your warehouse/Helix usage.
-Datasets are refreshed independently and materialized into {brand}'s data engine, Helix, allowing you to run a Dataset once and leverage its results across multiple Reports.
+Datasets are refreshed independently and materialized into {product}'s data engine, Helix, allowing you to run a Dataset once and leverage its results across multiple Reports.
 
 Unlike Datasets, dbt metric logic is run directly through dbt's SQL proxy and server to ensure the data is aggregated correctly.
 This requires each individual Metric chart to be run independently.
