@@ -5,7 +5,7 @@
 :description: How to get in touch with Analyst Studio
 :ogdescription: How to get in touch with Analyst Studio
 :path: /articles/contact-us
-:brand: Analyst Studio
+:product: Analyst Studio
 
 Have a question that's not answered here, or looking for assistance with an analytics challenge?
 {support-url} is available to help.
@@ -26,11 +26,11 @@ We review all emails and will respond as soon as possible!
 == Live chat
 //+++<flag-icon>++++++</flag-icon>+++
 
-Users in {brand}'s paid plan Workspaces can chat directly with our team of Customer Support Engineers and Analysts at any time during {brand}'s business hours:
+Users in {product}'s paid plan Workspaces can chat directly with our team of Customer Support Engineers and Analysts at any time during {product}'s business hours:
 
 *Business Hours*: Monday-Friday, 5am to 6pm pacific (excluding major US holidays)
 
-To access live chat anywhere in {brand}:
+To access live chat anywhere in {product}:
 
 . Click on the *?* circle in the upper right corner of the window.
 . Click *Chat with us*.

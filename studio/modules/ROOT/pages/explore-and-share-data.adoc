@@ -4,7 +4,7 @@
 :experimental:
 :linkattrs:
 :description: Explore and share data.
-:brand: Analyst Studio
+:product: Analyst Studio
 
 ** xref:explorations.adoc[Explorations] +
 Explorations are your own personal visualizations.

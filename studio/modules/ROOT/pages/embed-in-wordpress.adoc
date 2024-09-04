@@ -5,13 +5,13 @@
 :description: How to embed an Analyst Studio report in a WordPress site.
 :ogdescription: How to embed an Analyst Studio report in a WordPress site.
 :path: /articles/embed-in-wordpress
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-The link:https://wordpress.org/plugins/mode-analytics/[{brand} Wordpress plugin,window=_blank] allows you to easily White-Label Embed a {brand} report into a WordPress site.
+The link:https://wordpress.org/plugins/mode-analytics/[{product} Wordpress plugin,window=_blank] allows you to easily White-Label Embed an {product} report into a WordPress site.
 
-//The link:https://wordpress.org/plugins/mode-analytics/[{brand} Wordpress plugin,window=_blank] allows you to easily xref:white-label-embeds.adoc[White-Label Embed] a {brand} report into a WordPress site.
+//The link:https://wordpress.org/plugins/mode-analytics/[{product} Wordpress plugin,window=_blank] allows you to easily xref:white-label-embeds.adoc[White-Label Embed] an {product} report into a WordPress site.
 
 image::wordpress-embed.png[Embed Analyst Studio Reports in WordPress]
 
@@ -19,9 +19,9 @@ TIP: This link:https://wordpress.org/plugins/user-switching/[User Switching plug
 
 == Requirements
 
-* The {brand} Workspace containing the target Report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank] that includes White-Label Embeds.
+* The {product} Workspace containing the target Report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank] that includes White-Label Embeds.
 
-//* The {brand} Workspace containing the target report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank] that includes xref:white-label-embeds.adoc[White-Label Embeds].
+//* The {product} Workspace containing the target report must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank] that includes xref:white-label-embeds.adoc[White-Label Embeds].
 * You must have a valid xref:sharing-and-embedding.adoc#white-label-embed-signature-tokens[**signature token**] for the Workspace that contains the target Report.
 Ensure you have both the public access key and private access secret.
 * You must have administrative access to the WordPress site where you want to embed the Report.
@@ -30,18 +30,18 @@ Ensure you have both the public access key and private access secret.
 == Implementation steps
 
 [#install-the-mode-wordpress-plugin]
-=== Install the {brand} WordPress plugin
+=== Install the {product} WordPress plugin
 
-Log in to your WordPress dashboard to install the {brand} Wordpress plugin:
+Log in to your WordPress dashboard to install the {product} Wordpress plugin:
 
 . In the left navigation panel, click *Plugins*, and then *Add New*.
-. Search for *{brand} Analytics* and the latest version will appear at the top of the list of results.
+. Search for *{product} Analytics* and the latest version will appear at the top of the list of results.
 . Click *Install Now*.
 . Wait for the installation to finish, then click *Activate*.
 
-=== Input your {brand} signature token
+=== Input your {product} signature token
 
-In the WordPress dashboard, go to *Settings* \-> *{brand} Analytics*.
+In the WordPress dashboard, go to *Settings* \-> *{product} Analytics*.
 Paste your signature token *Access Key* and *Access Secret* into the plugin.
 
 === Add and configure the report embed
@@ -74,7 +74,7 @@ On a report, click *Add Parameters* and fill in the following fields:
 
 == User tokens
 
-With <<install-the-mode-wordpress-plugin,{brand}'s WordPress plugin>>, admins can set up user authentication Parameters or tokens.
+With <<install-the-mode-wordpress-plugin,{product}'s WordPress plugin>>, admins can set up user authentication Parameters or tokens.
 You can create a custom attribute for each user's profile that will dynamically replace the token (for example, `+{{account_id}}+` in the Parameter default value field) when an embed is rendered.
 This will ensure that the user is shown the embed with the correct Parameters.
 
@@ -86,12 +86,12 @@ This will ensure that the user is shown the embed with the correct Parameters.
 . Create a unique token in the *Token Name*. We recommend creating one token per Report.
 . In *Custom Value*, enter the Parameter value you intend to replace the token with.
 The parameter value should be specific to the user who is viewing the Report.
-_Make sure that the value you insert to substitute the token is the same value that you've assigned in your {brand} Report._
+_Make sure that the value you insert to substitute the token is the same value that you've assigned in your {product} Report._
 
 === Add token parameter into a report in WordPress
 
-. Go to *Settings*, then *{brand} Analytics*.
+. Go to *Settings*, then *{product} Analytics*.
 . In the Parameter section of the Report, enter the following:
- ** *Parameter Slug:* The same Parameter you used in the {brand} Report.
+ ** *Parameter Slug:* The same Parameter you used in the {product} Report.
  ** *Data Type:* Select Text, as the Default Value will be the User Token you created above.
  ** *Default Value:* The user-specific token name you created on the WordPress User Profile above.

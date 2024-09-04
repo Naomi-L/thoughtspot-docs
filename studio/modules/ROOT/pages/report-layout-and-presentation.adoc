@@ -5,7 +5,7 @@
 :description: Control the visual aspect of a report.
 :ogdescription: Control the visual aspect of a report.
 :path: /articles/report-layout-and-presentation
-:brand: Analyst Studio
+:product: Analyst Studio
 
 [#name-and-description]
 == Name and description
@@ -29,7 +29,7 @@ In addition, you may style any Report by <<html-editor,including custom CSS usin
 
 *Add a new custom theme*
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen and click *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen and click *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . Click on the *New Theme* button.
@@ -47,7 +47,7 @@ Any member can use or create a custom theme, however, a custom theme can only be
 You cannot delete any of the built-in color themes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . To modify a custom theme, locate it in the list and click on it.
@@ -65,7 +65,7 @@ Your Workspace includes a number of pre-defined color palettes which you may be 
 
 *Add a custom color palette*
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click the *New Color Palette* button.
 . Enter a unique name and select categorical, sequential, or divergent palette type:
@@ -83,7 +83,7 @@ Any member can use or create a custom color palette, however, a custom color pal
 You cannot delete any of the built-in color palettes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . To modify a custom color palette, locate it in the list and click on it.
 Make any changes and click *Save*.
@@ -110,7 +110,7 @@ TIP: Don't see **View Details** in the Report header? You may be in the Report e
 [#run-history]
 === Run history
 
-Every time you run a Report, {brand} saves a copy of its configuration and results (excluding Notebook code, HTML, chart configuration, and calculated field formulas), so you can see exactly how a Report looked from a given point in time.
+Every time you run a Report, {product} saves a copy of its configuration and results (excluding Notebook code, HTML, chart configuration, and calculated field formulas), so you can see exactly how a Report looked from a given point in time.
 A historical run is saved even if the queries in the Report do not complete successfully.
 Historical report runs are accessible indefinitely unless the Report is deleted.
 
@@ -118,7 +118,7 @@ You can access a Report's run history from <<report-details,Report details>>.
 Click on one of the historical report runs in the list to view the Report as it appeared at that time.
 Each historical run has a unique static report run URL so that specific run can be shared with others.
 
-IMPORTANT: {brand} only stores query results for historical runs, not the underlying data from your database. When a report is deleted, historical report run results are retained on {brand}'s servers for 30 days. After 30 days, historical run results are automatically deleted from {brand}'s servers. After an additional 30 days, historical run results are automatically deleted from {brand}'s backups and cannot be recovered by {brand}.
+IMPORTANT: {product} only stores query results for historical runs, not the underlying data from your database. When a report is deleted, historical report run results are retained on {product}'s servers for 30 days. After 30 days, historical run results are automatically deleted from {product}'s servers. After an additional 30 days, historical run results are automatically deleted from {product}'s backups and cannot be recovered by {product}.
 
 [#report-builder]
 == Report Builder
@@ -199,8 +199,8 @@ The HTML for the layout grid will update automatically as you modify elements in
 However, please note:
 
 * Deleting a reference to a chart or table from the report's HTML will remove it from the layout, but will not delete the underlying chart or table from the report editor.
-* You can add custom HTML elements (for example, paragraphs, images, links, etc.) within or outside the grid generated for you by {brand}.
-Note that adding custom HTML elements within the grid generated for you by {brand} (that is, inside the `div` tags with class `mode-grid container`) will result in unexpected behavior, and as such is not recommended at this time.
+* You can add custom HTML elements (for example, paragraphs, images, links, etc.) within or outside the grid generated for you by {product}.
+Note that adding custom HTML elements within the grid generated for you by {product} (that is, inside the `div` tags with class `mode-grid container`) will result in unexpected behavior, and as such is not recommended at this time.
 * We recommend positioning and sizing built-in visualizations with the drag-and-drop interface before modifying the HTML directly, because custom HTML content cannot be modified using the drag-and-drop interface.
 
 The Report's <<name-and-description,name and description>> are automatically added to all Reports inside a `<div>` with the class `mode-header`.
@@ -216,8 +216,8 @@ You may include external assets (for example, JavaScript libraries, stylesheets,
 
 [NOTE]
 ====
-* Any external assets must be hosted on the internet ({brand} does not host custom assets) and loaded securely using HTTPS, _not_ HTTP.
-* link:http://d3js.org/[D3,window=_blank] (v3.5.17) and link:http://jquery.com/[JQuery,window=_blank] (v2.2.4), two JavaScript libraries commonly used for data visualization, are preloaded into all {brand} reports.
+* Any external assets must be hosted on the internet ({product} does not host custom assets) and loaded securely using HTTPS, _not_ HTTP.
+* link:http://d3js.org/[D3,window=_blank] (v3.5.17) and link:http://jquery.com/[JQuery,window=_blank] (v2.2.4), two JavaScript libraries commonly used for data visualization, are preloaded into all {product} reports.
 You do not need to add `<script>` tags to your Report to use these libraries.
 ====
 
@@ -247,7 +247,7 @@ Results from any query in your report can be accessed using JavaScript in the HT
 The `content` property of any Dataset within Datasets contains the query results.
 
 If the xref:querying-data.adoc#sorry-this-data-is-larger-than-your-limit[query result exceeds] our legacy limit, the `content` property of the Dataset associated with this query will be empty.
-Note that users will still be able to view and create {brand} charts and tables in these instances.
+Note that users will still be able to view and create {product} charts and tables in these instances.
 
 The `datasets` array contains the following information for each query in the report:
 
@@ -290,15 +290,15 @@ one JSON object per row.
 
 | queryName
 | string
-| The given name of the query in {brand}.
+| The given name of the query in {product}.
 
 | reportDataUrl
 | string
-| URL for viewing the query result set in {brand}.
+| URL for viewing the query result set in {product}.
 
 | reportQueryUrl
 | string
-| URL for viewing the query SQL code in {brand}.
+| URL for viewing the query SQL code in {product}.
 
 | query_token
 | string
@@ -314,7 +314,7 @@ If true, `content[]` will be empty.
 | URL for downloading the query result set as a CSV file.
 |===
 
-Queries are added to `datasets[]` in the order that they were added to the Report, regardless of the order that they appear in {brand}.
+Queries are added to `datasets[]` in the order that they were added to the Report, regardless of the order that they appear in {product}.
 
 === Example
 
@@ -385,7 +385,7 @@ image::report-settings-refresh.png[Report Settings]
 
 === Fullscreen mode
 
-Fullscreen mode maximizes the content of your Report so it occupies the entire screen, eliminating all other parts of the {brand} interface and browser window.
+Fullscreen mode maximizes the content of your Report so it occupies the entire screen, eliminating all other parts of the {product} interface and browser window.
 A Report in fullscreen mode will automatically refresh and display the latest data whenever the Report is successfully run unless you access it using a static xref:report-scheduling-and-sharing.adoc#link[run link].
 To enable fullscreen mode:
 
@@ -402,10 +402,10 @@ TIP: Don't see the **Fullscreen** button in the Report header? You may be in the
 === URL query string
 //+++<flag-icon>++++++</flag-icon>+++
 
-You may add one or more field-value pairs to a {brand} Report's URL link:https://en.wikipedia.org/wiki/Query_string[query string,window=_blank] to control that Report's behavior.
+You may add one or more field-value pairs to an {product} Report's URL link:https://en.wikipedia.org/wiki/Query_string[query string,window=_blank] to control that Report's behavior.
 You may combine multiple field-value pairs in a Report's URL query string, separated by `&`.
 
-TIP: All {brand} URLs, including query strings, are case-sensitive.
+TIP: All {product} URLs, including query strings, are case-sensitive.
 
 ==== `run`
 
@@ -413,7 +413,7 @@ Forces the Report to re-run and refreshes all query results, Notebook output, an
 
 * If present in the query string, must be equal to the value `now`.
 * Whenever a Report URL is accessed that includes `run=now` in the query string, the report will re-run.
-If `run=now` is not included in the query string, {brand} will return data from the most recent time the report was run.
+If `run=now` is not included in the query string, {product} will return data from the most recent time the report was run.
 * If the URL query string includes values for xref:parameters.adoc[Parameters], then the Report will be run each time the URL is accessed, even if `run=now` is not included.
 
 The following example URL will update all queries and visualizations each time it is accessed:
@@ -525,7 +525,7 @@ https://app.mode.com/modeanalytics/reports/a9e1fe690f93?param_sales_region[]=Mid
 [discrete]
 === *Q: Why does the custom styling on chart titles appear to be broken?*
 
-{brand} made some updates to chart titles and chart descriptions that would require changes to the CSS code.
+{product} made some updates to chart titles and chart descriptions that would require changes to the CSS code.
 Please see the example below to update your custom report theme accordingly.
 
 [source,css]
@@ -547,7 +547,7 @@ Please see the example below to update your custom report theme accordingly.
 [discrete]
 === *Q: Why does the custom styling on pivot tables appear to be broken?*
 
-{brand} made some updates to pivot tables that would require changes to the CSS code.
+{product} made some updates to pivot tables that would require changes to the CSS code.
 The CSS selector `muze-layer-text-cell` is now two selectors:
 
 [source,css]

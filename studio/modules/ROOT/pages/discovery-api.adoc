@@ -5,13 +5,13 @@
 :description: An overview of Analyst Studio Discovery API.
 :ogdescription: An overview of Analyst Studio Discovery API.
 :path: /articles/discovery-api
-:brand: Analyst Studio
+:product: Analyst Studio
 
 //+++<flag-icon>++++++</flag-icon>+++
 
 == Overview
 
-The Discovery API is a read-only batch API that allow developers to get lists of {brand} resources, along with metadata about each of those resources.
+The Discovery API is a read-only batch API that allow developers to get lists of {product} resources, along with metadata about each of those resources.
 The API will be referred to as 'batch' throughout the documentation.
 See the full documentation for the Discovery API link:https://mode.com/developer/discovery-api/introduction/[here,window=_blank].
 

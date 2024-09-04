@@ -6,21 +6,21 @@
 :hide_from_nav: false
 :ogdescription: Analyst Studio’s integration with semantic layers extends metrics defined in dbt and Looker so business teams can leverage them for code-free exploration and reporting
 :path: /articles/semantic-layer-integrations
-:brand: Analyst Studio
+:product: Analyst Studio
 
-NOTE: {brand} will be following dbt's lead in deprecating our integration to the first version of the semantic layer. link:https://mode.com/integrations/get-dbt[Learn about our integration with dbt's Semantic Layer,window=_blank] and please use the xref:supported-databases.adoc#dbt-semantic-layer[new connector].
+NOTE: {product} will be following dbt's lead in deprecating our integration to the first version of the semantic layer. link:https://mode.com/integrations/get-dbt[Learn about our integration with dbt's Semantic Layer,window=_blank] and please use the xref:supported-databases.adoc#dbt-semantic-layer[new connector].
 
 == Set up a data source connection
 
 To get started, first xref:supported-databases.adoc[set up a new data source connection to the semantic layer].
 
-For the *dbt Semantic Layer* connection in {brand}, you will need the following:
+For the *dbt Semantic Layer* connection in {product}, you will need the following:
 
 * *dbt Cloud Hostname*: The hostname for the instance of dbt Cloud.
 * *Environment ID*: The unique identifier for a dbt environment in the dbt Cloud URL, when you navigate to that environment under Deployments.
 * *Service Token*: Service Tokens for dbt Cloud can be created in dbt account settings, and must have at least "Semantic Layer Only" permissions.
 
-For the *Looker SQL* connection in {brand}, leveraging Looker's Open SQL interface, you will need the following:
+For the *Looker SQL* connection in {product}, leveraging Looker's Open SQL interface, you will need the following:
 
 * *Host*: The url of your Looker instance (for example, test123.looker.com).
 * *Username*: The Client ID portion of the link:https://cloud.google.com/looker/docs/admin-panel-users-users#api_keys[Looker API key,window=_blank].
@@ -35,7 +35,7 @@ You'll be taken to a SQL editor interface.
 image::dbt-create-dataset.png[Create a dbt Semantic Layer Dataset]
 
 Once you've pulled in your data, you can add additional fields via calculated fields or add descriptions for the existing fields.
-link:https://mode.com/developer/api-reference/analytics/dataset-field-descriptions/[Check out {brand}'s API endpoints for creating and updating field descriptions,window=_blank] to programmatically add and update descriptions from your semantic layer documentation.
+link:https://mode.com/developer/api-reference/analytics/dataset-field-descriptions/[Check out {product}'s API endpoints for creating and updating field descriptions,window=_blank] to programmatically add and update descriptions from your semantic layer documentation.
 
 === Write a dbt metrics query
 
@@ -96,4 +96,4 @@ Select *Schedule* to add a new schedule.
 Adding a schedule ensures metrics data is updated for the Dataset on a regular cadence, so users building on top of the Dataset get the freshest data.
 
 Select *Move to...* to move the Dataset into a Collection and make it discoverable to users.
-This will ensure users can find the Dataset when browsing or searching across {brand}.
+This will ensure users can find the Dataset when browsing or searching across {product}.

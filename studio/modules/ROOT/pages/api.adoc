@@ -4,11 +4,11 @@
 :experimental:
 :linkattrs:
 :description: API.
-:brand: Analyst Studio
+:product: Analyst Studio
 
 ** xref:api-reference.adoc[API reference] +
-An overview of {brand} API.
+An overview of {product} API.
 ** xref:discovery-api.adoc[Discovery API] +
-An overview of {brand} Discovery API.
+An overview of {product} Discovery API.
 ** xref:discovery-database.adoc[Discovery Database] +
-An overview of {brand} Database.
+An overview of {product} Database.

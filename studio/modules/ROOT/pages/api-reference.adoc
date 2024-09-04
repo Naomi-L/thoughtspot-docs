@@ -6,18 +6,18 @@
 :experimental:
 :ogdescription: An overview of Analyst Studio API
 :path: /articles/api-reference
-:brand: Analyst Studio
+:product: Analyst Studio
 :jira: SCAL-219402
 
 //+++<flag-icon>++++++</flag-icon>+++
 
 == API tokens
 
-API tokens allow you to connect to {brand}'s API programmatically.
-Use an API token instead of your email address and account password whenever you programmatically authenticate to {brand} with link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication[basic authentication,window=_blank].
+API tokens allow you to connect to {product}'s API programmatically.
+Use an API token instead of your email address and account password whenever you programmatically authenticate to {product} with link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication[basic authentication,window=_blank].
 
 To call the API, you must first create an API access token.
-Currently, {brand} supports two types of access tokens -- Workspace API tokens and personal API tokens.
+Currently, {product} supports two types of access tokens -- Workspace API tokens and personal API tokens.
 As of June 2023, you can only create Workspace API tokens, as this is the more secure and therefore recommended way to provide API access.
 Any personal tokens that were created prior to June 2023 can continue to be used to authenticate with the API;
 however, we will be fully deprecating personal API tokens in August 2024.
@@ -25,7 +25,7 @@ however, we will be fully deprecating personal API tokens in August 2024.
 The Workspace API tokens are meant to be used for programmatic management, such as archiving inactive Reports or deleting schedules for stale Reports across your Workspace.
 These tokens mimic Admin access to the Workspace and only Admins will be able to create and manage them.
 
-See the full documentation for {brand}'s API link:https://mode.com/developer/api-reference/introduction/[here,window=_blank].
+See the full documentation for {product}'s API link:https://mode.com/developer/api-reference/introduction/[here,window=_blank].
 
 [#generating-api-tokens]
 === Creating an API Access token
@@ -59,14 +59,14 @@ For more information on generating and managing Workspace API tokens, xref:works
 
 IMPORTANT: You can continue to use personal API tokens with the API. However, you will not be able to generate new personal tokens. Personal token use will be deprecated in August 2024.
 
-When using personal API tokens, access to resources in the API directly matches your level of permissions in the {brand} Workspace you're calling.
-Before returning a response, {brand} validates every API call against your permissions in that Workspace.
+When using personal API tokens, access to resources in the API directly matches your level of permissions in the {product} Workspace you're calling.
+Before returning a response, {product} validates every API call against your permissions in that Workspace.
 
 [#faqs]
 === FAQs
 
 [discrete]
-==== *Q: {brand} API rate limiting*
+==== *Q: {product} API rate limiting*
 
 As of today, our API rate limiting is approximately 40 requests every 10 seconds, or 4 requests per second per username.
 We currently publish two headers:

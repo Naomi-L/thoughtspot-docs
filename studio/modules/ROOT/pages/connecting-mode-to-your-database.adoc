@@ -5,45 +5,45 @@
 :description: Learn how Analyst Studio connects.
 :ogdescription: Learn how Analyst Studio connects
 :path: /articles/connecting-mode-to-your-database
-:brand: Analyst Studio
+:product: Analyst Studio
 :jira: SCAL-219400
 
 == Getting ready to connect
 
-{brand} can connect to link:https://mode.com/data-sources/[most popular databases,window=_blank] that can be queried using SQL or a SQL-like language, including databases hosted on private networks or on private machines, databases hosted in VPCs and VPNs, and databases hosted in the cloud by third parties such as Amazon and Microsoft.
-By default, each database you connect to your {brand} Workspace can be queried by all members of your Workspace.
+{product} can connect to link:https://mode.com/data-sources/[most popular databases,window=_blank] that can be queried using SQL or a SQL-like language, including databases hosted on private networks or on private machines, databases hosted in VPCs and VPNs, and databases hosted in the cloud by third parties such as Amazon and Microsoft.
+By default, each database you connect to your {product} Workspace can be queried by all members of your Workspace.
 
 === Obtain database credentials and connection details
 
-When you set up a new data connection, you will provide {brand} with the credentials for a user account in your database that {brand} will use to execute queries against the database.
-The permissions granted to this user account will govern which tables and records members of your Workspace can access when they use that database connection in {brand}.
+When you set up a new data connection, you will provide {product} with the credentials for a user account in your database that {product} will use to execute queries against the database.
+The permissions granted to this user account will govern which tables and records members of your Workspace can access when they use that database connection in {product}.
 
-A best practice is to create (or ask your database admin to create) a new database user specifically to use with {brand}.
-Grant this new user read-only permission for the schemas and tables you want your {brand} users to be able to query.
+A best practice is to create (or ask your database admin to create) a new database user specifically to use with {product}.
+Grant this new user read-only permission for the schemas and tables you want your {product} users to be able to query.
 
 === Choose a connection method
 
-{brand} can connect to your database in two ways:
+{product} can connect to your database in two ways:
 
-* *<<direct-connect,Direct Connect>>*: {brand} will connect directly to your database over the public internet.
-This is the simplest way to connect, but may require your database or network to be configured to allow {brand}'s servers to connect to it.
-* *<<bridge,Bridge>>*: {brand} connects to your database with the assistance of a small helper application installed on a computer inside your network with direct access to your database.
-This solution lets {brand} connect to your database even if it's not <<how-do-i-know-if-my-database-is-publicly-accessible,publicly accessible>>.
+* *<<direct-connect,Direct Connect>>*: {product} will connect directly to your database over the public internet.
+This is the simplest way to connect, but may require your database or network to be configured to allow {product}'s servers to connect to it.
+* *<<bridge,Bridge>>*: {product} connects to your database with the assistance of a small helper application installed on a computer inside your network with direct access to your database.
+This solution lets {product} connect to your database even if it's not <<how-do-i-know-if-my-database-is-publicly-accessible,publicly accessible>>.
 
-Typically, users are able to connect {brand} to their database directly.
+Typically, users are able to connect {product} to their database directly.
 There are, however, a few common scenarios in which you will likely need to use Bridge and/or seek the assistance of your network administrator to connect, namely if:
 
 * You need to be connected to a VPN/VPC or be physically in the office to access your database;
 or,
-* You need to configure your database to allow {brand} to directly connect (for example, allowlist {brand}'s IP addresses), but you do not have access to the database's configuration console.
+* You need to configure your database to allow {product} to directly connect (for example, allowlist {product}'s IP addresses), but you do not have access to the database's configuration console.
 
 [#direct-connect]
 == Direct Connect
 
 === Overview
 
-Direct Connect is the simplest way to connect your database to {brand}.
-You provide {brand} with the necessary credentials, and {brand}'s servers connect directly to your database.
+Direct Connect is the simplest way to connect your database to {product}.
+You provide {product} with the necessary credentials, and {product}'s servers connect directly to your database.
 Most databases hosted by third parties, such as Amazon, Google, and Segment, are publicly accessible and are compatible with Direct Connect.
 In some cases, databases hosted in private networks can also be publicly accessible and are compatible with Direct Connect.
 
@@ -55,10 +55,10 @@ In order to use Direct Connect, your database must:
 * Be publicly accessible via the internet (Not sure?
 <<how-do-i-know-if-my-database-is-publicly-accessible,Follow these steps>>).
 * Have SSL encryption enabled.
-* Be allowed to accept incoming connections from {brand}'s IP addresses.
+* Be allowed to accept incoming connections from {product}'s IP addresses.
 
-Your database may require you to allowlist {brand}'s IP addresses before it will accept an incoming connection from our servers.
-All connections from {brand} will come from one of these eight IP addresses:
+Your database may require you to allowlist {product}'s IP addresses before it will accept an incoming connection from our servers.
+All connections from {product} will come from one of these eight IP addresses:
 
 `54.68.30.98/32` +
 `54.68.45.3/32` +
@@ -69,13 +69,13 @@ All connections from {brand} will come from one of these eight IP addresses:
 `54.221.238.89/32` +
 `52.20.173.236/32`
 
-If your database or network environment does not meet the above requirements, consider connecting with {brand}'s <<bridge,Bridge connector>> instead.
+If your database or network environment does not meet the above requirements, consider connecting with {product}'s <<bridge,Bridge connector>> instead.
 
 === How to connect
 
 To add a new data connection to your Workspace using Direct Connect:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] for the Workspace to which you'd like to add the connection, and click on your name in the top left corner.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] for the Workspace to which you'd like to add the connection, and click on your name in the top left corner.
 . Click on *Connect a Database*.
 . Select your database from the list.
 . Follow the on-screen instructions to connect your database.
@@ -102,8 +102,8 @@ If it fails, it likely isn't.
 In some instances, however, the connection can fail because your database doesn't allow connections from IP addresses that haven't been added to an allowlist.
 If this may be the case, link:http://askubuntu.com/questions/95910/command-for-determining-my-public-ip[find your computer's IP address,window=_blank] and add it to your database's IP address allowlist.
 Try the command above again.
-If it succeeds, your database is publicly accessible and can connect to {brand} directly.
-Note that you may need to <<requirements,allowlist {brand}'s IP addresses>> in your database's configuration.
+If it succeeds, your database is publicly accessible and can connect to {product} directly.
+Note that you may need to <<requirements,allowlist {product}'s IP addresses>> in your database's configuration.
 
 [discrete]
 ==== *Q: Is it possible to connect to a database via SSH tunneling?*
@@ -134,7 +134,7 @@ If your database isn't publicly accessible, you should <<bridge,connect using Br
 Could not verify connection: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 ----
 
-This is a generic MySQL error that indicates {brand} can't reach your database.
+This is a generic MySQL error that indicates {product} can't reach your database.
 There are a couple of common causes for this error:
 
 * *Your database doesn't allow SSL connections*: Direct Connect only supports SSL connections.
@@ -142,7 +142,7 @@ If SSL is disabled on your MySQL database, Direct Connect will be unable to conn
 To resolve this issue, you can either allow SSL connections to your database or <<bridge,connect using Bridge>>.
 * *Your MySQL database isn't configured to allow external connections*: Check the configuration file at `/etc/mysql/my.cnf`.
 If the `bind_address` is set to `127.0.0.1`, your database will only allow connections from your local machine.
-To allow external connections--which is required for connecting to {brand}--change the bind address to `0.0.0.0`.
+To allow external connections--which is required for connecting to {product}--change the bind address to `0.0.0.0`.
 
 [discrete]
 ==== *3. When connecting to Redshift, it says we're having trouble verifying your connection.*
@@ -152,12 +152,12 @@ To allow external connections--which is required for connecting to {brand}--chan
 Could not verify connection: We're having trouble verifying your connection. Please check that the hostname and port are correct and that your firewall is configured to allow connections from Mode.
 ----
 
-This is a generic error that indicates {brand} can't reach your Redshift database.
+This is a generic error that indicates {product} can't reach your Redshift database.
 There are a couple of common causes for this error:
 
-* *Your Redshift security group or VPC security doesn't allow connections from {brand}'s IP addresses*: If your Redshift is in a security group, you must configure that security group to allow connections from {brand}'s IP addresses.
+* *Your Redshift security group or VPC security doesn't allow connections from {product}'s IP addresses*: If your Redshift is in a security group, you must configure that security group to allow connections from {product}'s IP addresses.
 Note that if your Redshift is in a VPC, the VPC may also be part of a security group that's distinct from the Redshift security group.
-This VPC security group must also allow connections from {brand}.
+This VPC security group must also allow connections from {product}.
 See this <<requirements,article>> about which IP addresses to allowlist, this xref:supported-databases.adoc#amazon-redshift[article] for how to configure security groups in your Redshift instance, and this link:http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html[article,window=_blank] for more information on security settings for Redshift.
 * *Use a Redshift host name rather than the IP address*: Redshift host names are often formatted like this: `examplecluster.abc123xyz789.us-west-2.redshift.amazonaws.com`.
 Try using a host of this format rather than an IP address.
@@ -181,7 +181,7 @@ This means that your database does not have SSL configured.
 To ensure your data remains secure, <<direct-connect,Direct Connect>> doesn't support connecting unless your database allows encrypted connections.
 To enable SSL, please refer to your database's website for information on how to configure TLS/SSL for your database.
 
-If you don't want to or can't enable SSL, you can connect your database to {brand} using <<bridge,Bridge>>.
+If you don't want to or can't enable SSL, you can connect your database to {product} using <<bridge,Bridge>>.
 Though Bridge connections use transport encryption by default, you can disable it by clicking the green "*turn off transport encryption*" link when setting up Bridge.
 
 image::transport_off.jpg[Transport encryption]
@@ -204,36 +204,36 @@ If it fails, it likely isn't.
 In some instances, however, the connection can fail because your database doesn't allow connections from IP addresses that haven't been added to an allowlist.
 If this may be the case, link:http://askubuntu.com/questions/95910/command-for-determining-my-public-ip[find your computer's IP address,window=_blank] and add it to your database's IP address allowlist.
 Try the command above again.
-If it succeeds, your database is publicly accessible and can connect to {brand} directly, provided that the <<requirements,appropriate IP addresses are allowlisted>>.
+If it succeeds, your database is publicly accessible and can connect to {product} directly, provided that the <<requirements,appropriate IP addresses are allowlisted>>.
 
 [#bridge]
 == Bridge
 
 === Overview
 
-Typically, users will connect {brand} directly to their database.
-However, there are many situations in which directly connecting {brand} to your database is not possible, or modifying the configuration of your VPN/firewall is not practical or desirable.
-For these cases, {brand} offers an application ("the Bridge connector") to coordinate communication between {brand} and your databases.
+Typically, users will connect {product} directly to their database.
+However, there are many situations in which directly connecting {product} to your database is not possible, or modifying the configuration of your VPN/firewall is not practical or desirable.
+For these cases, {product} offers an application ("the Bridge connector") to coordinate communication between {product} and your databases.
 The Bridge connector is easy to install, configure, and maintain.
 
 The Bridge connector can run on a computer or virtual machine within your organization's VPN or firewall.
-{brand} also supports running the Bridge connector inside a Docker container.
+{product} also supports running the Bridge connector inside a Docker container.
 
-When you write and run a query in {brand}, the Bridge facilitates the connection to your database.
-The query is executed by your database using the user credentials you provide when setting up {brand}.
-Once complete, Bridge sends data back to {brand}, so you can visualize and share the results.
+When you write and run a query in {product}, the Bridge facilitates the connection to your database.
+The query is executed by your database using the user credentials you provide when setting up {product}.
+Once complete, Bridge sends data back to {product}, so you can visualize and share the results.
 
 === Requirements
 
 To install and configure Bridge, you must have sufficient (typically local administrative) privileges on the host computer.
-You must also have access within {brand} to connect data sources for your Workspace.
+You must also have access within {product} to connect data sources for your Workspace.
 
-Bridge connects to {brand} by making outbound TCP connections on the following ports:
+Bridge connects to {product} by making outbound TCP connections on the following ports:
 
 * HTTPS/443
 * TCP/8444
 
-You can run {brand}'s Bridge connector <<run-bridge-as-a-docker-container,as a container>> on any Linux host running Docker engine.
+You can run {product}'s Bridge connector <<run-bridge-as-a-docker-container,as a container>> on any Linux host running Docker engine.
 
 You can also <<install-bridge-with-mode,install the Bridge connector>> on any computer running any of the following supported operating systems:
 
@@ -251,18 +251,18 @@ TIP: When connecting to a database in AWS, most customers will run Bridge in an 
 NOTE:  If you have a Studio plan, and are installing via the non-Docker approach, please reach out to {support-url} to help complete the Bridge setup.
 
 [#install-bridge-with-mode]
-=== Install Bridge with {brand}
+=== Install Bridge with {product}
 
-These instructions assume that you meet <<requirements,the Requirements>> and would like to install {brand}'s Bridge connector on a host computer you administer.
+These instructions assume that you meet <<requirements,the Requirements>> and would like to install {product}'s Bridge connector on a host computer you administer.
 
 Our system packages will install Bridge and configure the system to run Bridge via the system's service manager.
 Bridge's <<where-is-the-bridge-configuration-file-saved,configuration file>> 'bridge.json' contains a credential and should be kept secret when incorporating it into configuration management systems.
 
-. In the upper left corner of your Workspace's {brand} home page, expand the menu under your name, and select *Connect a Database* from the dropdown.
+. In the upper left corner of your Workspace's {product} home page, expand the menu under your name, and select *Connect a Database* from the dropdown.
 +
 image::connect-a-database-2021.png[Settings Dropdown]
 
-. Click on the type of database you want to connect to {brand}.
+. Click on the type of database you want to connect to {product}.
 +
 image::select-db.png[Select a Database]
 
@@ -288,12 +288,12 @@ image::bridge-back-to-DB-creds.png[Back to Credentials]
 [#run-bridge-as-a-docker-container]
 === Run Bridge in a Docker container
 
-These instructions assume you meet <<requirements,the requirements>> and would like to run {brand}'s Bridge connector in a Docker container.
+These instructions assume you meet <<requirements,the requirements>> and would like to run {product}'s Bridge connector in a Docker container.
 
 [discrete]
 ==== Generate Bridge credentials
 
-. In the upper left corner of your Workspace's {brand} home page, expand the menu under your name, and select *Workspace Settings* from the dropdown.
+. In the upper left corner of your Workspace's {product} home page, expand the menu under your name, and select *Workspace Settings* from the dropdown.
 +
 image::workspace-settings.png[Organization Settings]
 
@@ -324,11 +324,11 @@ Inspect the logs for any error messages by running the following command: `docke
 [discrete]
 ==== Connect your database via Bridge
 
-. In the upper left corner of your Workspace's {brand} home page, expand the menu under your name, and select *Connect a Database* from the dropdown.
+. In the upper left corner of your Workspace's {product} home page, expand the menu under your name, and select *Connect a Database* from the dropdown.
 +
 image::connect-a-database-2021.png[Connect a Database]
 
-. Click on the type of database you want to connect to {brand}.
+. Click on the type of database you want to connect to {product}.
 +
 image::select-db.png[Select a database]
 
@@ -348,7 +348,7 @@ image::bridge-back-to-DB-creds.png[Return to Credentials]
 === FAQs (Bridge)
 
 [discrete]
-==== *Q: Do I need to run several Bridge connectors to connect {brand} to several databases?*
+==== *Q: Do I need to run several Bridge connectors to connect {product} to several databases?*
 
 No.
 A single Bridge connector can support multiple databases.
@@ -356,8 +356,8 @@ A single Bridge connector can support multiple databases.
 [discrete]
 ==== *Q: What data does the Bridge connector have access to?*
 
-The Bridge connector provides a tunnel through which {brand}'s platform can connect to your database(s).
-The connection between the Bridge and {brand} is fully encrypted.
+The Bridge connector provides a tunnel through which {product}'s platform can connect to your database(s).
+The connection between the Bridge and {product} is fully encrypted.
 The Bridge connector stores only its own configuration.
 There is no caching or database driver in the Bridge.
 No database credentials, queries, or query results are stored within the connector.
@@ -366,15 +366,15 @@ No database credentials, queries, or query results are stored within the connect
 ==== *Q: What happens if I disable transport encryption?*
 
 Some older databases either do not support or have not been configured to support transport encryption.
-To enable customers to connect {brand} to these databases, we support disabling transport encryption, but only when connecting via the Bridge.
+To enable customers to connect {product} to these databases, we support disabling transport encryption, but only when connecting via the Bridge.
 
 If you disable transport encryption when configuring the Bridge connector, this will disable the encrypted connections between the computer running the Bridge connector and your database.
-However, all communication between the computer running Bridge and {brand} will still be fully encrypted.
+However, all communication between the computer running Bridge and {product} will still be fully encrypted.
 
 [discrete]
 ==== *Q: How can I replace an existing Bridge connection?*
 
-To replace an existing Bridge connection, first remove the existing Bridge from {brand}.
+To replace an existing Bridge connection, first remove the existing Bridge from {product}.
 
 . Click on your avatar in the upper left.
 . Select *Settings* from the dropdown.
@@ -472,9 +472,9 @@ a| link:http://www.thewindowsclub.com/open-windows-services[Windows Services Man
 
 [#where-in-mode-can-i-view-the-password-token-secret-for-the-bridge-connector-that-i-created]
 [discrete]
-==== *Q: Where in {brand} can I view the password (token secret) for the Bridge connector that I created?*
+==== *Q: Where in {product} can I view the password (token secret) for the Bridge connector that I created?*
 
-The token's secret is a protected string and is not visible in the {brand} UI after initial creation.
+The token's secret is a protected string and is not visible in the {product} UI after initial creation.
 If the configuration files displayed were not copied or saved somewhere by the user, they should be considered lost forever.
 We recommend deleting this bridge and creating a new one.
 
@@ -507,14 +507,14 @@ Could not verify connection: please try again.
 Could not verify connection: We're having trouble verifying your connection. Please check that the hostname and port are correct and that your firewall is configured to allow connections from Mode.
 ----
 
-This error indicates that {brand} could reach your Bridge connector, but Bridge couldn't reach your database.
+This error indicates that {product} could reach your Bridge connector, but Bridge couldn't reach your database.
 
 You may see this error if your database credentials are invalid.
 As a first step, check the credentials and try again.
 Note that if your database doesn't have a password, entering any password should fix this error.
 
 If you're sure the credentials are correct, these errors can also occur when Bridge is installed on a machine that can't access your database.
-Importantly, this error occurs from the perspective of the machine running Bridge, not necessarily from your computer or from {brand}'s servers.
+Importantly, this error occurs from the perspective of the machine running Bridge, not necessarily from your computer or from {product}'s servers.
 Most commonly, this error occurs when your database is accessible only to computers inside a VPN.
 If you installed Bridge on a computer outside your VPN, or if the computer is not currently logged in to the VPN, Bridge won't be able to connect to your database.
 
@@ -537,7 +537,7 @@ To fix this, you should either install Bridge on a machine that has access or ad
 Could not verify connection: There was a problem connecting to your Bridge Connector.
 ----
 
-This error indicates that {brand} couldn't reach your Bridge connector.
+This error indicates that {product} couldn't reach your Bridge connector.
 
 First, check if Bridge is running with the command listed below.
 
@@ -546,8 +546,8 @@ First, check if Bridge is running with the command listed below.
 
 If Bridge is not running, <<how-do-i-stop-or-start-the-bridge-connector,restart the Bridge application>>.
 
-If Bridge is running, {brand} may not be able to reach Bridge because the ports that Bridge connects over are closed.
-Bridge connects to {brand} over outbound port 8444.
+If Bridge is running, {product} may not be able to reach Bridge because the ports that Bridge connects over are closed.
+Bridge connects to {product} over outbound port 8444.
 You can confirm that the port is open for Bridge by running these commands on the computer running Bridge.
 
 * *For Linux or OSX*:
@@ -582,13 +582,13 @@ To resolve, open an instance of PowerShell with elevated privileges (Run as Admi
 
 == Security
 
-{brand} supports TLS/SSL (Transport Layer Security/Secure Socket Layer) for encrypting communication with your database.
+{product} supports TLS/SSL (Transport Layer Security/Secure Socket Layer) for encrypting communication with your database.
 This type of security, which encrypts data while it's in transit, is commonly referred to as transport encryption.
 
-For additional auditing, {brand} tags each query with additional metadata which will appear in the database system logs:
+For additional auditing, {product} tags each query with additional metadata which will appear in the database system logs:
 
-* The {brand} username and email address of the user running the query.
-* A link to that query in {brand}, which includes the time the query was run and the exact Dataset returned.
+* The {product} username and email address of the user running the query.
+* A link to that query in {product}, which includes the time the query was run and the exact Dataset returned.
 
-At {brand}, we take security very seriously.
-Learn more about link:https://mode.com/security/[{brand}'s approach to security,window=_blank].
+At {product}, we take security very seriously.
+Learn more about link:https://mode.com/security/[{product}'s approach to security,window=_blank].

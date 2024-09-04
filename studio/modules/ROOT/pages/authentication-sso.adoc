@@ -6,19 +6,19 @@
 :experimental:
 :ogdescription: Ensure your accounts settings and verify a user’s identity
 :path: /articles/authentication-and-sso
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Restricting sign-in methods
 //+++<flag-icon>++++++</flag-icon>+++
 
-Organization admins can set sign-in restrictions to control how members are able to authenticate when accessing their {brand} Workspace.
+Organization admins can set sign-in restrictions to control how members are able to authenticate when accessing their {product} Workspace.
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank].
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank].
 . Click on your name in the upper left corner.
 . Click *Workspace Settings* from the dropdown menu.
 . In the People section, click on *Member Authorization*.
 
-By default, users can log in to your {brand} Workspace with all of the following methods of access.
+By default, users can log in to your {product} Workspace with all of the following methods of access.
 Toggle off any methods that you do not want to allow users to authenticate with:
 
 * Username and password
@@ -32,17 +32,17 @@ WARNING: Do not disable all sign-in methods. If all methods are disabled, it wil
 === Custom SAML
 //+++<flag-icon>++++++</flag-icon>+++
 
-Admins may define one more custom SAML identity provider that your {brand} Workspace can use to authenticate users:
+Admins may define one more custom SAML identity provider that your {product} Workspace can use to authenticate users:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and click *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and click *Workspace Settings* from the dropdown menu.
 . In the People section, click on *Member Authorization*.
 . To add a new SAML provider, click *+ Add New Provider*.
 To edit or delete an existing provider, click the *gear* image:settings-mini-hover.svg[mini hover] next to its name in the list and click *Edit* or *Delete*.
 . Enter the SAML configuration and click *Update* when you are finished.
 
-Custom providers will automatically create user accounts in {brand} for emails that match your organization's claimed domain.
+Custom providers will automatically create user accounts in {product} for emails that match your organization's claimed domain.
 Setup is required for each provider.
-Once you create a new provider in {brand} settings, you will see the following information which may be required for setup in your SAML provider:
+Once you create a new provider in {product} settings, you will see the following information which may be required for setup in your SAML provider:
 
 * Assertion Consumer Service URL
 * Entity ID
@@ -54,20 +54,20 @@ image::SAML-provider-details.png[SAML Provider details]
 === SCIM
 //+++<flag-icon>++++++</flag-icon>+++
 
-This guide walks through the supported features, requirements and troubleshooting steps for setting up SCIM for {brand}.
+This guide walks through the supported features, requirements and troubleshooting steps for setting up SCIM for {product}.
 SCIM is supported for both Okta and Azure Active Directory (AAD).
 
 SCIM is a protocol that lets enterprise identity providers (IdPs) integrate with and provision applications.
 This allows large Workspaces to keep all of their applications up-to-date with their org chart, and maintain centralized control of app and data permissions.
 
-Once you are integrated through SCIM, you will be able to provision users into {brand} and manage {brand} group memberships through your IdP, rather than needing to do it within the {brand} UI.
-This allows you to manage {brand} from the same place and in the same way that you manage other applications, and to synchronize identity information like name and email across all of the apps that your members use.
+Once you are integrated through SCIM, you will be able to provision users into {product} and manage {product} group memberships through your IdP, rather than needing to do it within the {product} UI.
+This allows you to manage {product} from the same place and in the same way that you manage other applications, and to synchronize identity information like name and email across all of the apps that your members use.
 
-The effect is a less tedious workflow for application administrators, resulting in tighter security and a more effective and accurate deployment of {brand} into your workspace.
+The effect is a less tedious workflow for application administrators, resulting in tighter security and a more effective and accurate deployment of {product} into your workspace.
 
 ==== Requirements
 
-{brand} requires that SCIM customers have completed the SAML setup process and have a working Okta or AAD integration before setting up provisioning features with SCIM.
+{product} requires that SCIM customers have completed the SAML setup process and have a working Okta or AAD integration before setting up provisioning features with SCIM.
 Workspaces wishing to use SCIM are required to use SAML as their sole sign-in method.
 
 See <<custom-saml,here>> for more information on how to set up SAML.
@@ -78,14 +78,14 @@ See <<custom-saml,here>> for more information on how to set up SAML.
 
 The following provisioning features are supported:
 
-* *Push New Users*: New users created through OKTA will also be provisioned in {brand}.
-* *Push User Deactivation*: Deactivating the user through OKTA will remove the user from the organization and all groups in {brand}.
+* *Push New Users*: New users created through OKTA will also be provisioned in {product}.
+* *Push User Deactivation*: Deactivating the user through OKTA will remove the user from the organization and all groups in {product}.
 If they are reactivated, they will need to have any groups reassigned to restore associated resource entitlements.
 * *Push Profile Updates*: Updates made to the user's profile through OKTA will be pushed to the third party application.
-First Name and Last Name will be combined as the Full Name in {brand}.
-* *Group Push*: Groups and their members can be pushed to {brand}.
+First Name and Last Name will be combined as the Full Name in {product}.
+* *Group Push*: Groups and their members can be pushed to {product}.
 You can find more information about using group push operations here: link:https://help.okta.com/en/prod/Content/Topics/users-groups-profiles/usgp-group-push-main.htm[Using Group Push,window=_blank].
-* *Reactivate Users*: Reactivating the user through Okta will reactivate the user in {brand}.
+* *Reactivate Users*: Reactivating the user through Okta will reactivate the user in {product}.
 They will need to have any groups reassigned to restore associated resource entitlements.
 
 *Import Users*, *Import Groups*, and *Sync Password* are not currently supported.
@@ -97,21 +97,21 @@ Please note that if you don't see this switch, you should contact your account m
 . Click *View Config Settings*.
 You will need to copy the 2.0 Base URL and OAuth Bearer Token into your Okta App's Provisioning configuration: image:scimbase.png[SCIM]
 . Log in to Okta as an Administrator.
-Navigate to your {brand} Analytics application from the Admin page.
+Navigate to your {product} Analytics application from the Admin page.
 . Select the *Provisioning* tab.
 Check the *Enable API Integration* box.
-. Enter the SCIM 2.0 Base URL from the {brand} SCIM config settings panel. Enter the OAuth Bearer Token from the {brand} SCIM config settings panel.
+. Enter the SCIM 2.0 Base URL from the {product} SCIM config settings panel. Enter the OAuth Bearer Token from the {product} SCIM config settings panel.
 . In Okta, click the *Save* button: image:save.png[SCIM] You should see a message confirming the integration was authenticated successfully with an option to test credentials: image:save1.png[SCIM]
 
 ===== SCIM connection points
 
-After configuring SCIM for your {brand} app in Okta, enable the following connection points:
+After configuring SCIM for your {product} app in Okta, enable the following connection points:
 
-* *Create Users*: When this connection point is enabled, users will be created in {brand} when the app is assigned to them in Okta.
-* *Update User Attributes*: When this connection point is enabled, a user's attributes will be updated in {brand} when the app is assigned to them, and any future attribute changes will automatically be synced to {brand}.
-* *Deactivate Users*: This connection point allows you to deactivate a user's {brand} account when the {brand} app is unassigned from them in Okta.
+* *Create Users*: When this connection point is enabled, users will be created in {product} when the app is assigned to them in Okta.
+* *Update User Attributes*: When this connection point is enabled, a user's attributes will be updated in {product} when the app is assigned to them, and any future attribute changes will automatically be synced to {product}.
+* *Deactivate Users*: This connection point allows you to deactivate a user's {product} account when the {product} app is unassigned from them in Okta.
 Accounts will be reactivated when the app is reassigned.
-* *Group Management*: {brand} supports group management through Okta's SCIM connector, so you can create, update, and deactivate groups directly in the IDP.
+* *Group Management*: {product} supports group management through Okta's SCIM connector, so you can create, update, and deactivate groups directly in the IDP.
 
 Select *To App* in the left panel, then select the *Provisioning Features* you want to enable:
 image:oktaTOmode.png[SCIM]
@@ -122,45 +122,45 @@ You can now assign users to the app.
 
 ==== Attributes and mappings
 
-{brand} supports users pushed from Okta with Okta mastering the `userName`, `givenName`, `familyName`, `email`, and `emailType` attributes.
-{brand} uses only the user's `primary` email internally.
-While {brand} accepts any `userName`, we recommend that this attribute be set to the primary email (the Okta default).
+{product} supports users pushed from Okta with Okta mastering the `userName`, `givenName`, `familyName`, `email`, and `emailType` attributes.
+{product} uses only the user's `primary` email internally.
+While {product} accepts any `userName`, we recommend that this attribute be set to the primary email (the Okta default).
 
-{brand}-mastered attributes are only supported in the initial SCIM setup and matching process.
+{product}-mastered attributes are only supported in the initial SCIM setup and matching process.
 
-{brand} supports designating admin users via specifying admin as the value of the role attribute.
+{product} supports designating admin users via specifying admin as the value of the role attribute.
 Other values for role will be ignored.
 
-Specify admins in Okta to ensure users retain their {brand} roles.
-To see who is currently an Admin, go to *Workspace Settings > Members* in {brand}.
+Specify admins in Okta to ensure users retain their {product} roles.
+To see who is currently an Admin, go to *Workspace Settings > Members* in {product}.
 
 image::scim_attribute_mappings.png[Attribute Mappings Screenshot]
 
-===== Assign {brand} admins
+===== Assign {product} admins
 
-{brand} supports designating admin users via specifying admin as the value of the role attribute.
+{product} supports designating admin users via specifying admin as the value of the role attribute.
 Other values for the role will be ignored.
 
-Specify admins in Okta to ensure users retain their {brand} roles.
-To see who is currently an Admin, go to *Organization Settings > Members* in {brand}.
-To grant users in a group Admin access to {brand}, add the following attribute to the group:
+Specify admins in Okta to ensure users retain their {product} roles.
+To see who is currently an Admin, go to *Organization Settings > Members* in {product}.
+To grant users in a group Admin access to {product}, add the following attribute to the group:
 
 image::assignmodegroups.png[SCIM]
 
 *Users and Groups*
 
-{brand} supports Group Push with Okta, which allows Admins to push groups from Okta to {brand}, as well as manage groups that were created in {brand} through Okta.
+{product} supports Group Push with Okta, which allows Admins to push groups from Okta to {product}, as well as manage groups that were created in {product} through Okta.
 
-NOTE: Users need to be assigned to the {brand} application before they will be included in pushes of Groups that contain them. You may need to unassign and re-assign users to the {brand} app before pushing Groups.
+NOTE: Users need to be assigned to the {product} application before they will be included in pushes of Groups that contain them. You may need to unassign and re-assign users to the {product} app before pushing Groups.
 
 For more information on Group Push, see Okta's documentation on link:https://help.okta.com/en-us/content/topics/users-groups-profiles/usgp-about-group-push.htm[Using Group Push,window=_blank] and link:https://help.okta.com/oie/en-us/content/topics/directory/ad-agent-cofigure-group-push-ad-ous.htm[Enhanced Group Push,window=_blank].
 
 === Azure Active Directory
 
-{brand} requires that SCIM customers have completed the SAML setup process and have a working AAD-{brand} integration before setting up provisioning features with SCIM.
+{product} requires that SCIM customers have completed the SAML setup process and have a working AAD-{product} integration before setting up provisioning features with SCIM.
 Organizations wishing to use SCIM are required to use SAML as their sole sign-in method.
 
-See <<custom-saml,here>> for more information on how to set up SAML in {brand}.
+See <<custom-saml,here>> for more information on how to set up SAML in {product}.
 
 See link:https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/add-application-portal-setup-sso[here,window=_blank] for AAD's setup documentation
 
@@ -187,9 +187,9 @@ A list of all configured apps is shown, including apps that were added from the 
 Select *+ New application > + Create your own application*.
 Then, follow the steps link:https://docs.microsoft.com/en-us/azure/active-directory/app-provisioning/use-scim-to-provision-users-and-groups#getting-started[here,window=_blank] to create the application.
 . In the app management screen, select *Provisioning* in the left panel.
-In the *Provisioning {brand}* menu, select *Automatic*.
+In the *Provisioning {product}* menu, select *Automatic*.
 image:aad-tenant-url.png[SCIM]
-. In the *Tenant URL* field, enter the 2.0 Base URL copied from {brand} settings and append the following parameter: `?aadOptscim062020`.
+. In the *Tenant URL* field, enter the 2.0 Base URL copied from {product} settings and append the following parameter: `?aadOptscim062020`.
 Add the OAuth Bearer Token in the *Secret Token* field.
 See screenshot above for what the full URL should look like.
 . Select *Test Connection* to have Azure Active Directory attempt to connect to the SCIM endpoint.
@@ -198,21 +198,21 @@ If it succeeds, click *Save*.
 . In the *Mappings* section, there are two selectable sets of attribute mappings: one for user objects and one for group objects.
 Select each one to review the attributes that are synchronized from Azure Active Directory to your app.
 The attributes selected as matching properties are used to match the users and groups in your app for update operations.
-_For {brand}, the username attribute is populated with user email and will be used to map existing {brand} users to users in Azure Active Directory._
+_For {product}, the username attribute is populated with user email and will be used to map existing {product} users to users in Azure Active Directory._
 +
 image:aad-attribute-mapping.png[SCIM]
 
 . Select *Sync only assigned users and groups* to only sync users and groups assigned in the *Users and groups* tab.
-Attempting to sync un-assigned users and groups will result in creating {brand} users for all users in your tenant, so ensure that you only sync assigned users and groups.
+Attempting to sync un-assigned users and groups will result in creating {product} users for all users in your tenant, so ensure that you only sync assigned users and groups.
 +
-NOTE: Existing {brand} users will be mapped as long as their email matches the email in Azure Active Directory. Existing groups in {brand} will not be mapped and must be re-created in Azure Active Directory to be managed from there.
+NOTE: Existing {product} users will be mapped as long as their email matches the email in Azure Active Directory. Existing groups in {product} will not be mapped and must be re-created in Azure Active Directory to be managed from there.
 
-==== How to assign {brand} Administrators
+==== How to assign {product} Administrators
 
 There are two major parts of setup before Admin assignment can happen:
 
 * The role must be created, in the application's App Roles.
-* The mapping must exist for the assigned roles to be passed along to {brand}.
+* The mapping must exist for the assigned roles to be passed along to {product}.
 
 [discrete]
 ====== Creating the Admin user role
@@ -221,7 +221,7 @@ There are two major parts of setup before Admin assignment can happen:
 
 . Find your app registrations within the Azure Active Directory dashboard. +
 image:appregistrations.png[SCIM]
-. Select the {brand} application.
+. Select the {product} application.
 It might be only visible after selecting *all applications*, since the default view is only *owned applications*.
 . Within the application's dashboard, select *App Roles* in the navigation.
 . Select *Create App Role* at the top, and fill in the following values: +
@@ -235,7 +235,7 @@ image:aad-admins2.png[AAD]
 
 (link:https://docs.microsoft.com/en-us/azure/active-directory/app-provisioning/customize-application-attributes#editing-user-attribute-mappings[Relevant official documentation on editing user attribute mappings,window=_blank])
 
-. Find the {brand} application within the *Enterprise Applications* section of the main nav. +
+. Find the {product} application within the *Enterprise Applications* section of the main nav. +
 image:aadmodenavigation.png[SCIM]
 . Select *Provisioning* from the Application nav. +
 image:aad-mode-app.png[SCIM]
@@ -280,10 +280,10 @@ image::aad-admins9.png[SCIM]
 
 === Best practices
 
-* If you want existing {brand} users to be managed via SCIM, ensure that the {brand} user's attributes (email, specifically) match the SCIM user's attributes.
-Once the user is successfully being managed by SCIM, all future changes should be made in the SCIM provider and pushed to {brand}.
+* If you want existing {product} users to be managed via SCIM, ensure that the {product} user's attributes (email, specifically) match the SCIM user's attributes.
+Once the user is successfully being managed by SCIM, all future changes should be made in the SCIM provider and pushed to {product}.
 * Only use SCIM for provisioning once initial setup is complete.
-You can update your {brand} workspace settings to disable manual inviting.
+You can update your {product} workspace settings to disable manual inviting.
 * Use group provisioning rather than individual user provisioning to ensure access controls and roles are set up correctly.
 * For initial setup, start with one user or group to test that provisioning is set up correctly.
 
@@ -295,12 +295,12 @@ You can update your {brand} workspace settings to disable manual inviting.
 
 Yes.
 To update user emails via SCIM, update the email in the identity provider (for example, Okta, AAD).
-You may need to re-push groups from Okta to ensure that the changes are applied in {brand}.
+You may need to re-push groups from Okta to ensure that the changes are applied in {product}.
 
 [discrete]
 ==== *Q: What is the default session expiration length for logged-in sessions?*
 
-By default, logged-in sessions to {brand} expire after 30 days, at which point users must re-authenticate.
+By default, logged-in sessions to {product} expire after 30 days, at which point users must re-authenticate.
 If you are an Admin and would like to adjust the session expiration length for your Workspace, please xref:contact-us.adoc[contact us].
 
 [discrete]
@@ -310,15 +310,15 @@ We do not currently support users being connected to two workspaces using SCIM.
 If you have a second workspace for sensitive data, it is recommended to keep that data in the same workspace and use permissions to manage access.
 
 [discrete]
-==== *Q: Group names need to match between Okta and {brand}. Does this also apply to Group memberships?*
+==== *Q: Group names need to match between Okta and {product}. Does this also apply to Group memberships?*
 
-Group memberships do not need to match between Okta and {brand}, but anything that is pushed will overwrite what is in {brand} and replace it with the Okta group members.
-So, if a member is missing from the Okta group being pushed, they will no longer appear in the {brand} group once synced, and that Group's contents will only be manageable via Okta.
+Group memberships do not need to match between Okta and {product}, but anything that is pushed will overwrite what is in {product} and replace it with the Okta group members.
+So, if a member is missing from the Okta group being pushed, they will no longer appear in the {product} group once synced, and that Group's contents will only be manageable via Okta.
 
 [discrete]
 ==== *Q: Can we test the SCIM integration before enabling it for all members?*
 
-It is not possible to create a second Okta integration within a {brand} workspace.
+It is not possible to create a second Okta integration within an {product} workspace.
 We only allow one SCIM instance per workspace, and we recommend that you sync a few test users (not yourself) before syncing everyone.
 
 [#troubleshooting]
@@ -331,26 +331,26 @@ If the error cannot be resolved easily, write in to {support-url}.
 |===
 | Issue | What to do
 
-| Users not added to {brand} groups when provisioned from identity provider.
-a| Users assigned to the {brand} app within the identity provider before SCIM is configured will not be created or linked to their {brand} account.
+| Users not added to {product} groups when provisioned from identity provider.
+a| Users assigned to the {product} app within the identity provider before SCIM is configured will not be created or linked to their {product} account.
 
 *AAD* +
-Check the user is assigned to the {brand} app in AAD, check that the group is assigned to the {brand} app, then re-provision the group to {brand}.
+Check the user is assigned to the {product} app in AAD, check that the group is assigned to the {product} app, then re-provision the group to {product}.
 You can also stop and restart provisioning in AAD if you check the logs and find errors.
 If re-starting provisioning doesn't work, reach out to {support-url}. +
 
 *Okta* +
-To ensure proper access to their account and groups, un-assign and re-assign the user to the {brand} app in Okta.
-Then, re-push the group to {brand}.
+To ensure proper access to their account and groups, un-assign and re-assign the user to the {product} app in Okta.
+Then, re-push the group to {product}.
 
 | Users who were previously Admins lost their Admin role.
 | Check that Admin access was granted by using the role *admin* (case-sensitive) when provisioning the user from the identity provider.
 
 | User accounts aren't linked to the identity provider accounts.
-| Check that the email in the identity provider matches the user email in {brand}.
+| Check that the email in the identity provider matches the user email in {product}.
 
-| Unable to manually invite users in {brand}.
-a| There is a {brand} workspace setting that disables manual invites and group creation to reduce the risk of mismatches between the identity provider and {brand}. +
+| Unable to manually invite users in {product}.
+a| There is an {product} workspace setting that disables manual invites and group creation to reduce the risk of mismatches between the identity provider and {product}. +
 Admins can disable this setting to allow manual invites and group management by going to menu:Workspace Settings[Member Authorization] and disabling the toggle for *Use only SCIM for provisioning*.
 
 | Received the following error: "Sorry, your organization has disabled that sign in method.

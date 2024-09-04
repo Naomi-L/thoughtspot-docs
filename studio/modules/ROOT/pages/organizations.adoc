@@ -5,15 +5,15 @@
 :description: How to configure your Analyst Studio Workspace.
 :ogdescription: How to configure your Analyst Studio Workspace.
 :path: /articles/organizations
-:brand: Analyst Studio
+:product: Analyst Studio
 
 == Overview
 
-Workspaces are groups of {brand} users that can securely share database connections and analyses with each other.
+Workspaces are groups of {product} users that can securely share database connections and analyses with each other.
 You may be a member of any number of Workspaces.
 By default, any member of a Workspace can query any of the Workspace's private link:https://mode.com/data-sources/[database connections,window=_blank].
 
-Anyone with a {brand} user account can link:https://app.mode.com/organizations/new[create a Workspace,window=_blank] for free.
+Anyone with an {product} user account can link:https://app.mode.com/organizations/new[create a Workspace,window=_blank] for free.
 
 == Managing membership
 
@@ -22,7 +22,7 @@ Anyone with a {brand} user account can link:https://app.mode.com/organizations/n
 
 You can see all the current and former members of your Workspace, as well as their current role, from the Members page in Workspace Settings:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
 . Click *Workspace Settings*
 . In the People section, click *Members*
 
@@ -58,8 +58,8 @@ By default, any member of your Workspace can invite new users to join.
 Invitees are required to verify their email address before being allowed to join the Workspace.
 Invitations expire after seven days.
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and click on your name in the upper left corner of the window.
-. Select *Invite to {brand}* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Select *Invite to {product}* from the dropdown menu.
 . Enter the email address of the person you want to invite and add an invitation message.
 . Click *Invite*.
 . You can see the status of your past invites--as well as resend pending invites--by clicking *See the invites you've already sent*.
@@ -69,10 +69,10 @@ Invitations expire after seven days.
 
 You can see the invites you've already sent and resend invitations to users from Workspace Settings:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
 . Click *Workspace Settings*
 . In the People section, click *Sent Invites*.
-. Click on the names of invitees who have signed up to see their profiles. To re-invite someone who hasn't signed up for {brand} yet, click the *Resend* button next to their name.
+. Click on the names of invitees who have signed up to see their profiles. To re-invite someone who hasn't signed up for {product} yet, click the *Resend* button next to their name.
 
 [discrete]
 ===== Reinvite a former member
@@ -102,7 +102,7 @@ Groups allow Workspace admins to easily modify and control access to database co
 
 To create a new group or manage members of an existing group:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] for the Workspace where you would like to create the group.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] for the Workspace where you would like to create the group.
 . Click on your name in the upper left corner.
 . Click *Workspace Settings* from the dropdown menu.
 . In the People section, click *Groups*.
@@ -144,9 +144,9 @@ image::CollectionRestriction.png[Member Authorization Settings]
 
 === Notifications
 
-Workspace admins can elect to receive emails from {brand} when new users sign up, Workspace membership changes, and more:
+Workspace admins can elect to receive emails from {product} when new users sign up, Workspace membership changes, and more:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Click *My Email Notifications*.
 . Toggle the notifications that you want to receive on or off.
 . Click *Save settings*.
@@ -154,9 +154,9 @@ Workspace admins can elect to receive emails from {brand} when new users sign up
 === Restricting invitations
 //+++<flag-icon>++++++</flag-icon>+++
 
-Admins in {brand}'s paid plans can control and restrict the onboarding of new members:
+Admins in {product}'s paid plans can control and restrict the onboarding of new members:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . In the People section, click on *Member Authorization*.
 . Click on the *Member Permissions* tab.
 . On this tab, you will see a number of options to help you control how new members can join your Workspace:
@@ -170,27 +170,27 @@ image::Member-Authorization-settings.png[Member Authorization Settings]
 * *Only Admins*: Only admins can invite new users to the Workspace.
 
 [discrete]
-===== What should happen when someone with your domain email address signs up for {brand}?
+===== What should happen when someone with your domain email address signs up for {product}?
 
 This setting will only be visible if your Workspace has <<claimed-domains,claimed a domain>>.
 
-* *Approve Automatically*: (Default) Any new user with a verified email address in the indicated <<claimed-domains,claimed domain>> will automatically become a member of the Workspace when they sign up for {brand}.
+* *Approve Automatically*: (Default) Any new user with a verified email address in the indicated <<claimed-domains,claimed domain>> will automatically become a member of the Workspace when they sign up for {product}.
 * *Require Approval*: An admin must approve each new member after they are invited to join the Workspace.
 
 [#claimed-domains]
 === Claimed domains
 
-{brand} customers have the option to "claim" their corporate email address domains.
-Any users who sign up for {brand} subsequent to the domain being claimed, with a verified email address in the claimed domain, will be automatically added to the Workspace that claimed the domain.
+{product} customers have the option to "claim" their corporate email address domains.
+Any users who sign up for {product} subsequent to the domain being claimed, with a verified email address in the claimed domain, will be automatically added to the Workspace that claimed the domain.
 Once a Workspace claims a domain, no subsequent Workspace can claim the same domain.
 
-This is designed to create a streamlined onboarding process for new {brand} users who work at the same company by ensuring that new users are added to the company's existing {brand} workspace.
+This is designed to create a streamlined onboarding process for new {product} users who work at the same company by ensuring that new users are added to the company's existing {product} workspace.
 
 ==== Requirements
 
 To claim a domain, the following requirement must be met:
 
-* The {brand} Workspace must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank].
+* The {product} Workspace must be on a link:https://mode.com/compare-plans/[paid plan,window=_blank].
 
 ===== How claimed domains work
 
@@ -198,17 +198,17 @@ For this example we'll use a fictitious company called Octan Industries.
 All employees at Octan Industries have an email address ending in @octan.com.
 
 Ann works for Octan industries and has the email address ann@octan.com.
-She verifies her email address and creates a new {brand} Workspace.
-Ann elects to purchase a link:https://mode.com/compare-plans/[paid {brand} plan,window=_blank] on behalf of her company.
-Ann wants to ensure that every Octan industries user who signs up for a {brand} account on their own ends up in the Workspace she is managing, instead of creating their own free Workspace.
-Therefore, Ann reaches out to {brand}'s support team to claim the @octan.com domain.
+She verifies her email address and creates a new {product} Workspace.
+Ann elects to purchase a link:https://mode.com/compare-plans/[paid {product} plan,window=_blank] on behalf of her company.
+Ann wants to ensure that every Octan industries user who signs up for an {product} account on their own ends up in the Workspace she is managing, instead of creating their own free Workspace.
+Therefore, Ann reaches out to {product}'s support team to claim the @octan.com domain.
 
-Later, when bill@octan.com signs up for {brand} and verifies his email address, he will be automatically added to the Octan Workspace and can collaborate with Ann in {brand}.
+Later, when bill@octan.com signs up for {product} and verifies his email address, he will be automatically added to the Octan Workspace and can collaborate with Ann in {product}.
 
 When SSO is enabled, users will be able to sign up with their email and will immediately have access to the Workspace if they are already logged into the SSO provider (that is, Google).
-This is a very seamless experience for users to access {brand}. Contact {support-url} to claim a domain.
+This is a very seamless experience for users to access {product}. Contact {support-url} to claim a domain.
 
-IMPORTANT: Some domains are not available to be claimed. For example, they may belong to a large institution and require additional authorization, or they may be shared email domains used by many Workspaces. In such cases, we encourage customers to use email invites or a third-party identity provider to set up user accounts in {brand}.
+IMPORTANT: Some domains are not available to be claimed. For example, they may belong to a large institution and require additional authorization, or they may be shared email domains used by many Workspaces. In such cases, we encourage customers to use email invites or a third-party identity provider to set up user accounts in {product}.
 
 '''
 
@@ -216,34 +216,34 @@ IMPORTANT: Some domains are not available to be claimed. For example, they may b
 
 === Update your profile
 
-Your user profile allows you to customize your {brand} experience across all of the {brand} Workspaces where you are a member.
-To update your profile, start by navigating to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and signing in if you aren't already:
+Your user profile allows you to customize your {product} experience across all of the {product} Workspaces where you are a member.
+To update your profile, start by navigating to the link:https://app.mode.com/home/[{product} home page,window=_blank] and signing in if you aren't already:
 
 . Click on your name in the upper left corner of the window and click *My Account*.
 . Click on *Profile* under Account Settings.
 
-Here you'll find a number of tabs containing settings for your profile that will be common across for your experience throughout {brand}:
+Here you'll find a number of tabs containing settings for your profile that will be common across for your experience throughout {product}:
 
 * *Details* - Adjust your name, query editor theme, and time zone.
 * *Email* - Update your email address. _(Note: Remember to verify your email address after updating it.)_
-* *Password* - Update your {brand} password.
+* *Password* - Update your {product} password.
 * *Avatar* - Change the avatar associated with your user account.
-If you have a link:https://en.gravatar.com/[Gravatar,window=_blank] account, you can link it on this page to use your Gravatar as your {brand} avatar.
+If you have a link:https://en.gravatar.com/[Gravatar,window=_blank] account, you can link it on this page to use your Gravatar as your {product} avatar.
 
 === Verify your email address
 
-You can access much of {brand}'s public functionality without verifying your email address.
+You can access much of {product}'s public functionality without verifying your email address.
 However, if you'd like to join Workspaces and access private data, you will need to verify your email address.
 
-When you create an account or update your email address, {brand} automatically sends you an email asking you to confirm your email address.
+When you create an account or update your email address, {product} automatically sends you an email asking you to confirm your email address.
 To verify your email, simply click the link in that email.
 
 === Delete your account
 
-Deleting your account will delete any Reports you created against the {brand} Public Warehouse and delete any data you uploaded to the {brand} Public Warehouse.
+Deleting your account will delete any Reports you created against the {product} Public Warehouse and delete any data you uploaded to the {product} Public Warehouse.
 Reports created inside of any other Workspace will not be deleted--other members inside that Workspace will still have access to those Reports.
 
-. From the {brand} homepage, click on your account dropdown menu in the upper left.
+. From the {product} homepage, click on your account dropdown menu in the upper left.
 . Click *Account*.
 . Click on *Profile* under Account Settings.
 . Click *Delete account...* in the lower right corner.
@@ -253,19 +253,19 @@ Reports created inside of any other Workspace will not be deleted--other members
 
 If you are the only admin of a Workspace, you cannot leave the Workspace until you <<change-the-role-of-a-member,make another member an admin>>.
 
-. Navigate to your link:https://app.mode.com/home/[{brand} homepage,window=_blank].
+. Navigate to your link:https://app.mode.com/home/[{product} homepage,window=_blank].
 . Click on your name in the upper left corner.
 . Click *Workspace Settings* from the dropdown menu.
 . Click the *Details* tab under the Workspace header on the left side.
 . Click the leave button *Leave* under Actions.
 . Confirm you want to leave this Workspace by clicking the *Leave* button again.
 
-==== What happens when you leave a {brand} Workspace
+==== What happens when you leave an {product} Workspace
 
-Leaving a Workspace does not delete your {brand} account, even if you leave all Workspaces in which you are a member.
+Leaving a Workspace does not delete your {product} account, even if you leave all Workspaces in which you are a member.
 When you leave a Workspace:
 
-* Any assets (for example, reports, code, etc.) created by you inside the {brand} Workspace are retained and will remain accessible by the remaining users in the Workspace.
+* Any assets (for example, reports, code, etc.) created by you inside the {product} Workspace are retained and will remain accessible by the remaining users in the Workspace.
 These assets will continue to show your name as the owner.
 * Any Report in your xref:spaces.adoc#types-of-spaces[personal Collection] will remain in your personal Collection and remain accessible by any member of the Workspace in possession of the report URL.
 * An admin of the Workspace can invite you back to the Workspace at any time.
@@ -278,26 +278,26 @@ However, you will not be able to generate new personal tokens.
 If you need a new access token for the API, an Admin in your workspace can generate one for you.
 xref:workspace-api-tokens.adoc[See here for more information on Workspace API tokens].
 
-When using personal API tokens, access to resources in the API directly matches your level of permissions in the {brand} Workspace you're calling.
-Before returning a response, {brand} validates every API call against your permissions in that Workspace.
+When using personal API tokens, access to resources in the API directly matches your level of permissions in the {product} Workspace you're calling.
+Before returning a response, {product} validates every API call against your permissions in that Workspace.
 
 == Privacy and security
 
 === Report visibility
 
-Everyone on the internet can access your {brand} Workspace's public profile page (for example, https://app.mode.com/modeanalytics) as well as the reports in your Workspace's xref:spaces.adoc#community-space[community Collection].
-In addition, all {brand} users can access any data uploaded by members of your Workspace to xref:managing-database-connections.adoc#mode-public-warehouse[{brand}'s Public Warehouse].
+Everyone on the internet can access your {product} Workspace's public profile page (for example, https://app.mode.com/modeanalytics) as well as the reports in your Workspace's xref:spaces.adoc#community-space[community Collection].
+In addition, all {product} users can access any data uploaded by members of your Workspace to xref:managing-database-connections.adoc#mode-public-warehouse[{product}'s Public Warehouse].
 
-Any other Report in your Workspace, including its code and query results, is *only* visible to other members of your {brand} Workspace unless someone has explicitly enabled external sharing for that Report.
+Any other Report in your Workspace, including its code and query results, is *only* visible to other members of your {product} Workspace unless someone has explicitly enabled external sharing for that Report.
 
 === GDPR
 
-{brand} is committed to meeting the requirements of the General Data Protection Regulation ('GDPR').
+{product} is committed to meeting the requirements of the General Data Protection Regulation ('GDPR').
 The GDPR is a landmark EU data privacy law, effective May 2018, which affects both European and non-European businesses.
-link:https://mode.com/gdpr/[Learn more about {brand}'s GDPR readiness, security infrastructure, and subprocessors,window=_blank].
+link:https://mode.com/gdpr/[Learn more about {product}'s GDPR readiness, security infrastructure, and subprocessors,window=_blank].
 
-{brand} offers a Data Processing Agreement (DPA) and EU Model Contract Clauses as a means of meeting the adequacy and security requirements of the European Parliament and Council of the European Union's Data Protection Directive and the GDPR.
-{brand}'s DPA is available to all Workspaces using {brand} and is automatically incorporated in the Terms of Service.
+{product} offers a Data Processing Agreement (DPA) and EU Model Contract Clauses as a means of meeting the adequacy and security requirements of the European Parliament and Council of the European Union's Data Protection Directive and the GDPR.
+{product}'s DPA is available to all Workspaces using {product} and is automatically incorporated in the Terms of Service.
 The DPA can be found link:https://mode.com/legal/dpa/[here,window=_blank].
 
 [#managing-schedules]
@@ -335,7 +335,7 @@ Your Workspace includes a number of built-in xref:report-layout-and-presentation
 === Add a custom theme
 //+++<flag-icon>++++++</flag-icon>+++
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . Click on the *New Theme* button.
@@ -354,7 +354,7 @@ Any member can use or create a custom theme, however, a custom theme can only be
 You cannot delete any of the built-in color themes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . To modify a custom theme, locate it in the list and click on it.
@@ -372,7 +372,7 @@ Your Workspace includes a number of pre-defined xref:report-layout-and-presentat
 === Add a custom color palette
 //+++<flag-icon>++++++</flag-icon>+++
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click the *New Color Palette* button.
 . Enter a unique name and select either Categorical or Divergent palette type:
@@ -391,7 +391,7 @@ Any member can use or create a custom color palette, however, a custom color pal
 You cannot delete any of the built-in color palettes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . To modify a custom color palette, locate it in the list and click on it.
 Make any changes and click *Save*.
@@ -406,7 +406,7 @@ Does not impact any existing reports.
 
 To manage billing communications and view billing history:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . In the Workspace section, click *Billing*.
 . Here you'll find of number of sections where you can view and modify your Workspace's billing details:
 
@@ -414,7 +414,7 @@ To manage billing communications and view billing history:
 | Section | What you can do
 
 | Overview
-| Details about your paid {brand} plan, including its renewal date.
+| Details about your paid {product} plan, including its renewal date.
 
 | History
 | All invoices related to your paid plan.
@@ -423,7 +423,7 @@ To manage billing communications and view billing history:
 | View or modify recipients of all invoices and billing communications.
 
 | Payment method
-| Modify the credit card information on that {brand} has on file.
+| Modify the credit card information on that {product} has on file.
 |===
 
 Eligible customers may elect to be billed by means other than credit card (such as by wire).
@@ -431,11 +431,11 @@ Please reach out to your account manager or xref:contact-us.adoc[contact our suc
 
 === Flexible seat and monthly data compute rates
 
-While all paid {brand} plans are on an annual term, you have the flexibility to scale up and down seats and monthly compute data outside of your annual plan at a "flex rate".
+While all paid {product} plans are on an annual term, you have the flexibility to scale up and down seats and monthly compute data outside of your annual plan at a "flex rate".
 
 === Seat flex rates
 
-For any users beyond the number of included users in your {brand} agreement, you will be charged a pro-rated amount for each user based on the number of days in the billing period (typically monthly) that the user was a member of your Workspace.
+For any users beyond the number of included users in your {product} agreement, you will be charged a pro-rated amount for each user based on the number of days in the billing period (typically monthly) that the user was a member of your Workspace.
 
 As an example, let's assume the flex rate for adding an additional member to your Workspace is $27/month.
 Let's say you add a coworker to your Workspace 10 days into your monthly billing period and there are 20 remaining days in that month.
@@ -446,12 +446,12 @@ You can add additional seats to your annual agreement at the annual price at any
 
 === Data compute flex rates
 
-For any data compute used beyond the monthly limit included in your {brand} agreement, you will be charged for the total GB used over your limit pro-rated to the "flex rate" based on your current {brand} plan.
-Data compute for your {brand} Workspace is calculated monthly by adding the GB from the total cumulative queries pulled into {brand}'s Helix Data Engine for the month.
+For any data compute used beyond the monthly limit included in your {product} agreement, you will be charged for the total GB used over your limit pro-rated to the "flex rate" based on your current {product} plan.
+Data compute for your {product} Workspace is calculated monthly by adding the GB from the total cumulative queries pulled into {product}'s Helix Data Engine for the month.
 
-Your {brand} plan includes a monthly data compute limit, and all flex data fees are calculated monthly and billed quarterly.
+Your {product} plan includes a monthly data compute limit, and all flex data fees are calculated monthly and billed quarterly.
 
-As an example, let's assume the flex rate for your {brand} plan is $1250 per 100GB.
+As an example, let's assume the flex rate for your {product} plan is $1250 per 100GB.
 In month 1, you use 105GB of cumulative data compute.
 In month 2, you use 95GB of cumulative data compute.
 In month 3, you use 120GB of cumulative data compute.
@@ -461,14 +461,14 @@ You can add additional monthly data compute throughput to your annual agreement 
 
 === Tracking insights on seats and data compute usage
 
-Want to track account usage or learn more about how your teams are using {brand}?
+Want to track account usage or learn more about how your teams are using {product}?
 We provide a handful of resources.
 
 ==== Workspace Stats page
 
 To review current trends and usage:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank].
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank].
 . Click on your name in the upper left corner of the screen.
 . Click *Workspace Settings* from the dropdown menu.
 . In the *Workspace* section, click *Stats*.
@@ -476,13 +476,13 @@ To review current trends and usage:
 
 ==== Discovery Database
 
-The Discovery Database allows your team to analyze trends, monitor usage, and glean insights on how your teams are using {brand} by providing you with a data connection directly in your {brand} Workspace.
+The Discovery Database allows your team to analyze trends, monitor usage, and glean insights on how your teams are using {product} by providing you with a data connection directly in your {product} Workspace.
 
 NOTE: Included in Business and Enterprise Plans. link:https://mode.com/developer/discovery-database/introduction/[Additional Discovery Database Details and Developer Guides,window=_blank]
 
-==== {brand}'s Discovery API
+==== {product}'s Discovery API
 
-The Discovery API provides API access to metadata that gives you insights on Reports, usage, and access to help you understand your content and how your teams are using {brand}.
+The Discovery API provides API access to metadata that gives you insights on Reports, usage, and access to help you understand your content and how your teams are using {product}.
 
 NOTE: Included in Enterprise Plan link:https://mode.com/developer/discovery-api/introduction/[Additional Discovery API Details and Developer Guides,window=_blank]
 
@@ -496,13 +496,13 @@ WARNING: Deleting a Workspace will remove all associated data, including public 
 Only an admin can delete a Workspace.
 To delete a Workspace:
 
-. Navigate to the link:https://app.mode.com/home/[{brand} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
 . Click *Workspace Settings*.
 . Select the *Details* tab.
 . Click *Delete* in the lower right corner.
 . Type the username of the Workspace in the text box and click *Permanently Delete*.
 +
-IMPORTANT: When a Workspace is deleted, all Reports contained within that Workspace are automatically deleted and historical report run results are retained on {brand}'s servers for 30 days. After 30 days, all of the Workspace's report run results are automatically deleted from {brand}'s servers. After an additional 30 days, these report run results are automatically deleted from {brand}'s backups and cannot be recovered by {brand}.
+IMPORTANT: When a Workspace is deleted, all Reports contained within that Workspace are automatically deleted and historical report run results are retained on {product}'s servers for 30 days. After 30 days, all of the Workspace's report run results are automatically deleted from {product}'s servers. After an additional 30 days, these report run results are automatically deleted from {product}'s backups and cannot be recovered by {product}.
 
 [#faqs]
 == FAQs
@@ -511,10 +511,10 @@ IMPORTANT: When a Workspace is deleted, all Reports contained within that Worksp
 === *Q: If a user is deactivated, can we retrieve the Reports in their personal collection?*
 
 Yes.
-Since {brand} Reports are owned by workspaces rather than individuals, all of the Reports the user created should remain unchanged after they leave the workspace.
+Since {product} Reports are owned by workspaces rather than individuals, all of the Reports the user created should remain unchanged after they leave the workspace.
 Reports living in personal collections can still be accessed by workspace admins if they have the Report URLs.
 
-Workspace admins can move Reports from a user's personal collection into a public or private collection of their choice using the link:https://mode.com/developer/api-cookbook/management/move-report/[{brand} API,window=_blank].
+Workspace admins can move Reports from a user's personal collection into a public or private collection of their choice using the link:https://mode.com/developer/api-cookbook/management/move-report/[{product} API,window=_blank].
 Please note that the Report tokens are required for this automation.
 If you need a list of the Report tokens in the deactivated user's personal collection, please have a workspace admin contact {support-url}.
 
@@ -528,7 +528,7 @@ In order to resolve this issue, you can create a duplicate of the Report and use
 
 //For further assistance, please refer to error #4 in our xref:white-label-embeds.adoc#troubleshooting[troubleshooting guide].
 
-*Managing Private and Personal Collection Reports:* Please be aware that since {brand} Reports are owned by workspaces rather than individuals, all Reports created by the user should remain unchanged after they leave the workspace.
+*Managing Private and Personal Collection Reports:* Please be aware that since {product} Reports are owned by workspaces rather than individuals, all Reports created by the user should remain unchanged after they leave the workspace.
 Reports located in personal collections can still be accessed by workspace admins if they have the report URLs.
 If the reports are in a public collection, they will still be accessible to the workspace as usual.
 However, if the Reports are in a private collection and the user is the only member of this collection, they will not be viewable or movable due to current limitations on permissions.
@@ -545,7 +545,7 @@ As an admin, you have the ability to cancel an invite by following these steps:
 . Click on *Cancel Invite*.
 
 [discrete]
-=== *Q: Users signed up for {brand} but didn't get email confirmation to join workspace*
+=== *Q: Users signed up for {product} but didn't get email confirmation to join workspace*
 
 This behavior is seen when the workspace has "admin-invite only" enabled and/or the admin has not approved the request to join the workspace.
 In many cases, when users click "Continue" in their email to verify their email address, nothing else is sent to them.
