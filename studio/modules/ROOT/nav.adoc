@@ -35,11 +35,13 @@
 ** xref:explorations.adoc[Explorations]
 ** xref:report-scheduling-and-sharing.adoc[Report scheduling and sharing]
 
+////
 * xref:embedding.adoc[Embedding]
 ** xref:internal-embeds.adoc[Internal embedded reports]
 //** xref:white-label-embeds.adoc[White-label embedded reports]
 ** xref:embed-in-wordpress.adoc[Embedding a report in a Wordpress site]
 ** xref:embed-in-salesforce.adoc[Embedding a report in Salesforce]
+////
 
 * xref:integrations.adoc[Integrations]
 ** xref:dbt-data-freshness.adoc[dbt data freshness]
