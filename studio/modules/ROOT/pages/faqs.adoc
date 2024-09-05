@@ -83,9 +83,6 @@ We'll be happy to assist you further.
 
 * xref:github.adoc#faqs[FAQs]
 
-=== Internal embedded reports
-
-* xref:internal-embeds.adoc#troubleshooting[Common Errors]
 
 === Notebook
 
