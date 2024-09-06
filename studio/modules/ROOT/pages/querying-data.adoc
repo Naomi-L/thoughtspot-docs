@@ -10,7 +10,7 @@
 == Overview
 
 The Report is where analysis happens in {product}.
-Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click the *New* image:modal-add.svg[new] button in the upper right corner of the window to create a new Report and get started.
+Click the app switcher icon in the top navigation bar and select {product}, then click the *New* image:modal-add.svg[new] button in the upper right corner of the window to create a new Report and get started.
 All new Reports are automatically added to your xref:spaces.adoc#personal-space[Personal Collection].
 
 After creating a Report, you will be taken to the editor to write your first query.

@@ -137,7 +137,7 @@ image:copy-paste-replace-from-explorations.gif[Copy Paste Replace from Explorati
 [#view-saved-explorations]
 == View saved Explorations
 
-To return to any Explorations you've made and or view all of your saved Explorations, go to the *My Explorations* tab on the left side of your link:https://app.mode.com/home/[{product} home page,window=_blank].
+To return to any Explorations you've made and or view all of your saved Explorations, go to the *My Explorations* tab on the left side of your {product} home page.
 From here you can search and filter your Explorations, or view, edit, or delete an existing Exploration.
 Your list of Explorations is private and browsable only to you.
 

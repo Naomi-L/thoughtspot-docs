@@ -22,7 +22,7 @@ Anyone with an {product} user account can link:https://app.mode.com/organization
 
 You can see all the current and former members of your Workspace, as well as their current role, from the Members page in Workspace Settings:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
 . Click *Workspace Settings*
 . In the People section, click *Members*
 
@@ -58,7 +58,7 @@ By default, any member of your Workspace can invite new users to join.
 Invitees are required to verify their email address before being allowed to join the Workspace.
 Invitations expire after seven days.
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
 . Select *Invite to {product}* from the dropdown menu.
 . Enter the email address of the person you want to invite and add an invitation message.
 . Click *Invite*.
@@ -69,7 +69,7 @@ Invitations expire after seven days.
 
 You can see the invites you've already sent and resend invitations to users from Workspace Settings:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
 . Click *Workspace Settings*
 . In the People section, click *Sent Invites*.
 . Click on the names of invitees who have signed up to see their profiles. To re-invite someone who hasn't signed up for {product} yet, click the *Resend* button next to their name.
@@ -102,7 +102,7 @@ Groups allow Workspace admins to easily modify and control access to database co
 
 To create a new group or manage members of an existing group:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] for the Workspace where you would like to create the group.
+. Click the app switcher icon in the top navigation bar and select {product}. Navigate to the Workspace where you would like to create the group.
 . Click on your name in the upper left corner.
 . Click *Workspace Settings* from the dropdown menu.
 . In the People section, click *Groups*.
@@ -146,7 +146,7 @@ image::CollectionRestriction.png[Member Authorization Settings]
 
 Workspace admins can elect to receive emails from {product} when new users sign up, Workspace membership changes, and more:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Click *My Email Notifications*.
 . Toggle the notifications that you want to receive on or off.
 . Click *Save settings*.
@@ -156,7 +156,7 @@ Workspace admins can elect to receive emails from {product} when new users sign 
 
 Admins in {product}'s paid plans can control and restrict the onboarding of new members:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . In the People section, click on *Member Authorization*.
 . Click on the *Member Permissions* tab.
 . On this tab, you will see a number of options to help you control how new members can join your Workspace:
@@ -217,7 +217,7 @@ IMPORTANT: Some domains are not available to be claimed. For example, they may b
 === Update your profile
 
 Your user profile allows you to customize your {product} experience across all of the {product} Workspaces where you are a member.
-To update your profile, start by navigating to the link:https://app.mode.com/home/[{product} home page,window=_blank] and signing in if you aren't already:
+To update your profile, start by navigating to the {product} home page and signing in if you aren't already:
 
 . Click on your name in the upper left corner of the window and click *My Account*.
 . Click on *Profile* under Account Settings.
@@ -243,7 +243,7 @@ To verify your email, simply click the link in that email.
 Deleting your account will delete any Reports you created against the {product} Public Warehouse and delete any data you uploaded to the {product} Public Warehouse.
 Reports created inside of any other Workspace will not be deleted--other members inside that Workspace will still have access to those Reports.
 
-. From the {product} homepage, click on your account dropdown menu in the upper left.
+. From the {product} home page, click on your account dropdown menu in the upper left.
 . Click *Account*.
 . Click on *Profile* under Account Settings.
 . Click *Delete account...* in the lower right corner.
@@ -253,7 +253,7 @@ Reports created inside of any other Workspace will not be deleted--other members
 
 If you are the only admin of a Workspace, you cannot leave the Workspace until you <<change-the-role-of-a-member,make another member an admin>>.
 
-. Navigate to your link:https://app.mode.com/home/[{product} homepage,window=_blank].
+. Click the app switcher icon in the top navigation bar and select {product}.
 . Click on your name in the upper left corner.
 . Click *Workspace Settings* from the dropdown menu.
 . Click the *Details* tab under the Workspace header on the left side.
@@ -335,7 +335,7 @@ Your Workspace includes a number of built-in xref:report-layout-and-presentation
 === Add a custom theme
 //+++<flag-icon>++++++</flag-icon>+++
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . Click on the *New Theme* button.
@@ -354,7 +354,7 @@ Any member can use or create a custom theme, however, a custom theme can only be
 You cannot delete any of the built-in color themes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . To modify a custom theme, locate it in the list and click on it.
@@ -372,7 +372,7 @@ Your Workspace includes a number of pre-defined xref:report-layout-and-presentat
 === Add a custom color palette
 //+++<flag-icon>++++++</flag-icon>+++
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click the *New Color Palette* button.
 . Enter a unique name and select either Categorical or Divergent palette type:
@@ -391,7 +391,7 @@ Any member can use or create a custom color palette, however, a custom color pal
 You cannot delete any of the built-in color palettes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . To modify a custom color palette, locate it in the list and click on it.
 Make any changes and click *Save*.
@@ -406,7 +406,7 @@ Does not impact any existing reports.
 
 To manage billing communications and view billing history:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . In the Workspace section, click *Billing*.
 . Here you'll find of number of sections where you can view and modify your Workspace's billing details:
 
@@ -468,7 +468,7 @@ We provide a handful of resources.
 
 To review current trends and usage:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank].
+. Click the app switcher icon in the top navigation bar and select {product}.
 . Click on your name in the upper left corner of the screen.
 . Click *Workspace Settings* from the dropdown menu.
 . In the *Workspace* section, click *Stats*.
@@ -496,7 +496,7 @@ WARNING: Deleting a Workspace will remove all associated data, including public 
 Only an admin can delete a Workspace.
 To delete a Workspace:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
 . Click *Workspace Settings*.
 . Select the *Details* tab.
 . Click *Delete* in the lower right corner.

@@ -29,7 +29,7 @@ In addition, you may style any Report by <<html-editor,including custom CSS usin
 
 *Add a new custom theme*
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen and click *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and click *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . Click on the *New Theme* button.
@@ -47,7 +47,7 @@ Any member can use or create a custom theme, however, a custom theme can only be
 You cannot delete any of the built-in color themes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click on the *Report Themes* tab.
 . To modify a custom theme, locate it in the list and click on it.
@@ -65,7 +65,7 @@ Your Workspace includes a number of pre-defined color palettes which you may be 
 
 *Add a custom color palette*
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . Click the *New Color Palette* button.
 . Enter a unique name and select categorical, sequential, or divergent palette type:
@@ -83,7 +83,7 @@ Any member can use or create a custom color palette, however, a custom color pal
 You cannot delete any of the built-in color palettes.
 To manage:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Under Features, select *Colors & Themes*.
 . To modify a custom color palette, locate it in the list and click on it.
 Make any changes and click *Save*.

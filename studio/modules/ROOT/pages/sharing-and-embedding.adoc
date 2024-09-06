@@ -12,7 +12,7 @@
 
 Admins can control how members of their Workspace are able to share Reports both internally and externally:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Click on *Sharing & Embedding* under Features.
 
 Adjust the toggles next to each of the following options and click *Save settings* when you are done to confirm:
@@ -64,7 +64,7 @@ To create or modify a signature token:
 
 image::signature-token-settings.png[New signature token]
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Click on *Sharing & Embedding* under Features.
 . Click on the *Embedding* tab.
 . To create a new signature token, enter a unique name and click *Create token*.

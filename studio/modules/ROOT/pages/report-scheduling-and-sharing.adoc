@@ -198,7 +198,7 @@ Allowing data previews, PDFs, and CSVs to be included in emails and Slack messag
 When disabled, Report image previews will no longer appear the message bodies of Slack or email shares, and Reports shared via email can no longer contain attached PDFs.
 Admins can control how members of their Workspace are able to share Reports both internally and externally.
 
-. Navigate to the link:https://app.mode.com[{product} home page,window=_blank], click on your name in the upper left corner of the screen and click *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen and click *Workspace Settings* from the dropdown menu.
 . Click on *Sharing & Embedding* under Features.
 See the full documentation for sharing data in {product} xref:sharing-and-embedding.adoc[here].
 
