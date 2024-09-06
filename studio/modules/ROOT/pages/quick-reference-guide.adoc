@@ -31,7 +31,7 @@ image::database-connection.png[Connect your database]
 == Invite collaborators
 
 The easiest way to share reports, code, and database query access with others is to invite them to your {product} Workspace.
-To send an invitation, start from the link:https://app.mode.com/home/[{product} home page,window=_blank] for your Workspace, click on your name in the upper left corner, and then click *Invite to {product}*.
+To send an invitation, start from the {product} home page for your Workspace, click on your name in the upper left corner, and then click *Invite to {product}*.
 
 == Create analysis
 
@@ -45,7 +45,7 @@ When creating an analysis, the first step is gathering and structuring all neces
 To do this, you'll need to write and execute SQL code against one or more xref:connecting-mode-to-your-database.adoc[connected databases].
 In {product}, this is done within a xref:organizing-reports.adoc[Report].
 
-To create a new Report, click the *new Report* image:modal-add.svg[modal add] button in the upper right-hand corner of the link:https://app.mode.com/home/[{product} home page,window=_blank], which will take you the Query Editor, where you can compose SQL code.
+To create a new Report, click the *new Report* image:modal-add.svg[modal add] button in the upper right-hand corner of the {product} home page, which will take you the Query Editor, where you can compose SQL code.
 
 image::sql-editor.png[Editor]
 

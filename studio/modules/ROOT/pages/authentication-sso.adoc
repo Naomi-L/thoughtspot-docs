@@ -13,7 +13,7 @@
 
 Organization admins can set sign-in restrictions to control how members are able to authenticate when accessing their {product} Workspace.
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank].
+. Click the app switcher icon in the top navigation bar and select {product}.
 . Click on your name in the upper left corner.
 . Click *Workspace Settings* from the dropdown menu.
 . In the People section, click on *Member Authorization*.
@@ -34,7 +34,7 @@ WARNING: Do not disable all sign-in methods. If all methods are disabled, it wil
 
 Admins may define one more custom SAML identity provider that your {product} Workspace can use to authenticate users:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank], click on your name in the upper left corner of the screen, and click *Workspace Settings* from the dropdown menu.
+. Click the app switcher icon in the top navigation bar and select {product}. Click on your name in the upper left corner of the screen, and click *Workspace Settings* from the dropdown menu.
 . In the People section, click on *Member Authorization*.
 . To add a new SAML provider, click *+ Add New Provider*.
 To edit or delete an existing provider, click the *gear* image:settings-mini-hover.svg[mini hover] next to its name in the list and click *Edit* or *Delete*.

@@ -51,7 +51,7 @@ Enter a commit message to describe the changes, and your updates will be pushed 
 
 To push all updates:
 
-. Navigate to the link:https://app.mode.com/home/[{product} home page,window=_blank] and click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
 . Click *Workspace Settings*.
 . Under the *Features* section, click *GitHub*.
 . Under the *Unresolved Differences* tab, click *Push All*.
