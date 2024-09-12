@@ -6,4 +6,5 @@ nav:
 - modules/ROOT/nav.adoc
 asciidoc:
   attributes:
+    product: Analyst Studio
     page-layout: default-blank
