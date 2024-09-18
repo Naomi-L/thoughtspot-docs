@@ -7,6 +7,7 @@
 :path: /articles/slack
 :versions: ["business"]
 :product: Analyst Studio
+:jira: SCAL-224857
 
 == Overview
 
@@ -102,9 +103,7 @@ Only the first failed delivery attempt will result in a notification email.
 [discrete]
 === *Q: Is there a way to disable the generated image in Slack when creating schedules?*
 
-Allowing data previews, PDFs, and CSVs to be included in emails and Slack messages is enabled by default.
-When disabled, Report image previews will no longer appear in the message bodies of Slack or email shares, and Reports shared via email can no longer contain attached PDFs.
-Admins can control how members of their Workspace are able to share reports both internally and externally.
+Allow preview images in Slack messages is enabled by default. When disabled, report image previews will no longer appear in the message bodies of Slack. Admins can control how members of their Workspace are able to share reports both internally and externally.
 
 . Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Click on *Sharing & Embedding* under Features.
