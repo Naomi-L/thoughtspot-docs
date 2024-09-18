@@ -1,0 +1,12 @@
+= Explore and share data
+:author: Naomi
+:last_updated: 7/25/24
+:experimental:
+:linkattrs:
+:description: Explore and share data.
+:product: Analyst Studio
+
+** xref:studio-explorations.adoc[Explorations] +
+Explorations are your own personal visualizations.
+** xref:studio-report-scheduling-and-sharing.adoc[Report scheduling and sharing] +
+Share your analysis outside of Analyst Studio.

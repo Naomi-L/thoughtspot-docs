@@ -1,0 +1,18 @@
+= Administration
+:author: Naomi
+:last_updated: 7/25/24
+:experimental:
+:linkattrs:
+:description: Administration.
+:product: Analyst Studio
+
+** xref:studio-authentication-sso.adoc[Authentication and SSO] +
+Check your accounts settings and verify a user’s identity.
+** xref:studio-permissions.adoc[Access control and permissions] +
+How to manage permissions in {product}.
+** xref:studio-sharing-and-embedding.adoc[Sharing and embedding] +
+Control your account’s sharing settings for embeds.
+** xref:studio-organizations.adoc[Workspaces] +
+How to configure your {product} Workspace.
+** xref:studio-workspace-api-tokens.adoc[API tokens] +
+An overview of Workspace API Tokens.
