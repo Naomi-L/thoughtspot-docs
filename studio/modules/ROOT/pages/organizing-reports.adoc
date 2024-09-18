@@ -6,6 +6,7 @@
 :ogdescription: How to create, duplicate, delete, archive, and move reports in Analyst Studio.
 :path: /articles/organizing-reports
 :product: Analyst Studio
+:jira: SCAL-224853
 
 == Create a new Report
 
@@ -53,7 +54,7 @@ To archive a Report:
 . Click *Archive*.
 . The Report will be hidden from view, but it will not be modified in any other way.
 
-Archived Reports are still accessible to Workspace members via direct link or search.
+Archived Reports are still accessible to Workspace members via direct link or search, and will have an archived badge.
 You can see all of the archived Reports in a Collection by navigating to that Collection and clicking on the *View All Reports* dropdown in the upper right, and clicking *Archive*.
 You can unarchive any of the Reports in this view by hovering over the Report thumbnail, clicking on the overflow menu icon image:menu-dots-gray-press.svg[menu] button that appears in the upper right, and clicking *Unarchive*.
 
