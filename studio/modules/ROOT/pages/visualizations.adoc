@@ -6,6 +6,7 @@
 :ogdescription: Visualize your data to gain insight.
 :path: /articles/visualizations
 :product: Analyst Studio
+:jira: SCAL-224859
 
 == Overview
 
@@ -384,6 +385,7 @@ In Explorations, the data profile setting is available in the Format panel.
 
 image::data-profile-in-flat-tables.gif[data profiling]
 
+[#pivot-table]
 === Pivot table
 
 A link:https://en.wikipedia.org/wiki/Pivot_table[pivot table,window=_blank] aggregates and summarizes (for example, using sum, average, count, etc.) query results and presents them in a data table.
@@ -457,13 +459,15 @@ You can use calculated fields in all pivot table drop zones.
 
 image::add-filters1.gif[Adding filters]
 
-==== Grand totals
+==== Grand totals and Subtotals
 
-You can toggle on and off either or both Column Grand Totals and Row Grand Totals using the xref:explorations.adoc#toolbar[Toolbar].
+You can toggle on and off either or both Column Grand totals and Subtotals and Row Grand totals and Subtotals using the xref:explorations.adoc#toolbar[Toolbar].
 
-By default, Grand Totals will take on the same aggregation method as the values you are totaling over--for example, it will sum all the values if your measure is SUM(field), or it will average across all the values if your measure is AVG(field).
+You will need more than one dimension and at least one measure under Columns or Rows in order to toggle on Subtotals. You can also utilize them for Visual Explorer charts.
 
-image::grandtotals_pt1.png[Grand Totals]
+Grand totals and Subtotals will take on the same aggregation method as the measure, for example, it will sum all the values if your measure is `SUM(field)` or it will average across all the values if your measure is `AVG(field)`.
+
+image::grand-subtotals.gif[Grand Totals]
 
 ==== Quick sort
 
