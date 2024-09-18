@@ -3,11 +3,11 @@
 :categories_weight: 3
 :date: 2024-05-30
 :description: Link your Google Accounts to import data directly into Analyst Studio's Datasets for analysis and visualization.
-:page-layout: default-cloud-early-access
+:page-layout: default-cloud
 :ogdescription: Link your Google Accounts to import data directly into Analyst Studio's Datasets for analysis and visualization.
 :path: /articles/google-sheets-integration
 :product: Analyst Studio
-:jira: SCAL-219403, SCAL-222359
+:jira: SCAL-219403, SCAL-222359, SCAL-224849
 
 == Overview
 
@@ -257,8 +257,7 @@ The ability to query and join Reusable Datasets is on the roadmap, and will be i
 [discrete]
 === *Q: Can I access my Google Sheet Datasets as dataframes in the Notebook?*
 
-Currently, only query results within a given Report can be referenced as dataframes.
-However, the ability to reference Datasets that you've added to your Report as dataframes is a feature on the roadmap and will be coming soon!
+Yes. You can reference Google Sheet Datasets that you’ve added to your Report as dataframes in the Notebook link:https://mode.com/help/articles/notebook#accessing-query-and-dataset-results[by name, position, or token].
 
 [discrete]
 === *Q: Can I add custom HTML to Reports that are using Google Sheets Datasets?*
@@ -314,3 +313,10 @@ Existing Datasets built on the connection will continue to use the last successf
 Disabling the Google Sheets integration will log out any Members currently connected to Google, and prevent them from re-connecting or creating new Datasets from Google Sheet data.
 
 Existing Datasets built via the Google Sheets integration will continue to use the last successful sync but won't be able to sync in new data, which could break existing refresh schedules.
+
+[discrete]
+=== *Q: Where can I get more information on the Google Sheets integration usage for my Workspace?*
+
+You can use link:https://mode.com/developer/discovery-database/introduction/[Discovery Database] to query which Google Sheets Datasets have been created and its sync history.
+
+Two new tables, GOOGLE_SHEETS and GOOGLE_SHEET_SYNCS have been added to the link:https://docs.google.com/spreadsheets/d/1j8LLiT-ifH7Y9or-ksSNy9XRPCuxVMNvvMhP7qvrnJI/edit?gid=2079969635#gid=2079969635[schema].
