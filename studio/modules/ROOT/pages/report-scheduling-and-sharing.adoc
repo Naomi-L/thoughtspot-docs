@@ -7,6 +7,7 @@
 :ogdescription: Share your analysis outside of Analyst Studio.
 :path: /articles/report-scheduling-and-sharing
 :product: Analyst Studio
+:jira: SCAL-224852
 
 [#sharing-and-scheduling]
 == Sharing and scheduling
@@ -94,6 +95,8 @@ To create a new schedule:
 . Click *Create Schedule*.
 +
 NOTE: A Report schedule will continue to run until either the underlying Report or the schedule is deleted, even if the Report author or schedule creator is no longer a member of your Workspace. Workspace Admins can bulk xref:organizations.adoc#managing-schedules[manage schedules] on the Schedules page under Workspace Settings.
+
+Report schedule failure email notifications get sent to the Report creator, the schedule creator, and the last editor each time the schedule runs and fails until the error is resolved, or the schedule is deleted.
 
 Scheduled runs will include {product}'s Notebook as long as the Report view page contains at least one output generated from the Notebook.
 At that point, the Notebook will refresh when the Report itself is re-run.
