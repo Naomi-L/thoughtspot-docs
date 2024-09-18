@@ -6,6 +6,7 @@
 :ogdescription: Visualize your data in Visual Explorer.
 :path: /articles/visual-explorer
 :product: Analyst Studio
+:jira: SCAL-224860
 
 == Getting started
 
@@ -1009,10 +1010,12 @@ image:conditional-formatting-color1.png[Conditional Formatting]
 Visual Explorer currently only supports one field per channel in a given Layer.
 
 [discrete]
-=== *Q: Can I display Grand Totals in my chart?*
+=== *Q: Can I display Grand totals and Subtotals in my chart?*
 
-You can toggle on and off either or both Column Grand Totals and Row Grand Totals using the Toolbar, like so:
+You can toggle on and off either or both Column Grand totals and Subtotals and Row Grand totals and Subtotals using the xref:explorations.adoc#toolbar[Toolbar].
 
-image::grandtotals.gif[Grand Totals]
+You will need more than one dimension and at least one measure under Columns or Rows in order to toggle on Subtotals.
 
-By default, Grand Totals will take on the same aggregation method as the values you are totaling over--for example, it will sum all the values if your measure is `SUM(field)` or it will average across all the values if your measure is `AVG(field)`.
+Grand totals and Subtotals will take on the same aggregation method as the measure, for example, it will sum all the values if your measure is `SUM(field)` or it will average across all the values if your measure is `AVG(field)`.
+
+image::grand-subtotals.gif[Grand totals and Subtotals]
