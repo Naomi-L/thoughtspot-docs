@@ -8,5 +8,3 @@
 
 ** xref:studio-explorations.adoc[Explorations] +
 Explorations are your own personal visualizations.
-** xref:studio-report-scheduling-and-sharing.adoc[Report scheduling and sharing] +
-Share your analysis outside of Analyst Studio.

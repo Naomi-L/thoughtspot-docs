@@ -19,18 +19,11 @@ We've included information on common errors, as well as tips to help you get the
 If you're unable to find the information you're looking for, please don't hesitate to reach out to {support-url}.
 We'll be happy to assist you further.
 
-=== Access control and permissions
-
-* xref:studio-permissions.adoc#faqs[FAQs]
 
 === API reference
 
 * xref:studio-api-reference.adoc#faqs[FAQs]
 
-=== Authentication and SSO
-
-* xref:studio-authentication-sso.adoc#faqs[FAQs]
-* xref:studio-authentication-sso.adoc#troubleshooting[Common Errors]
 
 === Calculated fields
 
@@ -98,11 +91,6 @@ We'll be happy to assist you further.
 * xref:studio-querying-data.adoc#faqs[FAQs]
 * xref:studio-querying-data.adoc#troubleshooting[Common Errors]
 
-=== Report scheduling and sharing
-
-* xref:studio-report-scheduling-and-sharing.adoc#faqs[FAQs]
-* xref:studio-report-scheduling-and-sharing.adoc#troubleshooting[Common Errors]
-
 === Slack integration
 
 * xref:studio-slack.adoc#faqs[FAQs]
@@ -133,7 +121,3 @@ We'll be happy to assist you further.
 * xref:white-label-embeds.adoc#faqs[FAQS]
 * xref:white-label-embeds.adoc#troubleshooting[Common Errors]
 ////
-
-=== Workspaces
-
-* xref:studio-organizations.adoc#faqs[FAQs]

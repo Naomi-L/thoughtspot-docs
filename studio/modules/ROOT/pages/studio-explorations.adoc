@@ -97,7 +97,7 @@ Change how a pill is aggregated by clicking the pill's context menu.
 
 === Filters
 
-When you explore in a Report with xref:studio-interactivity.adoc#filters-and-parameters[filters], {product} will translate the relevant filters into your Exploration automatically.
+When you explore in a Report with filters, {product} will translate the relevant filters into your Exploration automatically.
 This is so the visualization will reflect what you were seeing on the Report, and so that the filters will persist when you save your Exploration.
 Once you begin exploring, you can add or update filters.
 

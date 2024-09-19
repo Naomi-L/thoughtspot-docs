@@ -365,9 +365,6 @@ Once in the Report Builder, you can configure the layout and customize the look 
 image::13-report-builder.png[Add chart]
 
 You can add filters to your Report to allow viewers to slice the data in different views.
-You can learn more about using Report filters in this xref:studio-interactivity.adoc#filters-and-parameters[article].
-
-You can learn more about using the Report Builder in this xref:studio-report-layout-and-presentation.adoc#report-builder[article].
 
 To give your Report a name, hover over the Report title in the navigation panel and click on the pencil icon.
 This will open a modal where you can give the Report a name and description.
@@ -385,8 +382,6 @@ Once you choose where to move the Report to, you will be able to find the Report
 Anyone else with access to the Collection will also be able to see and find the Report.
 
 Learn more about organizing and managing Reports in collections in this xref:studio-spaces.adoc[article].
-
-Learn more about sharing Reports in this xref:studio-report-scheduling-and-sharing.adoc[article].
 
 === Refreshing data in a Dataset-based Report
 

@@ -20,7 +20,7 @@ There are two types of filters in {product}:
 
 . *Report-level filters*: These are filters that you create from the Report Builder and apply to all charts in your Report.
 Generally, you create these for your Report viewers to be able to filter data themselves.
-For more information on Report filters, refer to xref:studio-interactivity.adoc#filters-and-parameters[this section in our Reports page].
+
 . *Visualization-level filters*: These are filters that you create from the Chart Editor and apply only to that one chart.
 Report viewers will not see the visualization filters that you've applied.
 Generally, you create these to filter data completely from view.

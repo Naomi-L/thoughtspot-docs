@@ -19,7 +19,7 @@ All Workspaces are also automatically connected to the <<mode-public-warehouse,{
 
 === Connect a new database
 
-To connect your database to your {product} xref:studio-organizations.adoc[organization]:
+To connect your database to your {product} organization:
 
 . Click the app switcher icon in the top navigation bar and select {product}.
 . Click on your name in the upper left corner of the screen.

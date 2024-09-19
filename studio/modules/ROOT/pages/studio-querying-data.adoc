@@ -19,7 +19,7 @@ image::SQL_editor.png[Workflow Basics]
 
 The query editor contains a number of re-sizable sections that should be familiar to you if you have worked with other SQL clients before:
 
-. *Report navigation panel* - Use the navigation panel to quickly navigate between the xref:studio-report-layout-and-presentation.adoc#report-builder[Report Builder], a xref:studio-notebook.adoc#using-the-notebook[Python/R Notebook], and the data section.
+. *Report navigation panel* - Use the navigation panel to quickly navigate between the Report Builder, a xref:studio-notebook.adoc#using-the-notebook[Python/R Notebook], and the data section.
 Within the data section, which you can drag to resize, you will see:
 
  ** Every query in the Report.
@@ -97,7 +97,7 @@ NOTE: The **play** button is not available for certain database types, including
 Different visualizations, each with data from different databases, can exist side-by-side within the same Report.
 
 You cannot `JOIN` data sets between different connections in a single query.
-However, you can combine result sets from multiple databases and visualize the combined data using xref:studio-notebook.adoc#accessing-query-results[Python or R in the Notebook], or using xref:studio-report-layout-and-presentation.adoc#html-editor[JavaScript in the HTML editor].
+However, you can combine result sets from multiple databases and visualize the combined data using xref:studio-notebook.adoc#accessing-query-results[Python or R in the Notebook], or using JavaScript in the HTML editor.
 
 == Complex and multi-statement queries
 
@@ -576,8 +576,7 @@ By starting queries simultaneously, we can maximize the use of your database res
 At this time, {product} does not maintain active connections to client databases for security and data cost purposes, and does not support real-time data.
 All Reports, whether scheduled or ad hoc, create new connections on demand.
 
-Please see our documentation on how to xref:studio-report-scheduling-and-sharing.adoc#scheduled-runs[schedule a Report].
-We also suggest taking a look at our xref:studio-datasets.adoc#overview[Datasets] documentation.
+We suggest taking a look at our xref:studio-datasets.adoc#overview[Datasets] documentation.
 This allows multiple Reports to be created off of an initial query, which can be set to refresh on a schedule as well.
 
 [discrete]
