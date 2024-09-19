@@ -270,7 +270,7 @@ Each environment comes preloaded with the following libraries:
 
 | link:https://engarde.readthedocs.io/en/latest/index.html[engarde] | 0.4.0 | 0.4.0 | defensive data analysis
 
-| link:https://toblerity.org/fiona/[fiona] | 1.8.22 | 1.8.22 | read & write geospatial data files
+| link:https://fiona.readthedocs.io/en/stable/[fiona] | 1.8.22 | 1.8.22 | read & write geospatial data files
 
 | link:https://python-visualization.github.io/folium/latest/[folium] | 0.13.0 | 0.13.0 | build Leaflet.js maps
 
@@ -310,7 +310,7 @@ Each environment comes preloaded with the following libraries:
 
 | link:https://pandas.pydata.org/pandas-docs/stable/[pandas] | 1.4.4 | 1.4.4 | data structures & data analysis tools
 
-| link:https://pypi.org/project/pandas-profiling/1.4.0/[pandas_profiling] | 3.5.0 | 3.5.0 | generates profile reports from a pandas DataFrame
+| link:https://pypi.org/project/pandas-profiling/[pandas_profiling] | 3.5.0 | 3.5.0 | generates profile reports from a pandas DataFrame
 
 | link:https://pypi.org/project/pandasql/[pandasql] | 0.7.3 | 0.7.3 | query pandas dataframes using SQL syntax
 
