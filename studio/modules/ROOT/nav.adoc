@@ -1,9 +1,9 @@
 * xref:studio-get-started.adoc[Get started]
-** xref:studio-quick-reference-guide.adoc[Quick reference guide]
+//** xref:studio-quick-reference-guide.adoc[Quick reference guide]
 ** xref:studio-getting-started-with-mode.adoc[Getting started with Analyst Studio]
 ** xref:studio-open-source-code-attributions.adoc[Open Source Code Attributions]
 ** xref:studio-supported-browsers.adoc[Supported browsers]
-** xref:studio-release-notes.adoc[Release notes]
+//** xref:studio-release-notes.adoc[Release notes]
 
 * xref:studio-navigate-and-organize-content.adoc[Navigate and organize content]
 ** xref:studio-spaces.adoc[Collections]
@@ -25,15 +25,15 @@
 ** xref:studio-definitions.adoc[Definitions]
 
 * xref:studio-visualize-and-present-data.adoc[Visualize and present data]
-** xref:studio-report-layout-and-presentation.adoc[Report layout and presentation]
+//** xref:studio-report-layout-and-presentation.adoc[Report layout and presentation]
 ** xref:studio-visualizations.adoc[Visualizations]
 ** xref:studio-visual-explorer.adoc[Visual Explorer]
 ** xref:studio-cal-fields.adoc[Calculated fields]
-** xref:studio-interactivity.adoc[Interactivity]
+//** xref:studio-interactivity.adoc[Interactivity]
 
 * xref:studio-explore-and-share-data.adoc[Explore and share data]
 ** xref:studio-explorations.adoc[Explorations]
-** xref:studio-report-scheduling-and-sharing.adoc[Report scheduling and sharing]
+//** xref:studio-report-scheduling-and-sharing.adoc[Report scheduling and sharing]
 
 ////
 * xref:embedding.adoc[Embedding]
@@ -52,10 +52,10 @@
 ** xref:studio-webhooks.adoc[Webhooks]
 
 * xref:studio-administration.adoc[Administration]
-** xref:studio-authentication-sso.adoc[Authentication and SSO]
-** xref:studio-permissions.adoc[Access control & permissions]
-** xref:studio-sharing-and-embedding.adoc[Sharing and embedding]
-** xref:studio-organizations.adoc[Workspaces]
+//** xref:studio-authentication-sso.adoc[Authentication and SSO]
+//** xref:studio-permissions.adoc[Access control & permissions]
+//** xref:studio-sharing-and-embedding.adoc[Sharing and embedding]
+//** xref:studio-organizations.adoc[Workspaces]
 ** xref:studio-workspace-api-tokens.adoc[API tokens]
 
 * xref:studio-api.adoc[API]

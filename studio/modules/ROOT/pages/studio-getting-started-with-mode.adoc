@@ -7,8 +7,7 @@
 :path: /articles/getting-started-with-mode
 :product: Analyst Studio
 
-{product}'s analyst-first approach uses familiar technologies like SQL, Python, and R in an interactive data science environment that modernizes traditional BI workflows.
-Whether you're in the final stages of the purchase decision-making process or about to implement {product}, this guide will give you specific, actionable information about how to get your entire organization using {product}'s broad suite of capabilities.
+{product}'s analyst-first approach uses familiar technologies like SQL, Python, and R in an interactive data science environment that augments BI workflows in Thoughtspot. This guide will give you information about how to get your team using {product}’s broad suite of capabilities.
 
 ====== IN THIS GUIDE, YOU'LL LEARN HOW TO:
 
@@ -16,7 +15,7 @@ Whether you're in the final stages of the purchase decision-making process or ab
 * Connect {product} to your team's most important SQL databases.
 * Build Reports bringing together your data team and business users for fast, quality decisions.
 * Customize your analysis for impactful sharing and delightful presentation.
-* Organize Reports for increased of use for all team members.
+* Organize Reports for increased use for all team members.
 * Scale your analytics to match the growth of your business.
 * Get your entire organization using {product}'s broad suite of capabilities.
 
@@ -27,40 +26,28 @@ Finally, the API will allow you to programmatically integrate {product} into all
 
 == Data access and user roles
 
+////
 === Create a Workspace
 
 After creating an {product} account, you'll need to create a Workspace to connect your databases and invite other users.
 A Workspace is a group of users that share secure database connections and analysis with one another.
 Once that's set up, you can then configure database connections.
 {product} connects to most popular SQL databases and does not require any data preparation prior to connection, further streamlining the implementation process.
+////
 
-=== Connect to a database
-
-{product} can directly connect to link:https://mode.com/data-sources/[many popular databases,window=_blank]. All you have to do is enter the appropriate security credentials.
-A direct connection is easy to set up and does not require IT resources.
-If a database is behind a firewall or only accessed via VPN or VPCs, {product} supports a bridge connector option that's easy to install, configure, and maintain.
-The bridge connector can run directly behind your organization's VPN or firewall and once it's installed, can be configured to securely connect to one or more of the databases within your company.
-
-image::integrations.png[Grid showing some available integrations]
 
 [discrete]
-===== Provision users
+===== User access
 
-After connecting to a database, you can invite users and give them access to perform their analysis or administrative tasks.
+Users can be given access to perform their analysis or administrative tasks in {product}. Users and user groups can be given access by assigning *can use {product}* privilege to give them access to {product} or *can manage {product}* privilege to be an admin.
+An admin user is necessary for establishing database connections, creating collections, and managing Report access. We recommend granting several users admin privileges.
+Once a user has been made an admin, they can perform actions such as:
 
-An Admin user is necessary for managing user and group configurations.
-They can also establish database connections.
-We recommend granting several users with Admin privileges.
 
-Once a user has been made an Admin, they can perform actions such as:
-
-* Invite new members.
-* Grant/remove Admin access for other users.
+* Establish database connections.
+* Create collections.
 * Restrict Report visibility and access.
-* Create and manage user groups.
-* Manage sign-in methods including custom SAML identity providers.
-* Share and embed functions for the Workspace.
-* Integrate with other applications such as Slack.
+
 
 To get users onboarded quickly, an Admin should manage basic user setup and configure access.
 There is no need to start by creating complex security policies.
@@ -74,15 +61,26 @@ The analyst must wait for the data scientist or database administrator to give t
 In contrast, with {product}, all users are empowered to share and create by default.
 This feature is just one example of how {product} enables the citizen data analyst to get data access and gain insight in under an hour.
 
+
+=== Connect to a database
+
+{product} can directly connect to link:https://mode.com/data-sources/[many popular databases,window=_blank]. All you have to do is enter the appropriate security credentials.
+A direct connection is easy to set up and does not require IT resources.
+If a database is behind a firewall or only accessed via VPN or VPCs, {product} supports a bridge connector option that's easy to install, configure, and maintain.
+The bridge connector can run directly behind your organization's VPN or firewall and once it's installed, can be configured to securely connect to one or more of the databases within your company.
+
+image::integrations.png[Grid showing some available integrations]
+
 [discrete]
 ===== Create Collections
 
 With {product}'s user and sharing models, all users have access to existing reporting assets through Collections.
 You can use your personal Collection to keep track of your work.
-When you are ready to share the analysis with another team, you can make the results available in an open Collection or share it privately with a specific group of users.
+When you are ready to share the analysis with others, you can make the results available in an open Collection or share it privately with a specific group of users.
 
-Using shared private Collections, your team can keep reports organized, grouping them by project, department, quarter, or data source.
+Using shared private Collections, your team can keep Reports organized, grouping them by project, department, quarter, or data source.
 
+////
 == Data and user checklists
 
 The following are some key user-related items to think about before implementing {product}:
@@ -102,6 +100,7 @@ Onboarding users that are new to SQL, or just want to brush up on your SQL or Py
 Check out our in-depth link:https://mode.com/sql-tutorial/[SQL,window=_blank] and link:https://mode.com/python-tutorial/[Python,window=_blank] Tutorials.
 
 Of course, the starting point for the analysis process is the SQL Editor, so let's start there.
+////
 
 [discrete]
 === SQL editor
@@ -214,6 +213,7 @@ Out of the box, {product} includes many of the most popular libraries for R and 
 Combined, the SQL Editor, visualization features, and Notebook environments in {product} enable users to create quick, flexible, and shareable analysis.
 Together, they provide a powerful but easy-to-learn workflow where code-first analysts and code-free end users can work together to turn raw data into real-time decision-making.
 
+////
 == Analyzing data checklist
 
 Here are some items to consider for analyzing your data:
@@ -223,7 +223,8 @@ Here are some items to consider for analyzing your data:
 * Are there visualizations you haven't been able to develop with existing tools?
 * Do you have data sets that are currently too large or difficult to manage?
 * Are there existing notebook environments that you can consolidate and streamline with {product}?
-
+////
+////
 == Building and sharing a report
 
 Now that we have gone through {product}'s core concepts, we can walk through how to turn your analysis into a robust, meaningful Report that can be shared across the company.
@@ -280,7 +281,8 @@ With a WLE, authentication is handled external to {product} with customized look
 The WLE can also restrict the user's ability to see the underlying data - avoiding unintentional leakage of sensitive data.
 
 image::screenshot-wle.png[White label embed]
-
+////
+////
 == Building and sharing Report checklist
 
 Items to consider when planning your company's reporting strategy:
@@ -290,7 +292,8 @@ Items to consider when planning your company's reporting strategy:
 * Does there need to be a custom theme developed for internal or external sharing?
 * Will Reports need to be embedded and shared with external partners?
 * What is the primary manner Reports will be shared?
-
+////
+////
 == Advanced topics
 
 Building a data-driven culture means that data is a part of all your company's processes.
@@ -317,7 +320,8 @@ A link:https://mode.com/developer/api-reference/introduction/[full discussion of
 * Managing, updating, or retrieving information about Report filters.
 * Exporting results via JSON, CSV, or PDF.
 * Managing Report schedules and subscriptions.
-
+////
+////
 == Advanced topic checklist
 
 Which of the following functionality will be used:
@@ -326,6 +330,7 @@ Which of the following functionality will be used:
 * Will {product} sync with GitHub?
 * Which API options will the team use first?
 * Are there any playbook items that we want to adapt to our needs?
+////
 
 == Conclusion
 

@@ -27,6 +27,7 @@ These are the permissions that Workspace members need in order to access a Repor
 * To view a Report, Workspace members must have View permission to all database Connections used in the Report and View permission to the Report's Collection.
 * To duplicate a Report, Workspace members must have Query permission to all database Connections used in the Report and at least View permission to the Report's Collection.
 
+////
 [#create-groups]
 == Create Groups
 
@@ -43,6 +44,7 @@ From here, selecting the *Collections* and *Connections* tabs will provide visib
 image::permission1.png[Permissions1]
 
 TIP: To programmatically provision Groups and Users in {product}, talk to your CSM about implementing xref:studio-authentication-sso.adoc#scim[Okta SCIM].
+////
 
 === Admins
 
