@@ -24,7 +24,7 @@ Parameters are defined and configured using the link:http://liquidmarkup.org/[Li
 
 When you <<defining-parameters,define a Parameter>> in a Report's code and subsequently run the Report, a form is automatically added to the top of the Report that report viewers can use to modify the Parameter's value.
 
-You can include Parameter values in a Report's xref:studio-report-layout-and-presentation.adoc#url-query-string[URL query string] and {product} will return the Report's output using those values.
+You can include Parameter values in a Report's URL query string and {product} will return the Report's output using those values.
 
 NOTE: Parameters are a powerful feature that, by design, allow {product} users to run arbitrary SQL against a database. It is the responsibility of Workspace administrators to ensure that only authorized users are allowed to query the underlying database via the parameters feature.
 
@@ -319,7 +319,7 @@ This is also what {product} will use for the Parameter's value while you are edi
 
 For Multiselect Parameters, set `default: all`, and all available options will be selected by default.
 
-NOTE: A Parameter value provided via the Report's xref:studio-report-layout-and-presentation.adoc#url-query-string[URL query string] will override the default value.
+NOTE: A Parameter value provided via the Report's URL query string will override the default value.
 
 [discrete]
 ===== `label`

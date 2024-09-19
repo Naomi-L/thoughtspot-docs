@@ -20,7 +20,7 @@ The link:https://slack.com/apps/A1KBFDRGR-mode[{product} Slack app,window=_blank
 * You must be authorized to install apps in that workspace.
 
 NOTE: Reports can only be shared from {product} to any public channel and private channels where the {product} slack bot is a member.
-For example, if the {product} slack bot is not in the private #sales-only channel, then no member of your {product} organization can xref:studio-report-scheduling-and-sharing.adoc#slack[share Reports from {product}] to the #sales-only channel.
+For example, if the {product} slack bot is not in the private #sales-only channel, then no member of your {product} organization can share Reports from {product} to the #sales-only channel.
 
 [#setting-up]
 == Setting up or upgrading versions
@@ -37,7 +37,7 @@ A private channel without the @Mode bot cannot receive shared reports.
 +
 image::slackbot.png[New signature token]
 
-Now all members of your organization can xref:studio-report-scheduling-and-sharing.adoc#slack[share Reports to your Slack workspace] directly from the {product} interface.
+Now all members of your organization can share Reports to your Slack workspace directly from the {product} interface.
 
 == Required permissions
 
@@ -108,7 +108,6 @@ Allow preview images in Slack messages is enabled by default. When disabled, rep
 . Click the app switcher icon in the top navigation bar and select {product}, click on your name in the upper left corner of the screen, and select *Workspace Settings* from the dropdown menu.
 . Click on *Sharing & Embedding* under Features.
 
-See the full documentation for sharing data in {product} xref:studio-sharing-and-embedding.adoc#sharing[here].
 
 [discrete]
 === *Q: How long is the generated image in Slack available for?*

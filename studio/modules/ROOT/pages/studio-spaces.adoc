@@ -51,7 +51,7 @@ image::personal_manage_access.png[Reports in Personal collection]
 Reports in the community Collection are public and can be viewed, shared, run, or duplicated by anyone on the internet.
 Building reports based on data in the xref:studio-managing-database-connections.adoc#mode-public-warehouse[{product} Public Warehouse] and saving them in the community Collection is a great way to demonstrate and share your analytics and visualization skills with the entire {product} community and beyond.
 
-Each Workspace's community Collection is hidden by default, but it can be easily xref:studio-sharing-and-embedding.adoc#sharing[enabled] by a Workspace Admin.
+Each Workspace's community Collection is hidden by default, but it can be easily enabled by a Workspace Admin.
 When enabled, every member of the Workspace can contribute to the community Collection, and they will see it listed on the left side of their home page in the Collections section.
 
 The community Collection can only include Reports with queries that run against the {product} Public Warehouse.
@@ -92,7 +92,7 @@ To delete a Collection once it contains no Reports:
 . A pop-up will appear confirming that you want to delete this Collection.
 Click *Ok* to delete the Collection.
 +
-NOTE: You cannot delete your personal Collection. While you cannot delete the community Collection, it can be xref:studio-sharing-and-embedding.adoc#sharing[disabled] by a Workspace admin.
+NOTE: You cannot delete your personal Collection. While you cannot delete the community Collection, it can be disabled by a Workspace admin.
 
 === Change a Collection's name or description
 
@@ -119,7 +119,7 @@ TIP: Adding Members and Groups to a Collection will automatically add that Colle
 
 image::add-to-nav.png[Add collection to navigation]
 
-For more information on how to manage access, see xref:studio-permissions.adoc#set-up-collection-permissions[Collection permissions].
+
 
 === Add other members to a Collection
 
@@ -160,5 +160,3 @@ Reports in users' personal Collections or the community Collection will not be s
 Users must both have permission for the Connections used in a Report and the Collection that contains a Report in order to access the Report.
 For example, if a user has view permission for all Connections used in a Report but is not a member of the private Collection containing the Report, they will be unable to view the Report.
 They must have access to both.
-
-Learn more about xref:studio-permissions.adoc[access control and permissions].

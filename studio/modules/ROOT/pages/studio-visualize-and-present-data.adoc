@@ -6,13 +6,10 @@
 :description: Visualize and present data.
 :product: Analyst Studio
 
-** xref:studio-report-layout-and-presentation.adoc[Report layout and presentation] +
-Control the visual aspect of a Report.
+
 ** xref:studio-visualizations.adoc[Visualizations] +
 Visualize your data to gain insight.
 ** xref:studio-visual-explorer.adoc[Visual Explorer] +
 Visualize your data in Visual Explorer.
 ** xref:studio-cal-fields.adoc[Calculated fields] +
 How to add calculated fields to charts.
-** xref:studio-interactivity.adoc[Interactivity] +
-Interact with your data using various tools.
