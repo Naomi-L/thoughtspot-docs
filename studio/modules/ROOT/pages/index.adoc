@@ -94,26 +94,26 @@ td {
 ++++
 <!-- first row -->
 <div class="box-button-columns">
-    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/get-started" class="panel-2">
+    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-get-started" class="panel-2">
       <span>
     <h2>
       Get Started
     </h2>
     </span>
     </a></div>
-    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/navigate-and-organize-content" class = "panel-2">
+    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-navigate-and-organize-content" class = "panel-2">
     <h2>
       Navigate and organize content
     </h2>
     </a></div>
-  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/connect-your-database" class="panel-2">
+  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-connect-your-database" class="panel-2">
       <span>
     <h2>
       Connect your database
     </h2>
    </span>
     </a></div>
-  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/query-and-analyze-data" class="panel-2">
+  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-query-and-analyze-data" class="panel-2">
       <span>
     <h2>
       Query and analyze data
@@ -123,26 +123,21 @@ td {
  </div>
 <!-- second row -->
 <div class="box-button-columns">
-    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/visualize-and-present-data" class="panel-2">
+    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-visualize-and-present-data" class="panel-2">
       <span>
     <h2>
       Visualize and present data
     </h2>
     </span>
     </a></div>
-    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/explore-and-share-data" class = "panel-2">
+    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-explore-and-share-data" class = "panel-2">
     <h2>
       Explore and share data
     </h2>
     </a></div>
-  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/embedding" class="panel-2">
-      <span>
-    <h2>
-      Embedding
-    </h2>
-   </span>
-    </a></div>
-  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/integrations" class="panel-2">
+
+
+  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-integrations" class="panel-2">
       <span>
     <h2>
       Integrations
@@ -152,26 +147,26 @@ td {
  </div>
 <!-- third row -->
 <div class="box-button-columns">
-    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/administration" class="panel-2">
+    <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-administration" class="panel-2">
       <span>
     <h2>
       Administration
     </h2>
     </span>
     </a></div>
-    <div class="box-button"><a href = "https://analyst-studio-preview.netlify.app/studio/latest/api" class = "panel-2">
+    <div class="box-button"><a href = "https://analyst-studio-preview.netlify.app/studio/latest/studio-api" class = "panel-2">
     <h2>
       API
     </h2>
     </a></div>
-  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/faqs" class="panel-2">
+  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-faqs" class="panel-2">
       <span>
     <h2>
       FAQs
     </h2>
    </span>
     </a></div>
-  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/contact-us" class="panel-2">
+  <div class="box-button"><a href="https://analyst-studio-preview.netlify.app/studio/latest/studio-contact-us" class="panel-2">
       <span>
     <h2>
       Contact us
