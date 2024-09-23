@@ -20,10 +20,12 @@ Quick Charts are pre-defined templates to quickly create commonly-used chart typ
 
 Quick Charts can be added to a Report by clicking the "New Chart" icon located above the query editor to select the desired chart.
 
+[.bordered]
 image::create-a-chart-1.png[Create a chart]
 
 An alternative is to locate the Dataset in the data panel to create a chart from and clicking the "+" button beneath it to select the desired chart.
 
+[.bordered]
 image::create-a-chart-2.png[Create a chart]
 
 {product} supports the following Quick Chart types:
@@ -39,8 +41,10 @@ Bar charts are useful for showing comparisons between categories of data, or for
 Bar charts require one of the following combinations of fields:
 
 * Exactly one field and one field on the X and Y axis and an optional field on color. +
+[.bordered]
 image:bar-chart-1.png[Bar chart]
 * Exactly one field on the X-axis and more than one field on the Y-axis. +
+[.bordered]
 image:bar-chart-2.png[Bar chart]
 
 Format options:
@@ -48,10 +52,12 @@ Format options:
 * _Color formatting options_: Refer to the xref:studio-visual-explorer.adoc#building-a-simple-visualizaton[colors section].
 * _Swap axes_: X and Y axes can be swapped to create horizontal bar charts using the swap axes option on the toolbar.
 +
+[.bordered]
 image::swap-axes.png[Swap axes]
 
 * _Quick sort options_: Quick sort options on the toolbar can be used to sort the chart in descending or ascending order.
 +
+[.bordered]
 image::quick-sort-options.png[Quick sort options]
 
 * _Advanced sort options_: Refer to the xref:studio-visual-explorer.adoc#sorting[advanced sort options section].
@@ -63,6 +69,7 @@ It's important to note that the display labels are not reflected in CSV data exp
 * _Axes formatting options_: The format panel available in the top right corner of the chart editor (refer screenshot) can be used to update the axis title, toggle on/off axis title, toggle on/off bar labels, update axis label rotation angle, set the axis range, change format of axis labels, precision of axis labels, and axis scale type.
 * _Legend formatting options_: The format panel can be used to toggle on/off legend in the chart, toggle on/off legend title, adjust position of the legend, and update legend title.
 +
+[.bordered]
 image::format_panel.png[Legend formatting options]
 
 ==== Histograms
@@ -187,6 +194,7 @@ Big value visualizations are useful for highlighting key metrics and how those m
 You can use the following options to configure your big value.
 You can add any field from either Dimensions or Measures into each of these dropzones:
 
+[.bordered]
 image::big_values_image.png[Present_Big_Values]
 
 * _Value_: The field with the data you want to display.
@@ -203,6 +211,7 @@ NOTE: If you want to mirror the functionality of the {product}'s old Big Numbers
 * _Format_: use format shortcuts at located in the top toolbar to the right panel's to customize the formats of _Value_ and _Indicator_.
 These options include plain text, currency, number, and percentage.
 
+[.bordered]
 image::big-number.png[Big value]
 
 [#tables]
@@ -212,10 +221,12 @@ Tables present data in a format that is highly adaptable and easily understandab
 Users have two ways to create new tables.
 One approach involves selecting the table chart from the green *Add Chart* dropdown located above the query editor by clicking on it.
 
+[.bordered]
 image::addtableabovequery.png[add chart]
 
 Another option is to find the query with the data you want to display, click the *+* button under it, and select the table chart.
 
+[.bordered]
 image::addtable.png[add chart]
 
 The initial step for creating a table is to add desired columns from the *Dimensions* and *Measures* fields to the *Columns* section.
@@ -223,6 +234,7 @@ This can be accomplished by using the drag-and-drop method or by using the typea
 Additionally, it is possible to include columns that are intended for use as filters within the *Filters* section.
 Column formatting options are available in the toolbar above the table.
 
+[.bordered]
 image::charttoolbar.png[toolbar]
 
 * *Sort settings*
@@ -233,6 +245,7 @@ The sorting hierarchy can be defined by specifying primary and secondary sort fi
 Sort settings can be found in the field context menu or on the toolbar for chart designer and Explorations.
 In the Report View, it can be found in the field context menu.
 +
+[.bordered]
 image::sort-settings.png[sort settings]
 +
 The sorting hierarchy can be rearranged using the grab icon as shown in the demo video below:
@@ -241,10 +254,12 @@ image::sort-re-arrangement.gif[sort re-arrangement]
 +
 The sorts on fields can be cleared individually using the *Clear sort* option in the field context menu.
 +
+[.bordered]
 image::sort-settings-clear-field.png[clear sort on field]
 +
 All sorts applied in the table can also be cleared using the *Clear sorts* option in the toolbar.
 +
+[.bordered]
 image::sort-settings-clear-table.png[clear sort on table]
 
 * *Conditional Formatting*
@@ -272,6 +287,7 @@ by clicking on the Percent button.
 
 ==== *Format*
 
+[.bordered]
 image::format-table.png[toolbar2]
 
 The Format button updates to reflect the data type of the column.
@@ -282,6 +298,7 @@ The options available under *More formats* change based on the datatype of the c
 
 A field in the Flat Table can be formatted as a URL from the Format options in the top toolbar or using the format option in the field context menu.
 
+[.bordered]
 image::url-format.png[url formatting]
 
 *Basic hyperlink*
@@ -356,6 +373,7 @@ The row numbers are turned off by default.
 * Hide legend.
 The color legend is turned on by default when conditional color formatting is applied.
 +
+[.bordered]
 image::tableformattingoptions2.png[table formatting options]
 
 ==== *Page size customization*
@@ -365,6 +383,7 @@ The default number of rows per page is 100 rows.
 The number of rows shown per page can be customized by adding any number between 1 and 1000 in the input box located in the bottom right corner.
 The page size can be updated in the chart designer or Explorations.
 
+[.bordered]
 image::table-page-size.png[page size]
 
 ==== *Data profiling*
@@ -596,7 +615,7 @@ _Copy a chart from the Report View and paste in a Report_  image:copy-paste-from
 
 _Copy a chart from the Report View and replace another chart in a Report_ image:copy-paste-replace-from-report-view.gif[Copy Paste Replace from Report View]
 
-_Copy a chart from Explorations and paste in a Report_ image:copy-paste-from-explorations-.gif[Copy Paste from Explorations]
+_Copy a chart from Explorations and paste in a Report_ image:copy-paste-from-explorations.gif[Copy Paste from Explorations]
 
 _Copy a chart from Explorations and replace another chart in a Report_ image:copy-paste-replace-from-explorations.gif[Copy Paste Replace from Explorations]
 
@@ -620,6 +639,7 @@ They are not available when a reusable Dataset is created.
 Visualization settings will take precedence over field settings.
 * Default field settings are accessible in the context menu for each field within the fields list.
 +
+[.bordered]
 image::defaultfield.png[Default Field Settings]
 
 The following default field settings are available:

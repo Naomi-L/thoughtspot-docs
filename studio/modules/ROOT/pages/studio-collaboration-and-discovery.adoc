@@ -75,6 +75,7 @@ Use filters to narrow down your search results:
 Collections can only match on name and description.
 * Filter to content created by you.
 
+[.bordered]
 image::search-filters2.png[Search Filters]
 
 [#faqs]
@@ -85,14 +86,17 @@ image::search-filters2.png[Search Filters]
 
 We currently don't log the edit history, however, you should be able to see the query run history of a Report under *View Details > Details*, and scroll to the bottom.
 
+[.bordered]
 image::runHistory.png[Query History]
 
 You can also see the query run history, including who had run the query and the code written, when you click the 'View history' button in the editor:
 
+[.bordered]
 image::ViewHistory.png[View History]
 
 That will then bring up the following screen:
 
+[.bordered]
 image::QueryHistory.png[View History]
 
 Another option we would suggest is using GitHub Sync to track all changes made to a Report, so you can go on the GitHub repo to track exactly what changes are made at what time, and who made the changes.

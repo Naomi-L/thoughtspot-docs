@@ -41,6 +41,7 @@ At run time, {product} replaces each object reference in your SQL code with the 
 Let's walk through a simple example.
 link:https://app.mode.com/tutorial/reports/f14811830f89?param_acquired_year=2013[This Report,window=_blank] takes input from one Parameter and displays companies in the link:https://www.crunchbase.com/[Crunchbase,window=_blank] database that were acquired that year:
 
+[.bordered]
 image::parameter-example.png[Parameter Example]
 
 If you link:https://app.mode.com/tutorial/reports/f14811830f89/queries/250a3e4fd4cd[open the Report details,window=_blank] and check the box next to *Show parameter template code*, you'll see the following:
@@ -68,10 +69,12 @@ Un-check the box next to *Show parameter template code* and you'll see the code 
 
 *Query as written:*
 
+[.bordered]
 image::parameter-template-code.png[Parameter Example]
 
 *Query as executed against the database:*
 
+[.bordered]
 image::parameter-completed-value.png[Parameter Example]
 
 [#defining-parameters]
@@ -618,6 +621,7 @@ This will show you the exact Parameter values sent to your query.
 
 Another method would be to view the *Source* tab in the dataview after a successful query run.
 
+[.bordered]
 image::dataview-debug.png[Workflow Basics]
 
 [discrete]

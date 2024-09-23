@@ -69,6 +69,7 @@ A direct connection is easy to set up and does not require IT resources.
 If a database is behind a firewall or only accessed via VPN or VPCs, {product} supports a bridge connector option that's easy to install, configure, and maintain.
 The bridge connector can run directly behind your organization's VPN or firewall and once it's installed, can be configured to securely connect to one or more of the databases within your company.
 
+[.bordered]
 image::integrations.png[Grid showing some available integrations]
 
 [discrete]
@@ -109,6 +110,7 @@ The first step in creating a report is to query data using the query editor.
 {product}'s SQL Editor provides flexibility without extra complexity.
 The editor is simple and intuitive while providing advanced capabilities to streamline workflow.
 
+[.bordered]
 image::screenshot-sql-editor.png[SQL Editor]
 
 Select the database and explore the schema with the schema browser.
@@ -199,6 +201,7 @@ An analyst can perform analysis in a notebook that might be difficult (or imposs
 {product}'s Notebook has specific advantages including its ease of setup, centralization of environments, and simplified administration due to the inclusion of a variety of preloaded Python and R libraries.
 Since this environment is very similar to existing notebook environments, the learning curve should be minimal.
 
+[.bordered]
 image::screenshot-python-notebook.png[Python Notebook]
 
 After a query has been created using the SQL Editor, a user can add a new Notebook to their report and access the results of all queries.

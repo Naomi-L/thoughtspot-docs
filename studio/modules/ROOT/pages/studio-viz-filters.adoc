@@ -29,6 +29,7 @@ Generally, you create these to filter data completely from view.
 
 Once you have your Dataset and have created a visualization, you can add and apply visualization filters.
 
+[.bordered]
 image::viz-filter.png[Viz-Filter Example]
 
 . Drag-and-drop the field that you want to filter on into the Filters dropzone, highlighted above.
@@ -71,10 +72,12 @@ The simplest way to filter is from the list of field values.
 When working with fields with more distinct values, the typeahead search can help you find your desired value(s) quickly.
 If there are rows in your data without a value for this field, that record will be represented in the list as _Null_.
 
+[.bordered]
 image::filter-list-2023.png[Filter from List]
 
 For timestamp fields, you can select either from a list of full datetime values or from a discrete list of date part values (like year or month) extracted from your field values.
 
+[.bordered]
 image::filter-timestamp-2023.png[Filter Timestamp]
 
 {product} has two ways to interpret a filter list of values:
@@ -84,6 +87,7 @@ This is the default pattern.
 * *Exclude* values: You can exclude selected values by checking this option in the settings gear icon.
 When enabled, all checked values are now explicitly excluded from this visualization.
 
+[.bordered]
 image::filter-include-exclude.png[Filter Include/Exclude]
 
 As new values appear in your field in the future, an exclude filter will allow these new values though.
@@ -114,6 +118,7 @@ However, range filters do not require both start and end values.
 If there is no end value provided, the filter will act as an "`at least x value`" filter for the start value x.
 Equivalently, if there is no start value provided, the filter will act as an "`at most y value`" for the end value y.
 
+[.bordered]
 image::filter-range-numeric.png[Filter Range]
 
 ==== *Date range filters*
@@ -162,6 +167,7 @@ image::Mixed-time-unit-relative-date-range-filter.gif[Mixed time unit relative d
 {product} also supports limiting a visualization to display a set of field values according to some aggregation.
 For instance, you might want to see the five most popular US states according to recent order volume.
 
+[.bordered]
 image::filter-topbottomN.png[Filter Top/Bottom N]
 
 By default, this filter is applied after all other visualization filters.

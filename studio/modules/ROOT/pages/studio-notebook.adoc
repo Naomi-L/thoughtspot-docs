@@ -26,6 +26,7 @@ To get started using the Notebook:
 Your query results will automatically be loaded into a `datasets` object.
 . On the right-side panel, click the *dropdown* to select the environment you want to launch a Notebook from, usually either *Python 3*, *R*, or *Python 3 Edge*.
 
+[.bordered]
 image::notebook-language-2023.png[notebook language]
 
 Key elements of the {product} Notebook:
@@ -44,6 +45,7 @@ Key elements of the {product} Notebook:
 
 ==== *Main Toolbar*
 
+[.bordered]
 image::notebook_toolbar2023.png[Notebook Toolbar]
 
 . *Run All* - Runs all input cells in the Notebook in sequence (from top to bottom).
@@ -57,6 +59,7 @@ Restarts the session, thus clearing all the variables, libraries imported, etc.,
 
 ==== *Cell Toolbar*
 
+[.bordered]
 image::celltoolbar.png[Cell Toolbar]
 
 . *Run Cell and Advance* - Runs code in the selected cell and advances to the next cell.
@@ -156,6 +159,7 @@ The URL for SQL contains the query token at the end:
 
 `+https://app.mode.com/ORGANIZATION_USERNAME/reports/REPORT_TOKEN/queries/QUERY_TOKEN+`
 
+[.bordered]
 image::querytoken.png[Query token]
 
 === Memory management in Python
@@ -192,6 +196,7 @@ tracker.print_diff()
 [#adding-cell-output-to-your-report]
 === Adding cell output to your Report
 
+[.bordered]
 image::notebook-add-to-report-2023.png[Notebook Toolbar]
 
 Add contents of the OUT section of any Notebook cell to the Report Builder by clicking on the cell and then clicking *Add to Report* in the toolbar.
@@ -410,6 +415,7 @@ Please refer to the table above for the list of libraries that have been upgrade
 Analysts can access Edge via the environment dropdown in the upper right-hand corner of the Notebook.
 When switching between environments, remember to *Restart* the Notebook session.
 
+[.bordered]
 image::pythonEdge.png[python edge environment]
 
 [#r]

@@ -101,6 +101,7 @@ You can create branches and open pull requests in GitHub as normal without affec
 Merge to the default branch in GitHub and changes will automatically sync to {product}.
 If your branch causes any issues, you can revert to the previous version in GitHub.
 
+[.bordered]
 image::github_sync.png[Merge GitHub changes]
 
 Note that the owner of your GitHub organization will need to install the link:https://github.com/apps/modeanalytics[{product} GitHub app,window=_blank] in order to use the {product} Github sync.
@@ -175,6 +176,7 @@ NOTE: While we suggest this repository be solely dedicated to syncing with {prod
 Navigate to the link:https://github.com/apps/modeanalytics[installation page for {product}'s GitHub app,window=_blank] and click *Configure*.
 Confirm the installation location and then select the repository you'd like to use.
 +
+[.bordered]
 image::github-mode-app.png[GitHub Analyst Studio app]
 
 . Retrieve the installation ID for your {product} GitHub app.
@@ -225,6 +227,7 @@ If you have non-{product} data in the GitHub repository used for the {product}-G
 
 The *Push All* button is found by accessing the Workspace Settings menu, going to the GitHub tab under Features (highlighted in red below), selecting the Unresolved Differences tab (highlighted in orange below), and looking on the right side of the Resolve All Differences section (highlighted in pink below).
 
+[.bordered]
 image::githubunresolved.png[Github Unresolved Differences]
 
 [discrete]

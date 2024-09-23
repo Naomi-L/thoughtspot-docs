@@ -24,16 +24,19 @@ TIP: You can follow along with the examples in this video in the {product} Unive
 There are a few ways to begin exploring.
 From within the Chart editor context, click the *Explore* button in the toolbar of any built-in chart or table.
 
+[.bordered]
 image::charteditorXM.png[explore from the chart editor]
 
 When viewing an {product} Report or Dashboard, hover over a visualization and click the Explore button, or click on a series to explore a more specific subset of the data.
 
+[.bordered]
 image::explorechartorsubset.gif[explore from report view]
 
 When exploring, you can change the chart type, drag and drop from the list of available fields, sort, drill down, filter your data, and apply chart formatting.
 When you're finished, save your analysis by clicking the *Save Exploration* button.
 When saving, you will be prompted to add a title and a description for your Exploration.
 
+[.bordered]
 image::save-exploration1.png[save exploration]
 
 === Navigating Explorations
@@ -42,6 +45,7 @@ Below, we've outlined some of the key elements that will help you find your way 
 
 *When you begin exploring:*
 
+[.bordered]
 image::unsaved-exploration.png[unsaved exploration]
 
 . *← Back to report* - Directs you back to the report view.
@@ -58,6 +62,7 @@ image::saved-view-exploration.png[saved view exploration]
 
 *When you're exploring:*
 
+[.bordered]
 image::saved-edit-exploration.png[exploring saved Exploration]
 
 . *Gear icon* image:settings-mini-hover.svg[gear icon] - Access Exploration settings or delete the Exploration while in edit mode.
@@ -68,6 +73,7 @@ image::saved-edit-exploration.png[exploring saved Exploration]
 [#toolbar]
 === Toolbar
 
+[.bordered]
 image::XMtoolbar.png[toolbar]
 
 * *Undo/Redo* - Allows you to navigate through changes.
@@ -83,6 +89,7 @@ NOTE: xref:studio-visualizations.adoc#tables[Table Charts] contain additional op
 You can access general formatting options in the *Format* panel.
 You can customize labels, hide and show elements like titles, and control the placement of things like the legend from here.
 
+[.bordered]
 image::formatXM.png[format your exploration]
 
 == Working with your data
@@ -103,6 +110,7 @@ Once you begin exploring, you can add or update filters.
 
 When viewing an Exploration, you can see what filters are applied by clicking on the filter's tooltip in the Details panel.
 
+[.bordered]
 image::filters-applied.png[filters applied]
 
 === Parameters
@@ -112,6 +120,7 @@ This means your Exploration's data could change if someone updates the xref:stud
 At the top of your Exploration, you will see the current Parameter values.
 Update them by returning to the Report.
 
+[.bordered]
 image::parameters-applied.png[parameters applied]
 
 == Copy charts from Explorations
@@ -129,7 +138,7 @@ For Quick Chart drop zones that accept more than one field, the new field can be
 The typeahead search in the drop zones can also be used to add the new fields.
 
 _Copy a chart from Explorations and paste in a Report_
-image:copy-paste-from-explorations-.gif[Copy Paste from Explorations]
+image:copy-paste-from-explorations.gif[Copy Paste from Explorations]
 
 _Copy a chart from Explorations and replace another chart in a Report_
 image:copy-paste-replace-from-explorations.gif[Copy Paste Replace from Explorations]
@@ -141,6 +150,7 @@ To return to any Explorations you've made and or view all of your saved Explorat
 From here you can search and filter your Explorations, or view, edit, or delete an existing Exploration.
 Your list of Explorations is private and browsable only to you.
 
+[.bordered]
 image::my-explorations.png[my explorations tab]
 
 == Reports powering Explorations
@@ -149,6 +159,7 @@ Members in your workspace can only create and view Explorations when they have p
 If a query in your report powers an Exploration, you will see a status indicator in the right corner of the SQL editor.
 The tooltip will tell you how many Explorations are powered by your query's data.
 
+[.bordered]
 image::dependencies.png[dependencies]
 
 IMPORTANT: Deleting a Report or query will also delete all Explorations powered by that Report or query. Please keep in mind, if you add or change the names of columns, those updates will show up in Explorations. Similarly, deleting any columns or calculated fields will also delete them from Explorations.

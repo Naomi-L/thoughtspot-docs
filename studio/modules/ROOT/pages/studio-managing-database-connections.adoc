@@ -125,6 +125,7 @@ IMPORTANT: Admins in an {product} Workspace always have query access to all data
 
 Connection admins can set the default connection access policy for everyone in their Workspace to have *View* or *Query* access to the connection, or choose to set up access to *None*.
 
+[.bordered]
 image::permissions.png[Connection Access Policy Illustration]
 
 * The access type *View* allows all members to view content built on this connection.
@@ -134,6 +135,7 @@ image::permissions.png[Connection Access Policy Illustration]
 
 In addition, you can grant *Query*, *View*, or *Manage* access to groups and individuals.
 
+[.bordered]
 image::Access-Menu.png[Access Menu Illustration]
 
 To set up permissions to a connected database in {product}:
@@ -157,6 +159,7 @@ Here's an example of how this setup might look for a company with a single datab
 Note that these permissions only determine query access.
 Users in your Workspace will be able to see a report created with one of these data connections unless the report is in a xref:studio-spaces.adoc#personal-space[private Collection].
 
+[.bordered]
 image::data-source-roles-with-query-access.png[Database roles with query access]
 
 . In this simplified example, the company's database contains two tables: a marketing table and a finance table containing sensitive information.
@@ -388,6 +391,7 @@ If you don't have an account yet, link:https://app.mode.com/signup?src=help_site
 When querying the table, you will be required to type the namespace first.
 In the example below, the user's account name is "tutorial", so the uploaded table name will include the "tutorial" prefix:
 +
+[.bordered]
 image::public-data-customize-columns.png[Adding Public Data]
 
 Table names in the {product} Public Warehouse must:

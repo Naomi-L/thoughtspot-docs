@@ -18,6 +18,7 @@
 Admins can enable the feature from the *Google Sheets feature page* in Workspace Settings.
 * Once the feature is enabled, Workspace Members can connect {product} to their individual Google Accounts from the *Google Account page* in Workspace Settings.
 
+[.bordered]
 image::1-admin-enable.png[admin enable]
 
 === Tips when preparing your Google Sheet data for use in {product}
@@ -35,15 +36,18 @@ For example: +
 
 To create a new Google Sheet Dataset, select the *Create* button in the top right corner of your {product} home screen and choose the *Upload a Google Sheet* option in the Datasets section.
 
+[.bordered]
 image::2-upload-sheet.png[upload sheet]
 
 Alternatively, navigate to My Work and click the shortcut tile to *Upload a Google Sheet*.
 
+[.bordered]
 image::3-upload-sheet-shortcut-tile.png[upload sheet shortcut]
 
 This will open up the Google Sheets upload modal, where you can browse for and select individual Google Sheets.
 If you haven't connected to your account before, you'll first be prompted to do so.
 
+[.bordered]
 image::4-connect-account-modal.png[Connect account]
 
 Click on the *Set up account* button to access the Google Account page in Workspace Settings.
@@ -51,6 +55,7 @@ From here, you can give {product} access to your Google Drive account.
 
 NOTE: After you upload a Google Sheet into an {product} Dataset, access to the Dataset will be determined by the Collection the Dataset lives in. Datasets you create can also sync new data in from Google so long as you're connected to your Google Account.
 
+[.bordered]
 image::5-connect-account-settings-page.png[account settings]
 
 Once connected, Google Sheets you have access to will appear in the upload modal.
@@ -58,11 +63,13 @@ From here, you can browse and search for the Spreadsheet you'd like to use, or p
 After you've selected a Spreadsheet and Worksheet tab to upload, you can also give your Dataset a name and description.
 When you're finished, click *Create Dataset*.
 
+[.bordered]
 image::6-upload-modal.png[upload modal]
 
 After your Sheet data has been successfully uploaded and your Dataset has been created, you'll receive a notification that it's ready for use.
 From here, you can choose to edit the Dataset directly or start visually analyzing its data in a new Report.
 
+[.bordered]
 image::7-success-toast-edit.png[success toast edit]
 
 == Editing your Google Sheet Dataset
@@ -70,14 +77,17 @@ image::7-success-toast-edit.png[success toast edit]
 Once your Google Sheet data is uploaded, you'll be able to see the results in the Data View.
 This shows you the columns that were generated from the Google Sheet.
 
+[.bordered]
 image::8-data-tab.png[edit dataset]
 
 You can also see a list of all of the available fields in the Dataset from the Fields tab.
 
+[.bordered]
 image::9-fields-tab.png[fields tab]
 
 To pull new data in from the underlying Google Sheet, click the sync button.
 
+[.bordered]
 image::10-sync-button.png[sync button]
 
 === Describing the fields in your Dataset
@@ -88,12 +98,15 @@ To add a new field description, edit any Dataset and navigate to its Fields tab.
 From here, double-click on the row you'd like to edit.
 Descriptions support up to 350 characters, and text formatting such as bolding, italicizing, emojis, line breaks, and hyperlinks.
 
+[.bordered]
 image::1-add-description.png[Adding descriptions to the dataset]
 
+[.bordered]
 image::2-fields-view-page.png[View field descriptions on the dataset view page]
 
 Once added, field descriptions will appear in the Fields tab of a Dataset, and when hovering over the fields list in the chart builder.
 
+[.bordered]
 image::3-hover-description.png[Hover over fields to see descriptions in chart builder]
 
 // <highlight type="tip">**TIP**: Field description tooltips have a 250px max width. To see how your description will appear when charting off the data, add your Dataset to a Report and navigate to the given field from within the chart builder. </highlight>
@@ -130,17 +143,20 @@ Doing so will add the calculated field to the list of available fields, and also
 
 To add a new calculated field, first select the *New field* button.
 
+[.bordered]
 image::add_calc_fields.png[Adding calculated fields to the dataset]
 
 Then enter the formula for your calculated field, along with adding a name.
 To save the calculated field, select the *Apply and Close* button.
 
+[.bordered]
 image::add_calc_fields2.png[Adding calculated fields to the dataset]
 
 === Viewing source information
 
 Information about the underlying Google Sheet that was used to generate the Dataset can be accessed from the Source tab.
 
+[.bordered]
 image::11-source-tab.png[source tab]
 
 === Updating your Dataset's name and description
@@ -149,6 +165,7 @@ You can change the name and description for your Dataset at any point.
 To do so, select the caret next to the Dataset name in the header.
 From the dropdown, select *Rename*.
 
+[.bordered]
 image::12-rename.png[rename]
 
 Enter the desired Dataset name and description.
@@ -165,6 +182,7 @@ To create a new schedule, select the caret next to the Dataset name and choose *
 Then, select *Create New Schedule* to open the scheduling options.
 From here, you can set the refresh frequency, as well as the specific time and timezone.
 
+[.bordered]
 image::13-scheduler.png[scheduler]
 
 === Moving a Google Sheet Dataset to a Collection
@@ -176,6 +194,7 @@ To move the Dataset to a Collection, select the *Move to a Collection* button in
 
 This will open a modal displaying all of the available Collections.
 
+[.bordered]
 image::move_to.png[Moving a dataset]
 
 Select the Collection you want to add the Dataset to, then select *Move*.
@@ -184,6 +203,7 @@ Select the Collection you want to add the Dataset to, then select *Move*.
 
 To view a Dataset you've just created, select the *View* button in the top right corner of the Datasets editor.
 
+[.bordered]
 image::14-view-dataset.png[view dataset]
 
 From here, you can view the Data, Fields, and Source tabs, Dataset details, as well as export or copy the data.
@@ -191,6 +211,7 @@ From here, you can view the Data, Fields, and Source tabs, Dataset details, as w
 In the Details pane, you can see information about the Dataset, including the Collection it lives in, description, when it was last synced, any schedules it has, and which Reports are built from the Dataset.
 To view a list of Reports created from the Dataset, select the *Used in* link to open a modal displaying all child Reports.
 
+[.bordered]
 image::dataset-used-in.gif[Details pane]
 
 Reports you don't have access to will still appear in the count, but will be obfuscated or un-viewable.
@@ -205,6 +226,7 @@ There are a few ways to use your Google Sheet Dataset in a Report:
 . After your Sheet data has been successfully uploaded and your Dataset has been created, you'll receive a notification that it's ready for use.
 From here, you can choose to edit the Dataset directly or start visually analyzing its data in a new Report.
 +
+[.bordered]
 image::15-use-in-report.png[view dataset]
 
 . While editing or viewing a Google Sheet Dataset, click the *Use in New Report* button located in the header.
@@ -217,6 +239,7 @@ To make your Google Sheet Datasets more discoverable, move them to a Workspace C
 Once your Report is created and the Dataset is added, a flat table visualization will also be created by default.
 You can filter and sort the data on the table visualization or create additional visualizations using the data in the Dataset.
 
+[.bordered]
 image::11-make-chart.png[New chart]
 
 === Refreshing data in a Dataset-based Report
@@ -226,6 +249,7 @@ When you run your Report or refresh an individual Dataset from within a Report, 
 
 Datasets will be badged in the Report edit view when there is a fresher sync available, so you know when to refresh your Report.
 
+[.bordered]
 image::16-gsheets-data-refresh-available.png[use in report]
 
 == Google Sheet Dataset permissions
@@ -289,6 +313,7 @@ No, you can only select one Google Sheet tab to upload at a time, as Datasets ca
 
 The Dataset will be permanently removed from your Workspace, and any dependent Reports, Charts, or Calculated Fields will break.
 
+[.bordered]
 image::4-delete-dataset.png[Delete Dataset confirmation]
 
 [discrete]

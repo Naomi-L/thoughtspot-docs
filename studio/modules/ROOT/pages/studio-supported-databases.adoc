@@ -367,10 +367,12 @@ Depending on your Amazon settings, you may need to grant {product} access to you
 . Select *Clusters* from the left navigation bar.
 . Click on the cluster you want to connect.
 +
+[.bordered]
 image::redshift-select-cluster.png[Redshift]
 
 . Find *Cluster Security Groups* under *Cluster Properties* and click on the cluster's security group.
 +
+[.bordered]
 image::redshift-cluster-properties.png[Redshift]
 +
 NOTE: If you are using VPC Security Groups, you must also grant {product} access to that security group.
@@ -378,12 +380,14 @@ Please click on your VPC Security Group name and follow <<amazon-web-services,th
 
 . Click on the name of the security group.
 +
+[.bordered]
 image::redshift-security-group.png[Redshift]
 
 . You'll see a list of authorized connections.
 Click the blue *Add Connection Type* button in the upper left.
 . Select *CIDR/IP* from the *Connection Type* dropdown, and paste the address `54.68.30.98/32` in the *CIDR/IP to Authorize* field.
 +
+[.bordered]
 image::redshift-connection.png[Redshift]
 
 . Click the blue *Authorize* button.
@@ -402,6 +406,7 @@ mParticle supports both mParticle-hosted and client-hosted Redshift clusters.
 If you're using an mParticle hosted Redshift cluster, log in to the mParticle platform and navigate to the Redshift Configuration tab.
 There, you'll find your connection string and user credentials.
 
+[.bordered]
 image::mparticle-redshift-configuration.png[mParticle Redshift]
 
 You can also xref:studio-connecting-mode-to-your-database.adoc#requirements[allowlist {product}'s servers] by editing the list of allowed IP addresses on mParticle UI, which will update the AWS security group settings associated with your Redshift cluster.
@@ -799,6 +804,7 @@ To connect {product} to your BigQuery project, you will need to create a service
 . Navigate to the link:https://console.developers.google.com[Google Developers Console,window=_blank].
 Before proceeding, click on the dropdown to the right of Google Cloud and select the project to which you want to connect.
 +
+[.bordered]
 image::GBQ-Setup01.png[BigQuery]
 +
 NOTE: If you do not see the project you would like to connect to listed in the dropdown, click on the account switcher in the upper right corner of the window and ensure you are logged in to a Google account that is a member of the project.
@@ -806,30 +812,36 @@ NOTE: If you do not see the project you would like to connect to listed in the d
 . Click on the hamburger menu in the upper left and select *IAM & Admin* and then *Service accounts*.
 Click the *Create service account* button.
 +
+[.bordered]
 image::GBQ-Setup02.png[BigQuery]
 
 . Give your new service account a name, pick a unique ID, and add a description.
 Click *Create and continue*.
 +
+[.bordered]
 image::GBQ-Setup03.png[BigQuery]
 
 . Grant required roles, for example, BigQuery Job User and BigQuery Data Viewer.
 +
+[.bordered]
 image::GBQ-Setup04.png[BigQuery]
 
 . Finally, click *Done* to create your service account.
 Now we create the JSON key file.
 Navigate to *Manage keys* under the *Actions* menu for the service account.
 +
+[.bordered]
 image::GBQ-Setup05.png[BigQuery]
 
 . Navigate to *ADD KEY* > *Create new key*.
 +
+[.bordered]
 image::GBQ-Setup06.png[BigQuery]
 
 . Click *CREATE* to create and download the JSON key file.
 Save the private key file to a secure place where you can easily retrieve it when setting up the connection in {product}.
 +
+[.bordered]
 image::GBQ-Setup07.png[BigQuery]
 
 . Return to {product}, and begin the process to xref:studio-connecting-mode-to-your-database.adoc[connect a BigQuery database].
@@ -897,6 +909,7 @@ Go to the link:https://bigquery.cloud.google.com/[BigQuery Web UI,window=_blank]
 In the navigation, hover over a schema name and click the down arrow icon next to the name.
 Choose *Create new table*.
 +
+[.bordered]
 image::bigquery-google-sheets-1.png[GoogleSheets]
 +
 Select Google Drive for the new table's location and paste the Google Sheet URL (not the shared link, but the actual URL you use to view the Sheet) into this field.
@@ -904,6 +917,7 @@ Choose *Google Sheets* as the Format.
 Then add all the column names and types from your Google Sheet under *Schema*.
 Click *Create Table* when ready.
 +
+[.bordered]
 image::bigquery-google-sheets-2.png[GoogleSheets]
 
 . Enable Google Sheets for {product} Use.
@@ -1089,10 +1103,12 @@ image:azure-mode-first-ip.png[Azure SQL]
  ** `52.20.173.236`
 
 +
+[.bordered]
 image::azure-mode-all-ips.png[Azure SQL]
 
 . Click *Save* at the bottom of the screen.
 +
+[.bordered]
 image::azure-save.png[Azure SQL]
 
 // #### MemSQL
@@ -1454,6 +1470,7 @@ We'll start by determining if your database is accessible to us.
 . Navigate to your link:https://console.aws.amazon.com/rds/home#dbinstances:[RDS Instance Console,window=_blank].
 . Click the arrow and then magnifying glass to view the details of the instance that you want to connect.
 +
+[.bordered]
 image::rds-select-instance-201507.png[Amazon RDS Console]
 
 . Look under *Security and Network*.
@@ -1461,6 +1478,7 @@ Your instance is in a VPC if there's an entry labeled VPC.
 It is typically found below _Availability Zone_ and above _Security Groups_.
 If you don't have an entry here, then your instance is not in a VPC, and you can jump to the *Security Groups* section below.
 +
+[.bordered]
 image::rds-with-a-vpc-201507.png[RDS with a VPC]
 
 . Instances in VPCs can be public or private.
@@ -1468,6 +1486,7 @@ We can find out by looking under *Security and Network* again.
 This time for an entry labeled _Publicly Accessible_.
 If it is followed by a _Yes_, then you can jump to the *Security Groups* section below.
 +
+[.bordered]
 image::rds-with-a-public-vpc-201507.png[RDS on a public VPC]
 
 . To connect to instances in a private VPC, you'll need to install our xref:studio-connecting-mode-to-your-database.adoc#bridge[Bridge connector].
@@ -1493,29 +1512,35 @@ RDS instances outside of a VPC have a different process.
 
 . Under *Security and Network*, click the security group name.
 +
+[.bordered]
 image::rds-vpc-security-group-201507.png[Amazon RDS]
 
 . A new tab will be opened.
 Click on the *Inbound* tab and then *Edit*.
 +
+[.bordered]
 image::rds-vpc-security-group-edit-201507.png[Amazon RDS]
 
 . Find the RDS type that matches your instance (for example, PostgreSQL), enter each of our addresses, and then click *Save*.
 +
+[.bordered]
 image::rds-vpc-security-group-addresses-201507.png[Amazon RDS]
 
 ===== No VPC
 
 . Under *Security and Network*, click the security group to which that database belongs.
 +
+[.bordered]
 image::rds-security-group.png[Amazon RDS]
 
 . At the bottom of the page, highlight the *Connection Type* selector and choose *CIDR/IP*.
 +
+[.bordered]
 image::rds-connection-type.png[Amazon RDS]
 
 . In the *CIDR/IP to Authorize* field, paste address: `54.68.30.98/32`.
 +
+[.bordered]
 image::rds-cidr-ip.png[Amazon RDS]
 
 . Click the blue *Authorize* button.

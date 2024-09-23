@@ -11,6 +11,7 @@
 [#overview]
 == Overview
 
+[.bordered]
 image::raw_definition.png[Definitions - saved SELECT SQL statements]
 
 A Definition is a saved `SELECT` statement that can be referenced in other SQL queries.

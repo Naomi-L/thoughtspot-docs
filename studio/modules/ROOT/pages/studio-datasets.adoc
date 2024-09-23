@@ -54,14 +54,17 @@ Check out our {product} University learning path, link:https://university.mode.c
 
 To create a new Dataset, select the *Create* button in the top right corner of your {product} home screen and choose *Make a reusable Dataset*.
 
+[.bordered]
 image::make-dataset-plus.png[create dataset]
 
 Alternatively, go to *My Work* on the left nav and click the shortcut tile for *Make a reusable Dataset*.
 
+[.bordered]
 image::make-dataset-shortcut.png[create dataset]
 
 This will open up the Datasets editor where you can write a new SQL query or insert SQL snippets using xref:studio-definitions.adoc#overview[Definitions].
 
+[.bordered]
 image::create_dataset2.png[create dataset]
 
 === Previewing your Dataset
@@ -69,10 +72,12 @@ image::create_dataset2.png[create dataset]
 Once you run the query, you will be able to see the results below in the data view.
 This shows you the columns that were generated from the SQL query.
 
+[.bordered]
 image::data_view.png[data view]
 
 You can see a list of all of the available fields in the Dataset from the Fields tab.
 
+[.bordered]
 image::fields_tab_dataset.png[Datasets from the Fields tab]
 
 === Describing the fields in your Dataset
@@ -83,12 +88,15 @@ To add a new field description, edit any Dataset and navigate to its Fields tab.
 From here, *double-click* on the row you'd like to edit.
 Descriptions support up to 350 characters, and text formatting such as bolding, italicizing, emojis, line breaks, and hyperlinks.
 
+[.bordered]
 image::1-add-description.png[Adding descriptions to the dataset]
 
+[.bordered]
 image::2-fields-view-page.png[View field descriptions on the dataset view page]
 
 Once added, field descriptions will appear in the Fields tab of a Dataset, and when hovering over the fields list in the chart builder.
 
+[.bordered]
 image::3-hover-description.png[Hover over fields to see descriptions in chart builder]
 
 TIP: Field description tooltips have a 250px max width. To see how your description will appear when charting off the data, add your Dataset to a Report and navigate to the given field from within the chart builder.
@@ -127,17 +135,20 @@ Doing so will add the calculated field to the list of available fields, and also
 
 To add a new calculated field, first select the *New field* button.
 
+[.bordered]
 image::add_calc_fields.png[Adding calculated fields to the dataset]
 
 Then enter the formula for your calculated field, along with adding a name.
 To save the calculated field, select the *Apply and Close* button.
 
+[.bordered]
 image::add_calc_fields2.png[Adding calculated fields to the dataset]
 
 === Viewing the source syntax
 
 The source syntax of the query run can be accessed from the *Source* tab.
 
+[.bordered]
 image::view_sourceSyntax.png[Viewing the source syntax]
 
 === Adding a name and description to the Dataset
@@ -145,11 +156,13 @@ image::view_sourceSyntax.png[Viewing the source syntax]
 You can add a name and description to the Dataset.
 To do so, select the caret next to the placeholder name, "`Untitled Dataset.`" From the dropdown, select *Rename*.
 
+[.bordered]
 image::addingName_Description.png[Adding name and description]
 
 Enter the desired Dataset name and description.
 Then select *Save*.
 
+[.bordered]
 image::rename_dataset.png[Adding name and description]
 
 We recommend using consistent naming conventions and adding detailed descriptions to your Datasets.
@@ -162,11 +175,13 @@ When a Dataset refreshes, all associated Reports built using that Dataset will r
 
 To create a new schedule, select the caret next to the Dataset name and choose *Schedule*.
 
+[.bordered]
 image::schedule_ds.png[Schedule a dataset]
 
 Then, select *Create New Schedule* to open the scheduling options.
 From here, you can set the refresh frequency, as well as the specific time and timezone.
 
+[.bordered]
 image::create_new_schedule.png[Schedule a dataset]
 
 === Moving a Dataset to a Collection
@@ -178,6 +193,7 @@ To move the Dataset to a Collection, select the *Move to a Collection* button in
 
 This will open a modal displaying all of the available Collections.
 
+[.bordered]
 image::move_to.png[Moving a dataset]
 
 Select the Collection you want to add the Dataset to, then select *Move*.
@@ -186,30 +202,36 @@ Select the Collection you want to add the Dataset to, then select *Move*.
 
 To view a Dataset you've just created, select the *View* button in the top right corner of the screen.
 
+[.bordered]
 image::view_dataset.png[View a dataset]
 
 You will be able to view the Data, Fields, and Source tabs, and Dataset details. You can also export or copy the data from this view.
 
+[.bordered]
 image::viewing_a_dataset.png[View a dataset]
 
 In the Details pane, you can see information about the Dataset, including the Collection it lives in, description, when it was last run, any schedules it runs on, and which Reports are built from the Dataset.
 To view a list of Reports created from the Dataset, select the *Used in* link to open a modal displaying all child Reports.
 
+[.bordered]
 image::dataset-used-in.gif[Details pane]
 
 NOTE: Reports you don't have access to will still appear in the count, but will be obfuscated/un-viewable.
 
 You can share the Dataset with others on your team by selecting the *Share* button.
 
+[.bordered]
 image::share_ds.png[Share a dataset]
 
 Or, if you're ready to create a new Report using this Dataset, select the *Use in new Report button*.
 
+[.bordered]
 image::newReport_ds.png[Share a dataset]
 
 This will create a new Report with a flat table visualization added by default.
 You can filter and sort the data on the table visualization or create additional visualizations using the data in the Dataset.
 
+[.bordered]
 image::viewing_a_dataset1.png[Share a dataset]
 
 === Dataset permissions
@@ -228,6 +250,7 @@ You can add a Dataset to any Report for which you have edit access.
 This is true whether the Report was initially started with a SQL query, or another Dataset.
 To do so, open any Report in Edit mode and select the *Add Data* button from the left-side menu.
 
+[.bordered]
 image::add_ds_to_a_report.png[Using a dataset in reports]
 
 This will provide the options to add additional data via a new query, or using a Dataset.
@@ -235,6 +258,7 @@ Select *Use a Dataset*.
 
 This will open up a modal that allows you to browse existing Datasets to add to your Report.
 
+[.bordered]
 image::use-a-ds.png[Using a dataset in reports]
 
 You can use the search bar to filter for a specific Dataset, then select the one you want to work with.
@@ -244,6 +268,7 @@ If you want to use a personal Dataset, you'll need to use the *By URL* option an
 Once you select a Dataset, it will be added to your Report.
 You'll be able to view the data as well as begin building visualizations from it.
 
+[.bordered]
 image::use_ds1.png[Using a dataset in reports]
 
 === Starting a new Report from a Dataset
@@ -260,15 +285,18 @@ Use this workflow when you've found a Dataset that you'd like to explore and ana
 
 To create a new report, select the *Create* button in the {product} header, and choose *Use existing data*.
 
+[.bordered]
 image::use-existing-data-plus.png[Creating a report from the create button]
 
 Alternatively, go to *My Work* on the left nav and click the shortcut tile for *Use existing data*.
 
+[.bordered]
 image::use-existing-data-shortcut.png[Creating a report from the shortcut tile]
 
 If you have more than one option besides SQL, you will be prompted to choose how you want to start your Report.
 Select *Dataset*.
 
+[.bordered]
 image::start-report.png[Creating a report from the create button]
 
 Otherwise, this will open up a modal that allows you to browse existing Datasets to use as the foundation of your Report.
@@ -280,6 +308,7 @@ image::use-a-ds.png[Use a dataset]
 Datasets from Workspace Collections you have access to will appear here.
 If you want to use a personal Dataset, you'll need to use the *By URL* option and paste the URL in the search bar.
 
+[.bordered]
 image::use_a_ds_byURL.png[Use a dataset]
 
 Selecting a Dataset will open it.
@@ -290,6 +319,7 @@ Selecting a Dataset will open it.
 You can start a new Report while viewing a Dataset.
 From the Dataset view, select the green *Use in new Report* button from the top menu.
 
+[.bordered]
 image::newReport_ds.png[Use a dataset]
 
 This will create a new Report that you can start exploring and adding new visualizations to.
@@ -300,22 +330,26 @@ From the Dataset, you can start to explore by browsing the fields and adding you
 
 To add a function, navigate to the Fields tab and click the *New Field* button.
 
+[.bordered]
 image::4-new-field.png[Add a function to a dataset]
 
 Enter the function for your calculated field, and give it a name.
 To save the field, select the *Apply and Close* button.
 The field will be saved locally to your Report, allowing you to personalize your view of the data without impacting the original Dataset.
 
+[.bordered]
 image::5-save-local-formula.png[Save a function for a dataset]
 
 To describe your own local fields, *double-click* on the row for a given field within the Fields tab.
 
 Field descriptions support up to 350 characters, and text formatting such as bolding, italicizing, emojis, line breaks, and hyperlinks.
 
+[.bordered]
 image::6-add-local.png[Add descriptions to local fields]
 
 Descriptions you add to your local fields will appear when hovering over the fields list in the chart builder, alongside any other field descriptions that were added directly to the source Dataset.
 
+[.bordered]
 image::7-see-local.png[See local field descriptions on hover]
 
 NOTE: You won't be able to edit or delete field descriptions that were added to the source Dataset while using its data within a Report. To add or change a source field's description, edit the original Dataset.
@@ -325,16 +359,19 @@ NOTE: You won't be able to edit or delete field descriptions that were added to 
 From the Dataset, you can start to explore by browsing the fields and adding custom functions on the fly.
 This allows you to personalize your view of the data without impacting the original Dataset.
 
+[.bordered]
 image::9-data-view.gif[Use a dataset]
 
 To explore the data visually, select the *New Chart* button from either the top menu or left-side menu.
 
+[.bordered]
 image::10-new-chart-ctas.png[New chart]
 
 Choose the chart type you want to create.
 Doing so will open the visualization builder.
 From here, you can drag and drop the fields you want to analyze to create your chart.
 
+[.bordered]
 image::11-make-chart.png[New chart]
 
 === Move charts from queries to Datasets
@@ -357,11 +394,13 @@ _Move a chart created off a query to a Report with the Dataset_  image:copy-past
 To add your charts to the Report Builder, select the chart's context menu from either the top menu or left-side menu.
 Then choose *Add to Report Builder*.
 
+[.bordered]
 image::12-add-to-builder.png[Add chart]
 
 You can access the report builder by selecting *Report Builder* from the left-side menu.
 Once in the Report Builder, you can configure the layout and customize the look and feel of your Report.
 
+[.bordered]
 image::13-report-builder.png[Add chart]
 
 You can add filters to your Report to allow viewers to slice the data in different views.
@@ -369,6 +408,7 @@ You can add filters to your Report to allow viewers to slice the data in differe
 To give your Report a name, hover over the Report title in the navigation panel and click on the pencil icon.
 This will open a modal where you can give the Report a name and description.
 
+[.bordered]
 image::14-rename-report.png[Add chart]
 
 By default, the Report will live in your personal Collection.
@@ -376,6 +416,7 @@ To move it to a different Collection, select the dropdown menu next to Report, t
 
 A window will appear displaying an option to create a new Collection, or to select from any Collections you have access to.
 
+[.bordered]
 image::move_to.png[Add chart]
 
 Once you choose where to move the Report to, you will be able to find the Report in that Collection.
@@ -390,12 +431,14 @@ When you run your Report or refresh an individual Dataset, {product} will check 
 
 There is a badge in the Report edit view notifying you that a fresher run is available, so you know when to refresh the Report.
 
+[.bordered]
 image::5-refresh-dataset.gif[Dataset refresh]
 
 NOTE: Changes to a Dataset's calculated fields will be reflected immediately on page load, regardless of whether there's a newer run available.
 
 You can also compare how recently your entire Report ran relative to when the Datasets were last run by navigating to your Report's Activity popover.
 
+[.bordered]
 image::6-activity-popover.png[Dataset refresh]
 
 == Deleting Datasets
@@ -405,15 +448,18 @@ image::6-activity-popover.png[Dataset refresh]
 To delete a Dataset, open up the Dataset in edit mode.
 Then, using the dropdown next to the Dataset name, select *Delete Dataset*.
 
+[.bordered]
 image::delete-dataset.png[Delete Dataset]
 
 Doing so will prompt a confirmation that you want to delete the Dataset.
 To confirm, select *Delete*.
 
+[.bordered]
 image::delete-dataset-confirmation.png[Delete Dataset confirmation]
 
 NOTE: If a Dataset is deleted, it will be permanently removed from your Workspace, and any dependent Reports, charts, or calculated fields will break.
 
+[.bordered]
 image::4-delete-dataset.png[Delete Dataset confirmation]
 
 [#faqs]
@@ -442,6 +488,7 @@ NOTE: Even if a query run is successful, changing field names or removing fields
 
 The Dataset will be permanently removed from your Workspace, and any dependent Reports, charts, or calculated fields will break.
 
+[.bordered]
 image::4-delete-dataset.png[deleted dataset]
 
 [discrete]

@@ -184,6 +184,7 @@ To enable SSL, please refer to your database's website for information on how to
 If you don't want to or can't enable SSL, you can connect your database to {product} using <<bridge,Bridge>>.
 Though Bridge connections use transport encryption by default, you can disable it by clicking the green "*turn off transport encryption*" link when setting up Bridge.
 
+[.bordered]
 image::transport_off.jpg[Transport encryption]
 
 "Publicly accessible" databases aren't databases that can be queried by anyone in the general public--nearly all "publicly accessible" databases still require passwords and encrypted connections.
@@ -260,27 +261,33 @@ Bridge's <<where-is-the-bridge-configuration-file-saved,configuration file>> 'br
 
 . In the upper left corner of your Workspace's {product} home page, expand the menu under your name, and select *Connect a Database* from the dropdown.
 +
+[.bordered]
 image::connect-a-database-2021.png[Settings Dropdown]
 
 . Click on the type of database you want to connect to {product}.
 +
+[.bordered]
 image::select-db.png[Select a Database]
 
 . Click on the 'Bridge connector' link above the connections details form.
 +
+[.bordered]
 image::bridge-enter-creds.png[Enter Credentials]
 
 . To install Bridge for the first time, click on the *'connect a new bridge'* link.
 +
+[.bordered]
 image::connect-a-new-bridge.png[Connect a New Bridge]
 
 . Select the operating system of your host computer and follow the onscreen prompts to copy and execute statements in the command line.
 +
+[.bordered]
 image::select-os.png[Choose your OS]
 
 . Once Bridge is installed and running, click *Next*.
 . You will be returned to the database credentials page, where you should see that the database will be connecting through your newly-installed Bridge connector.
 +
+[.bordered]
 image::bridge-back-to-DB-creds.png[Back to Credentials]
 
 . Fill out your database credentials and click '*Connect*.'
@@ -295,19 +302,23 @@ These instructions assume you meet <<requirements,the requirements>> and would l
 
 . In the upper left corner of your Workspace's {product} home page, expand the menu under your name, and select *Workspace Settings* from the dropdown.
 +
+[.bordered]
 image::workspace-settings.png[Organization Settings]
 
 . In the left navigation, under *Data*, select *Bridge Connectors*.
 +
+[.bordered]
 image::data-bridge-connectors.png[Under Bridge Connectors]
 
 . Enter a descriptive name for your Bridge connector and press *Create bridge*.
 You will be able to edit this in the future.
 +
+[.bordered]
 image::name-bridge.png[Create New Bridge]
 
 . A panel will display a confirmation that the named Bridge was created and the credentials for that Bridge are displayed.
 +
+[.bordered]
 image::configuration-with-ENV-variables.png[Bridge Display Panel]
 
 . <<where-in-mode-can-i-view-the-password-token-secret-for-the-bridge-connector-that-i-created,Copy the configuration with ENV variables>>. Save these to create a new configuration file for the Bridge connector.
@@ -326,22 +337,27 @@ Inspect the logs for any error messages by running the following command: `docke
 
 . In the upper left corner of your Workspace's {product} home page, expand the menu under your name, and select *Connect a Database* from the dropdown.
 +
+[.bordered]
 image::connect-a-database-2021.png[Connect a Database]
 
 . Click on the type of database you want to connect to {product}.
 +
+[.bordered]
 image::select-db.png[Select a database]
 
 . Click on the 'Bridge connector' link above the connections details form.
 +
+[.bordered]
 image::bridge-enter-creds.png[Enter Credentials]
 
 . Select the name of the Bridge connector running in Docker.
 +
+[.bordered]
 image::select-bridge-connector.png[Choose a Bridge]
 
 . You will be returned to the database credentials page, where you should see that the database will be connecting through your Bridge connector.
 +
+[.bordered]
 image::bridge-back-to-DB-creds.png[Return to Credentials]
 
 [#faqs-bridge]

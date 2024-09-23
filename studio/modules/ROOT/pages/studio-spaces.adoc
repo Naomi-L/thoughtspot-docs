@@ -43,6 +43,7 @@ Update the default access to *Restricted* if you don't want users in your Worksp
 
 You can also specifically grant individuals and groups access to view and edit Personal content you share with them.
 
+[.bordered]
 image::personal_manage_access.png[Reports in Personal collection]
 
 [#community-space]
@@ -117,6 +118,7 @@ If you want to add a Collection to your navigation, go to *My Collections*, sele
 
 TIP: Adding Members and Groups to a Collection will automatically add that Collection to the recently-added users' side-navigation. To ensure that new Workspace Members see relevant Collections, add the new Members to Groups with access to the Collections, and they will see their side-navigation populated with the relevant Collections.
 
+[.bordered]
 image::add-to-nav.png[Add collection to navigation]
 
 
