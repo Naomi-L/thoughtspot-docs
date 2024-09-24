@@ -23,7 +23,7 @@ Any personal tokens that were created prior to June 2023 can continue to be used
 however, we will be fully deprecating personal API tokens in August 2024.
 
 The Workspace API tokens are meant to be used for programmatic management, such as archiving inactive Reports or deleting schedules for stale Reports across your Workspace.
-These tokens mimic Admin access to the Workspace and only Admins will be able to create and manage them.
+These tokens mimic admin access to the Workspace and only admins will be able to create and manage them.
 
 See the full documentation for {product}'s API link:https://mode.com/developer/api-reference/introduction/[here,window=_blank].
 
@@ -34,7 +34,7 @@ WARNING: Remember to store your API token and password securely. Do not expose t
 
 ==== Workspace tokens
 
-Only Admins are able to create Workspace tokens.
+Only admins are able to create Workspace tokens.
 You can create as many API access tokens as you need.
 To create one, navigate to your menu:Workspace Settings[ Default Settings  > API].
 Click the "`gear`" icon and select *Create new API token*. You will be prompted to add a display name and save the token.
@@ -75,12 +75,12 @@ We currently publish two headers:
 * X-RateLimit-Remaining, which shows how many requests until you'll be throttled.
 
 [discrete]
-==== *Q: How to check which reports are scheduled and viewed*
+==== *Q: How to check which Reports are scheduled and viewed*
 
 *API method*
 
-You can loop through every single Report in the workspace (the ones in public/private collections, but not other members' personal collections), and check each individual report to see whether it's scheduled.
-See the API documentation on how to get all the Reports in your workspace is link:https://mode.com/developer/api-cookbook/management/get-all-reports/[here,window=_blank].
+You can loop through every single Report in the workspace (the ones in public/private Collections, but not other members' personal Collections), and check each individual Report to see whether it's scheduled.
+See the API documentation on how to get all the Reports in your Workspace link:https://mode.com/developer/api-cookbook/management/get-all-reports/[here,window=_blank].
 
 From there, you can see the `view_count` property, which will allow you to see the view count for an individual Report.
 

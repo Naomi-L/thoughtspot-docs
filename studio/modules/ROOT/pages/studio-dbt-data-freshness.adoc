@@ -11,7 +11,7 @@
 == Overview
 
 {product}'s dbt integration allows users to view metadata about data freshness from dbt directly in {product} Reports.
-The integration allows {product} users to present information about when source data was last refreshed for a report, by mapping the tables used in the report to dbt models.
+The integration allows {product} users to present information about when source data was last refreshed for a Report, by mapping the tables used in the Report to dbt models.
 
 == Connect {product} to dbt
 
@@ -26,7 +26,7 @@ link:https://docs.getdbt.com/docs/dbt-cloud/using-dbt-cloud/cloud-snapshotting-s
 In order to set up dbt data freshness in {product}, you will need to have:
 
 * The *Job ID* for the dbt Job that updates your production data.
-* A *Service Account Token* generated from dbt's metadata API.
+* A *Service Account Token* generated from dbt's Metadata API.
 
 === Get dbt job ID
 
@@ -46,9 +46,9 @@ In order to authorize the API, you will need to generate a token in dbt.
 
 To generate a Metadata-only Service Account Token, go to the Account Settings view of dbt Cloud.
 From there, click on the Service Account tokens page.
-Create a new Metadata Only token and save.
+Create a new Metadata-only token and save.
 
-You will also need to enable the Metadata API to allow querying with the Metadata Only Token.
+You will also need to enable the Metadata API to allow querying with the Metadata-only token.
 Navigate to the Metadata page in Account Settings to enable access to the API.
 
 For more information on how to generate a Service Account Token, link:https://docs.getdbt.com/docs/dbt-cloud/dbt-cloud-api/service-tokens#metadata-only-service-account-tokens[see the dbt Cloud documentation,window=_blank].
@@ -61,7 +61,7 @@ Select the Connection you want to enable dbt for and navigate to the *dbt Integr
 [.bordered]
 image::dbt2.png[dbt2]
 
-Only Admins or users with permission to manage the Connection will be able to enable the dbt integration.
+Only admins or users with permission to manage the Connection will be able to enable the dbt integration.
 If you have multiple Connections, the integration must be set up for each Connection separately.
 
 == Viewing dbt data freshness in {product} Reports
