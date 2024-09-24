@@ -101,7 +101,7 @@ You can access the included URL to learn more about the included resource.
 }
 ----
 
-=== A new report is created
+=== A new Report is created
 
 [source,json]
 ----
@@ -111,7 +111,7 @@ You can access the included URL to learn more about the included resource.
 }
 ----
 
-=== A report finishes running
+=== A Report finishes running
 
 [source,json]
 ----
@@ -121,7 +121,7 @@ You can access the included URL to learn more about the included resource.
 }
 ----
 
-=== A report is deleted
+=== A Report is deleted
 
 [source,json]
 ----

@@ -81,7 +81,7 @@ image::XMtoolbar.png[toolbar]
 * *Swap axes* - Switch between a horizontal and vertical chart type configuration.
 * *Quick sort* - Sorts your discrete, categorical data by a measure in either ascending or descending order.
 +
-NOTE: xref:studio-visualizations.adoc#tables[Table Charts] contain additional options and formatting in the toolbar.
+NOTE: xref:studio-visualizations.adoc#tables[Table charts] contain additional options and formatting in the toolbar.
 
 [#formatting-your-exploration]
 === Formatting your Exploration
@@ -155,8 +155,8 @@ image::my-explorations.png[my explorations tab]
 
 == Reports powering Explorations
 
-Members in your workspace can only create and view Explorations when they have permission to view the report.
-If a query in your report powers an Exploration, you will see a status indicator in the right corner of the SQL editor.
+Members in your workspace can only create and view Explorations when they have permission to view the Report.
+If a query in your Report powers an Exploration, you will see a status indicator in the right corner of the SQL editor.
 The tooltip will tell you how many Explorations are powered by your query's data.
 
 [.bordered]
@@ -171,7 +171,7 @@ IMPORTANT: Deleting a Report or query will also delete all Explorations powered 
 === *Q: Can I share my Exploration?*
 
 Yes.
-Once you save your Exploration, you can share the URL with others in your workspace.
+Once you save your Exploration, you can share the URL with others in your Workspace.
 If they have permission to view the Report, they can view your Exploration.
 
 [discrete]

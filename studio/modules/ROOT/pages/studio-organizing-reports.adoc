@@ -31,7 +31,7 @@ To remove a star from a Report, repeat the above steps.
 
 {product} lets you copy an existing Report so that you can modify or build on it without making changes to the original.
 You can duplicate any Report that you created.
-In a paid plan Workspace, you can duplicate any Report visible to you, as long as you have access to all of the database connections used in that Report.
+You can duplicate any Report visible to you, as long as you have access to all of the database connections used in that Report.
 
 To duplicate a Report:
 

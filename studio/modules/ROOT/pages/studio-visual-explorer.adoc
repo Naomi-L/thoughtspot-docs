@@ -26,7 +26,7 @@ Consequently, there are a few key differences between the workflow within the Vi
  ** Quick Charts: arrive with a starting graphic type in mind, then rebuild through until you arrive at something you like.
  ** Visual Explorer: iterate toward your end visualization by using modular, independent components.
 
-As a general principle, you can think of *Columns* as what data you want to display horizontally (similar to an x-axis), *Rows* as what data you want to display vertically (similar to a y-axis), and *Layers* as how you want to display your data.
+As a general principle, you can think of *Columns* as what data you want to display horizontally (similar to an X-axis), *Rows* as what data you want to display vertically (similar to a Y-axis), and *Layers* as how you want to display your data.
 
 [.bordered]
 image::col-row-lay.png[Columns Rows and Layers]
@@ -43,7 +43,7 @@ Doing so groups your visualization by categorical values, which helps you break 
 [.bordered]
 image::simple-viz.jpeg[Simple visual]
 
-From there, you can drag-and-drop or use the type-ahead search to add a *measure* to your rows or columns.
+From there, you can drag-and-drop or use the typeahead search to add a *measure* to your rows or columns.
 Measures are automatically aggregated by default when added to visualizations.
 
 [.bordered]
@@ -109,7 +109,7 @@ image:mark-types-bar-overview.png[Mark Types]
 image:mark-types-bar-grouped.png[Grouped Bar Mark Type]
   *** *Overlapped*: Bars overlap with each other.
 This is most useful when a field is added to the Size channel.
-In this example, payment_cycle has been added to the Size channel. +
+In this example, `payment_cycle` has been added to the Size channel. +
 image:mark-types-bar-overlapped.png[Overlapped Bar Mark Type]
   *** *Stacked*: Bars are stacked on top of each other, showcasing cumulative data for multiple categories. +
 image:mark-types-bar-stacked.png[Stacked Bar Mark Type]
@@ -173,9 +173,9 @@ image::Demo-No-field-on-color.gif[Color]
 
 NOTE: Support to set a custom color using the color dropper is dependent on the browser. We recommend using Google Chrome for the best experience.
 
-*Coloring by Dimensions*
+*Coloring by dimensions*
 
-When you add a Dimension to the Color channel by dragging and dropping or using the type-ahead search, the measure in the chart is sliced, and each value in the Dimension is represented by a different color in your chosen palette.
+When you add a dimension to the Color channel by dragging and dropping or using the type-ahead search, the measure in the chart is sliced, and each value in the dimension is represented by a different color in your chosen palette.
 The colors assigned to a specific value can be customized by clicking on the color swatch.
 
 image::Demo-Dimension-on-Color.gif[Color by Dimensions]
@@ -288,8 +288,8 @@ There are several ways to graph multiple measures in one view:
 
 By default, each measure gets its own axis when you add measures directly to either Rows or Columns.
 
-* Adding a measure to Columns will create a new axis along the x-axis.
-* Adding a measure to Rows will create a new axis along the y-axis.
+* Adding a measure to Columns will create a new axis along the X-axis.
+* Adding a measure to Rows will create a new axis along the Y-axis.
 
 In the example below, we have one measure in Rows and another measure in Columns.
 Compare that to the resulting visualization.
@@ -350,7 +350,7 @@ To learn about plotting data along more than one axis, see <<dual-axes,dual axes
 
 ===== *Creating a shared axis*
 
-To create a shared axis, add at least one continuous field to columns or rows by dragging and dropping or by using the typeahead search.
+To create a shared axis, add at least one continuous field to Columns or Rows by dragging and dropping or by using the typeahead search.
 From the pill context menu (accessed via the caret on the right side of the pill), you can select "`Shared axis`" (fig.
 1.1).
 When selected, a blue check will appear in the menu next to shared axis, and a new gray header and dropzone will appear around the pill (fig 1.2).
@@ -374,13 +374,13 @@ You may add more continuous pills to the shared axis dropzone to plot additional
 image:1.5.png[Shared Axis 1.5]
 
 Another great feature of shared axis is the ability to move the shared axis group between dropzones.
-Simply click the shared axis header and drag it to move between columns and rows (fig 1.6).
+Simply click the shared axis header and drag it to move between Columns and Rows (fig 1.6).
 
 image:1.6.png[Shared Axis 1.6]
 
 ===== *Formatting a shared axis*
 
-To update the axis title for the shared axis group, open the shared access context menu in the upper right of the shared axis header, and select "`format`" (fig 2.1).
+To update the axis title for the shared axis group, open the shared access context menu in the upper right of the shared axis header, and select *Format* (fig 2.1).
 You can also click directly on the Format tab in the right-hand panel of the visualization builder (fig 2.2a).
 If you click the Format tab directly, you must also select the name of your shared axis group from the fields list dropdown (fig.
 2.2b).
@@ -526,7 +526,7 @@ image:topbottom.png[Top N Filter]
 == Sorting
 
 [discrete]
-==== Quick sort
+==== Quick Sort
 
 In the xref:studio-explorations.adoc#toolbar[Toolbar], you have the ability to leverage our Quick Sort feature to sort your innermost discrete, categorical data by the outermost measure in either descending or ascending order.
 
@@ -541,10 +541,10 @@ image::sort-vestatic.jpeg[Quick Sort Visual Explorer]
 From there, you can specify exactly how you'd like to sort that discrete field.
 We currently support the following sorting methods:
 
-. By data value
-. By field
-. By manual
-. By nested
+. By data value.
+. By field.
+. By manual.
+. By nested.
 
 [discrete]
 ==== Sorting by data values
@@ -625,7 +625,7 @@ image::anatomy-of-a-visualization.png[Anatomy of a Visualization]
  ** Header Values are the data values within a header.
 * *Pane*: Panes are formed when fields on Rows and Columns intersect.
 A visualization can be consisted of several panes.
-* *Legend*: Legends are keys of the chart's data series to help you understand the visual representation of your data series, usually via Color or Size.
+* *Legend*: Legends are keys of the chart's data series to help you understand the visual representation of your data series, usually via color or size.
 
 === Formatting
 
@@ -670,8 +670,8 @@ However, please note that whatever changes you make on the axes will not affect 
 
 === Panes
 
-Whether a visualization contains an Axis vs. a Header depends on whether the field is continuous vs. discrete, but all visualizations will have a pane if there is an intersection of at least two fields.
-Any formatting changes you want to be reflected on your Labels or Tooltips should be made in the Pane section, as these elements all exist within the Pane.
+Whether a visualization contains an axis versus a header depends on whether the field is continuous versus discrete, but all visualizations will have a pane if there is an intersection of at least two fields.
+Any formatting changes you want to be reflected on your labels or tooltips should be made in the Pane section, as these elements all exist within the Pane.
 
 [.bordered]
 image::panes-viz.jpeg[Panes]
@@ -724,7 +724,7 @@ In order to accomplish that, some of the axis tick values are also dropped.
 
 Follow the steps below to enable this for a chart:
 
-. Click *Change display of discrete axis* button.
+. Click the *Change display of discrete axis* button.
 +
 [.bordered]
 image::change-display-discrete-axis.png[change display]
@@ -732,11 +732,9 @@ image::change-display-discrete-axis.png[change display]
 . There are two choices: *Fit to screen* and *Fit to data* (default).
 . Select *Fit to screen*.
 +
-NOTE: The **"Change display of discrete axis"** button will be enabled when you have continuous values.
+NOTE: The **Change display of discrete axis** button will be enabled when you have continuous values.
 
 === Add customized text labels
-
-==== *Intro*
 
 Text settings enable you to quickly label important data points in your visualization, and provide at-a-glance insight for complex charts.
 Through a simple modal, you can customize the text labels shown for each series in your visualization, providing helpful context that is tied directly to the data.
@@ -801,7 +799,7 @@ When you open text settings from here and apply your changes, all series will in
 [.bordered]
 image::text-settings-2-1.png[text labels 2.1]
 
-If you are in *All Layers* in the layers dropzone, and see a non-interactive Multiple pill in the text channel (fig 2.2), this indicates that individual series have pills in their text channels, and those will have to be removed before you can customize labels using *All Layers*.
+If you are in *All Layers* in the layers dropzone, and see a non-interactive *Multiple* pill in the text channel (fig 2.2), this indicates that individual series have pills in their text channels, and those will have to be removed before you can customize labels using *All Layers*.
 
 [.bordered]
 image::text-settings-2-2.png[text labels 2.2]
@@ -828,7 +826,6 @@ image:Chart-Descriptions.gif[Chart descriptions]
 [#quick-table-calculations]
 == Quick table calculations
 
-=== Intro
 
 Quick table calculations allow you to quickly apply an analytic calculation to the data in your visualization.
 In addition to choosing the *Quick table calculation type*, you can also specify the level and direction you want to calculate.
@@ -839,7 +836,7 @@ image:overview-1.png[Quick table calculation] image:overview-2.png[Quick table c
 
 === Calculation types
 
-There are three Quick calculation types we currently offer: *Percent difference*, *Difference*, and *Percent of total*.
+There are three quick calculation types we currently offer: *Percent difference*, *Difference*, and *Percent of total*.
 
 *Percent Difference:* Calculates the percent difference between the current value and another specified value for each mark in the visualization.
 In addition to the usual level and direction, you can also specify which value you'd like to anchor the difference calculation *relative to*.
@@ -858,7 +855,7 @@ image:calc-type-percent-of-total.png[Quick table calc percent of total]
 [#quick-calculations]
 === Customizing your quick calculation
 
-In addition to choosing the calculation type, you can also specify the direction (for example, across vs. down) and the level (for example, table vs. cell) you wish to calculate over.
+In addition to choosing the calculation type, you can also specify the direction (for example, across versus down) and the level (for example, table versus cell) you wish to calculate over.
 To customize the direction and level of a calculation, go to <<table-calculation-settings,Table calculation settings>> in the pill context menu.
 
 *Table Across:* Calculates *across* (left to right) the entire *table* and restarts after every partition.
@@ -908,7 +905,7 @@ Table calculation settings is an advanced feature that allows users to further c
 
 After applying a <<quick-calculations,quick table calculation>> to a field, or dropping a calculated field into a dropzone, a field's context menu will display an additional option labeled *Table calculation settings* (fig 1.1).
 Clicking this option will open the Table calculation settings modal.
-It provides additional options that allow you to reorder fields present in your visualization, and specify the way they should be used in the application of the table calculation (1.2).
+It provides additional options that allow you to reorder fields present in your visualization, and specify the way they should be used in the application of the table calculation (fig 1.2).
 
 NOTE: Both quick table calculations and calculated fields are types of table calculations, so both will have this additional customized setting available to them.
 
@@ -959,7 +956,7 @@ image:table-calc-settings-2-2.png[Table calc settings 2.2] image:table-calc-sett
 
 == Binning
 
-In Visual Explorer, users can bin a measure or numeric dimension on various chart components such as the X or Y axis, size, detail, text, and/or color channel by using the bin option in the field context menu as shown in the demo below.
+In Visual Explorer, users can bin a measure or numeric dimension on various chart components such as the X- or Y-axis, size, detail, text, and/or color channel by using the bin option in the field context menu as shown in the demo below.
 The recommended bin size is determined by the minimum and maximum values of the field in the underlying data.
 The bin size can be updated using the bin settings option in the same field context menu. The default for the bin label is the lower limit of the numerical range assigned to that bin.
 The bin label format can be updated to a continuous range using the axis labels option for binned fields in the format panel.
@@ -985,7 +982,7 @@ If you're unsure how to get started in the Visual Explorer, a great way is to be
 
 image:convert-to-ve.gif[Convert to Visual Explorer Environment]
 
-We support all Quick Chart conversions except for Tables and Big Values.
+We support all Quick Chart conversions except for tables and big values.
 We do not support converting Visual Explorer visualizations back to Quick Charts, though you can use the Back and Forward buttons in the Chart Editor.
 image:convert-to-ve1.png[Convert to Visual Explorer Environment]
 
@@ -1054,9 +1051,9 @@ the larger the value, the darker the color.
 image::conditional-formatting-color1.png[Conditional Formatting]
 
 [discrete]
-=== *Q: Can I have multiple fields in a Layer channel?*
+=== *Q: Can I have multiple fields in a layer channel?*
 
-Visual Explorer currently only supports one field per channel in a given Layer.
+Visual Explorer currently only supports one field per channel in a given layer.
 
 [discrete]
 === *Q: Can I display Grand totals and Subtotals in my chart?*

@@ -38,7 +38,7 @@ Some common scenarios for when you'd want to use calculated fields include:
 
 == Creating a calculated field
 
-. Click the app switcher icon in the top navigation bar and select {product}, then sign in to your Workspace.
+. Click the app switcher icon in the top navigation bar and select *{product}*, then sign in to your Workspace.
 . Click the green `+` to create a new report in the upper right-hand corner.
 . Run a SQL query.
 (It can be as simple as `SELECT * FROM table`.)
@@ -72,7 +72,7 @@ You should see it in your fields list, with an equal sign (=) next to the data t
 
 *In charts*
 
-You can chart your calculated field just as you could a SQL-generated field, by selecting and dragging the field into your Chart menu.
+You can chart your calculated field just as you could a SQL-generated field, by selecting and dragging the field into your chart menu.
 
 image::4-drag-calc-field.gif[calculated fields in charts]
 
@@ -88,7 +88,7 @@ image::filter-calc-field.gif[Calculated Fields in Filters]
 
 These are the four basic components that make up any calculated field:
 
-* *Fields* - columns from your data source, can be either a Dimension or a Measure.
+* *Fields* - columns from your data source, can be either a dimension or a measure.
 * *Operators* - symbols that denote a certain operation, like `+` and `-` .
 * *Functions* - transform the given input to an expected output, like `COUNT()` and `SUM()`.
 * *Literal expressions* - constant values that are represented as is.

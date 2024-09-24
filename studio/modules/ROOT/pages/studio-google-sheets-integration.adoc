@@ -215,7 +215,7 @@ image::14-view-dataset.png[view dataset]
 
 From here you can view the Data, Fields, and Source tabs, Dataset details, as well as export or copy the data.
 
-In the Details pane, you can see information about the Dataset including the Collection it lives in, description, when it was last synced, any schedules it has, and which Reports are built from the Dataset.
+In the Details pane, you can see information about the Dataset, including the Collection it lives in, description, when it was last synced, any schedules it has, and which Reports are built from the Dataset.
 To view a list of Reports created from the Dataset, select the *Used in* link to open a modal displaying all child Reports.
 
 image::dataset-used-in.gif[Details pane]
@@ -253,7 +253,7 @@ image::11-make-chart.png[New chart]
 === Refreshing data in a Dataset-based Report
 
 New Google Sheet Dataset data can be synced into {product} via a Dataset schedule, or manually from within the Datasets editor.
-When you run your Report or refresh an individual Dataset from within a Report, {product} will check to see if there's a newer Google Sheet Dataset sync available, load it in, and snapshot its results within your Report's Run History.
+When you run your Report or refresh an individual Dataset from within a Report, {product} will check to see if there's a newer Google Sheet Dataset sync available, load it in, and snapshot its results within your Report's run history.
 
 Datasets will be badged in the Report edit view when there is a fresher sync available, so you know when to refresh your Report.
 
@@ -274,8 +274,8 @@ Datasets you create can continue to sync new data in from Google so long as you'
 === *Q: Can I access my Google Sheet Datasets in the SQL editor for querying or joining?*
 
 No.
-Currently, Reusable Datasets can only be used for visual analysis via Quick Charts and the Visual Explorer.
-The ability to query and join Reusable Datasets is on the roadmap, and will be introduced as a future feature.
+Currently, reusable Datasets can only be used for visual analysis via Quick Charts and the Visual Explorer.
+The ability to query and join reusable Datasets is on the roadmap, and will be introduced as a future feature.
 
 [discrete]
 === *Q: Can I access my Google Sheet Datasets as dataframes in the Notebook?*
@@ -319,7 +319,7 @@ No, you can only select one Google Sheet tab to upload at a time, as Datasets ca
 [discrete]
 === *Q: What happens if I delete a Google Sheet Dataset?*
 
-The Dataset will be permanently removed from your Workspace, and any dependent Reports, Charts, or Calculated Fields will break
+The Dataset will be permanently removed from your Workspace, and any dependent Reports, charts, or calculated fields will break
 
 [.bordered]
 image::4-delete-dataset.png[Delete Dataset confirmation]
@@ -334,7 +334,7 @@ Existing Datasets built on the connection will continue to use the last successf
 [discrete]
 === *Q: As an admin, what happens to existing Google Sheet Datasets if I disable the Google Sheets integration for my Workspace?*
 
-Disabling the Google Sheets integration will log out any Members currently connected to Google, and prevent them from re-connecting or creating new Datasets from Google Sheet data.
+Disabling the Google Sheets integration will log out any members currently connected to Google, and prevent them from re-connecting or creating new Datasets from Google Sheet data.
 
 Existing Datasets built via the Google Sheets integration will continue to use the last successful sync but won't be able to sync in new data, which could break existing refresh schedules.
 

@@ -25,7 +25,7 @@ For example, if the {product} slack bot is not in the private #sales-only channe
 [#setting-up]
 == Setting up or upgrading versions
 
-. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select *{product}*, then click on your name in the upper left corner of the window.
 . Click *Workspace Settings*.
 . Under the Features section, click *Slack Application*.
 . Click the *Add to Slack* button.
@@ -80,7 +80,7 @@ More information about Slack's scopes can be found in Slack's link:https://api.s
 
 == Channel access
 
-Users in your organization can share reports to the following Slack channels:
+Users in your organization can share Reports to the following Slack channels:
 
 * Public channels in your connected Slack workspace.
 * Any private channels in your connected Slack workspace where the {product} slack bot has been added.

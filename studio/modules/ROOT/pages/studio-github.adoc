@@ -18,7 +18,7 @@ This will create a two-way sync between {product} and GitHub, where changes made
 
 Before you begin, you must meet the following requirements in order to set up the {product} sync with GitHub:
 
-* Your {product} Workspace must be on one of {product}'s paid plans.
+//* Your {product} Workspace must be on one of {product}'s paid plans.
 * You must be an admin of your {product} Workspace.
 * You must be authorized to install the link:https://github.com/apps/modeanalytics[{product} GitHub app,window=_blank] in your GitHub organization.
 * In GitHub, create a new repository or select an existing repository for {product}.
@@ -51,7 +51,7 @@ Enter a commit message to describe the changes, and your updates will be pushed 
 
 To push all updates:
 
-. Click the app switcher icon in the top navigation bar and select {product}, then click on your name in the upper left corner of the window.
+. Click the app switcher icon in the top navigation bar and select *{product}*, then click on your name in the upper left corner of the window.
 . Click *Workspace Settings*.
 . Under the *Features* section, click *GitHub*.
 . Under the *Unresolved Differences* tab, click *Push All*.

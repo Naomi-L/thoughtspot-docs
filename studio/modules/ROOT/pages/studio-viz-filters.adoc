@@ -66,7 +66,7 @@ There are different filter options depending on the datatype of the field chosen
 | N/A
 |===
 
-=== Filter from List
+=== Filter from list
 
 The simplest way to filter is from the list of field values.
 When working with fields with more distinct values, the typeahead search can help you find your desired value(s) quickly.
@@ -90,7 +90,7 @@ When enabled, all checked values are now explicitly excluded from this visualiza
 [.bordered]
 image::filter-include-exclude.png[Filter Include/Exclude]
 
-As new values appear in your field in the future, an exclude filter will allow these new values though.
+As new values appear in your field in the future, an exclude filter will allow these new values, though.
 Filters that include values limit the visualization's data to a set of selected values.
 This means new field values must be added manually to include filter list selection.
 
@@ -183,5 +183,5 @@ Applying the filter first will ensure the global top/bottom of your data are con
 {product}'s report filters only work with our native charts and tables.
 
 However, you can leverage xref:studio-parameters.adoc#overview[Parameters] for this case.
-When you select a Parameter and run the report, the queries return values associated with the selected Parameters.
+When you select a Parameter and run the Report, the queries return values associated with the selected Parameters.
 As a result, the Notebook and its visualizations will also be adjusted since the Notebook is purely powered by the query results.

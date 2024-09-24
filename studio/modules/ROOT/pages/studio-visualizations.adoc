@@ -40,7 +40,7 @@ Bar charts are useful for showing comparisons between categories of data, or for
 
 Bar charts require one of the following combinations of fields:
 
-* Exactly one field and one field on the X and Y axis and an optional field on color. +
+* Exactly one field and one field on the X- and Y-axis and an optional field on color. +
 [.bordered]
 image:bar-chart-1.png[Bar chart]
 * Exactly one field on the X-axis and more than one field on the Y-axis. +
@@ -50,7 +50,7 @@ image:bar-chart-2.png[Bar chart]
 Format options:
 
 * _Color formatting options_: Refer to the xref:studio-visual-explorer.adoc#building-a-simple-visualizaton[colors section].
-* _Swap axes_: X and Y axes can be swapped to create horizontal bar charts using the swap axes option on the toolbar.
+* _Swap axes_: X- and Y-axes can be swapped to create horizontal bar charts using the swap axes option on the toolbar.
 +
 [.bordered]
 image::swap-axes.png[Swap axes]
@@ -92,7 +92,7 @@ Format options:
 Line charts are useful for visualizing trends, highlighting patterns and time series analysis.
 They require one of the following combinations of fields:
 
-* Exactly one field on the X and one field on the Y axis and an optional field on color.
+* Exactly one field on the X- and one field on the Y-axis and an optional field on color.
 * Exactly one field on X-axis and more than one field on the Y-axis.
 
 Format options:
@@ -172,7 +172,7 @@ It's important to note that the display labels are not reflected in CSV data exp
 === Scatter plot chart
 
 Scatter plots are useful to visualize the relationships between variables, patterns and outlier detection.
-They require exactly one field on the X-axis and one field on the Y axis with optional fields for color and size
+They require exactly one field on the X-axis and one field on the Y-axis with optional fields for color and size.
 
 Format options:
 
@@ -192,7 +192,7 @@ It's important to note that the display labels are not reflected in CSV data exp
 Big value visualizations are useful for highlighting key metrics and how those metrics change over time.
 
 You can use the following options to configure your big value.
-You can add any field from either Dimensions or Measures into each of these dropzones:
+You can add any field from either *Dimensions* or *Measures* into each of these dropzones:
 
 [.bordered]
 image::big_values_image.png[Present_Big_Values]
@@ -277,13 +277,11 @@ Similarly, the column header will wrap up to two lines before truncation.
 * Decrease the number of decimal places for columns formatted as number, percentage, or currency.
 * Increase the number of decimal places for columns formatted as number, percentage, or currency.
 * Format column as number with commas as thousand separators.
-This format can be customized by navigating to More formats... by clicking on the Number button.
+This format can be customized by navigating to *More formats...* by clicking on the Number button.
 * Format column as currency, with the US dollar currency symbol.
-This format can be customized by navigating to *More formats...*
-by clicking on the Currency button.
+This format can be customized by navigating to *More formats...* by clicking on the Currency button.
 * Format column as percentage with two decimal places.
-This format can be customized by navigating to *More formats...*
-by clicking on the Percent button.
+This format can be customized by navigating to *More formats...* by clicking on the Percent button.
 
 ==== *Format*
 
@@ -469,7 +467,7 @@ image::PTQC-Conditional-Color-Formatting-2023.gif[Pivot Table Conditional Color 
 
 ==== Quick calculations
 
-xref:studio-visual-explorer.adoc#quick-calculations[Quick calculations] are available in Pivot Tables.
+xref:studio-visual-explorer.adoc#quick-calculations[Quick calculations] are available in pivot tables.
 
 ==== Adding filters
 
@@ -534,7 +532,7 @@ To manage Quick Charts in the Report, click on the three vertical dots to access
 * *Remove from builder*: Removes the visualization from the Report layout but does not delete it from the Report.
 * *Copy to {product} clipboard*: Copies the visualization that can be pasted in the same or different Report.
 Read more about <<copy-visualizations-across-reports,copying and pasting visualizations>>.
-* *Delete*: Removes the visualization from your report layout and deletes it from the editor.
+* *Delete*: Removes the visualization from your Report layout and deletes it from the editor.
 
 All Quick Charts except tables and big values can be converted to xref:studio-visual-explorer.adoc[Visual Explorer] to access advanced chart options.
 
@@ -558,19 +556,19 @@ If a Quick Chart has any of the following features in use, the user will not be 
 
 == Notebook visualizations
 
-Every report contains a built-in xref:studio-notebook.adoc[Notebook] environment where you can take the results of one or more queries, further analyze them in Python or R, and visualize the results using one of the many xref:studio-notebook.adoc#supported-libraries[built-in libraries].
+Every Report contains a built-in xref:studio-notebook.adoc[Notebook] environment where you can take the results of one or more queries, further analyze them in Python or R, and visualize the results using one of the many xref:studio-notebook.adoc#supported-libraries[built-in libraries].
 
-The contents of any xref:studio-notebook.adoc#adding-cell-output-to-your-report[Notebook output cell] can be added to your report.
+The contents of any xref:studio-notebook.adoc#adding-cell-output-to-your-report[Notebook output cell] can be added to your Report.
 These visualizations will update whenever the Notebook is run and the output changes.
 
 == Custom visualizations
 
-{product} supports the ability to customize {product}'s native visualizations or add custom D3 visualizations to an {product} report.
+{product} supports the ability to customize {product}'s native visualizations or add custom D3 visualizations to an {product} Report.
 When editing a Report, in the Report Builder's top toolbar, click the icon *</>* to customize the Report's HTML.
 The HTML editor lets you use valid HTML, JavaScript, or CSS in the layout of your Report, allowing you to add interactivity, custom visualizations, and more.
 To help you get started, {product}'s community maintains the link:https://github.com/mode/alamode[Alamode,window=_blank] JavaScript library that makes creating link:https://d3js.org/[D3-powered,window=_blank] visualizations easy.
 
-Check out link:https://mode.com/example-gallery/[{product}'s Gallery,window=_blank] for inspiration, sample reports, and more information about how to create advanced visualizations in {product}.
+Check out link:https://mode.com/example-gallery/[{product}'s Gallery,window=_blank] for inspiration, sample Reports, and more information about how to create advanced visualizations in {product}.
 
 [#copy-visualizations-across-reports]
 == Copy visualizations across Reports
@@ -622,8 +620,8 @@ _Copy a chart from Explorations and replace another chart in a Report_ image:cop
 Copy-pasting visualizations is helpful in the following scenarios:
 
 * Re-creating similar charts using different data sources without having to recreate manually each time.
-* Make updates to a chart in a Report in a Personal collection instead of editing directly in a Report that is used by others.
-* Move charts previously created off ad-hoc queries to a reusable Dataset.
+* Making updates to a chart in a Report in a personal collection instead of editing directly in a Report that is used by others.
+* Moving charts previously created off ad-hoc queries to a reusable Dataset.
 Learn more about Datasets xref:studio-datasets.adoc[here].
 
 NOTE: If users want to copy both the chart and the associated data source, they would need to perform two separate actions. They can first add the required data source for the chart into their Report and then proceed to copy and paste the chart into their Report.
@@ -646,7 +644,7 @@ The following default field settings are available:
 
 * Formatting:
  ** Users can define default formatting for fields (short numbers, long numbers, percentages, dates, etc.) for each Dataset to avoid repeated manual configurations.
-* Color Settings:
+* Color settings:
  ** Users can assign specific colors to values within a field for consistent color-coding across charts using the same field.
  ** Clicking on color settings for Dimensions should open the categorical color assignment modal.
  ** Colors can be configured for fields other than the specific field for which the modal has been launched by using the field selector at the top of the modal.

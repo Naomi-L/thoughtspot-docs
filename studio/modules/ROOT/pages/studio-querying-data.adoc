@@ -600,6 +600,7 @@ Yes, currently the limit is 160 queries per Report.
 [#troubleshooting]
 == Troubleshooting
 
+////
 [#sorry-this-data-is-larger-than-your-limit]
 [discrete]
 === *1. Sorry, this data is larger than your limit.*
@@ -607,6 +608,7 @@ Yes, currently the limit is 160 queries per Report.
 {product} limits the size of query results that you can access depending on whether you're using {product} Studio, or which paid plan you've chosen.
 
 For {product} Business and Enterprise customers, we offer different plans that support increased capacity up to 10 GB.
+////
 
 [discrete]
 === *2. Query result is too large. Please try adding a `LIMIT` clause.*
