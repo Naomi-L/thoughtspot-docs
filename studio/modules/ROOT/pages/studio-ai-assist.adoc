@@ -178,7 +178,7 @@ Using AI Assist does not require you to write full SQL queries from scratch.
 The key requirement is to include the name of the table(s) you're working with in your edits.
 At its core, AI Assist was developed to accelerate the SQL writing process.
 One of the primary benefits of the workflow is the ability to integrate natural language seamlessly into SQL code you've already written to quickly iterate.
-But whether you're just starting out or you're an experienced SQL editor, AI Assist is here to streamline your workflow and assist in crafting proper SQL syntax with ease!
+But whether you're just starting out or you're an experienced SQL editor, AI Assist is here to streamline your workflow and assist in crafting proper SQL syntax with ease.
 
 [discrete]
 ===== *Q: Does {product} use historical queries/data to train AI Assist?*

@@ -39,6 +39,7 @@ Admins will be able to see the following for all active, revoked, and expired AP
 * When the token was last used.
 * When the token is set to expire.
 
+[.bordered]
 image::workspace-api-tokens.png[Workspace API Tokens]
 
 *Limitations*:

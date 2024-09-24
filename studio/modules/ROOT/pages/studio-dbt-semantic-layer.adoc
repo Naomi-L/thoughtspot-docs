@@ -32,6 +32,7 @@ Once you've connected your semantic layer, create a Dataset to enable end user v
 Navigate to the plus button in the top right, and select *Make a reusable Dataset*.
 You'll be taken to a SQL editor interface.
 
+[.bordered]
 image::dbt-create-dataset.png[Create a dbt Semantic Layer Dataset]
 
 Once you've pulled in your data, you can add additional fields via calculated fields or add descriptions for the existing fields.
@@ -87,6 +88,7 @@ link:https://cloud.google.com/looker/docs/sql-interface[More information on how 
 
 To share Datasets created from the semantic layer, select the dropdown next to the Dataset name to rename the Dataset, set up a schedule, and publish the Dataset to a Collection.
 
+[.bordered]
 image::dbt-share-dataset.png[Share a dbt Semantic Layer Dataset]
 
 Select *Rename* to give the Dataset a name and description.

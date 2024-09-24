@@ -10,7 +10,7 @@
 
 == Create a new Report
 
-. Click the app switcher icon in the top navigation bar and select {product}, then (if necessary) sign in to {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on the *New* image:modal-add.svg[new] button in the upper right corner of the window.
 . A new, empty Report will be created in your personal Collection.
 
@@ -40,7 +40,7 @@ To duplicate a Report:
 . Alternatively, you can access the same affordance from the *Report Settings* menu in the header while editing a Report, or the *More* menu in the header when viewing.
 . Click *Duplicate*.
 . Stay on the page to be notified when the copy is ready and available to use.
-. A duplicated Report, including all code, results, and visualizations, will be created in your Personal Collection with you as the creator.
+. A duplicated Report, including all code, results, and visualizations, will be created in your personal Collection with you as the creator.
 
 You may now modify this duplicated Report without impacting the original Report in any way.
 
@@ -83,6 +83,6 @@ To recover a deleted Report, contact {support-url}.
 You can move Reports that you can edit into any Collection that you have edit access to.
 If you have view-only access to a Collection, you will not be able to move Reports into it.
 
-NOTE: Once you move a Report from your xref:studio-spaces.adoc#personal-space[Personal Collection] to another Collection, you cannot move it back. A workaround would be to duplicate the Report back to your Personal Collection.
+NOTE: Once you move a Report from your xref:studio-spaces.adoc#personal-space[personal Collection] to another Collection, you cannot move it back. A workaround would be to duplicate the Report back to your personal Collection.
 
-You cannot move a Report to the xref:studio-spaces.adoc#community-space[community collection] if any query within it has ever been run against any database other than the {product} Public Warehouse.
+You cannot move a Report to the xref:studio-spaces.adoc#community-space[community Collection] if any query within it has ever been run against any database other than the {product} Public Warehouse.

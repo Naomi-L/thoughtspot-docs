@@ -60,7 +60,7 @@ a| <<mysql,MySQL>>
 
 a| <<google-bigquery,Google BigQuery>>
 |
-| Not Supported
+| Not supported
 
 a| <<snowflake,Snowflake>>
 |
@@ -68,7 +68,7 @@ a| <<snowflake,Snowflake>>
 
 a| <<amazon-athena,Amazon Athena>>
 |
-| Not Supported
+| Not supported
 
 a| <<microsoft-sql-server,Microsoft SQL Server>>
 | 2012, 2014, 2016, 2017, 2019
@@ -100,11 +100,11 @@ a| <<microsoft-sql-server,Azure Synapse SQL>>
 
 a| <<dbt-semantic-layer,dbt Semantic Layer>>
 | 12.0.1
-| Not Supported
+| Not supported
 
 a| <<looker-sql,Looker SQL>>
 |
-| Not Supported
+| Not supported
 |===
 
 ==== Tier 2: Supported
@@ -162,7 +162,7 @@ a| <<denodo,Denodo>>
 
 a| <<arrow-flight-sql,Arrow Flight SQL>>
 |
-| Not Supported
+| Not supported
 |===
 
 ==== Tier 3: Works, not Supported
@@ -184,15 +184,15 @@ a| <<amazon-redshift,Tenjin>>
 
 | MemSQL
 |
-| Not Supported
+| Not supported
 
 a| <<postgresql,Citus>>
 |
-| Not Supported
+| Not supported
 
 a| <<postgresql,Timescale>>
 |
-| Not Supported
+| Not supported
 
 a| <<amazon-redshift,mParticle>>
 |
@@ -256,7 +256,7 @@ As a workaround, use the previous version of the driver (2.0.23.1000).
 
 
 | Simba v 2.0.13.1000
-| Requires additional IAM Permissions for Queries
+| Requires additional IAM permissions for queries
 a| This version of the driver requires that the {product} user's IAM permissions include the `athena:ListDataCatalogs` permission.
 This permission is required for query execution via {product} (not just the Schema Browser). +
 Customers whose {product} user is managed via the AmazonAthenaFullAccess Managed Policy will not experience issues.
@@ -293,7 +293,7 @@ You will land on a page that displays your database schema.
 . Select Amazon Athena from the list of databases.
 . Fill out your AWS region to be formatted like `us-west-2`.
 . Select *Authentication method: IAM* role in the {product} connection form.
-. Navigate to IAM Roles in your AWS Console.
+. Navigate to *IAM > Roles* in your AWS Console.
 +
 image:athena-new-iam-role.png[Athena]
 . Create a new role or choose an existing role and select *Custom trust policy* under *Trusted entity type*.
@@ -367,10 +367,12 @@ Depending on your Amazon settings, you may need to grant {product} access to you
 . Select *Clusters* from the left navigation bar.
 . Click on the cluster you want to connect.
 +
+[.bordered]
 image::redshift-select-cluster.png[Redshift]
 
 . Find *Cluster Security Groups* under *Cluster Properties* and click on the cluster's security group.
 +
+[.bordered]
 image::redshift-cluster-properties.png[Redshift]
 +
 NOTE: If you are using VPC Security Groups, you must also grant {product} access to that security group.
@@ -378,12 +380,14 @@ Please click on your VPC Security Group name and follow <<amazon-web-services,th
 
 . Click on the name of the security group.
 +
+[.bordered]
 image::redshift-security-group.png[Redshift]
 
 . You'll see a list of authorized connections.
 Click the blue *Add Connection Type* button in the upper left.
 . Select *CIDR/IP* from the *Connection Type* dropdown, and paste the address `54.68.30.98/32` in the *CIDR/IP to Authorize* field.
 +
+[.bordered]
 image::redshift-connection.png[Redshift]
 
 . Click the blue *Authorize* button.
@@ -399,9 +403,10 @@ image::redshift-connection.png[Redshift]
 ====== mParticle Redshift
 
 mParticle supports both mParticle-hosted and client-hosted Redshift clusters.
-If you're using an mParticle hosted Redshift cluster, log in to the mParticle platform and navigate to the Redshift Configuration tab.
+If you're using an mParticle-hosted Redshift cluster, log in to the mParticle platform and navigate to the Redshift Configuration tab.
 There, you'll find your connection string and user credentials.
 
+[.bordered]
 image::mparticle-redshift-configuration.png[mParticle Redshift]
 
 You can also xref:studio-connecting-mode-to-your-database.adoc#requirements[allowlist {product}'s servers] by editing the list of allowed IP addresses on mParticle UI, which will update the AWS security group settings associated with your Redshift cluster.
@@ -442,7 +447,7 @@ The following are known issues with the current supported drivers.
 
 | Avatica 1.17.0
 | Druid fetch size limited to 100
-| Druid JDBC driver only returns 100 rows per batch resulting in longer-than-expected query response times.
+| Druid JDBC driver only returns 100 rows per batch, resulting in longer-than-expected query response times.
 There is a link:https://github.com/apache/druid/pull/10880[server-side fix,window=_blank] that can be applied.
 
 | Avatica 1.17.0
@@ -696,7 +701,7 @@ There are no known issues with this driver.
 . Log in to {product} and select *connect a Database* in the dropdown menu under your profile in the left panel.
 . Select *Google AlloyDB* from the list of databases.
 . You can utilize xref:studio-connecting-mode-to-your-database.adoc#bridge[Bridge connector] if you have a private IP address.
-. Enter your Google AlloyDB credentials and click *connect*. +
+. Enter your Google AlloyDB credentials and click *Connect*. +
 .. Host / Port: Host name or IP address and Port of the server hosting AlloyDB.
 .. Database name: The database to connect to for AlloyDB.
 .. Username / Password: The username and password to authenticate with AlloyDB.
@@ -763,16 +768,17 @@ As a workaround, use the /* */ format.
 
 | Simba v 1.2.16.1020
 | Large queries need the 'bigquery.readsessions.create' permission
-a| Large queries trigger the Google Storage API which is free to use for anonymous tables, but requires admins to add the 'bigquery.readsessions.create' to their Google Big Query role associated with the {product} DB connection. +
+a| Large queries trigger the Google Storage API, which is free to use for anonymous tables, but requires admins to add the 'bigquery.readsessions.create' to their Google Big Query role associated with the {product} DB connection. +
 ----
 java.sql.SQLException: [Simba] BigQueryJDBCDriver 100210 Error initializing the Storage API. +
-Message : io.grpc.StatusRuntimeException: PERMISSION_DENIED: request failed:the user does not have 'bigquery.readsessions.create' permission
+Message : io.grpc.StatusRuntimeException: PERMISSION_DENIED: request failed:the user does not have 'bigquery.readsessions.create' permission.
 ----
 
 | Simba v 1.2.11.1014
 | Nested rows return as objects vs.
 arrays using {product} driver
-a| Utilize UNNEST and ARRAY_AGG to view nested rows as arrays. +++<pre class="preserve">+++select author, ARRAY_AGG(title) as title, +
+a| Utilize UNNEST and ARRAY_AGG to view nested rows as arrays. +
++++<pre class="preserve">+++select author, ARRAY_AGG(title) as title, +
 ARRAY_AGG(year) as year from testdb, +
 UNNEST(works) group by author+++</pre>+++
 
@@ -797,8 +803,9 @@ Temporary functions use and temporary table creation and deletion do not require
 To connect {product} to your BigQuery project, you will need to create a service account for {product} to use.
 
 . Navigate to the link:https://console.developers.google.com[Google Developers Console,window=_blank].
-Before proceeding, click on the dropdown to the right of Google Cloud and select the project to which you want to connect.
+Before proceeding, click on the dropdown to the right of *Google Cloud* and select the project to which you want to connect.
 +
+[.bordered]
 image::GBQ-Setup01.png[BigQuery]
 +
 NOTE: If you do not see the project you would like to connect to listed in the dropdown, click on the account switcher in the upper right corner of the window and ensure you are logged in to a Google account that is a member of the project.
@@ -806,30 +813,36 @@ NOTE: If you do not see the project you would like to connect to listed in the d
 . Click on the hamburger menu in the upper left and select *IAM & Admin* and then *Service accounts*.
 Click the *Create service account* button.
 +
+[.bordered]
 image::GBQ-Setup02.png[BigQuery]
 
 . Give your new service account a name, pick a unique ID, and add a description.
 Click *Create and continue*.
 +
+[.bordered]
 image::GBQ-Setup03.png[BigQuery]
 
 . Grant required roles, for example, BigQuery Job User and BigQuery Data Viewer.
 +
+[.bordered]
 image::GBQ-Setup04.png[BigQuery]
 
 . Finally, click *Done* to create your service account.
 Now we create the JSON key file.
 Navigate to *Manage keys* under the *Actions* menu for the service account.
 +
+[.bordered]
 image::GBQ-Setup05.png[BigQuery]
 
 . Navigate to *ADD KEY* > *Create new key*.
 +
+[.bordered]
 image::GBQ-Setup06.png[BigQuery]
 
 . Click *CREATE* to create and download the JSON key file.
 Save the private key file to a secure place where you can easily retrieve it when setting up the connection in {product}.
 +
+[.bordered]
 image::GBQ-Setup07.png[BigQuery]
 
 . Return to {product}, and begin the process to xref:studio-connecting-mode-to-your-database.adoc[connect a BigQuery database].
@@ -854,9 +867,9 @@ Most users choose standard SQL, which is similar to industry standard SQL dialec
 
 Regardless of your choice as the connection's default, users can specify which dialect they would like to use on a query-by-query basis by including either `#standardSQL` or `#legacySQL` in the Query Editor.
 
-A Workspace admin can change the default SQL preference a BigQuery connection at any time by following these steps:
+A Workspace admin can change the default SQL preference of a BigQuery connection at any time by following these steps:
 
-. Click the app switcher icon in the top navigation bar and select {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on your name in the upper left corner of the window.
 . Click *Workspace Settings*.
 . Under the Data section, click *Connections*.
@@ -889,7 +902,7 @@ The first step, enabling your Google Drive API, only needs to be done once.
 +
 Navigate to the link:https://console.developers.google.com/[Google Developer Console,window=_blank] and select your project from the project dropdown menu.
 From the left menu, click on *Library*.
-Under Google Apps API, click on Drive API to enable the API from that page.
+Under *Google Apps API*, click on *Drive API* to enable the API from that page.
 
 . Create a table in BigQuery from your Google Sheet.
 +
@@ -897,19 +910,21 @@ Go to the link:https://bigquery.cloud.google.com/[BigQuery Web UI,window=_blank]
 In the navigation, hover over a schema name and click the down arrow icon next to the name.
 Choose *Create new table*.
 +
+[.bordered]
 image::bigquery-google-sheets-1.png[GoogleSheets]
 +
-Select Google Drive for the new table's location and paste the Google Sheet URL (not the shared link, but the actual URL you use to view the Sheet) into this field.
+Select *Google Drive* for the new table's location and paste the Google Sheet URL (not the shared link, but the actual URL you use to view the Sheet) into this field.
 Choose *Google Sheets* as the Format.
 Then add all the column names and types from your Google Sheet under *Schema*.
 Click *Create Table* when ready.
 +
+[.bordered]
 image::bigquery-google-sheets-2.png[GoogleSheets]
 
 . Enable Google Sheets for {product} Use.
  ** For {product} to query your new table, share your Google Sheet with the service account email address you used to connect {product} to BigQuery.
 You can also share folders in your drive with this email address, which will allow {product} to query every sheet in that folder.
- ** To get your service account email address, go to your link:https://console.cloud.google.com/[Google Cloud Console,window=_blank], switch to your Project, and click on Service Accounts.
+ ** To get your service account email address, go to your link:https://console.cloud.google.com/[Google Cloud Console,window=_blank], switch to your Project, and click on *Service Accounts*.
 Copy the service account email address you used to connect {product} to BigQuery.
  ** To share a sheet or folder, click *Share* on the Google Sheet or in the folder, and paste the service account email address into the Share email field.
  ** Note that BigQuery schemas don't refresh automatically in {product}.
@@ -1089,10 +1104,12 @@ image:azure-mode-first-ip.png[Azure SQL]
  ** `52.20.173.236`
 
 +
+[.bordered]
 image::azure-mode-all-ips.png[Azure SQL]
 
 . Click *Save* at the bottom of the screen.
 +
+[.bordered]
 image::azure-save.png[Azure SQL]
 
 // #### MemSQL
@@ -1139,11 +1156,11 @@ The following are known issues with the current supported drivers.
 | Connections should be made using the TLSv1.2 and TLSv1.3 protocols, which are more secure.
 
 | MySQL Connector/J 8.0.20
-| Server Timezone Specification is Required
-a| Customers without a specified serverTimezone for their databases will see queries fail if any of the time zones (application/database servers) are not in the format `UTC+xx` or `GMT+xx`. +
+| Server Timezone Specification is required
+a| Customers without a specified Server Timezone for their databases will see queries fail if any of the time zones (application/database servers) are not in the format `UTC+xx` or `GMT+xx`. +
 Queries will fail with the following error: `java.sql.SQLException: The server time zone value 'PDT' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the 'serverTimezone' configuration property) to use a more specific time zone value if you want to utilize time zone support.` +
 *Note that the error is directly from the JDBC driver*.
-At this time {product} does not support customers setting additional configuration properties (such as the suggested 'serverTimezone' property) via the JDBC driver. +
+At this time, {product} does not support customers setting additional configuration properties (such as the suggested 'serverTimezone' property) via the JDBC driver. +
 More details in link:https://stackoverflow.com/questions/26515700/mysql-jdbc-driver-5-1-33-time-zone-issue[this StackOverflow thread,window=_blank].
 |===
 
@@ -1446,7 +1463,7 @@ There are no known issues with this driver.
 
 We have two ways of connecting to your RDS instance depending on your AWS settings.
 If your instance is publicly accessible, then {product} can connect directly to it.
-For databases that are not accessible you can use the xref:studio-connecting-mode-to-your-database.adoc#bridge[Bridge connector].
+For databases that are not accessible, you can use the xref:studio-connecting-mode-to-your-database.adoc#bridge[Bridge connector].
 We'll start by determining if your database is accessible to us.
 
 ===== Accessibility
@@ -1454,6 +1471,7 @@ We'll start by determining if your database is accessible to us.
 . Navigate to your link:https://console.aws.amazon.com/rds/home#dbinstances:[RDS Instance Console,window=_blank].
 . Click the arrow and then magnifying glass to view the details of the instance that you want to connect.
 +
+[.bordered]
 image::rds-select-instance-201507.png[Amazon RDS Console]
 
 . Look under *Security and Network*.
@@ -1461,6 +1479,7 @@ Your instance is in a VPC if there's an entry labeled VPC.
 It is typically found below _Availability Zone_ and above _Security Groups_.
 If you don't have an entry here, then your instance is not in a VPC, and you can jump to the *Security Groups* section below.
 +
+[.bordered]
 image::rds-with-a-vpc-201507.png[RDS with a VPC]
 
 . Instances in VPCs can be public or private.
@@ -1468,6 +1487,7 @@ We can find out by looking under *Security and Network* again.
 This time for an entry labeled _Publicly Accessible_.
 If it is followed by a _Yes_, then you can jump to the *Security Groups* section below.
 +
+[.bordered]
 image::rds-with-a-public-vpc-201507.png[RDS on a public VPC]
 
 . To connect to instances in a private VPC, you'll need to install our xref:studio-connecting-mode-to-your-database.adoc#bridge[Bridge connector].
@@ -1493,29 +1513,35 @@ RDS instances outside of a VPC have a different process.
 
 . Under *Security and Network*, click the security group name.
 +
+[.bordered]
 image::rds-vpc-security-group-201507.png[Amazon RDS]
 
 . A new tab will be opened.
 Click on the *Inbound* tab and then *Edit*.
 +
+[.bordered]
 image::rds-vpc-security-group-edit-201507.png[Amazon RDS]
 
 . Find the RDS type that matches your instance (for example, PostgreSQL), enter each of our addresses, and then click *Save*.
 +
+[.bordered]
 image::rds-vpc-security-group-addresses-201507.png[Amazon RDS]
 
 ===== No VPC
 
 . Under *Security and Network*, click the security group to which that database belongs.
 +
+[.bordered]
 image::rds-security-group.png[Amazon RDS]
 
 . At the bottom of the page, highlight the *Connection Type* selector and choose *CIDR/IP*.
 +
+[.bordered]
 image::rds-connection-type.png[Amazon RDS]
 
 . In the *CIDR/IP to Authorize* field, paste address: `54.68.30.98/32`.
 +
+[.bordered]
 image::rds-cidr-ip.png[Amazon RDS]
 
 . Click the blue *Authorize* button.
@@ -1530,7 +1556,7 @@ image::rds-cidr-ip.png[Amazon RDS]
 While we currently do not support the ability to natively export or import data to and from a Google Sheet, we do have a step-by-step <<google-bigquery,guide on how to query Google Sheets using BigQuery in {product}>>.
 You can also follow the instructions below for a custom way to import data from an {product} report to a Google Sheet programmatically.
 
-*To enable this feature in a Google sheet, you can begin by following these steps:*
+*To enable this feature in a Google Sheet, you can begin by following these steps:*
 
 . Go to the {product} report and click *View Details*.
 . Click on the query on the left to access the query token in the URL.
@@ -1541,7 +1567,7 @@ You can also follow the instructions below for a custom way to import data from 
 
 In the formula above, please be sure to replace "WORKSPACE" with your workspace name as shown in any report URL, "REPORT_TOKEN" with the report token available in the URL, and "QUERY_TOKEN" with the query token that you just copied.
 
-This formula will import the data from the {product} query into the Google sheet once the following steps are completed.
+This formula will import the data from the {product} query into the Google Sheet once the following steps are completed.
 It will automatically use the last successful run of the query.
 
 *Setup*
@@ -1619,7 +1645,7 @@ Here's our documentation on xref:studio-api-reference.adoc#generating-api-tokens
 This will populate the query results.
 
 [discrete]
-====== *Q: How to upload data via CSV?*
+==== *Q: How to upload data via CSV?*
 
 Currently, we do not offer CSV uploads to private connections.
 {product} only supports uploading CSVs to our public data warehouse, but please note that this data will be publicly accessible.

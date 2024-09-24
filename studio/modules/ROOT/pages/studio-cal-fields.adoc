@@ -18,6 +18,7 @@ A calculated field either:
 * performs some calculation on database fields to create a value that is not directly stored in the database, or
 * selects values in database fields based on some customized criteria.
 
+[.bordered]
 image::cal_fields_page_visits.png[Calculated field]
 
 *When to use calculated fields*
@@ -44,10 +45,12 @@ Some common scenarios for when you'd want to use calculated fields include:
 . Create a new chart.
 . Click the *New field* button to open the calculated field formula editor:
 +
+[.bordered]
 image::create_cal_field_dataview.png[Create calculated field in dataview]
 
 . From the chart builder, click the *New field* icon to open the calculated field formula editor:
 +
+[.bordered]
 image::create_cal_field_chart_builder.png[Create calculated field in chart builder]
 
 . Type in a name and formula for your calculated field.
@@ -757,6 +760,7 @@ The system will automatically re-calculate the values depending on your dimensio
 
 *_The corresponding formula for this window sum would be `WINDOW_SUM(SUM([field]), -3, 2)`._*
 
+[.bordered]
 image::cal-fields-window-function.png[]
 
 [#calculated-field-component-types]

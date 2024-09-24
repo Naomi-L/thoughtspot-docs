@@ -35,6 +35,7 @@ Review these permissions and then click *Authorize* to complete the integration.
 Mention `@Mode` in the channel, and then you'll be given the option to add the bot to that channel.
 A private channel without the @Mode bot cannot receive shared reports.
 +
+[.bordered]
 image::slackbot.png[New signature token]
 
 Now all members of your organization can share Reports to your Slack workspace directly from the {product} interface.

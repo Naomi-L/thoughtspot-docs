@@ -58,6 +58,7 @@ For more information on how to generate a Service Account Token, link:https://do
 Once you have a job ID and signature, go to your Workspace's *Settings* and navigate to the *Manage Connections* tab.
 Select the Connection you want to enable dbt for and navigate to the *dbt Integration* tab.
 
+[.bordered]
 image::dbt2.png[dbt2]
 
 Only Admins or users with permission to manage the Connection will be able to enable the dbt integration.
@@ -75,6 +76,7 @@ In addition to seeing the *Source data last refreshed* time from dbt, you'll fin
 
 TIP: Compare the dbt **Source data last refreshed** time to the Report's **Last successful run** time to see if the Report you're viewing is up-to-date. If the source data was last refreshed more recently than the Report was run, you may see fresher data in the Report by clicking the **Run Now** button.
 
+[.bordered]
 image::dbt3.png[dbt3]
 
 To view the *Source data last refreshed* time for each table included in the Report, go to Report Details.
@@ -84,6 +86,7 @@ Hover over the timestamp to see the dbt source name.
 
 If a Report's queries reference Connections that don't have dbt enabled, the table will not be shown in this list.
 
+[.bordered]
 image::dbt4.png[dbt4]
 
 [#faqs]
