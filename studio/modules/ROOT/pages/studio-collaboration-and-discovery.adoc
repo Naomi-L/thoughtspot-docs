@@ -61,10 +61,10 @@ Search by title, description, or query keywords like column names to find the co
 
 === Keyboard shortcuts
 
-* *Cmd/Ctrl + K*:  Opens search window
-* Use up/down arrow keys to navigate through search results
-* **Cmd/Ctrl + Enter**: Opens result in a new tab
-* *Enter*: Opens result in current tab
+* *Cmd/Ctrl + K*:  Opens search window.
+* Use up/down arrow keys to navigate through search results.
+* **Cmd/Ctrl + Enter**: Opens result in a new tab.
+* *Enter*: Opens result in current tab.
 
 === Filtering search results
 
@@ -84,7 +84,7 @@ image::search-filters2.png[Search Filters]
 [discrete]
 === *Q: Is there a way I can track who edits a Report or query?*
 
-We currently don't log the edit history, however, you should be able to see the query run history of a Report under *View Details > Details*, and scroll to the bottom.
+We currently don't log the edit history, however, you should be able to see the query run history of a Report by navigating to *View Details > Details*, and scrolling to the bottom.
 
 [.bordered]
 image::runHistory.png[Query History]
@@ -99,5 +99,5 @@ That will then bring up the following screen:
 [.bordered]
 image::QueryHistory.png[View History]
 
-Another option we would suggest is using GitHub Sync to track all changes made to a Report, so you can go on the GitHub repo to track exactly what changes are made at what time, and who made the changes.
+Another option we suggest is using GitHub Sync to track all changes made to a Report, so you can go on the GitHub repo to track exactly what changes are made at what time, and who made the changes.
 You can learn more about GitHub Sync xref:studio-github.adoc#mode-github[here].

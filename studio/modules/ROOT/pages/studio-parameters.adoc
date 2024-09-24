@@ -14,7 +14,7 @@
 
 Use Parameters to make Reports more scalable, re-usable, and interactive by allowing viewers to modify the data returned by a Report without modifying its code.
 
-Parameters are defined and configured using the link:http://liquidmarkup.org/[Liquid template language,window=_blank], and a single Report can accept input from multiple parameters at once.
+Parameters are defined and configured using the link:http://liquidmarkup.org/[Liquid template language,window=_blank], and a single Report can accept input from multiple Parameters at once.
 {product} reports offer four different kinds of Parameters:
 
 * {blank}<<select,**Select**>>
@@ -26,16 +26,16 @@ When you <<defining-parameters,define a Parameter>> in a Report's code and subse
 
 You can include Parameter values in a Report's URL query string and {product} will return the Report's output using those values.
 
-NOTE: Parameters are a powerful feature that, by design, allow {product} users to run arbitrary SQL against a database. It is the responsibility of Workspace administrators to ensure that only authorized users are allowed to query the underlying database via the parameters feature.
+NOTE: Parameters are a powerful feature that, by design, allow {product} users to run arbitrary SQL against a database. It is the responsibility of Workspace administrators to ensure that only authorized users are allowed to query the underlying database via the Parameters feature.
 
 == Getting started
 
-There are two primary steps to implementing a parameter:
+There are two primary steps to implementing a Parameter:
 
-*Define each parameter* - Report parameters are defined alongside your SQL code between `{% form %}` and `{% endform %}` tags in the Query Editor.
+*Define each Parameter* - Report Parameters are defined alongside your SQL code between `{% form %}` and `{% endform %}` tags in the Query Editor.
 For readability, we suggest you place this code below your SQL code.
 
-*Reference parameters in your SQL code* - Insert one or more references to each parameter into your SQL code using Liquid object tags (for example, `{{ parameter_name }}`).
+*Reference Parameters in your SQL code* - Insert one or more references to each Parameter into your SQL code using Liquid object tags (for example, `{{ parameter_name }}`).
 At run time, {product} replaces each object reference in your SQL code with the corresponding Parameter's input value before sending the code to your database for execution.
 
 Let's walk through a simple example.
@@ -65,7 +65,7 @@ acquired_year:
 
 This code produces a single text box parameter titled "Acquired Year" with a default value of "2013".
 Whenever the Report is run, the exact set of characters entered into this text box will be substituted directly into all report SQL code wherever `{{ acquired_year }}` is written.
-Un-check the box next to *Show parameter template code* and you'll see the code that was actually executed against the database, after {product} evaluated all the Liquid code and the parameter's value was substituted into the WHERE clause for `{{ acquired_year }}`.
+Un-check the box next to *Show parameter template code* and you'll see the code that was actually executed against the database, after {product} evaluated all the Liquid code and the Parameter's value was substituted into the WHERE clause for `{{ acquired_year }}`.
 
 *Query as written:*
 
@@ -112,7 +112,7 @@ It contains a stacked bar chart that changes depending on the configuration of a
 [#select]
 === Select
 
-A Select parameter allows the viewer to choose exactly one option from a pre-defined dropdown list.
+A Select Parameter allows the viewer to choose exactly one option from a pre-defined dropdown list.
 The link:https://app.mode.com/modeanalytics/reports/a9e1fe690f93/queries/3dec3e1954b1[example Report,window=_blank] (check *Show parameter template code*) defines a Parameter named `shipment_status` with two options ("delivered" and "failure") that the user must choose between.
 By default, "delivered" is selected.
 
@@ -128,14 +128,14 @@ shipment_status:
 {% endform %}
 ----
 
-The `options` property is set to a list of values that will be available to the report viewer in the dropdown.
+The `options` property is set to a list of values that will be available to the Report viewer in the dropdown.
 The exact value selected will be substituted into the Report's SQL code wherever `{{ shipment_status }}` is written when the query is executed.
 
 [#multiselect]
 === Multiselect
 
 A Multiselect Parameter allows the viewer to choose zero, one, or many options among a pre-defined list.
-The link:https://app.mode.com/modeanalytics/reports/a9e1fe690f93/queries/3dec3e1954b1[example Report,window=_blank] (check *Show parameter template code*) defines a parameter named `sales_region` with four possible options ("Northeast", "Midwest", "West", and "Southeast") that the user can choose from.
+The link:https://app.mode.com/modeanalytics/reports/a9e1fe690f93/queries/3dec3e1954b1[example Report,window=_blank] (check *Show parameter template code*) defines a Parameter named `sales_region` with four possible options ("Northeast", "Midwest", "West", and "Southeast") that the user can choose from.
 By default, "Northeast" and "West" are selected.
 
 [source,sql]
@@ -150,7 +150,7 @@ sales_region:
 {% endform %}
 ----
 
-The `options` property is set to a list of values that will be available to the report viewer in the dropdown.
+The `options` property is set to a list of values that will be available to the Report viewer in the dropdown.
 In this example, the exact value(s) selected will be substituted into SQL code wherever `{{ sales_region }}` is written when the query is executed.
 For example:
 
@@ -232,7 +232,7 @@ NOTE: We currently support up to 1 MB of data within a single multiselect dropdo
 [#text]
 === Text
 
-A text Parameter presents the report viewer with a free-form text box that accepts any combination of characters as an input.
+A Text Parameter presents the Report viewer with a free-form text box that accepts any combination of characters as an input.
 The link:https://app.mode.com/modeanalytics/reports/a9e1fe690f93/queries/3dec3e1954b1[example Report,window=_blank] (check *Show parameter template code*) defines a Parameter named `order_min` with a default value of "0":
 
 [source,sql]
@@ -293,7 +293,7 @@ order_start_date:
 ----
 
 A string in the format of `YYYY-MM-DD` containing the chosen date will be substituted into the report's SQL code wherever `{{ order_start_date }}` is written when the query is executed.
-Therefore, make sure to wrap any reference to a date Parameter in single quotes.
+Therefore, make sure to wrap any reference to a Date Parameter in single quotes.
 For example:
 
 [source,sql]
@@ -335,7 +335,7 @@ If you do not define the `label` property for a Parameter, {product} will automa
 
 If defined, `description` adds a tooltip to the Parameter's name.
 When a report viewer hovers over this tooltip, the text you define for this property will be displayed.
-Use this property to provide additional context for the Parameter to report viewers.
+Use this property to provide additional context for the Parameter to Report viewers.
 
 == Common techniques
 
@@ -383,10 +383,10 @@ When the user selects one of those options and runs the report, the selected sal
 
 === Dynamic options list
 
-The options list for a <<select,Select>> or <<multiselect,Multiselect>> Parameter can be defined dynamically from the results of a SQL query within a report.
+The options list for a <<select,Select>> or <<multiselect,Multiselect>> Parameter can be defined dynamically from the results of a SQL query within a Report.
 Instead of setting the `options` property in the Parameter definition equal to a static list, you set the `options` property equal to two sub-properties (indented an additional two spaces from `options`):
 
-* `labels`: The name of a column in the SQL query containing the values that will be shown to the report viewer in the dropdown list.
+* `labels`: The name of a column in the SQL query containing the values that will be shown to the Report viewer in the dropdown list.
 * `values`: The name of a column in the SQL query containing the values that will be substituted into your SQL code when the Parameter choice(s) are selected.
 
 In the link:https://app.mode.com/modeanalytics/reports/a9e1fe690f93[example Report,window=_blank], the `sales_rep` parameter is referenced in the WHERE clause of the Main Query, but its definition and the SQL that populates its options are defined in a separate query called Sales Reps Param:
@@ -502,7 +502,7 @@ This method takes the current UTC date and time (`'now'`), removes everything ex
 [discrete]
 === *Q: How to create a dynamic Parameter defined by another Parameter?*
 
-You may want to add a Parameter to a report that updates based on the value of another Parameter.
+You may want to add a Parameter to a Report that updates based on the value of another Parameter.
 For example, a *regions* dropdown that has an option of "northeast" and that leads to a nested dropdown of maine, vermont, etc.
 
 We have an link:https://app.mode.com/modeanalytics/reports/01a832c66385[example Report,window=_blank] that shows how to create a dynamic Parameter defined by another dynamic Parameter.
@@ -541,13 +541,13 @@ The order of Parameters are defined in two ways and in this order:
 The Parameters within Query B will then appear in the same order they appear as written in the query.
 * *Order of appearance within the query*
  ** You can control the order of Parameters by defining them all in the same parameter `{% form %}` in a query.
-The order in the report view would respect the order in the query form.
+The order in the Report view would respect the order in the query form.
 
 [discrete]
 === *Q: How to set up a schedule with relative Parameter dates (like "yesterday")*
 
-When creating schedules in {product}, you may want to set up a date Parameter that's relative to the time the schedule runs.
-For example, rather than setting a date Parameter to show data from January 1, 2022 to today, you may want to set up the Parameter to show data over the last week.
+When creating schedules in {product}, you may want to set up a Date Parameter that's relative to the time the schedule runs.
+For example, rather than setting a Date Parameter to show data from January 1, 2022 to today, you may want to set up the Parameter to show data over the last week.
 
 You can do this using an `if` statement in your query.
 The query below shows an example.
@@ -625,7 +625,7 @@ Another method would be to view the *Source* tab in the dataview after a success
 image::dataview-debug.png[Workflow Basics]
 
 [discrete]
-=== *2. I'm unable to interact with Parameters on the report builder page*
+=== *2. I'm unable to interact with Parameters on the Report Builder page*
 
 You cannot view the Parameter forms in the Report Builder.
 To add them to your Report, you will need to include the Parameter code in one or more queries and then select "View" in the Report header.

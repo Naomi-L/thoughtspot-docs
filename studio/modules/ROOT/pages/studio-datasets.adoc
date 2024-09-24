@@ -28,7 +28,7 @@ They create a new layer between your data warehouse and Reports in {product}, wh
 
 Key benefits of Datasets:
 
-* *Centralize logic and data quality*: Datasets can power multiple reports, allowing analysts to write or update one query that cascades down across multiple reports.
+* *Centralize logic and data quality*: Datasets can power multiple Reports, allowing analysts to write or update one query that cascades down across multiple Reports.
 * *Manage data stack complexities*: Datasets introduces a new way data moves through {product}, creating a middle governance later that can centralize logic and make scaling easier.
 * *Improve efficiency and performance*: With data cached in Helix, this provides incremental performance gains for each Report refresh that doesn't have to hit the data warehouse.
 * *Cost savings*: Datasets are positioned between Reports and warehouses for more efficient data usage and controlled warehouse hits.
@@ -515,7 +515,7 @@ While both features allow you to analyze data in a code-free environment, they c
 Datasets are refreshed independently and materialized into {product}'s data engine, Helix, allowing you to run a Dataset once and leverage its results across multiple Reports.
 
 Unlike Datasets, dbt metric logic is run directly through dbt's SQL proxy and server to ensure the data is aggregated correctly.
-This requires each individual Metric chart to be run independently.
+This requires each individual metric chart to be run independently.
 However, we take advantage of Helix for all stylistic and formatting changes to avoid round trips to the database whenever possible.
 
 Learn more about dbt Semantic Layer Integration link:https://mode.com/get-dbt/[here,window=_blank].

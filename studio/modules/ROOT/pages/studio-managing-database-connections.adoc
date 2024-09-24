@@ -21,7 +21,7 @@ All Workspaces are also automatically connected to the <<mode-public-warehouse,{
 
 To connect your database to your {product} organization:
 
-. Click the app switcher icon in the top navigation bar and select {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on your name in the upper left corner of the screen.
 . Click *Connect a Database*.
 . Follow the instructions to connect your database.
@@ -32,21 +32,21 @@ IMPORTANT: Any active member of an {product} Workspace can create a new database
 
 === Modify or disconnect a connected database
 
-You can only delete or modify the settings and credentials for a database connection if you're an Admin or if you were the member who connected it to the Workspace.
+You can only delete or modify the settings and credentials for a database connection if you're an admin or if you were the member who connected it to the Workspace.
 
-. Click the app switcher icon in the top navigation bar and select {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on your name in the upper left, and click *Workspace Settings*.
 . In the Data section, click *Connections*.
 . All the database connections for your Workspace are listed on the right.
 . Click on the connection and then go to the *Connection Properties tab* to adjust the database credentials and configuration.
 Click *Delete* to disconnect this database from {product}.
 +
-IMPORTANT: Deleting a database connection from {product} will prevent all reports built using that connection from running until a new connection is selected. Deleting a database connection will not, however, have any effect on the database itself.
+IMPORTANT: Deleting a database connection from {product} will prevent all Reports built using that connection from running until a new connection is selected. Deleting a database connection will not, however, have any effect on the database itself.
 
 [#update-preferred-jdbc-driver]
 === Update preferred JDBC driver
 
-To update the driver {product} uses to connect to one of your data sources, you must have the Manage Data Source permission or higher.
+To update the driver {product} uses to connect to one of your data sources, you must have the manage data source permission or higher.
 
 . Open the menu beneath your name in the upper left corner and select *Workspace Settings*.
 +
@@ -69,9 +69,9 @@ image:driver_saved_ribbon.png[Data Source Saved]
 +
 image:driver_update_auth_fail_ribbon.png[Data Source Auth Fail]
 
-=== Disable or enable Automatic Schema Refresh
+=== Disable or enable automatic schema refresh
 
-For Admins and users with "manage" permission:
+For admins and users with "manage" permission:
 
 . In the Connections section, select a database connection to navigate to the settings.
 . Toggle *Automatic Schema Refresh* off or on.
@@ -79,7 +79,7 @@ For Admins and users with "manage" permission:
 Schema refresh will now be disabled or enabled.
 . Manually refresh the schema with the button at the top of the page.
 
-=== Trigger a Schema Refresh
+=== Trigger a schema refresh
 
 {product}'s schema update frequency is daily at 3:05pm UTC (7:05am PST / 8:05am PDT based on daylight savings).
 However, you can trigger a schema refresh at any time.
@@ -116,12 +116,12 @@ Limiting that user's permissions on the database side will, in turn, restrict th
 Admins in a paid plan Workspace can also limit access to a data connection to specific non-admin users or user groups directly in {product}.
 If a non-admin user does not have access to a connected database, that user will not be able to:
 
-* Query the database or create, duplicate, edit, or schedule any reports that query that database.
+* Query the database or create, duplicate, edit, or schedule any Reports that query that database.
 * Write or view any of that data connection's xref:studio-definitions.adoc[Definitions].
 +
 IMPORTANT: Admins in an {product} Workspace always have query access to all data connections in that Workspace.
 
-*Setting the Default Connection Access Policy*
+*Setting the default connection access policy*
 
 Connection admins can set the default connection access policy for everyone in their Workspace to have *View* or *Query* access to the connection, or choose to set up access to *None*.
 
@@ -131,7 +131,7 @@ image::permissions.png[Connection Access Policy Illustration]
 * The access type *View* allows all members to view content built on this connection.
 * The access type *Query* allows all members to view and query this connection.
 
-*Granting Access Type to Groups and Individuals*
+*Granting access type to groups and individuals*
 
 In addition, you can grant *Query*, *View*, or *Manage* access to groups and individuals.
 
@@ -140,14 +140,14 @@ image::Access-Menu.png[Access Menu Illustration]
 
 To set up permissions to a connected database in {product}:
 
-. Click the app switcher icon in the top navigation bar and select {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on your name in the upper left, and click *Workspace Settings*.
 . In the Data section, click *Manage Connections*.
 . Click on the data connection you want to limit.
 . Click the *Permissions* tab.
 . Click on *Connection Access Policy*, to set the default access type to *None*, *View*, or *Query*.
 . To manually add users and user groups, click *Add members*.
-When in the pop-up box, click on each user or user group that you want to grant access to this connection.
+In the pop-up box, click on each user or user group that you want to grant access to this connection.
 . Once you click on the user or user group, you will have the option to grant *Query*, *View*, or *Manage* access.
 . If you change your mind and want to remove that member, click on the user or user group, then click on the *Access Type* and choose *Remove Access*. Then confirm *Remove Access*.
 
@@ -157,7 +157,7 @@ When in the pop-up box, click on each user or user group that you want to grant 
 Here's an example of how this setup might look for a company with a single database, connected to {product} via two different database user roles.
 
 Note that these permissions only determine query access.
-Users in your Workspace will be able to see a report created with one of these data connections unless the report is in a xref:studio-spaces.adoc#personal-space[private Collection].
+Users in your Workspace will be able to see a Report created with one of these data connections unless the Report is in a xref:studio-spaces.adoc#personal-space[private Collection].
 
 [.bordered]
 image::data-source-roles-with-query-access.png[Database roles with query access]
@@ -182,9 +182,9 @@ They will not have access to any sensitive financial information.
 
 * {product} allows customers to define, using Liquid parameters and SQL, metadata attributes to be sent about each query.
 This metadata can include {product} user or query attributes (for example, username, query runner group, or timestamp of query run).
-{product} calls these Query *Headers*.
+{product} calls these query *headers*.
 * {product} automatically appends a SQL comment to each query with the following static {product} user attributes: email, timestamp of query run, {product} query run URL, and a boolean value indicating whether the query was executed manually or scheduled.
-{product} calls these Query *Footers*.
+{product} calls these query *footers*.
 
 === Query headers
 
@@ -195,13 +195,13 @@ Using custom query headers you can:
 * Automatically set environment variables, such as default schemas and time zones.
 * Add custom logging to each query that will appear in your database's logs.
 +
-IMPORTANT: Headers are injected only once per {product} SQL query, even if that query is split into multiple statements. Query Headers appear as part of the syntax executed by the database. Query Headers are not visible in {product}'s SQL Editor, but are viewable in a historical query run.
+IMPORTANT: Headers are injected only once per {product} SQL query, even if that query is split into multiple statements. Query headers appear as part of the syntax executed by the database. Query headers are not visible in {product}'s SQL Editor, but are viewable in a historical query run.
 
 === Modify a data connection's query header
 
 You must be the creator of a data connection or a Workspace admin to modify its query header.
 
-. Click the app switcher icon in the top navigation bar and select {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on your name in the upper left, and click *Workspace Settings*.
 . In the Data section, click *Connections*.
 . Click on the data connection you would like to modify.
@@ -297,7 +297,7 @@ SELECT 2
 ----
 
 In Postgres, we'll see two distinct statement executions.
-The Header appears on the first statement only.
+The header appears on the first statement only.
 
 [source,sql]
 ----
@@ -307,7 +307,7 @@ The Header appears on the first statement only.
 SELECT 1
 ----
 
-The Footers only appears on the second statement (unless per-statement footers are enabled).
+The footers only appears on the second statement (unless per-statement footers are enabled).
 
 [source,sql]
 ----
@@ -319,7 +319,7 @@ SELECT 2
 
 {product} always appends a non-customizable SQL comment annotation at the end of a query.
 By default, this annotation is made per query.
-For a multi-statement query (see example) the footer is only appended to the second statement by default.
+For a multi-statement query (see example), the footer is only appended to the second statement by default.
 {product} is able to enable per-statement footers if the Workspace uses multi-statement queries.
 
 Query footers are not visible in {product}'s SQL Editor to the user while editing a query, and query footers do not display in {product}'s UI as a part of the query syntax for a past query run.
@@ -327,10 +327,10 @@ This annotation does appear as part of the syntax executed by the database.
 
 The annotation always includes:
 
-* user: query runner's username
-* email: email address
-* url: complete query run url
-* scheduled: true/false
+* user: query runner's username.
+* email: email address.
+* url: complete query run url.
+* scheduled: true/false.
 
 ==== Examples
 
@@ -343,7 +343,7 @@ SELECT 2
 ----
 
 In Snowflake (*two* distinct statement executions;
-*without* per-statement Footers, only the second statement show the footer comment):
+*without* per-statement footers, only the second statement show the footer comment):
 
 [source,SQL]
 ----
@@ -353,7 +353,7 @@ SELECT 2
 ----
 
 In Snowflake (two distinct statement executions;
-*with* per-statement Footers, both statements show the footer comment):
+*with* per-statement footers, both statements show the footer comment):
 
 [source,SQL]
 ----
@@ -373,15 +373,14 @@ The {product} Public Warehouse is a great tool that you can use to:
 * Share analysis with or learn from anyone in the {product} community.
 * Experiment with all of {product}'s features.
 
-Anyone with an {product} account has access to the {product} Public Warehouse and can build reports on top of the data inside it.
+Anyone with an {product} account has access to the {product} Public Warehouse and can build Reports on top of the data inside it.
 
 [#uploading-data]
 === Uploading data
 
 IMPORTANT: **All data uploaded into the {product} Public Warehouse is publicly accessible by anyone on the internet, so take care not to upload anything sensitive or confidential.**
 
-. link:https://app.mode.com/signin[Sign in to {product},window=_blank].
-If you don't have an account yet, link:https://app.mode.com/signup?src=help_site[create a free {product} user account here,window=_blank].
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Locate your name in the upper left corner of the window and ensure it says *{product} Community* above your name.
 (If not, click on your name, click *Switch*, scroll to the bottom of the pop-up, and click the *Switch* button under {product} Community).
 . Click on your name in the upper left corner of the window and then click *Contribute Public Data*.
@@ -412,7 +411,7 @@ You can now query this data in {product} by selecting {product} Public Warehouse
 
 To remove a table you've uploaded to {product}'s Public Warehouse:
 
-. Click the app switcher icon in the top navigation bar and select {product}.
+. Click the app switcher icon in the top navigation bar and select *{product}*.
 . Click on your name in the upper left, and click *My Account*.
 . In the Account Setting section, click *Public Data*.
 . Navigate to your public {product} community page by clicking on the link provided (for example, `+https://app.mode.com/{{mode_username}}+`).

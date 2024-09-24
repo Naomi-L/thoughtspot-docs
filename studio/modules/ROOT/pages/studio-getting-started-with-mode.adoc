@@ -7,7 +7,7 @@
 :path: /articles/getting-started-with-mode
 :product: Analyst Studio
 
-{product}'s analyst-first approach uses familiar technologies like SQL, Python, and R in an interactive data science environment that augments BI workflows in Thoughtspot. This guide will give you information about how to get your team using {product}’s broad suite of capabilities.
+{product}'s analyst-first approach uses familiar technologies like SQL, Python, and R in an interactive data science environment that augments BI workflows in ThoughtSpot. This guide will give you information about how to get your team using {product}’s broad suite of capabilities.
 
 ====== IN THIS GUIDE, YOU'LL LEARN HOW TO:
 
@@ -49,7 +49,7 @@ Once a user has been made an admin, they can perform actions such as:
 * Restrict Report visibility and access.
 
 
-To get users onboarded quickly, an Admin should manage basic user setup and configure access.
+To get users onboarded quickly, an admin should manage basic user setup and configure access.
 There is no need to start by creating complex security policies.
 With {product}, you can build more security policies in the future if needed.
 When adding users, there is no requirement to configure a unique user "`role`". All users will have the ability to create interactive Reports using SQL, Python, or R.
@@ -64,7 +64,7 @@ This feature is just one example of how {product} enables the citizen data analy
 
 === Connect to a database
 
-{product} can directly connect to link:https://mode.com/data-sources/[many popular databases,window=_blank]. All you have to do is enter the appropriate security credentials.
+{product} can directly connect to many popular databases. All you have to do is enter the appropriate security credentials.
 A direct connection is easy to set up and does not require IT resources.
 If a database is behind a firewall or only accessed via VPN or VPCs, {product} supports a bridge connector option that's easy to install, configure, and maintain.
 The bridge connector can run directly behind your organization's VPN or firewall and once it's installed, can be configured to securely connect to one or more of the databases within your company.
@@ -106,7 +106,7 @@ Of course, the starting point for the analysis process is the SQL Editor, so let
 [discrete]
 === SQL editor
 
-The first step in creating a report is to query data using the query editor.
+The first step in creating a Report is to query data using the query editor.
 {product}'s SQL Editor provides flexibility without extra complexity.
 The editor is simple and intuitive while providing advanced capabilities to streamline workflow.
 
@@ -122,7 +122,7 @@ The editor provides developer-friendly features, including:
 
 * Code highlighting and formatting.
 * Keyboard shortcuts.
-* Context aware auto-complete.
+* Context-aware auto-complete.
 * Query history.
 
 == Time-saving shortcuts for your queries
@@ -141,14 +141,14 @@ These simple template constructs can simplify many tasks that are difficult to d
 
 === Parameters
 
-Parameters let Report developers make minor changes to their SQL syntax that give end users more flexibility when running their reports.
+Parameters let Report developers make minor changes to their SQL syntax that give end users more flexibility when running their Reports.
 Parameters allow Report viewers to alter their Reports without writing the underlying SQL code or asking Report developers to modify the original query.
 Since parameters also use a Liquid template language, Report developers can quickly use these template helpers.
 
 === Helix data engine
 
 Behind the scenes, {product}'s in-memory data engine, Helix, powers the data analysis process.
-Instead of doing last-mile aggregations and pivots in queries to fit the results in memory, Helix lets analysts do the calculations on the fly using calculated fields directly in the Report - reducing work and saving time.
+Instead of doing last-mile aggregations and pivots in queries to fit the results in memory, Helix lets analysts do the calculations on the fly using calculated fields directly in the Report -- reducing work and saving time.
 Because Helix works with large datasets, analysts can get insights on large datasets in less than an hour.
 Helix needs no configuration or tuning.
 You will have this feature available upon implementation.
@@ -187,7 +187,6 @@ This lets citizen data analysts and business stakeholders explore the data and b
 
 With {product}, you can create your own custom visualizations as well.
 One of the primary ways of doing so is by leveraging the R and Python visualization libraries through the notebook environments.
-We will discuss notebooks in the next section.
 
 == Notebooks
 
@@ -198,14 +197,14 @@ Your users can use {product}'s SQL Editor and visualization tools for day-to-day
 {product} uses industry standard Python and R in a notebook environment to enable rapid code iteration for data manipulation, statistical analysis, and advanced visualization.
 An analyst can perform analysis in a notebook that might be difficult (or impossible) to do in SQL.
 
-{product}'s Notebook has specific advantages including its ease of setup, centralization of environments, and simplified administration due to the inclusion of a variety of preloaded Python and R libraries.
+{product}'s Notebook has specific advantages, including its ease of setup, centralization of environments, and simplified administration due to the inclusion of a variety of preloaded Python and R libraries.
 Since this environment is very similar to existing notebook environments, the learning curve should be minimal.
 
 [.bordered]
 image::screenshot-python-notebook.png[Python Notebook]
 
-After a query has been created using the SQL Editor, a user can add a new Notebook to their report and access the results of all queries.
-Each query's result is available in the native Pandas DataFrame or R Data Frame.
+After a query has been created using the SQL Editor, a user can add a new Notebook to their Report and access the results of all queries.
+Each query's result is available in the native Pandas Data Frame or R Data Frame.
 
 No additional manipulation is necessary.
 Because queries across multiple databases are made available in the Notebook, it can be used to merge data that can not be easily joined with a standard SQL query.

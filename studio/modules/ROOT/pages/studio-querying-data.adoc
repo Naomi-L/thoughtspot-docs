@@ -10,8 +10,8 @@
 == Overview
 
 The Report is where analysis happens in {product}.
-Click the app switcher icon in the top navigation bar and select {product}, then click the *New* image:modal-add.svg[new] button in the upper right corner of the window to create a new Report and get started.
-All new Reports are automatically added to your xref:studio-spaces.adoc#personal-space[Personal Collection].
+Click the app switcher icon in the top navigation bar and select *{product}*, then click the *New* image:modal-add.svg[new] button in the upper right corner of the window to create a new Report and get started.
+All new Reports are automatically added to your xref:studio-spaces.adoc#personal-space[personal Collection].
 
 After creating a Report, you will be taken to the editor to write your first query.
 
@@ -24,11 +24,11 @@ The query editor contains a number of re-sizable sections that should be familia
 Within the data section, which you can drag to resize, you will see:
 
  ** Every query in the Report.
-Click on a Query to select it and edit its code.
+Click on a query to select it and edit its code.
 Use the context menu to rename, duplicate, delete, and more.
-To add a new query, click on the plus button to the right of the Data header.
+To add a new query, click on the plus button to the right of the data header.
  ** Each visualization that you build using a query's data.
-Use the overflow menu to add or remove your Chart from the Report Builder, duplicate, xref:studio-explorations.adoc#view-saved-explorations[explore], and more.
+Use the overflow menu to add or remove your chart from the Report Builder, duplicate, xref:studio-explorations.adoc#view-saved-explorations[explore], and more.
 Or, click the plus button below your chart to add a new one.
 +
 TIP: To tell which charts you've added to the Report Builder, look for a blue checkmark symbol within each chart's icon.
@@ -78,7 +78,7 @@ TIP: Quickly expand or collapse the Data View by double-clicking its header.
 The schema browser lets you explore the schemas, tables and columns in the selected database.
 Drag to resize to fit longer table names.
 
-[.bordered]
+
 image::schema_browser.png[Schema Browser]
 
 . *Show/hide:* Click to hide or reveal the schema browser.

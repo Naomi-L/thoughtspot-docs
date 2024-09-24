@@ -75,7 +75,7 @@ If your database or network environment does not meet the above requirements, co
 
 To add a new data connection to your Workspace using Direct Connect:
 
-. Click the app switcher icon in the top navigation bar and select {product}. Navigate to the Workspace to which you'd like to add the connection, and click on your name in the top left corner.
+. Click the app switcher icon in the top navigation bar and select *{product}*. Navigate to the Workspace to which you'd like to add the connection, and click on your name in the top left corner.
 . Click on *Connect a Database*.
 . Select your database from the list.
 . Follow the on-screen instructions to connect your database.
@@ -131,7 +131,7 @@ If your database isn't publicly accessible, you should <<bridge,connect using Br
 
 [source,plaintext]
 ----
-Could not verify connection: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Could not verify connection: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure. The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
 ----
 
 This is a generic MySQL error that indicates {product} can't reach your database.
@@ -238,13 +238,13 @@ You can run {product}'s Bridge connector <<run-bridge-as-a-docker-container,as a
 
 You can also <<install-bridge-with-mode,install the Bridge connector>> on any computer running any of the following supported operating systems:
 
-* macOS 10.11 or later
-* Windows 10 or Windows Server 2012 R2 or later
+* macOS 10.11 or later.
+* Windows 10 or Windows Server 2012 R2 or later.
 * Most 64-bit Linux distributions, including:
- ** Ubuntu 14.04 16.04 18.04 20.04 LTS
- ** Fedora 27, 28, 29
- ** CentOS 6, 7
- ** Debian 8.0, 9.0
+ ** Ubuntu 14.04 16.04 18.04 20.04 LTS.
+ ** Fedora 27, 28, 29.
+ ** CentOS 6, 7.
+ ** Debian 8.0, 9.0.
  ** {blank} {support-url} can provide a generic tarball for many other 64-bit Linux systems.
 
 TIP: When connecting to a database in AWS, most customers will run Bridge in an EC2 virtual machine. In these cases, you should set up a 64-bit EC2 instance running Linux that can both connect to your Redshift/RDS cluster and can connect to modeanalytics.com on ports 443 and 8444.
@@ -254,7 +254,7 @@ NOTE:  If you have a Studio plan, and are installing via the non-Docker approach
 [#install-bridge-with-mode]
 === Install Bridge with {product}
 
-These instructions assume that you meet <<requirements,the Requirements>> and would like to install {product}'s Bridge connector on a host computer you administer.
+These instructions assume that you meet <<requirements,the requirements>> and would like to install {product}'s Bridge connector on a host computer you administer.
 
 Our system packages will install Bridge and configure the system to run Bridge via the system's service manager.
 Bridge's <<where-is-the-bridge-configuration-file-saved,configuration file>> 'bridge.json' contains a credential and should be kept secret when incorporating it into configuration management systems.
