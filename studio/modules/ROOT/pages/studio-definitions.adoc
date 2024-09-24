@@ -26,7 +26,7 @@ Less SQL-savvy users can then do a simple `SELECT * FROM {{ @definition_name }}`
 
 Definitions are similar in concept to a link:https://www.w3schools.com/sql/sql_view.asp[database view,window=_blank].
 However, Definitions are created and maintained in {product} rather than your database.
-Paid plan Workspaces can create an unlimited number Definitions against any connected database.
+You can create an unlimited number Definitions against any connected database.
 
 Each Definition is built on top of one database connection.
 You must have query access to the database connection in order to write a Definition against it and to see and share Definitions written by others against that database connection.

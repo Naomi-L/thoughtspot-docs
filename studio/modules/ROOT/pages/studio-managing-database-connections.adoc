@@ -113,7 +113,7 @@ Limiting that user's permissions on the database side will, in turn, restrict th
 === Limit access to a data connection in {product}
 //+++<flag-icon>++++++</flag-icon>+++
 
-Admins in a paid plan Workspace can also limit access to a data connection to specific non-admin users or user groups directly in {product}.
+Admins can also limit access to a data connection to specific non-admin users or user groups directly in {product}.
 If a non-admin user does not have access to a connected database, that user will not be able to:
 
 * Query the database or create, duplicate, edit, or schedule any Reports that query that database.
@@ -169,7 +169,7 @@ image::data-source-roles-with-query-access.png[Database roles with query access]
 . When you xref:studio-connecting-mode-to-your-database.adoc[connect a database] to {product}, you do so using database user roles.
 Each connection will appear as a different database in the schema browser.
 Note that the default name will be the name of the database (for example, Redshift), but you can also name it based on a description of the access level or user role.
-. Paid plan Workspaces can also specify which {product} users have access to each connection.
+. Workspaces can also specify which {product} users have access to each connection.
  ** A user with query access to "`Marketing`" will ONLY be able to query the marketing table.
 They will not have access to any sensitive financial information.
  ** A user with query access to "`All`" will be able to query the marketing and finance tables.

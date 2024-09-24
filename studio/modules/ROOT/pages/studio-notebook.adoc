@@ -164,7 +164,7 @@ image::querytoken.png[Query token]
 
 === Memory management in Python
 
-For {product} Business and Enterprise paid plans, {product}'s Python notebook has 16GB of RAM and up to 16 CPU available to it.
+{product}'s Python notebook has 16GB of RAM and up to 16 CPU available to it.
 The free {product} Studio notebook is limited to 4GB of RAM and 1 CPU.
 To effectively manage memory usage in the {product} Notebooks, consider (1) data load of query result sets, (2) incremental library installation, (3) memory utilization in session.
 
@@ -248,7 +248,7 @@ Common use cases include:
 [#python]
 === Python
 
-IMPORTANT: Notebooks in the {product} Studio plan are unable to properly utilize the `pip`, `requests`, or the `urllib3` packages in the Python or Python 3 Edge environments. To fully utilize these packages, please upgrade to a paid {product} Business or Enterprise plan.
+//IMPORTANT: Notebooks in the {product} Studio plan are unable to properly utilize the `pip`, `requests`, or the `urllib3` packages in the Python or Python 3 Edge environments. To fully utilize these packages, please upgrade to a paid {product} Business or Enterprise plan.
 
 {product} supports Python version 3.9 in the Notebooks.
 
@@ -421,7 +421,7 @@ image::pythonEdge.png[python edge environment]
 [#r]
 === R
 
-IMPORTANT: Notebooks in the {product} Studio plan are unable to properly utilize the httr package in the R environment. To fully utilize this package, please upgrade to a paid {product} Business or Enterprise plan.
+//IMPORTANT: Notebooks in the {product} Studio plan are unable to properly utilize the httr package in the R environment. To fully utilize this package, please upgrade to a paid {product} Business or Enterprise plan.
 
 The Notebook supports R version 4.2.0 and comes preloaded with the following R packages:
 //+++<supported-libraries-table json="https://mode.github.io/runtimes/r.json" type="R">++++++</supported-libraries-table>+++
@@ -551,7 +551,7 @@ IMPORTANT: We strongly discourage using the `httr` library to access APIs that r
 [#install-additional-libraries]
 == Install additional libraries
 
-IMPORTANT: Notebooks in the {product} Studio plan are unable to install additional libraries. To access this feature, please upgrade to a paid {product} Business or Enterprise plan.
+//IMPORTANT: Notebooks in the {product} Studio plan are unable to install additional libraries. To access this feature, please upgrade to a paid {product} Business or Enterprise plan.
 
 To use a publicly available library in the Notebook that is not listed above, users leverage each environment's package manager to install that library at run-time.
 The Notebook environment has up to 1 GB of memory available to load additional packages.
@@ -693,6 +693,7 @@ You may now use any of the methods or functionality included in the library in s
 [#faqs]
 == FAQs
 
+////
 [discrete]
 === *Q: How much memory is available to the Notebook?*
 
@@ -717,6 +718,7 @@ Each Notebook session has the following resources available, depending on the ve
 |===
 
 When suspended, the Notebook environment can be resumed at any time by running a cell, running the entire Notebook, or running the Report.
+////
 
 [discrete]
 === *Q: Can you visualize a Notebook-generated visualization with {product}'s native chart editor?*
@@ -774,6 +776,7 @@ This is because the logic is set up such that the Notebook does not know which q
 
 Therefore, it is possible that the Notebook would render faster, but it must wait for all queries to finish running.
 
+////
 [discrete]
 === *Q: I am on a paid {product} Business or Enterprise plan. Why can't I pip install or upgrade certain libraries in the Notebook?*
 
@@ -787,6 +790,7 @@ However, we cannot guarantee that these libraries will function properly if they
 
 If you do not see a library listed as supported, it is considered a feature request.
 Please contact {support-url} to confirm and request the library.
+////
 
 [discrete]
 === *Q: Do you have a tutorial where I can learn Python for business analysis using real-world data?*

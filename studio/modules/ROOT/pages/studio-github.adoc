@@ -18,7 +18,7 @@ This will create a two-way sync between {product} and GitHub, where changes made
 
 Before you begin, you must meet the following requirements in order to set up the {product} sync with GitHub:
 
-* Your {product} Workspace must be on one of {product}'s paid plans.
+//* Your {product} Workspace must be on one of {product}'s paid plans.
 * You must be an admin of your {product} Workspace.
 * You must be authorized to install the link:https://github.com/apps/modeanalytics[{product} GitHub app,window=_blank] in your GitHub organization.
 * In GitHub, create a new repository or select an existing repository for {product}.

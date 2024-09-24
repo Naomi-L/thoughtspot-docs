@@ -26,7 +26,7 @@ We review all emails and will respond as soon as possible!
 == Live chat
 //+++<flag-icon>++++++</flag-icon>+++
 
-Users in {product}'s paid plan Workspaces can chat directly with our team of Customer Support Engineers and Analysts at any time during {product}'s business hours:
+You can chat directly with our team of Customer Support Engineers and Analysts at any time during {product}'s business hours:
 
 *Business Hours*: Monday-Friday, 5am to 6pm pacific (excluding major US holidays)
 

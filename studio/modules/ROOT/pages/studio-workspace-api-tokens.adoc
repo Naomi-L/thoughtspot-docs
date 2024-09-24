@@ -14,7 +14,7 @@
 Workspace API tokens are meant to be used for programmatic management, such as archiving inactive Reports or deleting schedules for stale Reports across your Workspace.
 These tokens mimic admin access to the Workspace and only admins will be able to create and manage them.
 
-To generate a new API token, you must be on a paid plan and an admin of your Workspace.
+To generate a new API token, you must be an admin of your Workspace.
 
 Navigate to menu:Workspace Settings[Default Settings  > API].
 Click the "`gear`" icon and select "`Create new API token`". You will be prompted to add a display name and save the token.
