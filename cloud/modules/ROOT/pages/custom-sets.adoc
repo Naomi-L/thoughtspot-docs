@@ -31,7 +31,7 @@ Bins allow you to create groups based on bins of specified sizes with a minimum 
 +
 image::create-set.png[Create column set]
 . To add multiple conditions click *Add condition*.
-. To add multiple groups clcik *Add group*.
+. To add multiple groups click *Add group*.
 
 . For conditions, you can choose to show remaining values as either *Individual values* or as a *Group*. If you choose to group the remaining values, you can enter a name for the group.
 +
@@ -44,5 +44,3 @@ The name appears to identify the set for future use.
 . Optionally, enter a *Set description*.
 
 . Click *Create*.
-
-
